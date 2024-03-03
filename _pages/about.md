@@ -2,7 +2,6 @@
 title: About me
 subtitle: Javi Aparicio
 description: Portrait photographer located in Bern, Switzerland
-featured_image: /images/javi.jpg
 ---
 
 Welcome to Javi Aparicio Foto!
