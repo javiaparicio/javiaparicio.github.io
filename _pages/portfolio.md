@@ -1,5 +1,5 @@
 <div class="gallery" data-columns="3">
-    <img src="../images/portfolio/a.jpg" />
+<!--    <img src="../images/portfolio/a.jpg" /> -->
     <img src="../images/portfolio/b.jpeg" />
     <img src="../images/portfolio/c.jpg" />
     <img src="../images/portfolio/22.jpeg" />
