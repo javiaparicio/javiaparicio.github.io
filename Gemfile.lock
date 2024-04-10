@@ -264,6 +264,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 212)
   jekyll-paginate
+  jekyll-seo-tag
   jekyll-sitemap
   webrick
 
