@@ -4,8 +4,13 @@
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 25px;
 }
-  
-.gallery img {
+
+.gallery-image.lazy {
+    filter: blur(10px);
+    transition: filter 0.3s;
+}
+
+.gallery-image {
     width: 100%;
     height: 200px;
     object-fit: cover;

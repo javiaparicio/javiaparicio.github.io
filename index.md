@@ -7,7 +7,7 @@ title: Home
   {% for image in site.static_files %}
     {% if image.path contains 'assets/images' %}
       {% if image.extname == ".jpg" or image.extname == ".png" %}
-        <img src="{{ image.path }}" alt="{{ image.basename }}" class="gallery-image">
+        <img data-src="{{ image.path }}" alt="{{ image.basename }}" class="gallery-image lazy">
       {% endif %}
     {% endif %}
   {% endfor %}
