@@ -9,7 +9,7 @@ description: Portrait photographer located in Bern, Switzerland
 
 <p>Please fill out the form below to get in touch with me.</p>
 
-<form action="https://formspree.io/f/mjvnrpje" method="POST">
+<form action="{{ site.data.settings.contact_settings.form_action }}" method="POST">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required>
   
@@ -22,8 +22,6 @@ description: Portrait photographer located in Bern, Switzerland
   <input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" />
   <input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
   
-  <button type="submit">Send</button>
+  <button type="submit">{{ site.data.settings.contact_settings.send_button_text }}</button>
 </form>
-
-<p>I will get back to you as soon as possible.</p>
 </div>
