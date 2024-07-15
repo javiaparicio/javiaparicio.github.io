@@ -1,0 +1,48 @@
+.socials {
+	list-style: none;
+	margin: 0;
+	padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.socials ul {
+    padding-bottom: 100px;
+}
+
+.socials_item {
+	display: inline-block;
+	margin-left: 2px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.socials_item_link {
+	position: relative;
+	display: block;
+	border-radius: 100%;
+	background: $text-light-color;
+	font-size: 17px;
+	line-height: 1;
+	color: $background-color;
+
+	@include mq(tabletp) {
+		width: 35px;
+		height: 35px;
+		font-size: 20px;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include translate(-50%,-52%);
+	}
+
+	&:hover {
+		background: $accent-color;
+		color: $background-color;
+	}
+}

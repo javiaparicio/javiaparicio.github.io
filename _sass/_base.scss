@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+.container {
+    display: flex;
+}
+  
+.content {
+    margin-top: 100px;
+    margin-left: 200px;
+    padding: 20px;
+    flex: 1;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+  }
+
+@media (max-width: 768px) {
+    nav.sidebar {
+        display: none;
+    }
+
+    .content {
+      margin-top: 100px;
+      margin-left: 0px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    div.aboutme {
+      width: 90%;
+      padding: 20px;
+    }
+
+    div.contactme {
+      width: 90%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #f8f8f8;
+        padding-top: 60px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+
+    .mobile-menu.show {
+        transform: translateX(0);
+        display: block;
+    }
+
+    .mobile-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu ul li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    .mobile-menu ul li a {
+        text-decoration: none;
+        font-family: "Courier New";
+        color: #333;
+    }
+
+    ul.mobile-socials {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+    }
+
+    li.mobile-socials_item {
+        display: inline-block;
+        margin-left: 2px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+    }
+
+    .mobile-socials_item_link {
+      position: relative;
+      display: block;
+      border-radius: 100%;
+      background: $text-light-color;
+      font-size: 17px;
+      line-height: 1;
+      color: $background-color;
+    
+      @include mq(tabletp) {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+      }
+    
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%,-52%);
+      }
+    
+      &:hover {
+        background: $accent-color;
+        color: $background-color;
+      }
+    }
+}
