@@ -1,0 +1,9 @@
+<ul class="mobile-socials">
+    {% for social in site.data.settings.social_links %}
+    <li class="mobile-socials_item">
+        <a href="{{ social.url }}" target="_blank" class="mobile-socials_item_link" title="{{ social.name }}">
+            <i class="{{ social.icon }}" aria-hidden="true"></i>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
