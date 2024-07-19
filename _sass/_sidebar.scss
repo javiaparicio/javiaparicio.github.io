@@ -4,7 +4,7 @@
     padding-left: 80px;
     padding-bottom: 60px;
     width: 220px;
-    height: 80vh;
+    height: 85vh;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     display: flex;
@@ -12,7 +12,7 @@
     justify-content: space-between;
     font-family: "Courier New";
 }
-  
+
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -22,10 +22,11 @@
 .sidebar ul li {
     margin-bottom: 10px;
 }
+
 .sidebar > ul > .menutitle {
     font-weight: bold;
 }
-  
+
 .sidebar ul li a {
     text-decoration: none;
     font-family: "Courier New";
