@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeImage) {
         closeImage.addEventListener('click', () => lightbox.classList.remove('show'));
     }
-    const fullscreen = document.getElementById('fullscreen');
-    if (fullscreen) {
-        fullscreen.addEventListener('click', toggleFullScreen);
+    const fullscreenButton = document.getElementById('fullscreen');
+    if (fullscreenButton) {
+        fullscreenButton.addEventListener('click', toggleFullScreen);
     }
 
     function showPrevImage() {
@@ -102,5 +102,13 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           document.exitFullscreen();
         }
-      }
+    }
+
+    document.addEventListener('fullscreenchange', function() {
+        if (document.fullscreenElement) {
+          fullscreenButton.innerHTML = '<i class="fas fa-compress"></i>';
+        } else {
+          fullscreenButton.innerHTML = '<i class="fas fa-expand"></i>';
+        }
+    });
 });

@@ -18,5 +18,7 @@ title: Home
   <img id="lightbox-img">
   <span class="nav" id="next"></span>
   <span class="close" id="close"></span>
-  <span class="fullscreen" id="fullscreen">⛶</span>
+  <span class="fullscreen" id="fullscreen">
+    <i class="fas fa-expand"></i>
+  </span>
 </div>
