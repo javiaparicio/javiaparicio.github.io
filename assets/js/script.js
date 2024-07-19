@@ -55,9 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         closeImage.addEventListener('click', () => lightbox.classList.remove('show'));
     }
     const fullscreenButton = document.getElementById('fullscreen');
-    if (fullscreenButton) {
-        fullscreenButton.addEventListener('click', toggleFullScreen);
-    }
 
     function showPrevImage() {
         currentImageIndex = (currentImageIndex === 0) ? galleryImages.length - 1 : currentImageIndex - 1;
@@ -87,6 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+        if (fullscreenButton) {
+            fullscreenButton.addEventListener('click', toggleFullScreen);
+        }
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement) {
+              fullscreenButton.innerHTML = '<i class="fas fa-compress"></i>';
+            } else {
+              fullscreenButton.innerHTML = '<i class="fas fa-expand"></i>';
+            }
+        });
+    } else {
+        if (fullscreenButton) {
+            fullscreenButton.style.display = 'none';
+        }
+    }
+
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -97,18 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleFullScreen() {
         if (!document.fullscreenElement) {
           lightbox.requestFullscreen().catch(err => {
-            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            if (fullscreenButton) {
+                fullscreenButton.style.display = 'none';
+            }
           });
         } else {
           document.exitFullscreen();
         }
     }
-
-    document.addEventListener('fullscreenchange', function() {
-        if (document.fullscreenElement) {
-          fullscreenButton.innerHTML = '<i class="fas fa-compress"></i>';
-        } else {
-          fullscreenButton.innerHTML = '<i class="fas fa-expand"></i>';
-        }
-    });
 });
