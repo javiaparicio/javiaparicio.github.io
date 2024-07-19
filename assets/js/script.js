@@ -54,6 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeImage) {
         closeImage.addEventListener('click', () => lightbox.classList.remove('show'));
     }
+    const fullscreen = document.getElementById('fullscreen');
+    if (fullscreen) {
+        fullscreen.addEventListener('click', toggleFullScreen);
+    }
 
     function showPrevImage() {
         currentImageIndex = (currentImageIndex === 0) ? galleryImages.length - 1 : currentImageIndex - 1;
@@ -89,4 +93,14 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', () => {
         mobileMenu.classList.toggle('show');
     });
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+          lightbox.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+      }
 });
