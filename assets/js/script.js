@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lightbox Functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const galleryImages = document.querySelectorAll('.gallery-image');
+    let galleryImages = Array.from(document.querySelectorAll('.gallery-image')).reverse();
     let currentImageIndex = 0;
 
     function showImage(index) {
@@ -57,12 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const fullscreenButton = document.getElementById('fullscreen');
 
     function showPrevImage() {
-        currentImageIndex = (currentImageIndex === 0) ? galleryImages.length - 1 : currentImageIndex - 1;
+        currentImageIndex = (currentImageIndex === galleryImages.length - 1) ? 0 : currentImageIndex + 1;
         showImage(currentImageIndex);
     }
 
     function showNextImage() {
-        currentImageIndex = (currentImageIndex === galleryImages.length - 1) ? 0 : currentImageIndex + 1;
+        currentImageIndex = (currentImageIndex === 0) ? galleryImages.length - 1 : currentImageIndex - 1;
         showImage(currentImageIndex);
     }
 

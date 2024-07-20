@@ -4,7 +4,8 @@ title: Home
 ---
 
 <div class="gallery">
-  {% for image in site.static_files %}
+  {% assign images = site.static_files | sort: "path" | reverse %}
+  {% for image in images %}
     {% if image.path contains 'assets/images' %}
       {% if image.extname == ".jpg" or image.extname == ".png" %}
         <img data-src="{{ image.path }}" alt="{{ image.basename }}" class="gallery-image lazy">
