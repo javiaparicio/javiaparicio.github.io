@@ -8,7 +8,9 @@ title: Home
   {% for image in images %}
     {% if image.path contains 'assets/images' %}
       {% if image.extname == ".jpg" or image.extname == ".png" %}
-        <img data-src="{{ image.path }}" alt="{{ image.basename }}" class="gallery-image lazy">
+        {% assign file_time = site.time | date: '%s' %}
+        {% assign hash = file_time | MD5 %}
+        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="{{ image.basename }}" class="gallery-image lazy">
       {% endif %}
     {% endif %}
   {% endfor %}
