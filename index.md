@@ -6,7 +6,7 @@ title: Home
 <div class="gallery">
   {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
-    {% if image.path contains 'assets/images' %}
+    {% if image.path contains 'assets/images/portfolio' %}
       {% if image.extname == ".jpg" or image.extname == ".png" %}
         {% assign file_time = site.time | date: '%s' %}
         {% assign hash = file_time | MD5 %}
