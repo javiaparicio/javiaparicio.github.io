@@ -3,8 +3,8 @@ email: info@javiapariciofoto.ch
 description: Portrait photographer located in Bern, Switzerland.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://javiapariciofoto.ch" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  
+twitter_username:
+github_username:
 
 # Build settings
 theme: minima
@@ -33,4 +33,4 @@ plugins:
 #   - vendor/ruby/
 
 sass:
-    style: compressed
+  style: compressed
