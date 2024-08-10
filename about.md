@@ -5,6 +5,8 @@ layout: default
 description: Portrait photographer located in Bern, Switzerland
 ---
 
+<img src="assets/images/about/001.jpg" />
+
 <div class="aboutme">
 <h2>Welcome</h2>
 <p>Every portrait has a story—let’s tell yours. As a portrait photographer, I’m passionate about capturing the real you. Whether it’s a family moment, a professional headshot, or a creative project, I focus on creating images that reflect your unique personality.</p>
@@ -31,3 +33,5 @@ description: Portrait photographer located in Bern, Switzerland
 <p>Lo que hace especial mi trabajo no son solo las fotos, sino la experiencia. Me tomo el tiempo de conocerte, creando un ambiente relajado donde tu verdadero ser pueda brillar. El resultado: retratos que te encantarán y momentos que querrás revivir una y otra vez.</p>
 <p>Echa un vistazo a mi portafolio, y hagamos algo increíble juntos.</p>
 <p>Javi Aparicio</p>
+
+<img src="assets/images/about/015.jpg" />
