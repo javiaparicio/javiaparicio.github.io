@@ -1,0 +1,27 @@
+/* Footer Styles */
+.site-footer {
+    margin-left: 200px;
+    background: #ffffff;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.site-footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    background: #abb7b7;
+    color: #333333;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}

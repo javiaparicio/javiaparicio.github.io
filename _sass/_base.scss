@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Courier New";
     margin: 0;
     padding: 0;
 }
@@ -37,11 +37,21 @@ body {
         flex: 1;
     }
 
+    div.site-footer {
+        margin-left: 0px;
+        padding: 20px;
+        flex: 1;
+    }
+
     div.aboutme {
         width: 90%;
     }
 
     div.contactme {
+        width: 90%;
+    }
+
+    div.pricing-content {
         width: 90%;
     }
 

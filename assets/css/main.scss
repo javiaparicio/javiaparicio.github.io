@@ -22,5 +22,8 @@ $error-color: {{ site.data.settings.color_settings.error_color }};
 @import "sidebar";
 @import "socials";
 @import "gallery";
+@import "pricing";
 @import "about";
 @import "contact";
+@import "footer";
+@import "test";
