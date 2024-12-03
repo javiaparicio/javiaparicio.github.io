@@ -10,15 +10,9 @@ contact_settings:
   send_button_text: "Send Message"
 
 social_links:
-  - name: Linktree
-    url: https://linktr.ee/javiaparicio
-    icon: fa fa-tree
   - name: Instagram
-    url: https://instagram.com/javiapariciofoto
+    url: https://instagram.com/thereisnopossibleway
     icon: fab fa-instagram
-  - name: Linkedin
-    url: https://www.linkedin.com/in/javiaparicio/
-    icon: fab fa-linkedin
 
 color_settings:
   background_color: "#ffffff"
