@@ -1,7 +1,7 @@
 ---
-title: Pricing
-subtitle: Javi Aparicio Photography
 layout: default
+title: Pricing
+permalink: pricing
 description: Portrait photographer located in Bern, Switzerland
 ---
 

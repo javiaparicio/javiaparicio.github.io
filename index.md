@@ -1,13 +1,13 @@
 ---
 title: Portrait photographer located in Bern
-subtitle: Javi Aparicio
 layout: default
 description: Portrait photographer located in Bern, Switzerland
 ---
 
 {% assign file_time = site.time | date: '%s' %}
 {% assign hash = file_time | MD5 %}
-<img src="assets/images/about/001.jpg" />
+
+<img src="assets/images/about/001.webp" alt="Javi Aparicio Portrait" width="185" height="169"/>
 
 <div class="aboutme">
 <h2>Welcome</h2>
@@ -36,4 +36,4 @@ description: Portrait photographer located in Bern, Switzerland
 <p>Echa un vistazo a mi portafolio, y hagamos algo increíble juntos.</p>
 <p>Javi Aparicio</p>
 
-<img src="assets/images/about/015.jpg" />
+<img src="assets/images/about/015.webp" alt="Javi Aparicio Portrait" width="300" height="200"/>

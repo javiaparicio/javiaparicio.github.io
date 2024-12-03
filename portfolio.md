@@ -1,13 +1,15 @@
 ---
 layout: default
 title: Portfolio
+permalink: portfolio
+description: Portrait photographer located in Bern, Switzerland
 ---
 
 <div class="gallery">
   {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
     {% if image.path contains 'assets/images/portfolio' %}
-      {% if image.extname == ".jpg" or image.extname == ".png" %}
+      {% if image.extname == ".webp" %}
         {% assign file_time = site.time | date: '%s' %}
         {% assign hash = file_time | MD5 %}
         <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="{{ image.basename }}" class="gallery-image lazy">
