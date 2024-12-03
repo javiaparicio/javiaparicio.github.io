@@ -1,5 +1,5 @@
 ---
-title: Javi Aparicio
+title: Portrait photographer located in Bern
 subtitle: Javi Aparicio
 layout: default
 description: Portrait photographer located in Bern, Switzerland
