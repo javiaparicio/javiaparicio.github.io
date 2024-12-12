@@ -13,6 +13,12 @@ social_links:
   - name: Instagram
     url: https://instagram.com/thereisnopossibleway
     icon: fab fa-instagram
+  - name: Telegram
+    url: https://t.me/javiapariciofoto
+    icon: fab fa-telegram
+#  - name: Whatsapp
+#    url:
+#    icon: fab fa-whatsapp
 
 color_settings:
   background_color: "#ffffff"
