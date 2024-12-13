@@ -34,7 +34,8 @@ description: Portrait photographer located in Bern, Switzerland
 <br>
 <hr>
 <br>
-<p><strong>Javi Aparicio</strong></p>
+<p><strong>Javier Aparicio Ríos Foto</strong></p>
+<p>CHE-482.759.955</p>
 <p>info@javiapariciofoto.ch<br>
 +41 78 790 97 19</p>
 <p>Stauffacherstrasse 44
