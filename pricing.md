@@ -8,7 +8,7 @@ description: Portrait photographer located in Bern, Switzerland
 <div class="pricing-content">
     <h1>Portrait Photography Packages</h1>
     <p>Choose the perfect package for your needs. My sessions are designed to provide a relaxed and professional experience with stunning results.</p>
-    <p>All sessions are by appointment only. Please contact me in advance to schedule your shoot.</p>
+    <p>All sessions are available by appointment only. Contact me to book your preferred time.</p>
 
     <div class="package">
         <h2>Basic Portrait Session – CHF 150</h2>
