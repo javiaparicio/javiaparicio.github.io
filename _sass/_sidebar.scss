@@ -10,7 +10,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Courier New";
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .sidebar ul {
@@ -31,6 +33,8 @@
 
 .sidebar ul li a {
     text-decoration: none;
-    font-family: "Courier New";
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     color: #333;
 }
