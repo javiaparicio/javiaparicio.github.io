@@ -15,9 +15,9 @@ social_links:
   - name: Telegram
     url: https://t.me/javiapariciofoto
     icon: fab fa-telegram
-#  - name: Whatsapp
-#    url:
-#    icon: fab fa-whatsapp
+  - name: Whatsapp
+    url: https://wa.me/+41787909719
+    icon: fab fa-whatsapp
 
 color_settings:
   background_color: "#ffffff"
