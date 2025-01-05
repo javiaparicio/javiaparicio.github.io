@@ -43,3 +43,24 @@ button[type="submit"]:hover {
     background-color: #ffeb00;
     color: black;
 }
+
+.agb-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between checkbox and label */
+    font-size: 0.9rem;
+}
+
+.agb-checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.agb-checkbox a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.agb-checkbox a:hover {
+    text-decoration: underline;
+}

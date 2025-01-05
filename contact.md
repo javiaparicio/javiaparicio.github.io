@@ -25,20 +25,19 @@ description: Portrait photographer located in Bern, Switzerland
   <label for="message">Message:*</label>
   <textarea id="message" name="message" rows="10" required></textarea>
 
+   <!-- AGB Checkbox Section -->
+    <div class="agb-checkbox">
+      <input type="checkbox" id="agb" name="agb" value="accepted" required>
+      <label for="agb">
+        I agree to the
+        <a href="/terms-and-conditions/" target="_blank">Terms and Conditions (AGB)</a> and
+        <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.
+      </label>
+    </div>
+    <br />
+
   <input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" />
   <input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
 
   <button type="submit">{{ site.data.settings.contact_settings.send_button_text }}</button>
 </form>
-<br>
-<br>
-<hr>
-<br>
-<p><strong>Javier Aparicio Ríos Foto</strong></p>
-<p>CHE-482.759.955</p>
-<p>info@javiapariciofoto.ch<br>
-+41 78 790 97 19</p>
-<p>Stauffacherstrasse 44
-<br>3014 Bern
-<br>Switzerland</p>
-</div>
