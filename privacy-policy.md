@@ -26,7 +26,22 @@ For more information, please refer to [Formspree’s Privacy Policy](https://for
 
 ---
 
-### **2. Data Usage**
+### **2. Use of Google reCAPTCHA**
+We use Google reCAPTCHA on our contact form to prevent spam and abuse. This service is provided by Google LLC and helps verify that the form submission is made by a human.
+
+When you use our contact form, Google reCAPTCHA may collect:
+- Your IP address
+- Information about your device and browser (e.g., browser version, screen resolution, operating system)
+
+This data is used to analyze user behavior and determine whether the request comes from a human or an automated system. Google processes this data in accordance with their privacy policy.
+
+For more information, please refer to:
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [Google Terms of Service](https://policies.google.com/terms)
+
+---
+
+### **3. Data Usage**
 We use your data to:
 - Respond to inquiries and provide services.
 - Improve our communication and user experience.
@@ -35,12 +50,12 @@ We **do not sell or distribute your data** to unauthorized third parties.
 
 ---
 
-### **3. Data Protection**
+### **4. Data Protection**
 We implement appropriate security measures to protect your personal data. While we trust third-party providers to manage data securely, we are not responsible for breaches on their end.
 
 ---
 
-### **4. Your Rights**
+### **5. Your Rights**
 You have the right to:
 - Request access to your data.
 - Request correction or deletion of your data.
