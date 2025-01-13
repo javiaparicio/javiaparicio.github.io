@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("keydown", function (event) {
-    if (lightbox.classList.contains("show")) {
+    if (lightbox?.classList.contains("show")) {
       if (event.key === "ArrowLeft") {
         showPrevImage();
       } else if (event.key === "ArrowRight") {
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
-      lightbox.requestFullscreen().catch((err) => {
+      lightbox?.requestFullscreen().catch((err) => {
         if (fullscreenButton) {
           fullscreenButton.style.display = "none";
         }
