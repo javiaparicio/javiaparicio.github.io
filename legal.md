@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Legal"
+title: "Legal Information – Javi Aparicio Foto | Photography in Bern"
 permalink: /legal/
+description: "Legal information for Javi Aparicio Foto. Find contact details, company information, and compliance details for our photography business in Bern, Switzerland."
 ---
 
 # Legal Information (Impressum)

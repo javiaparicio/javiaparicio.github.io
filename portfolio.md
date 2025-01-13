@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Portfolio
-permalink: portfolio
-description: Portrait photographer located in Bern, Switzerland
+title: "Photography Portfolio"
+permalink: /portfolio/
+description: "Explore Javi Aparicio’s photography portfolio, showcasing stunning portraits. See the moments that define creativity and artistry."
 ---
 
 <div class="gallery">

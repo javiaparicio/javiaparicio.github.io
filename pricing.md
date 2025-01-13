@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Pricing
-permalink: pricing
-description: Portrait photographer located in Bern, Switzerland
+title: "Photography Pricing – Affordable Portrait Packages in Bern"
+permalink: /pricing/
+description: "Learn about Javi Aparicio Foto’s photography packages in Bern. Transparent pricing for portraits, professional headshots, and personalized sessions. Book your session today!"
 ---
 
 <div class="pricing-content">

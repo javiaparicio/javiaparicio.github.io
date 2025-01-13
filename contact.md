@@ -1,8 +1,8 @@
 ---
-title: Contact me
-subtitle:
 layout: default
-description: Portrait photographer located in Bern, Switzerland
+title: "Contact Javi Aparicio Foto – Book Your Photography Session"
+permalink: /contact/
+description: "Get in touch with Javi Aparicio Foto for professional photography services in Bern, Switzerland. Contact us to schedule your next portrait session or inquire about custom projects."
 ---
 
 <div class="contactme">

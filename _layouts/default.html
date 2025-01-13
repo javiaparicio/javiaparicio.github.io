@@ -19,10 +19,8 @@
         <meta name="apple-mobile-web-app-title" content="Javi Aparicio Foto" />
         <link rel="manifest" href="/site.webmanifest" />
         <title>
-            {% if page.url == "/" %} {{
-            site.data.settings.basic_settings.site_title }} – {{ page.title }}
-            {% else %} {{ page.title }} – {{
-            site.data.settings.basic_settings.site_title }} {% endif %}
+            {%if page.title %} {{ page.title }} {% else %} {{ site.title }} {%
+            endif %}
         </title>
         <link
             rel="stylesheet"
