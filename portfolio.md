@@ -24,6 +24,6 @@ description: "Explore Javi Aparicio’s photography portfolio, showcasing stunni
   <span class="nav" id="next"></span>
   <span class="close" id="close"></span>
   <span class="fullscreen" id="fullscreen">
-    <i class="fas fa-expand"></i>
+    <i>+</i>
   </span>
 </div>

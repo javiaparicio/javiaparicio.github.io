@@ -105,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.addEventListener("fullscreenchange", function () {
       if (document.fullscreenElement) {
-        fullscreenButton.innerHTML = '<i class="fas fa-compress"></i>';
+        fullscreenButton.innerHTML = "<i>-</i>";
       } else {
-        fullscreenButton.innerHTML = '<i class="fas fa-expand"></i>';
+        fullscreenButton.innerHTML = "<i>+</i>";
       }
     });
   } else {
