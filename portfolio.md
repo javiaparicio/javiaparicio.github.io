@@ -12,7 +12,7 @@ description: "Explore Javi Aparicio’s photography portfolio, showcasing stunni
       {% if image.extname == ".webp" %}
         {% assign file_time = site.time | date: '%s' %}
         {% assign hash = file_time | MD5 %}
-        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="{{ image.basename }}" class="gallery-image lazy">
+        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="image {{ image.basename }} of the portfolio" class="gallery-image lazy">
       {% endif %}
     {% endif %}
   {% endfor %}
