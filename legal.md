@@ -16,7 +16,7 @@ description: "Legal information for Javi Aparicio Foto. Find contact details, co
 
 **Email**: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
 
-**Phone**: +41 78 790 97 19
+**Phone**: +41 77 231 12 63
 
 **Commercial Register Number**: CHE-482.759.955
 
@@ -29,4 +29,4 @@ For any questions or concerns regarding this Legal Page, please contact us at:
 
 **Email**: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
 
-**Phone**: +41 78 790 97 19
+**Phone**: +41 77 231 12 63
