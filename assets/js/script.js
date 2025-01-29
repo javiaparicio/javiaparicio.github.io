@@ -98,6 +98,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  if (lightboxImg) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lightboxImg.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    lightboxImg.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchEndX < touchStartX) showNextImage();
+      if (touchEndX > touchStartX) showPrevImage();
+    });
+  }
+
   const isMobile = window.innerWidth <= 768;
   if (!isMobile) {
     if (fullscreenButton) {
