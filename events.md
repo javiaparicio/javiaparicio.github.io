@@ -1,14 +1,14 @@
 ---
 layout: default
-title: "Photography Portfolio"
-permalink: /portfolio/
-description: "Explore Javi Aparicio’s photography portfolio, showcasing stunning portraits. See the moments that define creativity and artistry."
+title: "Event Photography Portfolio"
+permalink: /events/
+description: "Explore Javi Aparicio Foto's event photography portfolio. From corporate gatherings to cultural events, discover how moments are captured beautifully."
 ---
 
 <div class="gallery">
   {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
-    {% if image.path contains 'assets/images/portfolio' %}
+    {% if image.path contains 'assets/images/portfolio/events' %}
       {% if image.extname == ".webp" %}
         {% assign file_time = site.time | date: '%s' %}
         {% assign hash = file_time | MD5 %}
