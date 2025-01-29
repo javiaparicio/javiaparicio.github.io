@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Event Photography Portfolio"
+title: "Events Photography Portfolio"
 permalink: /events/
-description: "Explore Javi Aparicio Foto's event photography portfolio. From corporate gatherings to cultural events, discover how moments are captured beautifully."
+description: "Explore Javi Aparicio Foto's events photography portfolio. From corporate gatherings to cultural events, discover how moments are captured beautifully."
 ---
 
 <div class="gallery">
