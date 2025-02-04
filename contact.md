@@ -5,8 +5,9 @@ permalink: /contact/
 description: "Get in touch with Javi Aparicio Foto for professional photography services in Bern, Switzerland. Contact us to schedule your next portrait session or inquire about custom projects."
 ---
 
+# Contact me
+
 <div class="contactme">
-<h2>Contact me</h2>
 
 <p>Fill out the form below to get in touch with me.</p>
 <p>Füllen Sie das untenstehende Formular aus, um mit mir in Kontakt zu treten.</p>

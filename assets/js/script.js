@@ -105,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.addEventListener("fullscreenchange", function () {
       if (document.fullscreenElement) {
-        fullscreenButton.innerHTML = "<i>-</i>";
+        fullscreenButton.innerHTML = "<i aria-label=\"Exit fullscreen\">-</i>";
       } else {
-        fullscreenButton.innerHTML = "<i>+</i>";
+        fullscreenButton.innerHTML = "<iaria-label=\"Enter fullscreen\">+</i>";
       }
     });
   } else {

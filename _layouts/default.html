@@ -22,6 +22,10 @@
             href="/apple-touch-icon.png"
         />
         <meta name="apple-mobile-web-app-title" content="Javi Aparicio Foto" />
+        <title>
+            {%if page.title %} {{ page.title }} {% else %} {{ site.title }}
+            {%endif %}
+        </title>
         <link rel="manifest" href="/site.webmanifest" />
         <link
             rel="stylesheet"
@@ -46,7 +50,7 @@
             />
         </noscript>
 
-        {% seo %}
+        {% seo title=false %}
     </head>
     <body>
         <div class="container">

@@ -5,6 +5,8 @@ permalink: /portraits/
 description: "Explore Javi Aparicio’s portraits portfolio, showcasing stunning portraits. See the moments that define creativity and artistry."
 ---
 
+# Portraits Portfolio
+
 <div class="gallery">
   {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
@@ -19,11 +21,11 @@ description: "Explore Javi Aparicio’s portraits portfolio, showcasing stunning
 </div>
 
 <div class="lightbox" id="lightbox">
-  <span class="nav" id="prev"></span>
+  <span class="nav" id="prev" aria-label="Previous"></span>
   <img id="lightbox-img">
-  <span class="nav" id="next"></span>
-  <span class="close" id="close"></span>
+  <span class="nav" id="next" aria-label="Next"></span>
+  <span class="close" id="close" aria-label="Close"></span>
   <span class="fullscreen" id="fullscreen">
-    <i>+</i>
+    <i aria-label="Enter fullscreen">+</i>
   </span>
 </div>

@@ -5,8 +5,9 @@ permalink: /pricing/
 description: "Learn about Javi Aparicio Foto’s photography packages in Bern. Transparent pricing for portraits, professional headshots, and personalized sessions. Book your session today!"
 ---
 
+# Portrait Photography Packages
+
 <div class="pricing-content">
-    <h1>Portrait Photography Packages</h1>
     <p>Choose the perfect package for your needs. My sessions are designed to provide a relaxed and professional experience with stunning results.</p>
     <p>All sessions are available by appointment only. Contact me to book your preferred time.</p>
 

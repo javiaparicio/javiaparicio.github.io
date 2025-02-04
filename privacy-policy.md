@@ -11,7 +11,7 @@ Your privacy is important to us. This Privacy Policy outlines how we collect, us
 
 ---
 
-### **1. Data Collection**
+## **1. Data Collection**
 We collect the following data through our contact form:
 - Name
 - Email address
@@ -27,7 +27,7 @@ For more information, please refer to [Formspree’s Privacy Policy](https://for
 
 ---
 
-### **2. Use of Google reCAPTCHA**
+## **2. Use of Google reCAPTCHA**
 We use Google reCAPTCHA on our contact form to prevent spam and abuse. This service is provided by Google LLC and helps verify that the form submission is made by a human.
 
 When you use our contact form, Google reCAPTCHA may collect:
@@ -42,7 +42,7 @@ For more information, please refer to:
 
 ---
 
-### **3. Data Usage**
+## **3. Data Usage**
 We use your data to:
 - Respond to inquiries and provide services.
 - Improve our communication and user experience.
@@ -51,12 +51,12 @@ We **do not sell or distribute your data** to unauthorized third parties.
 
 ---
 
-### **4. Data Protection**
+## **4. Data Protection**
 We implement appropriate security measures to protect your personal data. While we trust third-party providers to manage data securely, we are not responsible for breaches on their end.
 
 ---
 
-### **5. Your Rights**
+## **5. Your Rights**
 You have the right to:
 - Request access to your data.
 - Request correction or deletion of your data.

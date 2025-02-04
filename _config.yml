@@ -9,6 +9,7 @@ author:
   name: Javi Aparicio
   bio: Portrait photographer based in Bern, Switzerland.
   email: info@javiapariciofoto.ch
+  url: https://javiapariciofoto.ch
 
 # Build settings
 theme: minima
@@ -33,13 +34,13 @@ markdown: kramdown
 # their entries' file path in the `include:` list.
 #
 exclude:
-   - .sass-cache/
-   - .jekyll-cache/
-   - gemfiles/
-   - Gemfile
-   - Gemfile.lock
-   - node_modules/
-   - vendor/bundle/
-   - vendor/cache/
-   - vendor/gems/
-   - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
