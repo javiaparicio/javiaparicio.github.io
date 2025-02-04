@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Javi Aparicio Foto – Portrait Photographer in Bern, Switzerland"
-description: "Discover Javi Aparicio Foto, a professional portrait and travel photographer based in Bern, Switzerland. Capturing timeless moments with creativity and care. Available by appointment only."
+title: "Javi Aparicio Foto – Photographer in Bern, Switzerland"
+description: "Discover Javi Aparicio Foto, a professional portrait and travel photographer based in Bern, Switzerland. Available by appointment only."
 ---
 
 {% assign file_time = site.time | date: '%s' %}

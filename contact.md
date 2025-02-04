@@ -2,7 +2,7 @@
 layout: default
 title: "Contact Javi Aparicio Foto – Book Your Photography Session"
 permalink: /contact/
-description: "Get in touch with Javi Aparicio Foto for professional photography services in Bern, Switzerland. Contact us to schedule your next portrait session or inquire about custom projects."
+description: "Contact Javi Aparicio Foto for professional photography in Bern. Schedule your portrait session or inquire about custom projects today!"
 ---
 
 # Contact me
