@@ -105,8 +105,8 @@ body {
 
     .mobile-menu ul li {
         margin-bottom: 10px;
-        padding-left: 20px;
         padding-bottom: 20px;
+        text-align: center;
     }
 
     .mobile-menu ul li a {
@@ -125,7 +125,7 @@ body {
 
     li.mobile-socials_item {
         display: inline-block;
-        margin-left: 2px;
+        padding: 20px;
 
         &:first-child {
             margin-left: 0;
