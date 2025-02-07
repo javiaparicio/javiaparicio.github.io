@@ -39,4 +39,4 @@ Javi Aparicio Foto is not liable for delays or failures caused by circumstances 
 ## Contact Information
 For any inquiries about these terms, please contact:
 **Email**: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
-**Phone**: +41 78 790 97 19
+**Phone**: +41 77 231 12 63
