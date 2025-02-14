@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll("img.lazy");
+  const path = window.location.pathname;
 
+  // Lazy Loading Images
+  const lazyImages = document.querySelectorAll("img.lazy");
   if ("IntersectionObserver" in window) {
     const lazyImageObserver = new IntersectionObserver(function (
       entries,
@@ -16,20 +18,41 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    lazyImages.forEach(function (lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
+    lazyImages.forEach((lazyImage) => lazyImageObserver.observe(lazyImage));
   } else {
-    // Fallback for browsers without IntersectionObserver support
-    lazyImages.forEach(function (lazyImage) {
+    lazyImages.forEach((lazyImage) => {
       lazyImage.src = lazyImage.dataset.src;
       lazyImage.classList.remove("lazy");
     });
   }
 
-  // Lightbox Functionality
+  // Lightbox Functionality (Only if needed)
+  if (document.getElementById("lightbox")) {
+    setupLightbox();
+  }
+
+  // Mobile Menu
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+  }
+
+  // Contact Form Autofill (Only on contact page)
+  if (path.includes("/contact")) {
+    prefillContactForm();
+  }
+});
+
+// ----------------------
+// LIGHTBOX FUNCTION
+// ----------------------
+function setupLightbox() {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
+  const fullscreenButton = document.getElementById("fullscreen");
   let galleryImages = Array.from(
     document.querySelectorAll(".gallery-image"),
   ).reverse();
@@ -42,26 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   galleryImages.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      showImage(index);
-    });
+    img.addEventListener("click", () => showImage(index));
   });
 
-  const prevImage = document.getElementById("prev");
-  if (prevImage) {
-    prevImage.addEventListener("click", showPrevImage);
-  }
-  const nextImage = document.getElementById("next");
-  if (nextImage) {
-    nextImage.addEventListener("click", showNextImage);
-  }
-  const closeImage = document.getElementById("close");
-  if (closeImage) {
-    closeImage.addEventListener("click", () =>
-      lightbox.classList.remove("show"),
-    );
-  }
-  const fullscreenButton = document.getElementById("fullscreen");
+  document.getElementById("prev")?.addEventListener("click", showPrevImage);
+  document.getElementById("next")?.addEventListener("click", showNextImage);
+  document
+    .getElementById("close")
+    ?.addEventListener("click", () => lightbox.classList.remove("show"));
 
   function showPrevImage() {
     currentImageIndex =
@@ -81,57 +92,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("keydown", function (event) {
     if (lightbox?.classList.contains("show")) {
-      if (event.key === "ArrowLeft") {
-        showPrevImage();
-      } else if (event.key === "ArrowRight") {
-        showNextImage();
-      } else if (event.key === "Escape" || event.code === "Space") {
+      if (event.key === "ArrowLeft") showPrevImage();
+      else if (event.key === "ArrowRight") showNextImage();
+      else if (event.key === "Escape" || event.code === "Space")
         lightbox.classList.remove("show");
-      }
     }
   });
-  if (lightbox) {
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.remove("show");
-      }
-    });
-  }
 
-  const isMobile = window.innerWidth <= 768;
-  if (!isMobile) {
-    if (fullscreenButton) {
-      fullscreenButton.addEventListener("click", toggleFullScreen);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("show");
     }
-    document.addEventListener("fullscreenchange", function () {
-      if (document.fullscreenElement) {
-        fullscreenButton.innerHTML = "<i aria-label=\"Exit fullscreen\">-</i>";
-      } else {
-        fullscreenButton.innerHTML = "<iaria-label=\"Enter fullscreen\">+</i>";
-      }
+  });
+
+  // Fullscreen Mode
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled) {
+      fullscreenButton.style.display = "none";
+    } else {
+      fullscreenButton.addEventListener("click", toggleFullScreen);
+      document.addEventListener("fullscreenchange", updateFullscreenIcon);
+    }
+  }
+}
+
+function toggleFullScreen() {
+  const lightbox = document.getElementById("lightbox");
+  if (!document.fullscreenElement) {
+    lightbox?.requestFullscreen().catch((err) => {
+      console.error("Fullscreen request failed", err);
     });
   } else {
-    if (fullscreenButton) {
-      fullscreenButton.style.display = "none";
-    }
+    document.exitFullscreen();
   }
+}
 
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("show");
-  });
-
-  function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-      lightbox?.requestFullscreen().catch((err) => {
-        if (fullscreenButton) {
-          fullscreenButton.style.display = "none";
-        }
-      });
+function updateFullscreenIcon() {
+  const fullscreenButton = document.getElementById("fullscreen");
+  if (fullscreenButton) {
+    if (document.fullscreenElement) {
+      fullscreenButton.innerHTML =
+        "<i aria-label='Exit fullscreen' class='fullscreenbutton'>🔲</i>";
     } else {
-      document.exitFullscreen();
+      fullscreenButton.innerHTML =
+        "<i aria-label='Enter fullscreen' class='fullscreenbutton'>⛶</i>";
     }
   }
-});
+}
+
+// ----------------------
+// CONTACT FORM FUNCTION
+// ----------------------
+function prefillContactForm() {
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  const subjectField = document.getElementById("subject");
+  if (subjectField) {
+    const subjectValue = getQueryParam("subject");
+    if (subjectValue) {
+      subjectField.value = decodeURIComponent(subjectValue);
+    }
+  }
+}

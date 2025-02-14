@@ -26,6 +26,6 @@ description: "Explore Javi Aparicio’s portraits portfolio, showcasing stunning
   <span class="nav" id="next" aria-label="Next"></span>
   <span class="close" id="close" aria-label="Close"></span>
   <span class="fullscreen" id="fullscreen">
-    <i aria-label="Enter fullscreen">+</i>
+    <i aria-label="Enter fullscreen">⛶</i>
   </span>
 </div>

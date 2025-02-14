@@ -15,10 +15,10 @@ description: "Contact Javi Aparicio Foto for professional photography in Bern. S
 
 <form action="{{ site.data.settings.contact_settings.form_action }}" method="POST">
   <label for="name">Name:*</label>
-  <input type="text" id="name" name="name" required>
+  <input type="text" id="name" name="name" autocomplete="name" required>
 
   <label for="email">Email:*</label>
-  <input type="email" id="email" name="_replyto" required>
+  <input type="email" id="email" name="_replyto" autocomplete="email" required>
 
   <label for="subject">Subject:*</label>
   <input type="text" id="subject" name="subject" required>
