@@ -86,22 +86,31 @@
                 "priceRange": "$$",
                 "openingHours": "Mo-Su 17:00-21:00",
                 "sameAs": ["https://www.instagram.com/javiapariciofoto/"],
-                "serviceArea": {
-                    "@type": "Place",
-                    "name": "Bern, Switzerland"
-                },
-                "makesOffer": [
-                    {
-                        "@type": "Service",
-                        "name": "Portrait Photography",
-                        "description": "Professional portrait photography in Bern for individuals, couples, and families."
+                "areaServed": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 46.9647184,
+                        "longitude": 7.4527444
                     },
-                    {
-                        "@type": "Service",
-                        "name": "Event Photography",
-                        "description": "High-quality event photography for corporate events, concerts, and private gatherings."
-                    }
-                ]
+                    "geoRadius": 100000
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Photography Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Service",
+                            "name": "Portrait Photography",
+                            "description": "Professional portrait photography in Bern for individuals, couples, and families."
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Event Photography",
+                            "description": "High-quality event photography for corporate events, concerts, and private gatherings."
+                        }
+                    ]
+                }
             }
         </script>
     </head>
