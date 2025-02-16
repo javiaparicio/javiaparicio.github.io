@@ -20,7 +20,7 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
             <li>Basic retouching</li>
             <li>Delivery within 3 business days</li>
         </ul>
-        <a href="/contact?subject=Basic Portrait Session" class="button">Book now</a>
+        <a href="/contact/?subject=Basic Portrait Session" class="button">Book now</a>
     </div>
 
     <div class="package">
@@ -33,7 +33,7 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
             <li>Enhanced retouching (skin smoothing, stray hair removal)</li>
             <li>Delivery within 7 business days</li>
         </ul>
-        <a href="/contact?subject=Standard Portrait Session" class="button">Book now</a>
+        <a href="/contact/?subject=Standard Portrait Session" class="button">Book now</a>
     </div>
 
     <div class="package">
@@ -46,7 +46,7 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
             <li>A 20x30cm fine art print of your favorite photo</li>
             <li>Priority delivery within 5 business days</li>
         </ul>
-        <a href="/contact?subject=Premium Portrait Experience" class="button">Book now</a>
+        <a href="/contact/?subject=Premium Portrait Experience" class="button">Book now</a>
     </div>
 
     <div class="package">
@@ -64,7 +64,7 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
         <p>
             With a professional yet relaxed approach, I help clients feel at ease during their sessions. My focus on personalized services and high-quality editing ensures timeless portraits that you'll cherish forever.
         </p>
-        <a href="/contact" class="button">Get in Touch</a>
+        <a href="/contact/" class="button">Get in Touch</a>
     </div>
 
     <!-- Custom Projects Section -->
@@ -72,6 +72,6 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
         <h2>Looking for Something Different?</h2>
         <p>If you're interested in travel photography, astrophotography, or any other custom photography project, I'd be thrilled to collaborate with you to create stunning, tailored images.</p>
         <p>Contact me for a consultation, and we can discuss your vision, goals, and requirements for your unique project.</p>
-        <a href="/contact?subject=Request Custom Quote" class="button">Request a Custom Quote</a>
+        <a href="/contact/?subject=Request Custom Quote" class="button">Request a Custom Quote</a>
     </div>
 </div>
