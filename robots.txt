@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /60c897ba159d47ef82a9edfa68a80dc7.txt
+
+Sitemap: https://javiapariciofoto.ch/sitemap.xml
