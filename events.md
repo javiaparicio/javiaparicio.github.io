@@ -42,4 +42,4 @@ Browse my portfolio to see how I approach concerts, corporate events, and specia
 
 ## Book Event Photography Today
 
-Need professional photography for your next event? Let’s document it! [Contact me](/contact) to discuss your project.
+Need professional photography for your next event? Let’s document it! [Contact me](/contact/) to discuss your project.
