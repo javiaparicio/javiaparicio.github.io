@@ -17,6 +17,10 @@ Based in Bern, I work with individuals, professionals, and creatives who want mo
 
 Browse my portfolio to see how I capture personality and emotion through portrait photography.
 
+<br>
+<hr>
+<br>
+
 <div class="gallery">
   {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
@@ -29,6 +33,10 @@ Browse my portfolio to see how I capture personality and emotion through portrai
     {% endif %}
   {% endfor %}
 </div>
+
+<br>
+<hr>
+<br>
 
 ## Book Your Portrait Session Today
 

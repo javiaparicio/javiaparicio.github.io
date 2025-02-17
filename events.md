@@ -17,6 +17,10 @@ I work discreetly to document real emotions, interactions, and key highlights—
 
 Browse my portfolio to see how I approach concerts, corporate events, and special occasions.
 
+<br>
+<hr>
+<br>
+
 <div class="gallery">
   {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
@@ -39,6 +43,10 @@ Browse my portfolio to see how I approach concerts, corporate events, and specia
     <i aria-label="Enter fullscreen">⛶</i>
   </span>
 </div>
+
+<br>
+<hr>
+<br>
 
 ## Book Event Photography Today
 
