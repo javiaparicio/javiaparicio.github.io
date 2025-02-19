@@ -1,7 +1,6 @@
 ---
-layout: forward
-target: https://javiapariciofoto.ch/linktree/
-permalink: scanme
+layout: linktree
+permalink: /linktree/
 description: Portrait photographer located in Bern, Switzerland
 sitemap: false
 ---
