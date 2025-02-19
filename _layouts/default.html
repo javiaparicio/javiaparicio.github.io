@@ -1,59 +1,14 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- HTML Meta Tags -->
-        <title>
-            {%if page.title %} {{ page.title }} {% else %} {{ site.title }}
-            {%endif %}
-        </title>
-        <meta name="description" content="{{ page.description }}" />
-        <meta name="author" content="{{ site.author.name }}" />
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-        <!-- End HTML Meta Tags -->
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="{{ page.title }}" />
-        <meta property="og:description" content="{{ page.description }}" />
-        <meta
-            property="og:image"
-            content="https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp"
-        />
-        <meta property="og:site_name" content="{{ site.title }}" />
-        <meta property="og:locale" content="{{ site.locale }}" />
-        <!-- End Facebook Meta Tags -->
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="javiapariciofoto.ch" />
-        <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
-        <meta property="twitter:title" content="{{ page.title }}" />
-        <meta name="twitter:description" content="{{ page.description }}" />
-        <meta
-            name="twitter:image"
-            content="https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp"
-        />
-        <!-- End Twitter Meta Tags -->
+        {% include metatags.html %}
         <meta
             name="ahrefs-site-verification"
             content="4704889a5ffe2bdc50576fc6ddee24b63e59ac71720cf5536d7a8fa7ed7c1723"
         />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            type="image/png"
-            href="/favicon-96x96.png"
-            sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <meta name="apple-mobile-web-app-title" content="Javi Aparicio Foto" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {% include favicon.html %}
         <link
             rel="stylesheet"
             href="{{ '/assets/css/main.css' | relative_url }}"
@@ -62,57 +17,7 @@
             src="{{ '/assets/js/script.js' | relative_url }}"
             defer
         ></script>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "Javi Aparicio Foto",
-                "image": "https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp",
-                "@id": "https://javiapariciofoto.ch/",
-                "url": "https://javiapariciofoto.ch/",
-                "telephone": "+41 77 231 12 63",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Stauffacherstrasse 44",
-                    "addressLocality": "Bern",
-                    "postalCode": "3014",
-                    "addressCountry": "CH"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "46.9647184",
-                    "longitude": "7.4527444"
-                },
-                "priceRange": "$$",
-                "openingHours": "Mo-Su 17:00-21:00",
-                "sameAs": ["https://www.instagram.com/javiapariciofoto/"],
-                "areaServed": {
-                    "@type": "GeoCircle",
-                    "geoMidpoint": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 46.9647184,
-                        "longitude": 7.4527444
-                    },
-                    "geoRadius": 100000
-                },
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Photography Services",
-                    "itemListElement": [
-                        {
-                            "@type": "Service",
-                            "name": "Portrait Photography",
-                            "description": "Professional portrait photography in Bern for individuals, couples, and families."
-                        },
-                        {
-                            "@type": "Service",
-                            "name": "Event Photography",
-                            "description": "High-quality event photography for corporate events, concerts, and private gatherings."
-                        }
-                    ]
-                }
-            }
-        </script>
+        {% include ldjson.html %}
     </head>
     <body>
         <div class="container">
