@@ -6,15 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Javi Aparicio Linktree</title>
         <style>
-            @font-face {
-                font-family: "Roboto Mono";
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url("/assets/fonts/roboto_mono.woff") format("woff");
-            }
             body {
-                font-family: "Roboto Mono", sans-serif;
+                font-family: sans-serif;
                 font-weight: 300;
                 font-style: normal;
                 color: black;
@@ -28,7 +21,6 @@
                 position: relative;
                 overflow: hidden;
             }
-
             body::before {
                 content: "";
                 position: absolute;
@@ -110,7 +102,7 @@
                     background 0.3s ease,
                     transform 0.2s ease-in-out;
                 font-size: clamp(16px, 4vw, 18px);
-                font-weight: bold;
+                font-weight: 500;
                 box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
                 text-align: center;
                 height: auto;
