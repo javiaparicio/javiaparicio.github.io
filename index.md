@@ -10,7 +10,7 @@ description: "Discover Javi Aparicio Foto, a professional portrait and travel ph
 <h1>Javi Aparicio - Photographer</h1>
 
 <div>
-<img src="assets/images/about/001.webp" alt="Javi Aparicio, a professional portrait photographer in Bern, Switzerland" width="185" height="169" loading="lazy"/>
+<img src="assets/images/about/001.webp" alt="Javi Aparicio, a professional portrait photographer in Bern, Switzerland" width="185" height="169" class="about-image" loading="lazy"/>
 </div>
 
 <div class="aboutme">
@@ -44,5 +44,5 @@ description: "Discover Javi Aparicio Foto, a professional portrait and travel ph
     <p>Javi Aparicio</p>
 </div>
 <div>
-<img src="assets/images/about/015.webp" alt="Javi Aparicio, a professional portrait photographer in Bern, Switzerland" width="300" height="200" loading="lazy"/>
+<img src="assets/images/about/015.webp" alt="Javi Aparicio, a professional portrait photographer in Bern, Switzerland" width="300" height="200" class="about-image" loading="lazy"/>
 </div>
