@@ -10,6 +10,7 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
 <div class="pricing-content">
     <p>Choose the perfect package for your needs. My sessions are designed to provide a relaxed and professional experience with stunning results.</p>
     <p>All sessions are available by appointment only. Contact me to book your preferred time.</p>
+    <p>View my <a href="/portraits/" class="button">portfolio</a> to see examples of my work.</p>
 
     <div class="package">
         <h2>Basic Portrait Session – CHF 150</h2>
@@ -58,6 +59,7 @@ description: "Discover Javi Aparicio Foto’s pricing for portrait photography i
             <li><strong>Additional Shooting Time:</strong> CHF 80 per 30 minutes</li>
         </ul>
     </div>
+    <p>Ready to book a session? <a href="/contact/" class="button">Contact me</a>.</p>
 
     <div class="why-choose-me">
         <h2>Why Choose Me?</h2>

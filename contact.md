@@ -10,8 +10,8 @@ description: "Contact Javi Aparicio Foto for professional photography in Bern. S
 <div class="contactme">
 
 <p>Fill out the form below to get in touch with me.</p>
-<p>Füllen Sie das untenstehende Formular aus, um mit mir in Kontakt zu treten.</p>
-<p>Rellena el siguiente formulario para ponerte en contacto conmigo.</p>
+<p>Before reaching out, take a look at my <a href="/portraits/" class="button">portfolio</a> to see examples of my work.</p>
+<p>For pricing details, visit my <a href="/pricing/" class="button">pricing page</a>.</p>
 
 <form action="{{ site.data.settings.contact_settings.form_action }}" method="POST">
   <label for="name">Name:*</label>
