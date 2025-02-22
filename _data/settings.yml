@@ -19,6 +19,18 @@ social_links:
     url: https://wa.me/+41772311263
     icon: icon-whatsapp
 
+menu:
+  - name: Home
+    url: /
+  - name: Portraits
+    url: /portraits/
+  - name: Events
+    url: /events/
+  - name: Pricing
+    url: /pricing/
+  - name: Contact
+    url: /contact/
+
 color_settings:
   background_color: "#ffffff"
   background_alt_color: "#f7f9fa"

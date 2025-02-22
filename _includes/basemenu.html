@@ -1,7 +1,7 @@
 <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/portraits/">Portraits</a></li>
-    <li><a href="/events/">Events</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
-    <li><a href="/contact/">Contact</a></li>
+    {% for menuelement in site.data.settings.menu %}
+    <li>
+        <a href="{{ menuelement.url }}">{{ menuelement.name }}</a>
+    </li>
+    {% endfor %}
 </ul>
