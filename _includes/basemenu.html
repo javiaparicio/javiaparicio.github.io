@@ -1,7 +1,19 @@
 <ul>
     {% for menuelement in site.data.settings.menu %}
     <li>
-        <a href="{{ menuelement.url }}">{{ menuelement.name }}</a>
+        <a href="{{ menuelement.url[site.lang] }}">{{ menuelement.name[site.lang] }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul class="language_selector">
+    {% for lang in site.languages %}
+    <li>
+        {% if lang == site.default_lang %}
+        <a href="{{ page.url | remove: page.lang | remove: '/' | prepend: '/' }}">{{ lang | upcase }}</a>
+        {% else %}
+        <a href="{{ page.url | remove: page.lang | remove: '/' | prepend: '/' | prepend: lang | prepend: '/' }}">{{ lang | upcase }}</a>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>

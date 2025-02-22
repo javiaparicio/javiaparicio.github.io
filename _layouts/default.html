@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.lang | default: site.default_lang }}">
     <head>
         {% include metatags.html %}
         <meta
@@ -11,10 +11,10 @@
         {% include favicon.html %}
         <link
             rel="stylesheet"
-            href="{{ '/assets/css/main.css' | relative_url }}"
+            href="{{ '/assets/css/main.css' | absolute_url }}"
         />
         <script
-            src="{{ '/assets/js/script.js' | relative_url }}"
+            src="{{ '/assets/js/script.js' | absolute_url }}"
             defer
         ></script>
         {% include ldjson.html %}
