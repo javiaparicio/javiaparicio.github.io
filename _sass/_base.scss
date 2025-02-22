@@ -85,8 +85,8 @@ body {
         background-color: #f8f8f8;
         background-repeat: no-repeat;
         background-position: center top 20px;
-        background-size: auto; /* Adjust if needed */
-        padding-top: 200px;
+        background-size: auto;
+        padding-top: 280px;
         padding-bottom: 40px;
 
         display: none;
@@ -102,7 +102,7 @@ body {
         font-family: "Roboto Mono", sans-serif;
         font-weight: 300;
         font-style: normal;
-        text-align: center; /* Center-align all content */
+        text-align: center;
     }
 
     .mobile-menu.show {
@@ -112,7 +112,6 @@ body {
         align-items: center;
     }
 
-    /* Menu Styling */
     .menu-list {
         list-style-type: none;
         padding: 0;
@@ -121,7 +120,7 @@ body {
     }
 
     .menu-list li {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         padding-bottom: 20px;
     }
 
@@ -131,16 +130,16 @@ body {
         font-weight: 300;
         font-style: normal;
         color: #333;
+        font-size: 18px;
     }
 
-    /* Socials Styling */
     .mobile-socials {
         list-style: none;
         padding: 0;
-        margin: 20px 0; /* Add space between language selector and socials */
+        margin: 40px 0;
         display: flex;
         justify-content: center;
-        gap: 10px; /* Space between social icons */
+        gap: 20px;
     }
 
     .mobile-socials_item {
@@ -151,12 +150,12 @@ body {
         position: relative;
         display: block;
         border-radius: 100%;
-        background: #333; /* Adjust color as needed */
-        font-size: 17px;
+        background: #333;
+        font-size: 20px;
         line-height: 1;
-        color: #f8f8f8; /* Adjust color as needed */
-        width: 35px;
-        height: 35px;
+        color: #f8f8f8;
+        width: 40px;
+        height: 40px;
         text-align: center;
     }
 
@@ -168,7 +167,7 @@ body {
     }
 
     .mobile-socials_item_link:hover {
-        background: #ff6347; /* Adjust hover color as needed */
+        background: #ff6347;
         color: #fff;
     }
 
@@ -184,9 +183,10 @@ body {
 .language_selector {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 40px 0;
     display: flex;
-    gap: 8px;
+    justify-content: center;
+    gap: 15px;
 }
 
 .language_selector li {
@@ -203,9 +203,9 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .language_selector a:hover {
     color: #007bff;
 }
-
