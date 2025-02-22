@@ -94,9 +94,7 @@ body {
         top: 0;
         right: 0;
         width: 100%;
-        justify-content: center;
-        align-items: center;
-        height: 80%;
+        height: 100%;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         transition: transform 0.3s ease;
@@ -104,31 +102,30 @@ body {
         font-family: "Roboto Mono", sans-serif;
         font-weight: 300;
         font-style: normal;
+        text-align: center; /* Center-align all content */
     }
 
     .mobile-menu.show {
         transform: translateX(0);
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .mobile-menu ul {
+    /* Menu Styling */
+    .menu-list {
         list-style-type: none;
         padding: 0;
         margin: 0;
         width: 100%;
     }
 
-    .mobile-menu > ul > .menutitle {
-        font-weight: bold;
-    }
-
-    .mobile-menu ul li {
+    .menu-list li {
         margin-bottom: 10px;
         padding-bottom: 20px;
-        text-align: center;
     }
 
-    .mobile-menu ul li a {
+    .menu-list li a {
         text-decoration: none;
         font-family: "Roboto Mono", sans-serif;
         font-weight: 300;
@@ -136,47 +133,43 @@ body {
         color: #333;
     }
 
-    ul.mobile-socials {
+    /* Socials Styling */
+    .mobile-socials {
         list-style: none;
+        padding: 0;
+        margin: 20px 0; /* Add space between language selector and socials */
+        display: flex;
         justify-content: center;
-        display: block;
+        gap: 10px; /* Space between social icons */
     }
 
-    li.mobile-socials_item {
+    .mobile-socials_item {
         display: inline-block;
-        padding: 20px;
-
-        &:first-child {
-            margin-left: 0;
-        }
     }
 
     .mobile-socials_item_link {
         position: relative;
         display: block;
         border-radius: 100%;
-        background: $text-light-color;
+        background: #333; /* Adjust color as needed */
         font-size: 17px;
         line-height: 1;
-        color: $background-color;
+        color: #f8f8f8; /* Adjust color as needed */
+        width: 35px;
+        height: 35px;
+        text-align: center;
+    }
 
-        @include mq(tabletp) {
-            width: 35px;
-            height: 35px;
-            font-size: 20px;
-        }
+    .mobile-socials_item_link span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-        span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            @include translate(-50%, -52%);
-        }
-
-        &:hover {
-            background: $accent-color;
-            color: $background-color;
-        }
+    .mobile-socials_item_link:hover {
+        background: #ff6347; /* Adjust hover color as needed */
+        color: #fff;
     }
 
     .gallery {
