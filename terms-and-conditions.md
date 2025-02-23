@@ -1,8 +1,16 @@
 ---
 layout: default
-title: "Terms and Conditions (AGB) – Javi Aparicio Foto"
+title: ""
 permalink: /terms-and-conditions/
-description: "Review the Terms and Conditions (AGB) for Javi Aparicio Foto. Learn about our booking policies, payment terms, and image usage rights."
+description: ""
+title:
+  en: "Terms and Conditions (AGB) – Javi Aparicio Foto"
+  es: "Términos y Condiciones (AGB) – Javi Aparicio Foto"
+  de: "Allgemeine Geschäftsbedingungen (AGB) – Javi Aparicio Foto"
+description:
+  en: "Review the Terms and Conditions (AGB) for Javi Aparicio Foto. Learn about our booking policies, payment terms, and image usage rights."
+  es: "Revisa los Términos y Condiciones (AGB) de Javi Aparicio Foto. Infórmate sobre nuestras políticas de reserva, términos de pago y derechos de uso de las imágenes."
+  de: "Überprüfen Sie die Allgemeinen Geschäftsbedingungen (AGB) von Javi Aparicio Foto. Erfahren Sie mehr über unsere Buchungsrichtlinien, Zahlungsbedingungen und Bildnutzungsrechte."
 ---
 
 {% tf terms-and-conditions.md %}

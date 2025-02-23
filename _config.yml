@@ -1,16 +1,35 @@
-title: Javi Aparicio Foto
+languages: ["en", "de", "es"]
+default_lang: "en"
+
+title:
+  en: "Javi Aparicio Foto - Professional Photography"
+  es: "Javi Aparicio Foto - Fotografía Profesional"
+  de: "Javi Aparicio Foto - Professionelle Fotografie"
+
+description:
+    en: "Capturing authentic moments through professional photography."
+    es: "Capturando momentos auténticos a través de la fotografía profesional."
+    de: "Authentische Momente durch professionelle Fotografie festhalten."
+
 email: info@javiapariciofoto.ch
-description: Portrait photographer located in Bern, Switzerland.
+
+locale:
+  en: "en_US"
+  es: "es_ES"
+  de: "de_DE"
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://javiapariciofoto.ch" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
 author:
   name: Javi Aparicio
-  bio: Portrait photographer based in Bern, Switzerland.
+  bio:
+    en: "Portrait photographer based in Bern, Switzerland."
+    es: "Fotógrafo de retratos con base en Berna, Suiza."
+    de: "Porträtfotograf mit Sitz in Bern, Schweiz."
   email: info@javiapariciofoto.ch
   url: https://javiapariciofoto.ch
-locale: "en_US"
 
 # Build settings
 theme: minima
@@ -19,8 +38,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-multiple-languages-plugin
 
-languages: ["en", "de", "es"]
-default_lang: "en"
+
 exclude_from_localization: ["assets"]
 
 sass:
