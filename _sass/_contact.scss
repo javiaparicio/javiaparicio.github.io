@@ -1,12 +1,14 @@
 .contactme {
-    width: 60%;
+    width: 60%; /* Keep the width as needed */
     background-color: #ffffff;
     border-radius: 5px;
+    margin-left: 0; /* Align the container to the left */
+    padding: 0px; /* Add padding for better spacing */
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 600px; /* Keep the max-width for the form */
+    margin: 0; /* Remove auto margin to stop centering */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
