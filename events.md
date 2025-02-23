@@ -7,8 +7,8 @@ title:
   de: "Eventfotografie-Portfolio von Javi Aparicio – Bern, CH"
 description:
   en: "Explore Javi Aparicio Foto's events photography portfolio. From corporate gatherings to cultural events, discover how moments are captured beautifully."
-  es: "Explora el portafolio de fotografía de eventos de Javi Aparicio Foto. Desde reuniones corporativas hasta eventos culturales, descubre cómo se capturan momentos de manera hermosa."
-  de: "Entdecken Sie das Eventfotografie-Portfolio von Javi Aparicio Foto. Von Firmenveranstaltungen bis hin zu kulturellen Events – erleben Sie, wie besondere Momente wunderschön festgehalten werden."
+  es: "Explora el portafolio de fotografía de eventos de Javi Aparicio Foto. Desde reuniones corporativas hasta eventos culturales, capturando momentos únicos."
+  de: "Entdecken Sie das Eventfotografie-Portfolio von Javi Aparicio Foto. Von Firmen- bis kulturellen Events – erleben Sie, wie besondere Momente festgehalten werden."
 ---
 
 {% tf events.md %}
