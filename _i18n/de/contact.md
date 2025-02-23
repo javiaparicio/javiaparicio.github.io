@@ -3,8 +3,8 @@
 <div class="contactme">
 
 <p>Füllen Sie das untenstehende Formular aus, um mit mir in Kontakt zu treten.</p>
-<p>Bevor Sie sich melden, werfen Sie einen Blick in mein <a href="/portraits/" class="button">Portfolio</a>, um Beispiele meiner Arbeit zu sehen.</p>
-<p>Für Preisinformationen besuchen Sie meine <a href="/pricing/" class="button">Preisseite</a>.</p>
+<p>Bevor Sie sich melden, werfen Sie einen Blick in mein <a href="/de/portraits/" class="button">Portfolio</a>, um Beispiele meiner Arbeit zu sehen.</p>
+<p>Für Preisinformationen besuchen Sie meine <a href="/de/pricing/" class="button">Preisseite</a>.</p>
 
 <form action="{{ site.data.settings.contact_settings.form_action }}" method="POST">
   <label for="name">Name:*</label>
