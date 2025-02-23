@@ -2,9 +2,9 @@
 
 <div class="contactme">
 
-<p>Complete el siguiente formulario para ponerse en contacto conmigo.</p>
-<p>Antes de contactarme, visite mi <a href="/es/portraits/" class="button">portafolio</a> para ver ejemplos de mi trabajo.</p>
-<p>Para detalles sobre precios, visite mi <a href="/es/pricing/" class="button">página de precios</a>.</p>
+<p>Completa el siguiente formulario para ponerte en contacto conmigo.</p>
+<p>Antes de contactarme, visita mi <a href="/es/portraits/" class="button">portafolio</a> para ver ejemplos de mi trabajo.</p>
+<p>Para detalles sobre precios, visita mi <a href="/es/pricing/" class="button">página de precios</a>.</p>
 
 <form action="{{ site.data.settings.contact_settings.form_action }}" method="POST">
   <label for="name">Nombre:*</label>

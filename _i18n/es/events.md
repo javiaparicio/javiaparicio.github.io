@@ -28,7 +28,7 @@
   <hr>
   <br>
   <h2>Reserva Fotografía de Eventos Hoy</h2>
-  <p>¿Necesitas fotografía profesional para tu próximo evento? ¡Documentémoslo! <a href="/contact/" class="button">Contáctame</a> para hablar sobre tu proyecto.</p>
+  <p>¿Necesitas fotografía profesional para tu próximo evento? ¡Documentémoslo! <a href="/es/contact/" class="button">Contáctame</a> para hablar sobre tu proyecto.</p>
 </div>
 
 <div class="lightbox" id="lightbox">
