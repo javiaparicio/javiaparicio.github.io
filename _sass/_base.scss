@@ -96,7 +96,7 @@ body {
         font-weight: 300;
         font-style: normal;
         text-align: center; /* Center-align all content */
-        padding: 20px; /* Add padding around the menu content */
+        padding: 15px; /* Add padding around the menu content */
     }
 
     .mobile-menu.show {
@@ -108,7 +108,7 @@ body {
 
     /* Logo Styling */
     .mobile-menu-logo {
-        margin-bottom: 40px; /* Space below the logo */
+        margin-bottom: 30px; /* Space below the logo */
     }
 
     .mobile-menu-logo img {
@@ -125,8 +125,8 @@ body {
     }
 
     .mobile-menu-list li {
-        margin-bottom: 20px; /* Increased spacing between menu items */
-        padding-bottom: 20px;
+        margin-bottom: 18px; /* Increased spacing between menu items */
+        padding-bottom: 18px;
     }
 
     .mobile-menu-list li a {
@@ -141,7 +141,7 @@ body {
     .mobile-language-selector {
         list-style-type: none;
         padding: 0;
-        margin: 40px 0; /* Increased space between menu and language selector */
+        margin: 15px 0; /* Increased space between menu and language selector */
         display: flex;
         justify-content: center;
         gap: 15px; /* Increased space between language options */
@@ -161,7 +161,7 @@ body {
     .mobile-socials {
         list-style: none;
         padding: 0;
-        margin: 40px 0; /* Increased space between language selector and socials */
+        margin: 20px 0; /* Increased space between language selector and socials */
         display: flex;
         justify-content: center;
         gap: 20px; /* Increased space between social icons */
