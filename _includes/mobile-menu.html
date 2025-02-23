@@ -1,3 +1,41 @@
 <div class="mobile-menu" id="mobileMenu">
-    {% include basemenu.html %} {% include mobile-socials.html %}
+    <!-- Logo -->
+    <div class="mobile-menu-logo">
+        <img src="/assets/images/javiAparicioFotoLogo.webp" alt="Javi Aparicio Foto Logo">
+    </div>
+    <!-- Menu -->
+    <ul class="mobile-menu-list">
+        {% for menuelement in site.data.settings.menu %}
+        <li>
+            <a href="{{ menuelement.url[site.lang] }}">{{ menuelement.name[site.lang] }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+        <!-- Language Selector -->
+    <ul class="mobile-language-selector">
+        {% for lang in site.languages %}
+        <li>
+            {% if lang == site.default_lang %}
+            <a href="{{ page.url | remove: page.lang | remove: '/' | prepend: '/' }}">{{ lang | upcase }}</a>
+            {% else %}
+            <a href="{{ page.url | remove: page.lang | remove: '/' | prepend: '/' | prepend: lang | prepend: '/' }}">{{ lang | upcase }}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- Socials -->
+    <ul class="mobile-socials">
+        {% for social in site.data.settings.social_links %}
+        <li class="mobile-socials_item">
+            <a
+                href="{{ social.url }}"
+                target="_blank"
+                class="mobile-socials_item_link"
+                title="{{ social.name }}"
+            >
+                <span class="{{ social.icon }}" aria-hidden="true"></span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>

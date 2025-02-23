@@ -81,14 +81,7 @@ body {
     }
 
     .mobile-menu {
-        background-image: url("../images/javiAparicioFotoLogo.webp");
         background-color: #f8f8f8;
-        background-repeat: no-repeat;
-        background-position: center top 20px;
-        background-size: 150px;
-        padding-top: 240px;
-        padding-bottom: 30px;
-
         display: none;
         position: fixed;
         top: 0;
@@ -102,7 +95,8 @@ body {
         font-family: "Roboto Mono", sans-serif;
         font-weight: 300;
         font-style: normal;
-        text-align: center;
+        text-align: center; /* Center-align all content */
+        padding: 20px; /* Add padding around the menu content */
     }
 
     .mobile-menu.show {
@@ -112,34 +106,65 @@ body {
         align-items: center;
     }
 
-    .menu-list {
+    /* Logo Styling */
+    .mobile-menu-logo {
+        margin-bottom: 40px; /* Space below the logo */
+    }
+
+    .mobile-menu-logo img {
+        max-width: 150px; /* Adjust logo size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Menu Styling */
+    .mobile-menu-list {
         list-style-type: none;
         padding: 0;
         margin: 0;
         width: 100%;
     }
 
-    .menu-list li {
-        margin-bottom: 20px;
+    .mobile-menu-list li {
+        margin-bottom: 20px; /* Increased spacing between menu items */
         padding-bottom: 20px;
     }
 
-    .menu-list li a {
+    .mobile-menu-list li a {
         text-decoration: none;
         font-family: "Roboto Mono", sans-serif;
         font-weight: 300;
         font-style: normal;
         color: #333;
-        font-size: 18px;
+        font-size: 18px; /* Slightly larger font for better readability */
+    }
+    /* Language Selector Styling */
+    .mobile-language-selector {
+        list-style-type: none;
+        padding: 0;
+        margin: 40px 0; /* Increased space between menu and language selector */
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* Increased space between language options */
     }
 
+    .mobile-language-selector li {
+        display: inline-block;
+    }
+
+    .mobile-language-selector li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px; /* Slightly larger font for better readability */
+    }
+
+        /* Socials Styling */
     .mobile-socials {
         list-style: none;
         padding: 0;
-        margin: 30px 0;
+        margin: 40px 0; /* Increased space between language selector and socials */
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 20px; /* Increased space between social icons */
     }
 
     .mobile-socials_item {
@@ -150,15 +175,14 @@ body {
         position: relative;
         display: block;
         border-radius: 100%;
-        background: #333;
-        font-size: 20px;
+        background: #333; /* Adjust color as needed */
+        font-size: 20px; /* Slightly larger icons */
         line-height: 1;
-        color: #f8f8f8;
-        width: 40px;
-        height: 40px;
+        color: #f8f8f8; /* Adjust color as needed */
+        width: 40px; /* Larger clickable area */
+        height: 40px; /* Larger clickable area */
         text-align: center;
     }
-
     .mobile-socials_item_link span {
         position: absolute;
         top: 50%;
@@ -167,21 +191,8 @@ body {
     }
 
     .mobile-socials_item_link:hover {
-        background: #ff6347;
+        background: #ff6347; /* Adjust hover color as needed */
         color: #fff;
-    }
-
-    .language_selector {
-        list-style: none;
-        padding: 0;
-        margin: 30px 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .language_selector li {
-        display: inline-block;
     }
 
     .gallery {
