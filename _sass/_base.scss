@@ -85,9 +85,9 @@ body {
         background-color: #f8f8f8;
         background-repeat: no-repeat;
         background-position: center top 20px;
-        background-size: auto;
-        padding-top: 280px;
-        padding-bottom: 40px;
+        background-size: 150px;
+        padding-top: 240px;
+        padding-bottom: 30px;
 
         display: none;
         position: fixed;
@@ -136,7 +136,7 @@ body {
     .mobile-socials {
         list-style: none;
         padding: 0;
-        margin: 40px 0;
+        margin: 30px 0;
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -174,7 +174,7 @@ body {
     .language_selector {
         list-style: none;
         padding: 0;
-        margin: 40px 0;
+        margin: 30px 0;
         display: flex;
         justify-content: center;
         gap: 15px;
