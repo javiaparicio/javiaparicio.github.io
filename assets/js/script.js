@@ -32,13 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Mobile Menu
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("show");
-    });
-  }
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+
+  hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('show');
+  });
 
   // Contact Form Autofill (Only on contact page)
   if (path.includes("/contact")) {

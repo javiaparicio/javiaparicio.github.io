@@ -38,7 +38,7 @@
 
 <h2>Buchen Sie noch heute Ihr Porträt-Shooting</h2>
 
-Lassen Sie uns gemeinsam etwas Großartiges schaffen – <a href="/contact/" class="button">kontaktieren Sie mich</a>, um Ihr Shooting zu buchen.
+Lassen Sie uns gemeinsam etwas Großartiges schaffen – <a href="/de/contact/" class="button">kontaktieren Sie mich</a>, um Ihr Shooting zu buchen.
 
 </div>
 

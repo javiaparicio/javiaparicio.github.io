@@ -1,17 +1,18 @@
 .sidebar {
     background-color: #f8f8f8;
-    padding: 20px; /* Add padding around the sidebar content */
+    padding: 20px;
     width: 220px;
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the top */
-    align-items: center; /* Center-align items horizontally */
+    justify-content: flex-start;
+    align-items: center;
     font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
     font-style: normal;
+    transition: transform 0.3s ease;
 }
 
 /* Logo Styling */
@@ -31,11 +32,11 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    text-align: center; /* Center-align menu items */
+    text-align: center;
 }
 
 .menu-list li {
-    margin-bottom: 36px; /* Increased spacing between menu items */
+    margin-bottom: 36px;
 }
 
 .menu-list li a {
@@ -44,17 +45,17 @@
     font-weight: 300;
     font-style: normal;
     color: #333;
-    font-size: 18px; /* Slightly larger font for better readability */
+    font-size: 18px;
 }
 
 /* Language Selector Styling */
 .language_selector {
     list-style: none;
     padding: 0;
-    margin: 40px 0; /* Increased space between menu and language selector */
+    margin: 40px 0;
     display: flex;
     justify-content: center;
-    gap: 8px; /* Space between language options */
+    gap: 8px;
 }
 
 .language_selector li {
@@ -82,26 +83,27 @@
 .socials {
     list-style: none;
     padding: 0;
-    margin: 40px 0; /* Increased space between language selector and socials */
+    margin: 40px 0;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Increased space between social icons */
+    gap: 20px;
 }
 
 .socials_item {
     display: inline-block;
 }
 
+
 .socials_item_link {
     position: relative;
     display: block;
     border-radius: 100%;
-    background: #333; /* Adjust color as needed */
-    font-size: 20px; /* Slightly larger icons */
+    background: #333;
+    font-size: 20px;
     line-height: 1;
-    color: #f8f8f8; /* Adjust color as needed */
-    width: 40px; /* Larger clickable area */
-    height: 40px; /* Larger clickable area */
+    color: #f8f8f8;
+    width: 40px;
+    height: 40px;
     text-align: center;
 }
 

@@ -1,6 +1,5 @@
 ---
 ---
-@import "_mixins";
 
 $background-color: {{ site.data.settings.color_settings.background_color }};
 $background-alt-color: {{ site.data.settings.color_settings.background_alt_color }};
@@ -20,8 +19,6 @@ $error-color: {{ site.data.settings.color_settings.error_color }};
 
 @import "base";
 @import "sidebar";
+@import "content";
 @import "gallery";
-@import "pricing";
-@import "about";
-@import "contact";
-@import "footer";
+@import "media";
