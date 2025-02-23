@@ -203,33 +203,3 @@ body {
         display: none;
     }
 }
-
-.language_selector {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: left;
-    gap: 8px;
-}
-
-.language_selector li {
-    display: inline-block;
-}
-
-.language_selector li:not(:last-child)::after {
-    content: "|";
-    margin-left: 8px;
-    color: #000;
-}
-
-.language_selector a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.language_selector a:hover {
-    color: #007bff;
-}

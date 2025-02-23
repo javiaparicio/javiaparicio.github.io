@@ -1,4 +1,4 @@
-<h1>Javi Aparicio - Photographer</h1>
+<h1>Javi Aparicio - Fotografer</h1>
 
 <div>
 <img src="assets/images/about/001.webp" alt="Javi Aparicio, a professional portrait photographer in Bern, Switzerland" width="185" height="169" class="about-image" loading="lazy"/>
