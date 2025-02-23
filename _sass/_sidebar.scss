@@ -12,17 +12,16 @@
     font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
     font-style: normal;
-    transition: transform 0.3s ease;
 }
 
 /* Logo Styling */
 .sidebar-logo {
-    margin-bottom: 40px; /* Space below the logo */
-    margin-top: 40px;
+    margin-bottom: 30px; /* Space below the logo */
+    margin-top: 30px;
 }
 
 .sidebar-logo img {
-    max-width: 150px; /* Adjust logo size as needed */
+    max-width: 200px; /* Adjust logo size as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -52,7 +51,7 @@
 .language_selector {
     list-style: none;
     padding: 0;
-    margin: 40px 0;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     gap: 8px;

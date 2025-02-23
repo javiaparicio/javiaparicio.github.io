@@ -9,6 +9,16 @@
         z-index: 1000;
     }
 
+    .sidebar-logo {
+        margin-bottom: 20px; /* Space below the logo */
+        margin-top: 20px;
+    }
+
+    .sidebar-logo img {
+        max-width: 120px; /* Adjust logo size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
     .sidebar {
         transform: translateX(-100%);
     }
@@ -16,6 +26,16 @@
     .sidebar.show {
         transform: translateX(0); /* Show sidebar */
         width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .language_selector {
+        margin: 0px 0px 15px 0;
+    }
+
+    .socials {
+        margin: 20px 0;
     }
 
     .content {
