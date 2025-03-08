@@ -14,7 +14,6 @@
             <li>Retoque básico</li>
             <li>Entrega en 3 días hábiles</li>
         </ul>
-        <a href="/es/contact/?subject=Sesión Básica de Retratos" class="button">Reserva ahora tu sesión básica</a>
     </div>
 
     <div class="package">
@@ -27,7 +26,6 @@
             <li>Retoque mejorado (suavizado de piel, eliminación de cabellos sueltos)</li>
             <li>Entrega en 7 días hábiles</li>
         </ul>
-        <a href="/es/contact/?subject=Sesión Estándar de Retratos" class="button">Reserva ahora</a>
     </div>
 
     <div class="package">
@@ -40,7 +38,6 @@
             <li>Una impresión fine art de 20x30 cm de tu foto favorita</li>
             <li>Entrega prioritaria en 5 días hábiles</li>
         </ul>
-        <a href="/es/contact/?subject=Experiencia Premium de Retratos" class="button">Reserva ahora</a>
     </div>
 
     <div class="package">
@@ -52,14 +49,16 @@
             <li><strong>Tiempo Adicional de Sesión:</strong> CHF 80 por 30 minutos</li>
         </ul>
     </div>
-    <p>¿Listo para reservar una sesión? <a href="/es/contact/" class="button">Contáctame</a>.</p>
+
+    <div>
+      <p>¿Listo para reservar una sesión? <a href="/es/contact/" class="button">Contáctame</a>.</p>
+    </div>
 
     <div class="why-choose-me">
         <h2>¿Por Qué Elegirme?</h2>
         <p>
             Con un enfoque profesional pero relajado, ayudo a los clientes a sentirse cómodos durante sus sesiones. Mi atención a los servicios personalizados y la edición de alta calidad garantizan retratos atemporales que atesorará para siempre.
         </p>
-        <a href="/es/contact/" class="button">Pónte en Contacto</a>
     </div>
 
     <!-- Sección de Proyectos Personalizados -->

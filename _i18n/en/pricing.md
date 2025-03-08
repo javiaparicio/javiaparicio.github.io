@@ -14,7 +14,6 @@
             <li>Basic retouching</li>
             <li>Delivery within 3 business days</li>
         </ul>
-        <a href="/contact/?subject=Basic Portrait Session" class="button">Book now</a>
     </div>
 
     <div class="package">
@@ -27,7 +26,6 @@
             <li>Enhanced retouching (skin smoothing, stray hair removal)</li>
             <li>Delivery within 7 business days</li>
         </ul>
-        <a href="/contact/?subject=Standard Portrait Session" class="button">Book now</a>
     </div>
 
     <div class="package">
@@ -40,7 +38,6 @@
             <li>A 20x30cm fine art print of your favorite photo</li>
             <li>Priority delivery within 5 business days</li>
         </ul>
-        <a href="/contact/?subject=Premium Portrait Experience" class="button">Book now</a>
     </div>
 
     <div class="package">
@@ -52,14 +49,16 @@
             <li><strong>Additional Shooting Time:</strong> CHF 80 per 30 minutes</li>
         </ul>
     </div>
-    <p>Ready to book a session? <a href="/contact/" class="button">Contact me</a>.</p>
+
+    <div>
+      <p>Ready to book a session? <a href="/contact/" class="button">Contact me</a>.</p>
+    </div>
 
     <div class="why-choose-me">
         <h2>Why Choose Me?</h2>
         <p>
             With a professional yet relaxed approach, I help clients feel at ease during their sessions. My focus on personalized services and high-quality editing ensures timeless portraits that you'll cherish forever.
         </p>
-        <a href="/contact/" class="button">Get in Touch</a>
     </div>
 
     <!-- Custom Projects Section -->

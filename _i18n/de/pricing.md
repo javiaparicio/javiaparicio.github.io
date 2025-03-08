@@ -14,7 +14,6 @@
             <li>Grundlegende Retusche</li>
             <li>Lieferung innerhalb von 3 Werktagen</li>
         </ul>
-        <a href="/de/contact/?subject=Basis-Porträt-Shooting" class="button">Jetzt buchen</a>
     </div>
 
     <div class="package">
@@ -27,7 +26,6 @@
             <li>Erweiterte Retusche (Hautglättung, Entfernung von störenden Haaren)</li>
             <li>Lieferung innerhalb von 7 Werktagen</li>
         </ul>
-        <a href="/de/contact/?subject=Standard-Porträt-Shooting" class="button">Jetzt buchen</a>
     </div>
 
     <div class="package">
@@ -40,7 +38,6 @@
             <li>Ein 20x30 cm Fine-Art-Druck Ihres Lieblingsfotos</li>
             <li>Priorisierte Lieferung innerhalb von 5 Werktagen</li>
         </ul>
-        <a href="/de/contact/?subject=Premium-Porträt-Erlebnis" class="button">Jetzt buchen</a>
     </div>
 
     <div class="package">
@@ -52,14 +49,16 @@
             <li><strong>Zusätzliche Shooting-Zeit:</strong> CHF 80 pro 30 Minuten</li>
         </ul>
     </div>
-    <p>Bereit, ein Shooting zu buchen? <a href="/de/contact/" class="button">Kontaktieren Sie mich</a>.</p>
+
+    <div>
+      <p>Bereit, ein Shooting zu buchen? <a href="/de/contact/" class="button">Kontaktieren Sie mich</a>.</p>
+    </div>
 
     <div class="why-choose-me">
         <h2>Warum mich wählen?</h2>
         <p>
             Mit einem professionellen und doch entspannten Ansatz helfe ich meinen Kunden, sich während der Shootings wohlzufühlen. Mein Fokus auf personalisierte Dienstleistungen und hochwertige Bearbeitung sorgt für zeitlose Porträts, die Sie für immer schätzen werden.
         </p>
-        <a href="/de/contact/" class="button">Kontakt aufnehmen</a>
     </div>
 
     <!-- Benutzerdefinierte Projekte -->
