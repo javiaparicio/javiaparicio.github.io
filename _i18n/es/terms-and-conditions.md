@@ -31,5 +31,17 @@ Javi Aparicio Foto no es responsable de retrasos o fallos causados por circunsta
 
 ## Información de Contacto
 Para cualquier consulta sobre estos términos, contáctenos:
-**Correo Electrónico**: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
-**Teléfono**: +41 77 231 12 63
+
+**Correo Electrónico**: <span id="email"></span>
+
+**Teléfono**: <span id="phone"></span>
+
+<script>
+  fetch('/contact.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("email").innerHTML =
+        '<a href="mailto:' + data.email + '">' + data.email + '</a>';
+      document.getElementById("phone").innerHTML = data.phone;    })
+    .catch(error => console.error('Error loading contact data:', error));
+</script>

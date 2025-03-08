@@ -55,13 +55,24 @@ You have the right to:
 - Request correction or deletion of your data.
 - Withdraw consent for data processing.
 
-To exercise these rights, please contact us at [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch).
+To exercise these rights, please contact us at <span id="email2"></span>.
 
 ---
 
 ## Contact Information
 For any questions or concerns regarding this Privacy Policy, please contact:
 
-**Email**: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
+**Email**: <span id="email"></span>
 
-**Phone**: +41 77 231 12 63
+**Phone**: <span id="phone"></span>
+
+<script>
+  fetch('/contact.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("email").innerHTML =
+        '<a href="mailto:' + data.email + '">' + data.email + '</a>';
+      document.getElementById("email2").innerHTML = document.getElementById("email").innerHTML;
+      document.getElementById("phone").innerHTML = data.phone;    })
+    .catch(error => console.error('Error loading contact data:', error));
+</script>

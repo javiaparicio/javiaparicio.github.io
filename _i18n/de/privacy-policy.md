@@ -55,13 +55,24 @@ Sie haben das Recht:
 - Berichtigung oder Löschung Ihrer Daten zu verlangen.
 - Die Einwilligung zur Datenverarbeitung zu widerrufen.
 
-Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch).
+Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <span id="email2"></span>.
 
 ---
 
 ## Kontaktinformationen
 Bei Fragen oder Bedenken bezüglich dieser Datenschutzerklärung wenden Sie sich bitte an:
 
-**E-Mail**: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
+**E-Mail**: <span id="email"></span>
 
-**Telefon**: +41 77 231 12 63
+**Telefon**: <span id="phone"></span>
+
+<script>
+  fetch('/contact.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("email").innerHTML =
+        '<a href="mailto:' + data.email + '">' + data.email + '</a>';
+      document.getElementById("email2").innerHTML = document.getElementById("email").innerHTML;
+      document.getElementById("phone").innerHTML = data.phone;    })
+    .catch(error => console.error('Error loading contact data:', error));
+</script>
