@@ -1,0 +1,69 @@
+languages: ["en", "de", "es"]
+default_lang: "en"
+
+title:
+  en: "Javi Aparicio Foto - Professional Photography"
+  es: "Javi Aparicio Foto - Fotografía Profesional"
+  de: "Javi Aparicio Foto - Professionelle Fotografie"
+
+description:
+    en: "Capturing authentic moments through professional photography."
+    es: "Capturando momentos auténticos a través de la fotografía profesional."
+    de: "Authentische Momente durch professionelle Fotografie festhalten."
+
+email: info@javiapariciofoto.ch
+
+locale:
+  en: "en_US"
+  es: "es_ES"
+  de: "de_DE"
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://javiapariciofoto.ch" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:
+github_username:
+author:
+  name: Javi Aparicio
+  bio:
+    en: "Portrait photographer based in Bern, Switzerland."
+    es: "Fotógrafo de retratos con base en Berna, Suiza."
+    de: "Porträtfotograf mit Sitz in Bern, Schweiz."
+  email: info@javiapariciofoto.ch
+  url: https://javiapariciofoto.ch
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-multiple-languages-plugin
+
+
+exclude_from_localization: ["assets"]
+
+sass:
+  style: compressed
+
+timezone: Europe/Zurich
+
+markdown: kramdown
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

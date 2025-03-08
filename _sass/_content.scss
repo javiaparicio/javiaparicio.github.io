@@ -1,0 +1,151 @@
+.content {
+    margin-top: 30px;
+    margin-left: 320px;
+    padding: 20px;
+    flex: 1;
+    color: #666;
+    width: 100%;
+    max-width: 1200px;
+    transition: margin-left 0.3s ease; /* Smooth transition for shifting content */
+}
+
+.text-content {
+    width: 60%;
+    margin: 0 0;
+    color: #666;
+}
+
+.aboutme {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 60%;
+
+    p {
+        color: #666;
+    }
+}
+
+.about-image {
+    border-radius: 8px;
+}
+
+
+/* Contact */
+.contactme {
+    width: 60%; /* Keep the width as needed */
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 0; /* Align the container to the left */
+    padding: 0px; /* Add padding for better spacing */
+}
+
+form {
+    max-width: 600px; /* Keep the max-width for the form */
+    margin: 0; /* Remove auto margin to stop centering */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #006fb7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffeb00;
+    color: black;
+}
+
+.agb-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between checkbox and label */
+    font-size: 0.9rem;
+}
+
+.agb-checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.agb-checkbox a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.agb-checkbox a:hover {
+    text-decoration: underline;
+}
+
+
+/* Pricing */
+.pricing-content {
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.pricing-content h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Specific Styles for Packages */
+.package {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.package h2 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.package ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Footer Styles */
+.site-footer {
+    margin-left: 200px;
+    background: #ffffff;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    background: #abb7b7;
+    color: #333333;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}

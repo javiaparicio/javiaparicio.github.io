@@ -1,0 +1,31 @@
+<!-- HTML Meta Tags -->
+<title>
+    {% if page.title[site.lang] %}
+        {{ page.title[site.lang] }}
+    {% else %}
+        {{ site.title[site.lang] }}
+    {% endif %}
+</title>
+<meta name="description" content="{% if page.description[site.lang] %}{{ page.description[site.lang] }}{% else %}{{ site.description[site.lang] }}{% endif %}" />
+<meta name="author" content="{{ site.author.name }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<!-- End HTML Meta Tags -->
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{% if page.title[site.lang] %}{{ page.title[site.lang] }}{% else %}{{ site.title[site.lang] }}{% endif %}" />
+<meta property="og:description" content="{% if page.description[site.lang] %}{{ page.description[site.lang] }}{% else %}{{ site.description[site.lang] }}{% endif %}" />
+<meta property="og:image" content="https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp" />
+<meta property="og:site_name" content="{{ site.title[site.lang] }}" />
+<meta property="og:locale" content="{{ site.locale[site.lang] }}" />
+<!-- End Facebook Meta Tags -->
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="javiapariciofoto.ch" />
+<meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
+<meta name="twitter:title" content="{% if page.title[site.lang] %}{{ page.title[site.lang] }}{% else %}{{ site.title[site.lang] }}{% endif %}" />
+<meta name="twitter:description" content="{% if page.description[site.lang] %}{{ page.description[site.lang] }}{% else %}{{ site.description[site.lang] }}{% endif %}" />
+<meta name="twitter:image" content="https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp" />
+<!-- End Twitter Meta Tags -->

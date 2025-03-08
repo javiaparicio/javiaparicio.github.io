@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{ site.lang | default: site.default_lang }}">
+    <head>
+        {% include metatags.html %}
+        <meta
+            name="ahrefs-site-verification"
+            content="4704889a5ffe2bdc50576fc6ddee24b63e59ac71720cf5536d7a8fa7ed7c1723"
+        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% include favicon.html %}
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/main.css' | absolute_url }}"
+        />
+        <script
+            src="{{ '/assets/js/script.js' | absolute_url }}"
+            defer
+        ></script>
+        {% include ldjson.html %}
+    </head>
+    <body>
+        <div class="container">
+            <!-- Hamburger Icon (Visible on Mobile) -->
+            <div class="hamburger" id="hamburger">&#9776;</div>
+
+            <!-- Sidebar -->
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-logo">
+                    <img src="/assets/images/javiAparicioFotoLogo.webp" alt="Javi Aparicio Foto Logo">
+                </div>
+                <ul class="menu-list">
+                    {% for menuelement in site.data.settings.menu %}
+                    <li>
+                        <a href="{{ menuelement.url[site.lang] }}">{{ menuelement.name[site.lang] }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <ul class="language_selector">
+                    {% for lang in site.languages %}
+                    <li>
+                        {% assign base_url = page.url | remove: page.lang | append: '/' %}
+
+                        {% if lang == site.default_lang %}
+                            <a href="{{ base_url | replace: '//', '/'}}">{{ lang | upcase }}</a>
+                        {% else %}
+                            <a href="/{{ lang }}{{ base_url | replace: '//', '/' }}">{{ lang | upcase }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <ul class="socials">
+                    {% for social in site.data.settings.social_links %}
+                    <li class="socials_item">
+                        <a
+                            href="{{ social.url }}"
+                            target="_blank"
+                            class="socials_item_link"
+                            title="{{ social.name }}"
+                        >
+                            <span class="{{ social.icon }}" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <!-- Content -->
+            <div class="content" id="content">
+                {{ content }}
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

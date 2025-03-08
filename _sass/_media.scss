@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .sidebar-logo {
+        margin-bottom: 20px; /* Space below the logo */
+        margin-top: 20px;
+    }
+
+    .sidebar-logo img {
+        max-width: 100px; /* Adjust logo size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0); /* Show sidebar */
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .language_selector {
+        margin: 0px 0px 15px 0;
+    }
+
+    .socials {
+        margin: 20px 0;
+    }
+
+    .content {
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 20px;
+        flex: 1;
+    }
+
+    .content.shift {
+            margin-left: 220px; /* Match sidebar width */
+        }
+
+    .text-content {
+        width: 80%; /* Increase width on smaller screens */
+    }
+
+    div.site-footer {
+        margin-left: 0px;
+        padding: 20px;
+        flex: 1;
+    }
+
+    div.aboutme {
+        width: 90%;
+    }
+
+    div.contactme {
+        width: 90%;
+    }
+
+    div.pricing-content {
+        width: 90%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .lightbox .fullscreen {
+        display: none;
+    }
+}

@@ -1,0 +1,121 @@
+basic_settings:
+  site_title: Javi Aparicio Foto
+  site_tagline: Portrait Photographer
+
+contact_settings:
+  form_action: "https://formspree.io/f/mjvnrpje"
+  confirmation_url: "/thanks"
+  email_subject: "Contact form submission"
+  send_button_text:
+    en: "Send Message"
+    de: "Nachricht senden"
+    es: "Enviar mensaje"
+
+social_links:
+  - name: Instagram
+    url: https://instagram.com/javiapariciofoto
+    icon: icon-instagram
+  - name: Telegram
+    url: https://t.me/javiapariciofoto
+    icon: icon-telegram
+  - name: Whatsapp
+    url: https://wa.me/+41772311263
+    icon: icon-whatsapp
+
+menu:
+  - name:
+      en: Home
+      es: Inicio
+      de: Startseite
+    url:
+      en: /
+      es: /es/
+      de: /de/
+  - name:
+      en: Portraits
+      es: Retratos
+      de: Porträts
+    url:
+      en: /portraits/
+      es: /es/portraits/
+      de: /de/portraits/
+  - name:
+      en: Events
+      es: Eventos
+      de: Veranstaltungen
+    url:
+      en: /events/
+      es: /es/events/
+      de: /de/events/
+  - name:
+      en: Pricing
+      es: Tarifas
+      de: Preise
+    url:
+      en: /pricing/
+      es: /es/pricing/
+      de: /de/pricing/
+  - name:
+      en: Contact
+      es: Contacto
+      de: Kontakt
+    url:
+      en: /contact/
+      es: /es/contact/
+      de: /de/contact/
+
+footer:
+  copyright:
+    en: "Javier Aparicio Ríos Foto. All rights reserved."
+    es: "Javier Aparicio Ríos Foto. Todos los derechos reservados."
+    de: "Javier Aparicio Ríos Foto. Alle Rechte vorbehalten."
+  appointment:
+    en: "Photography services are available by appointment only."
+    es: "Los servicios de fotografía están disponibles solo con cita previa."
+    de: "Fotodienstleistungen sind nur nach Vereinbarung verfügbar."
+  links:
+    - name:
+        en: Legal
+        es: Legal
+        de: Rechtliches
+      url:
+        en: /legal/
+        es: /es/legal/
+        de: /de/legal/
+    - name:
+        en: Terms and Conditions
+        es: Términos y Condiciones
+        de: Allgemeine Geschäftsbedingungen
+      url:
+        en: /terms-and-conditions/
+        es: /es/terms-and-conditions/
+        de: /de/terms-and-conditions/
+    - name:
+        en: Privacy Policy
+        es: Política de Privacidad
+        de: Datenschutz
+      url:
+        en: /privacy-policy/
+        es: /es/privacy-policy/
+        de: /de/privacy-policy/
+    - name:
+        en: Sitemap
+        es: Mapa del Sitio
+        de: Sitemap
+      url:
+        en: /sitemap.xml
+        es: /es/sitemap.xml
+        de: /de/sitemap.xml
+
+color_settings:
+  background_color: "#ffffff"
+  background_alt_color: "#f7f9fa"
+  text_dark_color: "#2A2F36"
+  text_medium_color: "#6C7A89"
+  text_light_color: "#ABB7B7"
+  accent_color: "#6CC282"
+  border_color: "#dddddd"
+  overlay_background_color: "#6CC282"
+  overlay_text_color: "#ffffff"
+  overlay_accent_color: "#2A2F36"
+  error_color: "#D64541"

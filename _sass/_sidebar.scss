@@ -1,0 +1,159 @@
+.sidebar {
+    background-color: #f8f8f8;
+    padding: 20px;
+    width: 220px;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Logo Styling */
+.sidebar-logo {
+    margin-bottom: 30px; /* Space below the logo */
+    margin-top: 30px;
+}
+
+.sidebar-logo img {
+    max-width: 150px; /* Adjust logo size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Menu Styling */
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-list li {
+    margin-bottom: 36px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Language Selector Styling */
+.language_selector {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.language_selector li {
+    display: inline-block;
+}
+
+.language_selector li:not(:last-child)::after {
+    content: "|";
+    margin-left: 8px;
+    color: #000;
+}
+
+.language_selector a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.language_selector a:hover {
+    color: #007bff;
+}
+
+/* Socials Styling */
+.socials {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials_item {
+    display: inline-block;
+}
+
+
+.socials_item_link {
+    position: relative;
+    display: block;
+    border-radius: 100%;
+    background: #333;
+    font-size: 20px;
+    line-height: 1;
+    color: #f8f8f8;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.socials_item_link span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socials_item_link:hover {
+    background: #ff6347; /* Adjust hover color as needed */
+    color: #fff;
+}
+
+@font-face {
+    font-family: "socials";
+    src: url("/assets/fonts/socials.eot?kyddd8");
+    src:
+        url("/assets/fonts/socials.eot?kyddd8#iefix")
+            format("embedded-opentype"),
+        url("/assets/fonts/socials.ttf?kyddd8") format("truetype"),
+        url("/assets/fonts/socials.woff?kyddd8") format("woff"),
+        url("/assets/fonts/socials.svg?kyddd8#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "socials" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+    content: "\ea92";
+}
+.icon-whatsapp:before {
+    content: "\ea93";
+}
+.icon-telegram:before {
+    content: "\ea95";
+}

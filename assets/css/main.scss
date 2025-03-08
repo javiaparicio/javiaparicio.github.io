@@ -1,0 +1,24 @@
+---
+---
+
+$background-color: {{ site.data.settings.color_settings.background_color }};
+$background-alt-color: {{ site.data.settings.color_settings.background_alt_color }};
+$border-color: {{ site.data.settings.color_settings.border_color }};
+
+$text-dark-color: {{ site.data.settings.color_settings.text_dark_color }};
+$text-medium-color: {{ site.data.settings.color_settings.text_medium_color }};
+$text-light-color: {{ site.data.settings.color_settings.text_light_color }};
+
+$accent-color: {{ site.data.settings.color_settings.accent_color }};
+
+$overlay-background-color: {{ site.data.settings.color_settings.overlay_background_color }};
+$overlay-text-color: {{ site.data.settings.color_settings.overlay_text_color }};
+$overlay-accent-color: {{ site.data.settings.color_settings.overlay_accent_color }};
+
+$error-color: {{ site.data.settings.color_settings.error_color }};
+
+@import "base";
+@import "sidebar";
+@import "content";
+@import "gallery";
+@import "media";

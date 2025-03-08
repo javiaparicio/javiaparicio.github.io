@@ -1,0 +1,16 @@
+<br />
+<br />
+<br />
+<div class="site-footer">
+    <div class="footer-bottom">
+        <p>
+            &copy; {{ site.time | date: '%Y' }} {{
+            site.data.settings.footer.copyright[site.lang] }}<br />
+            {{ site.data.settings.footer.appointment[site.lang] }}<br />
+
+            {% for link in site.data.settings.footer.links %}
+            <a href="{{ link.url[site.lang] }}">{{ link.name[site.lang] }}</a>
+            {% if forloop.last == false %} | {% endif %} {% endfor %}
+        </p>
+    </div>
+</div>
