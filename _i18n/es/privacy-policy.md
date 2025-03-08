@@ -55,16 +55,16 @@ Usted tiene derecho a:
 - Solicitar la corrección o eliminación de sus datos.
 - Retirar el consentimiento para el procesamiento de datos.
 
-Para ejercer estos derechos, contáctenos en <span id="email2"></span>.
+Para ejercer estos derechos, contáctenos en <span id="email2">Javascript Blocked</span>.
 
 ---
 
 ## Información de Contacto
 Para cualquier pregunta o inquietud sobre esta Política de Privacidad, contáctenos:
 
-**Correo Electrónico**: <span id="email"></span>
+**Correo Electrónico**: <span id="email">Javascript Blocked</span>
 
-**Teléfono**: <span id="phone"></span>
+**Teléfono**: <span id="phone">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')

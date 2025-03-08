@@ -32,9 +32,9 @@ Javi Aparicio Foto haftet nicht für Verzögerungen oder Ausfälle, die durch Um
 ## Kontaktinformationen
 Bei Fragen zu diesen Bedingungen wenden Sie sich bitte an:
 
-**E-Mail**: <span id="email"></span>
+**E-Mail**: <span id="email">Javascript Blocked</span>
 
-**Telefon**: <span id="phone"></span>
+**Telefon**: <span id="phone">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')

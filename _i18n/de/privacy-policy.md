@@ -55,16 +55,16 @@ Sie haben das Recht:
 - Berichtigung oder Löschung Ihrer Daten zu verlangen.
 - Die Einwilligung zur Datenverarbeitung zu widerrufen.
 
-Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <span id="email2"></span>.
+Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <span id="email2">Javascript Blocked</span>.
 
 ---
 
 ## Kontaktinformationen
 Bei Fragen oder Bedenken bezüglich dieser Datenschutzerklärung wenden Sie sich bitte an:
 
-**E-Mail**: <span id="email"></span>
+**E-Mail**: <span id="email">Javascript Blocked</span>
 
-**Telefon**: <span id="phone"></span>
+**Telefon**: <span id="phone">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')

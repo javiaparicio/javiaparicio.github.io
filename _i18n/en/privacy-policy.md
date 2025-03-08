@@ -55,16 +55,16 @@ You have the right to:
 - Request correction or deletion of your data.
 - Withdraw consent for data processing.
 
-To exercise these rights, please contact us at <span id="email2"></span>.
+To exercise these rights, please contact us at <span id="email2">Javascript Blocked</span>.
 
 ---
 
 ## Contact Information
 For any questions or concerns regarding this Privacy Policy, please contact:
 
-**Email**: <span id="email"></span>
+**Email**: <span id="email">Javascript Blocked</span>
 
-**Phone**: <span id="phone"></span>
+**Phone**: <span id="phone">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')

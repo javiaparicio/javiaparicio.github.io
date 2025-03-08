@@ -32,9 +32,9 @@ Javi Aparicio Foto no es responsable de retrasos o fallos causados por circunsta
 ## Información de Contacto
 Para cualquier consulta sobre estos términos, contáctenos:
 
-**Correo Electrónico**: <span id="email"></span>
+**Correo Electrónico**: <span id="email">Javascript Blocked</span>
 
-**Teléfono**: <span id="phone"></span>
+**Teléfono**: <span id="phone">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')

@@ -32,9 +32,9 @@ Javi Aparicio Foto is not liable for delays or failures caused by circumstances 
 ## Contact Information
 For any inquiries about these terms, please contact:
 
-**Email**: <span id="email"></span>
+**Email**: <span id="email">Javascript Blocked</span>
 
-**Phone**: <span id="phone"></span>
+**Phone**: <span id="phone">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')

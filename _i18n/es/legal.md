@@ -3,15 +3,15 @@
 ## Impressum
 **Nombre del Negocio**: Javier Aparicio Ríos Foto
 
-**Propietario**: <span id="owner"></span>
+**Propietario**: <span id="owner">Javascript Blocked</span>
 
-**Dirección**: <span id="address"></span>
+**Dirección**: <span id="address">Javascript Blocked</span>
 
-**Correo Electrónico**: <span id="email"></span>
+**Correo Electrónico**: <span id="email">Javascript Blocked</span>
 
-**Teléfono**: <span id="phone"></span>
+**Teléfono**: <span id="phone">Javascript Blocked</span>
 
-**Número de Registro Mercantil**: <span id="che"></span>
+**Número de Registro Mercantil**: <span id="che">Javascript Blocked</span>
 
 **Número de IVA**: No sujeto a IVA.
 
@@ -20,9 +20,9 @@
 ## Información de Contacto
 Para cualquier pregunta o inquietud relacionada con esta página legal, contáctenos en:
 
-**Correo Electrónico**: <span id="email2"></span>
+**Correo Electrónico**: <span id="email2">Javascript Blocked</span>
 
-**Teléfono**: <span id="phone2"></span>
+**Teléfono**: <span id="phone2">Javascript Blocked</span>
 
 <script>
   fetch('/contact.json')
