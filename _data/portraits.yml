@@ -1,90 +1,54 @@
 images:
   - filename: "portraits_002.webp"
     title:
-      en: "José"
-      es: "José"
-      de: "José"
-    description:
       en: "Portrait of José."
       es: "Retrato de José."
       de: "Porträt von José."
 
   - filename: "portraits_003.webp"
     title:
-      en: "José"
-      es: "José"
-      de: "José"
-    description:
       en: "Portrait of José."
       es: "Retrato de José."
       de: "Porträt von José."
 
   - filename: "portraits_004.webp"
     title:
-      en: "José"
-      es: "José"
-      de: "José"
-    description:
       en: "Portrait of José."
       es: "Retrato de José."
       de: "Porträt von José."
 
   - filename: "portraits_005.webp"
     title:
-      en: "José"
-      es: "José"
-      de: "José"
-    description:
       en: "Portrait of José."
       es: "Retrato de José."
       de: "Porträt von José."
 
   - filename: "portraits_006.webp"
     title:
-      en: "Christian"
-      es: "Christian"
-      de: "Christian"
-    description:
       en: "Portrait of Christian."
       es: "Retrato de Christian."
       de: "Porträt von Christian."
 
   - filename: "portraits_007.webp"
     title:
-      en: "Christian"
-      es: "Christian"
-      de: "Christian"
-    description:
       en: "Portrait of Christian."
       es: "Retrato de Christian."
       de: "Porträt von Christian."
 
   - filename: "portraits_009.webp"
     title:
-      en: "Raul Huerta and Palisandro"
-      es: "Raul Huerta y Palisandro"
-      de: "Raul Huerta und Palisandro"
-    description:
       en: "Portrait of Raul Huerta and Palisandro."
       es: "Retrato de Raul Huerta y Palisandro."
       de: "Porträt von Raul Huerta und Palisandro."
 
   - filename: "portraits_010.webp"
     title:
-      en: "Avelino"
-      es: "Avelino"
-      de: "Avelino"
-    description:
       en: "Portrait of Avelino."
       es: "Retrato de Avelino."
       de: "Porträt von Avelino."
 
   - filename: "portraits_012.webp"
     title:
-      en: "Frank"
-      es: "Frank"
-      de: "Frank"
-    description:
       en: "Portrait of Frank."
       es: "Retrato de Frank."
       de: "Porträt von Frank."
@@ -94,47 +58,27 @@ images:
       en: ""
       es: ""
       de: ""
-    description:
-      en: ""
-      es: ""
-      de: ""
 
   - filename: "portraits_014.webp"
     title:
-      en: "Nana"
-      es: "Nana"
-      de: "Nana"
-    description:
       en: "Portrait of Nana."
       es: "Retrato de Nana."
       de: "Porträt von Nana."
 
   - filename: "portraits_015.webp"
     title:
-      en: "Mirta"
-      es: "Mirta"
-      de: "Mirta"
-    description:
       en: "Portrait of Mirta."
       es: "Retrato de Mirta."
       de: "Porträt von Mirta."
 
   - filename: "portraits_016.webp"
     title:
-      en: "Self-portrait"
-      es: "Autoretrato"
-      de: "Selbstporträt"
-    description:
       en: "Self-portrait."
       es: "Autoretrato."
       de: "Selbstporträt."
 
   - filename: "portraits_017.webp"
     title:
-      en: "José"
-      es: "José"
-      de: "José"
-    description:
       en: "Portrait of José."
       es: "Retrato de José."
       de: "Porträt von José."
@@ -144,47 +88,27 @@ images:
       en: ""
       es: ""
       de: ""
-    description:
-      en: ""
-      es: ""
-      de: ""
 
   - filename: "portraits_019.webp"
     title:
-      en: "Kathy"
-      es: "Kathy"
-      de: "Kathy"
-    description:
       en: "Portrait of Kathy."
       es: "Retrato de Kathy."
       de: "Porträt von Kathy."
 
   - filename: "portraits_020.webp"
     title:
-      en: "Self-portrait"
-      es: "Autorretrato"
-      de: "Selbstporträt"
-    description:
       en: "Self-portrait."
       es: "Autorretrato."
       de: "Selbstporträt."
 
   - filename: "portraits_021.webp"
     title:
-      en: "Self-portrait"
-      es: "Autorretrato"
-      de: "Selbstporträt"
-    description:
       en: "Self-portrait."
       es: "Autorretrato."
       de: "Selbstporträt."
 
   - filename: "portraits_022.webp"
     title:
-      en: "Robert"
-      es: "Robert"
-      de: "Robert"
-    description:
       en: "Portrait of Robert."
       es: "Retrato de Robert."
       de: "Porträt von Robert."
