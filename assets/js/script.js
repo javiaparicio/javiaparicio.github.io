@@ -57,7 +57,7 @@ function setupLightbox() {
     if (!imgElement) return;
 
     lightboxImg.src = imgElement.dataset.src;
-    lightboxCaption.innerHTML = imgElement.dataset.description || "";
+    lightboxCaption.innerHTML = imgElement.dataset.description || imgElement.dataset.title || "";
 
     lightbox.classList.add("show");
     currentImageIndex = index;

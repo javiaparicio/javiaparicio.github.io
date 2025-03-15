@@ -16,6 +16,7 @@
         alt="{{ meta.title[lang] | default: 'Photo by Javi Aparicio' }}"
         class="gallery-image lazy"
         data-description="{{ meta.description[lang] | default: '' }}"
+        data-title="{{ meta.title[lang] | default: '' }}"
       >
     {% endif %}
   {% endfor %}
