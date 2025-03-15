@@ -16,19 +16,7 @@
 <br>
 </div>
 
-
-<div class="gallery">
-  {% assign images = site.static_files | sort: "path" | reverse %}
-  {% for image in images %}
-    {% if image.path contains 'assets/images/portfolio/portraits' %}
-      {% if image.extname == ".webp" %}
-        {% assign file_time = site.time | date: '%s' %}
-        {% assign hash = file_time | MD5 %}
-        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="Retrato {{ image.basename }} por Javi Aparicio – Fotografía profesional y artística en Berna" class="gallery-image lazy">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</div>
+{% include gallery.html %}
 
 <div class="text-content">
 
@@ -40,14 +28,4 @@
 
 <p>Creemos algo grandioso juntos—<a href="/es/contact/" class="button">contáctame</a> para reservar su sesión.</p>
 
-</div>
-
-<div class="lightbox" id="lightbox">
-  <span class="nav" id="prev" aria-label="Anterior"></span>
-  <img id="lightbox-img">
-  <span class="nav" id="next" aria-label="Siguiente"></span>
-  <span class="close" id="close" aria-label="Cerrar"></span>
-  <span class="fullscreen" id="fullscreen">
-    <i aria-label="Pantalla completa">⛶</i>
-  </span>
 </div>

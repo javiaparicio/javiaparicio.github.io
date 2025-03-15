@@ -16,19 +16,7 @@
 <br>
 </div>
 
-
-<div class="gallery">
-  {% assign images = site.static_files | sort: "path" | reverse %}
-  {% for image in images %}
-    {% if image.path contains 'assets/images/portfolio/portraits' %}
-      {% if image.extname == ".webp" %}
-        {% assign file_time = site.time | date: '%s' %}
-        {% assign hash = file_time | MD5 %}
-        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="Portrait {{ image.basename }} by Javi Aparicio – Professional and artistic photography in Bern" class="gallery-image lazy">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</div>
+{% include gallery.html %}
 
 <div class="text-content">
 
@@ -40,14 +28,4 @@
 
 Let’s create something great together—<a href="/contact/" class="button">get in touch</a> to book your session.
 
-</div>
-
-<div class="lightbox" id="lightbox">
-  <span class="nav" id="prev" aria-label="Previous"></span>
-  <img id="lightbox-img">
-  <span class="nav" id="next" aria-label="Next"></span>
-  <span class="close" id="close" aria-label="Close"></span>
-  <span class="fullscreen" id="fullscreen">
-    <i aria-label="Enter fullscreen">⛶</i>
-  </span>
 </div>
