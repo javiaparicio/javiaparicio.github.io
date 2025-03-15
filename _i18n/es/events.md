@@ -10,18 +10,7 @@
   <br>
 </div>
 
-<div class="gallery">
-  {% assign images = site.static_files | sort: "path" | reverse %}
-  {% for image in images %}
-    {% if image.path contains 'assets/images/portfolio/events' %}
-      {% if image.extname == ".webp" %}
-        {% assign file_time = site.time | date: '%s' %}
-        {% assign hash = file_time | MD5 %}
-        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="Fotografía de eventos {{ image.basename }} por Javi Aparicio – capturando conciertos, reuniones corporativas y festivales" class="gallery-image lazy">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</div>
+{% include gallery.html gallery_type="events"%}
 
 <div class="text-content">
   <br>
@@ -29,14 +18,4 @@
   <br>
   <h2>Reserva Fotografía de Eventos Hoy</h2>
   <p>¿Necesitas fotografía profesional para tu próximo evento? ¡Documentémoslo! <a href="/es/contact/" class="button">Contáctame</a> para hablar sobre tu proyecto.</p>
-</div>
-
-<div class="lightbox" id="lightbox">
-  <span class="nav" id="prev" aria-label="Anterior"></span>
-  <img id="lightbox-img">
-  <span class="nav" id="next" aria-label="Siguiente"></span>
-  <span class="close" id="close" aria-label="Cerrar"></span>
-  <span class="fullscreen" id="fullscreen">
-    <i aria-label="Pantalla completa">⛶</i>
-  </span>
 </div>

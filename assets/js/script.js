@@ -4,11 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Lazy Loading Images
   const lazyImages = document.querySelectorAll("img.lazy");
   if ("IntersectionObserver" in window) {
-    const lazyImageObserver = new IntersectionObserver(function (
-      entries,
-      observer,
-    ) {
-      entries.forEach(function (entry) {
+    const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
@@ -26,20 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Lightbox Functionality (Only if needed)
+  // Lightbox Initialization
   if (document.getElementById("lightbox")) {
     setupLightbox();
   }
 
   // Mobile Menu
-  const hamburger = document.getElementById('hamburger');
-  const sidebar = document.getElementById('sidebar');
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.getElementById("sidebar");
+  hamburger?.addEventListener("click", () => sidebar.classList.toggle("show"));
 
-  hamburger.addEventListener('click', () => {
-      sidebar.classList.toggle('show');
-  });
-
-  // Contact Form Autofill (Only on contact page)
+  // Contact Form Autofill
   if (path.includes("/contact")) {
     prefillContactForm();
   }
@@ -51,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function setupLightbox() {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
   const fullscreenButton = document.getElementById("fullscreen");
   let galleryImages = Array.from(
     document.querySelectorAll(".gallery-image"),
@@ -58,7 +53,12 @@ function setupLightbox() {
   let currentImageIndex = 0;
 
   function showImage(index) {
-    lightboxImg.src = galleryImages[index].dataset.src;
+    const imgElement = galleryImages[index];
+    if (!imgElement) return;
+
+    lightboxImg.src = imgElement.dataset.src;
+    lightboxCaption.innerHTML = imgElement.dataset.description || "";
+
     lightbox.classList.add("show");
     currentImageIndex = index;
   }
@@ -104,7 +104,6 @@ function setupLightbox() {
     }
   });
 
-  // Fullscreen Mode
   if (fullscreenButton) {
     if (!document.fullscreenEnabled) {
       fullscreenButton.style.display = "none";
@@ -118,9 +117,7 @@ function setupLightbox() {
 function toggleFullScreen() {
   const lightbox = document.getElementById("lightbox");
   if (!document.fullscreenElement) {
-    lightbox?.requestFullscreen().catch((err) => {
-      console.error("Fullscreen request failed", err);
-    });
+    lightbox?.requestFullscreen().catch((err) => console.error("Fullscreen request failed", err));
   } else {
     document.exitFullscreen();
   }
@@ -129,13 +126,9 @@ function toggleFullScreen() {
 function updateFullscreenIcon() {
   const fullscreenButton = document.getElementById("fullscreen");
   if (fullscreenButton) {
-    if (document.fullscreenElement) {
-      fullscreenButton.innerHTML =
-        "<i aria-label='Exit fullscreen' class='fullscreenbutton'>🔲</i>";
-    } else {
-      fullscreenButton.innerHTML =
-        "<i aria-label='Enter fullscreen' class='fullscreenbutton'>⛶</i>";
-    }
+    fullscreenButton.innerHTML = document.fullscreenElement
+      ? "<i aria-label='Exit fullscreen' class='fullscreenbutton'>🔲</i>"
+      : "<i aria-label='Enter fullscreen' class='fullscreenbutton'>⛶</i>";
   }
 }
 
@@ -144,8 +137,7 @@ function updateFullscreenIcon() {
 // ----------------------
 function prefillContactForm() {
   function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+    return new URLSearchParams(window.location.search).get(param);
   }
 
   const subjectField = document.getElementById("subject");

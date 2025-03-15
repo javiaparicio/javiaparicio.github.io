@@ -16,7 +16,7 @@
 <br>
 </div>
 
-{% include gallery.html %}
+{% include gallery.html gallery_type="portraits"%}
 
 <div class="text-content">
 

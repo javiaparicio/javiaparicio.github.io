@@ -1,0 +1,20 @@
+images:
+  - filename: "events_001.webp"
+    title:
+      en: "Jazz Night in Bern"
+      es: "Noche de Jazz en Berna"
+      de: "Jazzabend in Bern"
+    description:
+      en: "Live jazz performance at a local club."
+      es: "Presentación de jazz en vivo en un club local."
+      de: "Live-Jazz-Aufführung in einem lokalen Club."
+
+  - filename: "events_002.webp"
+    title:
+      en: "Mountain Photography Workshop"
+      es: "Taller de Fotografía en la Montaña"
+      de: "Fotografie-Workshop in den Bergen"
+    description:
+      en: "Capturing the beauty of the Alps at sunrise."
+      es: "Capturando la belleza de los Alpes al amanecer."
+      de: "Die Schönheit der Alpen bei Sonnenaufgang einfangen."

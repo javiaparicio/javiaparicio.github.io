@@ -10,20 +10,7 @@
 <br>
 </div>
 
-
-<div class="gallery">
-  {% assign images = site.static_files | sort: "path" | reverse %}
-  {% for image in images %}
-    {% if image.path contains 'assets/images/portfolio/events' %}
-      {% if image.extname == ".webp" %}
-        {% assign file_time = site.time | date: '%s' %}
-        {% assign hash = file_time | MD5 %}
-        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="Event photography {{ image.basename }} by Javi Aparicio – capturing concerts, corporate gatherings, and festivals" class="gallery-image lazy">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</div>
-
+{% include gallery.html gallery_type="events"%}
 
 <div class="text-content">
     <br>
@@ -31,14 +18,4 @@
     <br>
     <h2>Book Event Photography Today</h2>
     <p>Need professional photography for your next event? Let’s document it! <a href="/contact/" class="button">Contact me</a> to discuss your project.</p>
-</div>
-
-<div class="lightbox" id="lightbox">
-  <span class="nav" id="prev" aria-label="Previous"></span>
-  <img id="lightbox-img">
-  <span class="nav" id="next" aria-label="Next"></span>
-  <span class="close" id="close" aria-label="Close"></span>
-  <span class="fullscreen" id="fullscreen">
-    <i aria-label="Enter fullscreen">⛶</i>
-  </span>
 </div>

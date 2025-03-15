@@ -1,0 +1,20 @@
+images:
+  - filename: "portraits_001.webp"
+    title:
+      en: "Portrait of Anna"
+      es: "Retrato de Anna"
+      de: "Porträt von Anna"
+    description:
+      en: "A professional headshot of Anna in natural light."
+      es: "Un retrato profesional de Anna con luz natural."
+      de: "Ein professionelles Porträt von Anna im natürlichen Licht."
+
+  - filename: "portraits_002.webp"
+    title:
+      en: "Portrait of Mark"
+      es: "Retrato de Mark"
+      de: "Porträt von Mark"
+    description:
+      en: "Black and white artistic portrait."
+      es: "Retrato artístico en blanco y negro."
+      de: "Künstlerisches Schwarz-Weiß-Porträt."

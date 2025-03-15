@@ -1,12 +1,22 @@
+{% assign gallery_data = site.data[include.gallery_type] %}
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign folder = '/assets/images/portfolio/' | append: include.gallery_type %}
+{% assign images = site.static_files | where_exp: "file", "file.path contains folder" | sort: "path" | reverse %}
+{% assign file_time = site.time | date: '%s' %}
+{% assign hash = file_time | MD5 %}
+
 <div class="gallery">
-  {% assign images = site.static_files | sort: "path" | reverse %}
   {% for image in images %}
-    {% if image.path contains 'assets/images/portfolio/portraits' %}
-      {% if image.extname == ".webp" %}
-        {% assign file_time = site.time | date: '%s' %}
-        {% assign hash = file_time | MD5 %}
-        <img data-src="{{ image.path | append: '?v=' | append: hash }}" alt="Portrait {{ image.basename }} by Javi Aparicio – Professional and artistic photography in Bern" class="gallery-image lazy">
-      {% endif %}
+    {% if image.extname == ".webp" %}
+      {% assign filename = image.basename | append: image.extname %}
+      {% assign meta = gallery_data.images | where: "filename", filename | first %}
+
+      <img
+        data-src="{{ image.path | append: '?v=' | append: hash }}"
+        alt="{{ meta.title[lang] | default: 'Photo by Javi Aparicio' }}"
+        class="gallery-image lazy"
+        data-description="{{ meta.description[lang] | default: '' }}"
+      >
     {% endif %}
   {% endfor %}
 </div>
@@ -14,6 +24,7 @@
 <div class="lightbox" id="lightbox">
   <span class="nav" id="prev" aria-label="Previous"></span>
   <img id="lightbox-img">
+  <div id="lightbox-caption" class="lightbox-caption"></div>
   <span class="nav" id="next" aria-label="Next"></span>
   <span class="close" id="close" aria-label="Close"></span>
   <span class="fullscreen" id="fullscreen">
