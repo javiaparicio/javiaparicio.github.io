@@ -136,3 +136,18 @@
 .fullscreenbutton {
     font-style: normal;
 }
+
+.lightbox-caption a {
+  color: #999; /* Dark gray for readability */
+  transition: color 0.3s ease;
+}
+
+/* Active/visited state */
+.lightbox-caption a:hover {
+  color: #fff;
+}
+
+/* Active/visited state */
+.lightbox-caption a:visited {
+  color: #fff;
+}
