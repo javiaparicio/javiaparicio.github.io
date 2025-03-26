@@ -37,9 +37,9 @@ images:
 
   - filename: "portraits_009.webp"
     title:
-      en: "Portrait of Raul Huerta and Palisandro."
-      es: "Retrato de Raul Huerta y Palisandro."
-      de: "Porträt von Raul Huerta und Palisandro."
+      en: "Portrait of <a href='https://www.instagram.com/raulhuerta_palisandro/' target='_blank'>Raul Huerta and Palisandro</a>."
+      es: "Retrato de <a href='https://www.instagram.com/raulhuerta_palisandro/' target='_blank'>Raul Huerta y Palisandro</a>."
+      de: "Porträt von <a href='https://www.instagram.com/raulhuerta_palisandro/' target='_blank'>Raul Huerta und Palisandro</a>."
 
   - filename: "portraits_010.webp"
     title:
@@ -133,6 +133,6 @@ images:
 
   - filename: "portraits_026.webp"
     title:
-      en: "Portrait of Evgenia."
-      es: "Retrato de Evgenia."
-      de: "Porträt von Evgenia."
+      en: "Portrait of <a href='https://www.instagram.com/jeya.artmodel/' target='_blank'>Evgenia</a>."
+      es: "Retrato de <a href='https://www.instagram.com/jeya.artmodel/' target='_blank'>Evgenia</a>."
+      de: "Porträt von <a href='https://www.instagram.com/jeya.artmodel/' target='_blank'>Evgenia</a>."
