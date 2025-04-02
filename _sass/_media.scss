@@ -46,8 +46,8 @@
     }
 
     .content.shift {
-            margin-left: 220px; /* Match sidebar width */
-        }
+        margin-left: 220px; /* Match sidebar width */
+    }
 
     .text-content {
         width: 80%; /* Increase width on smaller screens */
@@ -72,6 +72,11 @@
 
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 250px;
     }
 
     .lightbox .fullscreen {
