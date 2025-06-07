@@ -148,3 +148,27 @@ images:
       en: "Self-portrait."
       es: "Autorretrato."
       de: "Selbstporträt."
+
+  - filename: "portraits_029.webp"
+    title:
+      en: "Portrait of <a href='https://www.instagram.com/jlzyu/' target='_blank'>Julia</a>."
+      es: "Retrato de <a href='https://www.instagram.com/jlzyu/' target='_blank'>Julia</a>."
+      de: "Porträt von <a href='https://www.instagram.com/jlzyu/' target='_blank'>Julia</a>."
+
+  - filename: "portraits_030.webp"
+    title:
+      en: "Portrait of <a href='https://www.mioneo.ch/' target='_blank'>MioNeo</a>."
+      es: "Retrato de <a href='https://www.mioneo.ch/' target='_blank'>MioNeo</a>."
+      de: "Porträt von <a href='https://www.mioneo.ch/' target='_blank'>MioNeo</a>."
+
+  - filename: "portraits_031.webp"
+    title:
+      en: "Portrait of <a href='https://www.instagram.com/demifrayy/' target='_blank'>Demmi Fray</a>."
+      es: "Retrato de <a href='https://www.instagram.com/demifrayy/' target='_blank'>Demmi Fray</a>."
+      de: "Porträt von <a href='https://www.instagram.com/demifrayy/' target='_blank'>Demmi Fray</a>."
+
+  - filename: "portraits_032.webp"
+    title:
+      en: "Portrait of <a href='https://irynaberdnyk.com/' target='_blank'>Iryna Berdnyk</a>."
+      es: "Retrato de <a href='https://irynaberdnyk.com/' target='_blank'>Iryna Berdnyk</a>."
+      de: "Porträt von <a href='https://irynaberdnyk.com/' target='_blank'>Iryna Berdnyk</a>."
