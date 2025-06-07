@@ -13,48 +13,66 @@ images:
 
   - filename: "events_003.webp"
     title:
-      en: "45th International Balloon Festival - Château-D'Oex"
-      es: "45e Festival Internacional de Globos - Château-D'Oex"
-      de: "45. Internationales Ballon-Festival - Château-D'Oex"
+      en: "45th International Balloon Festival - Château-D'Oex."
+      es: "45e Festival Internacional de Globos - Château-D'Oex."
+      de: "45. Internationales Ballon-Festival - Château-D'Oex."
 
   - filename: "events_004.webp"
     title:
-      en: "45th International Balloon Festival - Château-D'Oex"
-      es: "45e Festival Internacional de Globos - Château-D'Oex"
-      de: "45. Internationales Ballon-Festival - Château-D'Oex"
+      en: "45th International Balloon Festival - Château-D'Oex."
+      es: "45e Festival Internacional de Globos - Château-D'Oex."
+      de: "45. Internationales Ballon-Festival - Château-D'Oex."
 
   - filename: "events_005.webp"
     title:
       en: "Ceviche Mixto concert at Lakelive."
-      es: "Concierto Ceviche Mixto - Lakelive"
-      de: "Konzert Ceviche Mixto - Lakelive"
+      es: "Concierto Ceviche Mixto - Lakelive."
+      de: "Konzert Ceviche Mixto - Lakelive."
 
   - filename: "events_006.webp"
     title:
       en: "Ceviche Mixto concert at Lakelive."
-      es: "Concierto Ceviche Mixto - Lakelive"
-      de: "Konzert Ceviche Mixto - Lakelive"
+      es: "Concierto Ceviche Mixto - Lakelive."
+      de: "Konzert Ceviche Mixto - Lakelive."
 
   - filename: "events_007.webp"
     title:
       en: "30th Anniversary of Ceviche Mixto at Kulturhof im Schloss Köniz."
-      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz"
-      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz"
+      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz."
+      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz."
 
   - filename: "events_008.webp"
     title:
       en: "30th Anniversary of Ceviche Mixto at Kulturhof im Schloss Köniz."
-      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz"
-      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz"
+      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz."
+      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz."
 
   - filename: "events_009.webp"
     title:
       en: "30th Anniversary of Ceviche Mixto at Kulturhof im Schloss Köniz."
-      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz"
-      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz"
+      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz."
+      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz."
 
   - filename: "events_010.webp"
     title:
       en: "30th Anniversary of Ceviche Mixto at Kulturhof im Schloss Köniz."
-      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz"
-      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz"
+      es: "30 aniversario Ceviche Mixto - Kulturhof im Schloss Köniz."
+      de: "30. Jubiläum Ceviche Mixto - Kulturhof im Schloss Köniz."
+
+  - filename: "events_011.webp"
+    title:
+      en: "Los Vacíos de Charly · Before the show at Casino Burgdorf."
+      es: "Los Vacíos de Charly · Antes del concierto en el Casino de Burgdorf."
+      de: "Los Vacíos de Charly · Vor dem Konzert im Casino Burgdorf."
+
+  - filename: "events_012.webp"
+    title:
+      en: "Ceviche Mixto."
+      es: "Ceviche Mixto."
+      de: "Ceviche Mixto."
+
+  - filename: "events_013.webp"
+    title:
+      en: "Sol Family."
+      es: "Sol Family."
+      de: "Sol Family."
