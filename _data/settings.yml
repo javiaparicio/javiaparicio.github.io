@@ -12,6 +12,9 @@ contact_settings:
     es: "Enviar mensaje"
 
 social_links:
+  - name: Pixelfed
+    url: https://pixelfed.social/javifoto
+    icon: iconlocal-pixelfed
   - name: Instagram
     url: https://instagram.com/javiapariciofoto
     icon: icon-instagram
