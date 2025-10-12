@@ -1,0 +1,385 @@
+# Copyright (C) 2024 Javi Aparicio
+# This file is distributed under the same license as the Javi Aparicio Foto package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Javi Aparicio Foto 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/javi-aparicio-foto\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: functions.php:35
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:36
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:45
+msgid "Portraits"
+msgstr ""
+
+#: functions.php:46
+msgid "Portrait"
+msgstr ""
+
+#: functions.php:47
+msgid "Add New Portrait"
+msgstr ""
+
+#: functions.php:48
+msgid "Add New Portrait"
+msgstr ""
+
+#: functions.php:49
+msgid "Edit Portrait"
+msgstr ""
+
+#: functions.php:50
+msgid "New Portrait"
+msgstr ""
+
+#: functions.php:51
+msgid "View Portrait"
+msgstr ""
+
+#: functions.php:52
+msgid "Search Portraits"
+msgstr ""
+
+#: functions.php:53
+msgid "No portraits found"
+msgstr ""
+
+#: functions.php:54
+msgid "No portraits found in trash"
+msgstr ""
+
+#: functions.php:65
+msgid "Events"
+msgstr ""
+
+#: functions.php:66
+msgid "Event"
+msgstr ""
+
+#: functions.php:67
+msgid "Add New Event"
+msgstr ""
+
+#: functions.php:68
+msgid "Add New Event"
+msgstr ""
+
+#: functions.php:69
+msgid "Edit Event"
+msgstr ""
+
+#: functions.php:70
+msgid "New Event"
+msgstr ""
+
+#: functions.php:71
+msgid "View Event"
+msgstr ""
+
+#: functions.php:72
+msgid "Search Events"
+msgstr ""
+
+#: functions.php:73
+msgid "No events found"
+msgstr ""
+
+#: functions.php:74
+msgid "No events found in trash"
+msgstr ""
+
+#: functions.php:85
+msgid "Portrait Details"
+msgstr ""
+
+#: functions.php:95
+msgid "Event Details"
+msgstr ""
+
+#: functions.php:103
+msgid "Title (English)"
+msgstr ""
+
+#: functions.php:107
+msgid "Title (Spanish)"
+msgstr ""
+
+#: functions.php:111
+msgid "Title (German)"
+msgstr ""
+
+#: functions.php:115
+msgid "Title (English)"
+msgstr ""
+
+#: functions.php:119
+msgid "Title (Spanish)"
+msgstr ""
+
+#: functions.php:123
+msgid "Title (German)"
+msgstr ""
+
+#: functions.php:150
+msgid "Theme Options"
+msgstr ""
+
+#: functions.php:156
+msgid "Contact Email"
+msgstr ""
+
+#: functions.php:165
+msgid "Phone Number"
+msgstr ""
+
+#: functions.php:174
+msgid "Address"
+msgstr ""
+
+#: functions.php:290
+msgid "Home"
+msgstr ""
+
+#: functions.php:291
+msgid "Portraits"
+msgstr ""
+
+#: functions.php:292
+msgid "Events"
+msgstr ""
+
+#: functions.php:293
+msgid "Pricing"
+msgstr ""
+
+#: functions.php:294
+msgid "Contact"
+msgstr ""
+
+#: header.php:50
+msgid "Previous"
+msgstr ""
+
+#: header.php:51
+msgid "Next"
+msgstr ""
+
+#: header.php:52
+msgid "Close"
+msgstr ""
+
+#: header.php:53
+msgid "Enter fullscreen"
+msgstr ""
+
+#: footer.php:8
+msgid "All rights reserved."
+msgstr ""
+
+#: footer.php:12
+msgid "Photography services are available by appointment only."
+msgstr ""
+
+#: index.php:12
+msgid "Welcome to Javi Aparicio Foto"
+msgstr ""
+
+#: index.php:13
+msgid "Every portrait has a story — let's tell yours."
+msgstr ""
+
+#: index.php:14
+msgid "As a portrait photographer, I'm passionate about capturing the real you. Whether it's a family moment, a professional headshot, or a creative project, I focus on creating images that reflect your unique personality."
+msgstr ""
+
+#: index.php:15
+msgid "What makes my work special isn't just the photos—it's the experience. I take the time to get to know you, creating a relaxed environment where your true self can shine. The result? Portraits that you'll love and moments you'll want to revisit again and again."
+msgstr ""
+
+#: index.php:16
+msgid "Take a look at my"
+msgstr ""
+
+#: index.php:16
+msgid "portfolio"
+msgstr ""
+
+#: index.php:16
+msgid "and let's make something amazing together."
+msgstr ""
+
+#: index.php:17
+msgid "Javi Aparicio"
+msgstr ""
+
+#: archive-portraits.php:6
+msgid "Portraits"
+msgstr ""
+
+#: archive-portraits.php:25
+msgid "No portraits found."
+msgstr ""
+
+#: archive-events.php:6
+msgid "Events"
+msgstr ""
+
+#: archive-events.php:25
+msgid "No events found."
+msgstr ""
+
+#: page-contact.php:8
+msgid "Contact"
+msgstr ""
+
+#: page-contact.php:12
+msgid "Get in Touch"
+msgstr ""
+
+#: page-contact.php:13
+msgid "Ready to create something amazing together? Let's discuss your photography needs."
+msgstr ""
+
+#: page-contact.php:17
+msgid "Email:"
+msgstr ""
+
+#: page-contact.php:24
+msgid "Phone:"
+msgstr ""
+
+#: page-contact.php:31
+msgid "Address:"
+msgstr ""
+
+#: page-contact.php:38
+msgid "Send a Message"
+msgstr ""
+
+#: page-pricing.php:8
+msgid "Pricing"
+msgstr ""
+
+#: page-pricing.php:12
+msgid "Professional Photography Services"
+msgstr ""
+
+#: page-pricing.php:13
+msgid "Every project is unique, and so is my approach. I offer personalized photography services tailored to your specific needs and vision."
+msgstr ""
+
+#: page-pricing.php:18
+msgid "Portrait Session"
+msgstr ""
+
+#: page-pricing.php:20
+msgid "Professional portrait photography session"
+msgstr ""
+
+#: page-pricing.php:22
+msgid "1-2 hour session"
+msgstr ""
+
+#: page-pricing.php:23
+msgid "Professional editing"
+msgstr ""
+
+#: page-pricing.php:24
+msgid "High-resolution digital files"
+msgstr ""
+
+#: page-pricing.php:25
+msgid "Online gallery for viewing"
+msgstr ""
+
+#: page-pricing.php:28
+msgid "Starting from CHF 300"
+msgstr ""
+
+#: page-pricing.php:32
+msgid "Event Photography"
+msgstr ""
+
+#: page-pricing.php:34
+msgid "Professional event documentation"
+msgstr ""
+
+#: page-pricing.php:36
+msgid "Full event coverage"
+msgstr ""
+
+#: page-pricing.php:37
+msgid "Professional editing"
+msgstr ""
+
+#: page-pricing.php:38
+msgid "High-resolution digital files"
+msgstr ""
+
+#: page-pricing.php:39
+msgid "Quick turnaround"
+msgstr ""
+
+#: page-pricing.php:42
+msgid "Starting from CHF 500"
+msgstr ""
+
+#: page-pricing.php:46
+msgid "Custom Projects"
+msgstr ""
+
+#: page-pricing.php:48
+msgid "Tailored photography solutions"
+msgstr ""
+
+#: page-pricing.php:50
+msgid "Consultation and planning"
+msgstr ""
+
+#: page-pricing.php:51
+msgid "Flexible scheduling"
+msgstr ""
+
+#: page-pricing.php:52
+msgid "Custom deliverables"
+msgstr ""
+
+#: page-pricing.php:53
+msgid "Ongoing support"
+msgstr ""
+
+#: page-pricing.php:56
+msgid "Custom pricing"
+msgstr ""
+
+#: page-pricing.php:61
+msgid "Note:"
+msgstr ""
+
+#: page-pricing.php:61
+msgid "All prices are subject to specific requirements and location. Contact me for a personalized quote."
+msgstr ""
+
+#: page-pricing.php:62
+msgid "Get a Quote"
+msgstr ""
+
+#: single.php:12
+msgid "Pages:"
+msgstr ""
+
+#: page.php:12
+msgid "Pages:"
+msgstr ""
