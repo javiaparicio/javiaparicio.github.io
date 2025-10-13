@@ -153,6 +153,36 @@ body {
     color: #007bff;
 }
 
+/* Flag styling */
+.language_selector img {
+    width: 16px;
+    height: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+/* Flag display options */
+.language_selector.flags-only a {
+    padding: 5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.language_selector.flags-only a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.language_selector.names-only img {
+    display: none;
+}
+
+.language_selector.flags-names a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 /* Socials Styling */
 .socials {
     list-style: none;

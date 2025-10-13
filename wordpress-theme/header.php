@@ -51,28 +51,89 @@
             ?>
         </ul>
         
-        <ul class="language_selector" role="menubar" aria-label="Language selection">
-            <?php
-            // Get language options from customizer
+        <?php
+        // Check if Polylang integration is enabled
+        $polylang_enabled = get_theme_mod('polylang_enabled', false);
+        
+        if ($polylang_enabled && function_exists('pll_the_languages')) {
+            // Use Polylang for language selector
+            $flag_display = get_theme_mod('polylang_flag_display', 'names');
+            $display_format = get_theme_mod('polylang_display_format', 'slug');
+            $hide_current = get_theme_mod('polylang_hide_current', false);
+            $hide_no_translation = get_theme_mod('polylang_hide_no_translation', false);
+            $force_home = get_theme_mod('polylang_force_home', false);
+            
+            // Configure flags and names based on dropdown selection
+            $show_flags = ($flag_display === 'flags' || $flag_display === 'flags_names');
+            $show_names = ($flag_display === 'names' || $flag_display === 'flags_names');
+            
+            // Get languages as array for proper loop handling
+            $languages_array = pll_the_languages(array(
+                'show_flags' => $show_flags,
+                'show_names' => $show_names,
+                'display_names_as' => $display_format,
+                'hide_if_empty' => false,
+                'force_home' => $force_home,
+                'hide_if_no_translation' => $hide_no_translation,
+                'hide_current' => $hide_current,
+                'post_id' => null,
+                'raw' => true,
+                'echo' => false
+            ));
+            
+            
+            if ($languages_array && is_array($languages_array)) {
+                echo '<ul class="language_selector ' . esc_attr($flag_display) . '" role="menubar" aria-label="Language selection">';
+                
+                $total_languages = count($languages_array);
+                $current_index = 0;
+                
+                foreach ($languages_array as $language) {
+                    echo '<li role="none"><a href="' . esc_url($language['url']) . '" role="menuitem" aria-label="Switch to ' . esc_attr($language['name']) . ' language">';
+                    
+                    // Add flag if enabled
+                    if ($show_flags) {
+                        // Polylang provides the flag as complete HTML img tag
+                        if (!empty($language['flag'])) {
+                            // Extract the src from the HTML img tag
+                            if (preg_match('/src=["\']([^"\']+)["\']/', $language['flag'], $matches)) {
+                                $flag_url = $matches[1];
+                                echo '<img src="' . $flag_url . '" alt="' . esc_attr($language['name']) . '" width="16" height="12" style="margin-right: 5px; vertical-align: middle;">';
+                            }
+                        }
+                    }
+                    
+                    // Add name if enabled
+                    if ($show_names) {
+                        echo esc_html($language['name']);
+                    }
+                    
+                    echo '</a></li>';
+                    
+                    $current_index++;
+                }
+                
+                echo '</ul>';
+            } else {
+                // Fallback if Polylang returns empty
+                javi_aparicio_language_selector_fallback();
+            }
+        } else {
+            // Use customizer language options or fallback
             $languages = javi_aparicio_get_language_options();
             
             if (!empty($languages)) {
+                echo '<ul class="language_selector" role="menubar" aria-label="Language selection">';
                 foreach ($languages as $language) {
                     echo '<li role="none"><a href="' . esc_url($language['url']) . '" role="menuitem" aria-label="Switch to ' . esc_attr($language['name']) . ' language">' . esc_html($language['name']) . '</a></li>';
                 }
+                echo '</ul>';
             } else {
                 // Fallback to default languages
-                $default_languages = array('en' => 'EN', 'es' => 'ES', 'de' => 'DE');
-                foreach ($default_languages as $lang_code => $lang_name) {
-                    $lang_url = home_url('/');
-                    if ($lang_code !== 'en') {
-                        $lang_url = home_url('/' . $lang_code . '/');
-                    }
-                    echo '<li role="none"><a href="' . esc_url($lang_url) . '" role="menuitem" aria-label="Switch to ' . esc_attr($lang_name) . ' language">' . esc_html($lang_name) . '</a></li>';
-                }
+                javi_aparicio_language_selector_fallback();
             }
-            ?>
-        </ul>
+        }
+        ?>
         
         <?php
         // Display social links menu
