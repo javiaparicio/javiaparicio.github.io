@@ -49,16 +49,10 @@ class JaviAparicioQuickSetup {
                     <div id="menus-status"></div>
                 </div>
                 
-                <div class="step">
-                    <h2>Step 3: Import Content</h2>
-                    <p>Import your portraits and events from Jekyll data.</p>
-                    <button id="import-content" class="button button-primary">Import Content</button>
-                    <div id="content-status"></div>
-                </div>
                 
                 <div class="step">
-                    <h2>Step 4: Configure Theme</h2>
-                    <p>Set up theme options and contact information.</p>
+                    <h2>Step 3: Configure Theme</h2>
+                    <p>Set up theme options and basic settings.</p>
                     <button id="configure-theme" class="button button-primary">Configure Theme</button>
                     <div id="theme-status"></div>
                 </div>
@@ -68,8 +62,7 @@ class JaviAparicioQuickSetup {
                 <h2>🎉 Setup Complete!</h2>
                 <p>Your WordPress photography portfolio is ready. Here's what you can do next:</p>
                 <ul>
-                    <li><a href="<?php echo admin_url('edit.php?post_type=portraits'); ?>">Manage Portraits</a></li>
-                    <li><a href="<?php echo admin_url('edit.php?post_type=events'); ?>">Manage Events</a></li>
+                    <li><a href="<?php echo admin_url('edit.php?post_type=page'); ?>">Manage Pages</a></li>
                     <li><a href="<?php echo admin_url('customize.php'); ?>">Customize Theme</a></li>
                     <li><a href="<?php echo home_url(); ?>">View Your Site</a></li>
                 </ul>
@@ -216,7 +209,7 @@ class JaviAparicioQuickSetup {
     
     private function create_pages() {
         $pages = array(
-            array('title' => 'Contact', 'slug' => 'contact', 'template' => 'page-contact.php'),
+            array('title' => 'Contact', 'slug' => 'contact'),
             array('title' => 'Pricing', 'slug' => 'pricing', 'template' => 'page-pricing.php'),
             array('title' => 'Legal', 'slug' => 'legal'),
             array('title' => 'Terms and Conditions', 'slug' => 'terms-and-conditions'),
@@ -274,18 +267,49 @@ class JaviAparicioQuickSetup {
     }
     
     private function import_content() {
-        // This would call the existing import functions
-        // For now, just return success
-        wp_send_json_success(array('message' => 'Content import completed. Check Portraits and Events sections.'));
+        // Content import is no longer needed - using regular pages
+        wp_send_json_success(array('message' => 'Content setup completed. Portraits and Events are now regular pages.'));
     }
     
     private function configure_theme() {
         // Set default theme options
-        set_theme_mod('contact_email', 'info@javiapariciofoto.ch');
-        set_theme_mod('contact_phone', '+41 77 231 12 63');
-        set_theme_mod('contact_address', 'Stauffacherstrasse 44, 3014 Bern, Switzerland');
         
-        wp_send_json_success(array('message' => 'Theme configured with default settings.'));
+        // Set default language options
+        set_theme_mod('language_1_name', 'EN');
+        set_theme_mod('language_1_url', home_url('/'));
+        set_theme_mod('language_2_name', 'ES');
+        set_theme_mod('language_2_url', home_url('/es/'));
+        set_theme_mod('language_3_name', 'DE');
+        set_theme_mod('language_3_url', home_url('/de/'));
+        
+        // Create default social links menu
+        $menu_id = wp_create_nav_menu('Social Links');
+        
+        if (!is_wp_error($menu_id)) {
+            // Add social links to the menu
+            $social_links = array(
+                array('title' => 'Pixelfed', 'url' => 'https://pixelfed.social/javifoto', 'classes' => array('iconlocal-pixelfed')),
+                array('title' => 'Instagram', 'url' => 'https://instagram.com/javiapariciofoto', 'classes' => array('icon-instagram')),
+                array('title' => 'Telegram', 'url' => 'https://t.me/javiapariciofoto', 'classes' => array('icon-telegram')),
+                array('title' => 'Whatsapp', 'url' => 'https://wa.me/+41772311263', 'classes' => array('icon-whatsapp')),
+            );
+            
+            foreach ($social_links as $link) {
+                wp_update_nav_menu_item($menu_id, 0, array(
+                    'menu-item-title' => $link['title'],
+                    'menu-item-url' => $link['url'],
+                    'menu-item-classes' => implode(' ', $link['classes']),
+                    'menu-item-status' => 'publish'
+                ));
+            }
+            
+            // Assign the menu to the social location
+            $locations = get_theme_mod('nav_menu_locations');
+            $locations['social'] = $menu_id;
+            set_theme_mod('nav_menu_locations', $locations);
+        }
+        
+        wp_send_json_success(array('message' => 'Theme configured with default settings including language and social options.'));
     }
 }
 

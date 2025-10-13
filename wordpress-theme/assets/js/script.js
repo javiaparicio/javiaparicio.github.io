@@ -5,244 +5,90 @@
 document.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
 
-    // Lazy Loading Images
-    const lazyImages = document.querySelectorAll("img.lazy");
-    if ("IntersectionObserver" in window) {
-        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target;
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove("lazy");
-                    lazyImageObserver.unobserve(lazyImage);
-                }
-            });
-        });
 
-        lazyImages.forEach((lazyImage) => lazyImageObserver.observe(lazyImage));
-    } else {
-        lazyImages.forEach((lazyImage) => {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.classList.remove("lazy");
-        });
-    }
-
-    // Lightbox Initialization
-    if (document.getElementById("lightbox")) {
-        setupLightbox();
-    }
 
     // Mobile Menu - Initialize
     initializeMobileMenu();
 
-    // Contact Form Autofill
-    if (path.includes("/contact")) {
-        prefillContactForm();
-    }
 });
 
-// ----------------------
-// LIGHTBOX FUNCTION
-// ----------------------
-function setupLightbox() {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxCaption = document.getElementById("lightbox-caption");
-    const fullscreenButton = document.getElementById("fullscreen");
-    let galleryImages = Array.from(
-        document.querySelectorAll(".gallery-image"),
-    ).reverse();
-    let currentImageIndex = 0;
 
-    function showImage(index) {
-        const imgElement = galleryImages[index];
-        if (!imgElement) return;
-
-        lightboxImg.src = imgElement.dataset.src;
-        lightboxCaption.innerHTML = imgElement.dataset.title || "";
-
-        lightbox.classList.add("show");
-        currentImageIndex = index;
-    }
-
-    galleryImages.forEach((img, index) => {
-        img.addEventListener("click", () => showImage(index));
-    });
-
-    const prevButton = document.getElementById("prev");
-    const nextButton = document.getElementById("next");
-    const closeButton = document.getElementById("close");
-
-    if (prevButton) {
-        prevButton.addEventListener("click", showPrevImage);
-    }
-    if (nextButton) {
-        nextButton.addEventListener("click", showNextImage);
-    }
-    if (closeButton) {
-        closeButton.addEventListener("click", () => lightbox.classList.remove("show"));
-    }
-
-    function showPrevImage() {
-        currentImageIndex =
-            currentImageIndex === galleryImages.length - 1
-                ? 0
-                : currentImageIndex + 1;
-        showImage(currentImageIndex);
-    }
-
-    function showNextImage() {
-        currentImageIndex =
-            currentImageIndex === 0
-                ? galleryImages.length - 1
-                : currentImageIndex - 1;
-        showImage(currentImageIndex);
-    }
-
-    document.addEventListener("keydown", function (event) {
-        if (lightbox?.classList.contains("show")) {
-            if (event.key === "ArrowLeft") showPrevImage();
-            else if (event.key === "ArrowRight") showNextImage();
-            else if (event.key === "Escape" || event.code === "Space")
-                lightbox.classList.remove("show");
-        }
-    });
-
-    if (lightbox) {
-        lightbox.addEventListener("click", (e) => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove("show");
-            }
-        });
-    }
-
-    if (fullscreenButton) {
-        if (!document.fullscreenEnabled) {
-            fullscreenButton.style.display = "none";
-        } else {
-            fullscreenButton.addEventListener("click", toggleFullScreen);
-            document.addEventListener("fullscreenchange", updateFullscreenIcon);
-        }
-    }
-}
-
-function toggleFullScreen() {
-    const lightbox = document.getElementById("lightbox");
-    if (!document.fullscreenElement) {
-        lightbox?.requestFullscreen().catch((err) => console.error("Fullscreen request failed", err));
-    } else {
-        document.exitFullscreen();
-    }
-}
-
-function updateFullscreenIcon() {
-    const fullscreenButton = document.getElementById("fullscreen");
-    if (fullscreenButton) {
-        fullscreenButton.innerHTML = document.fullscreenElement
-            ? "<i aria-label='Exit fullscreen' class='fullscreenbutton'>🔲</i>"
-            : "<i aria-label='Enter fullscreen' class='fullscreenbutton'>⛶</i>";
-    }
-}
-
-// ----------------------
-// CONTACT FORM FUNCTION
-// ----------------------
-function prefillContactForm() {
-    function getQueryParam(param) {
-        return new URLSearchParams(window.location.search).get(param);
-    }
-
-    const subjectField = document.getElementById("subject");
-    if (subjectField) {
-        const subjectValue = getQueryParam("subject");
-        if (subjectValue) {
-            subjectField.value = decodeURIComponent(subjectValue);
-        }
-    }
-}
 
 // ----------------------
 // WORDPRESS SPECIFIC FUNCTIONS
 // ----------------------
 
-// AJAX functionality for dynamic content loading
-function loadMoreImages(postType, page = 1) {
-    if (typeof javi_ajax === 'undefined') {
-        console.error('AJAX configuration not found');
-        return;
-    }
 
-    const data = new FormData();
-    data.append('action', 'load_more_images');
-    data.append('post_type', postType);
-    data.append('page', page);
-    data.append('nonce', javi_ajax.nonce);
-
-    fetch(javi_ajax.ajax_url, {
-        method: 'POST',
-        body: data
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            const gallery = document.querySelector('.gallery');
-            if (gallery) {
-                gallery.insertAdjacentHTML('beforeend', data.data.html);
-                // Re-initialize lazy loading for new images
-                initializeLazyLoading();
-            }
-        }
-    })
-    .catch(error => {
-        console.error('Error loading more images:', error);
-    });
-}
-
-// Initialize lazy loading for dynamically loaded content
-function initializeLazyLoading() {
-    const lazyImages = document.querySelectorAll("img.lazy:not([data-loaded])");
-    if ("IntersectionObserver" in window) {
-        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target;
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove("lazy");
-                    lazyImage.setAttribute('data-loaded', 'true');
-                    lazyImageObserver.unobserve(lazyImage);
-                }
-            });
-        });
-
-        lazyImages.forEach((lazyImage) => lazyImageObserver.observe(lazyImage));
-    }
-}
-
-// Mobile menu improvements
+// Mobile menu improvements with full accessibility support
 function initializeMobileMenu() {
     const hamburger = document.getElementById("hamburger");
     const sidebar = document.getElementById("sidebar");
     const content = document.getElementById("content");
+    let previousFocus = null;
 
     if (hamburger && sidebar) {
         // Toggle menu on hamburger click
         hamburger.addEventListener("click", function(e) {
             e.preventDefault();
             e.stopPropagation();
-            sidebar.classList.toggle("show");
-            if (content) {
-                content.classList.toggle("shift");
+            toggleMenu();
+        });
+
+        // Keyboard support for hamburger button
+        hamburger.addEventListener("keydown", function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
             }
         });
+
+        function toggleMenu() {
+            const isOpen = sidebar.classList.contains("show");
+            
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function openMenu() {
+            sidebar.classList.add("show");
+            hamburger.setAttribute("aria-expanded", "true");
+            if (content) {
+                content.classList.add("shift");
+            }
+            
+            // Store the element that had focus before opening menu
+            previousFocus = document.activeElement;
+            
+            // Don't auto-focus the first menu item to avoid visual "selected" appearance
+            // Users can navigate with keyboard if needed
+            
+            // Trap focus within the menu
+            trapFocus(sidebar);
+        }
+
+        function closeMenu() {
+            sidebar.classList.remove("show");
+            hamburger.setAttribute("aria-expanded", "false");
+            if (content) {
+                content.classList.remove("shift");
+            }
+            
+            // Restore focus to the hamburger button
+            if (previousFocus) {
+                previousFocus.focus();
+            } else {
+                hamburger.focus();
+            }
+        }
 
         // Close sidebar when clicking outside
         document.addEventListener("click", function(event) {
             if (window.innerWidth <= 768) {
                 if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
-                    sidebar.classList.remove("show");
-                    if (content) {
-                        content.classList.remove("shift");
-                    }
+                    closeMenu();
                 }
             }
         });
@@ -252,12 +98,55 @@ function initializeMobileMenu() {
         menuLinks.forEach(link => {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
-                    sidebar.classList.remove("show");
-                    if (content) {
-                        content.classList.remove("shift");
-                    }
+                    closeMenu();
                 }
             });
+        });
+
+        // Close menu with Escape key
+        document.addEventListener("keydown", function(e) {
+            if (e.key === 'Escape' && sidebar.classList.contains("show")) {
+                closeMenu();
+            }
+        });
+    }
+
+    // Focus trap function
+    function trapFocus(element) {
+        const focusableElements = element.querySelectorAll(
+            'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+        );
+        const firstFocusableElement = focusableElements[0];
+        const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+        // Only trap focus if user is already navigating with keyboard
+        let isKeyboardNavigation = false;
+        
+        element.addEventListener('keydown', function(e) {
+            isKeyboardNavigation = true;
+            
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        lastFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusableElement) {
+                        firstFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        });
+        
+        // If user starts keyboard navigation, focus the first element
+        element.addEventListener('keydown', function(e) {
+            if (isKeyboardNavigation && (e.key === 'Tab' || e.key === 'ArrowDown')) {
+                if (firstFocusableElement && document.activeElement === element) {
+                    firstFocusableElement.focus();
+                }
+            }
         });
     }
 }
@@ -296,31 +185,3 @@ function initializeSmoothScrolling() {
 // Initialize smooth scrolling
 document.addEventListener("DOMContentLoaded", initializeSmoothScrolling);
 
-// Gallery keyboard navigation improvements
-function initializeGalleryKeyboardNav() {
-    document.addEventListener("keydown", function(event) {
-        const lightbox = document.getElementById("lightbox");
-        if (lightbox && lightbox.classList.contains("show")) {
-            switch(event.key) {
-                case 'ArrowLeft':
-                    event.preventDefault();
-                    const prevButton = document.getElementById("prev");
-                    if (prevButton) prevButton.click();
-                    break;
-                case 'ArrowRight':
-                    event.preventDefault();
-                    const nextButton = document.getElementById("next");
-                    if (nextButton) nextButton.click();
-                    break;
-                case 'Escape':
-                    event.preventDefault();
-                    const closeButton = document.getElementById("close");
-                    if (closeButton) closeButton.click();
-                    break;
-            }
-        }
-    });
-}
-
-// Initialize gallery keyboard navigation
-document.addEventListener("DOMContentLoaded", initializeGalleryKeyboardNav);

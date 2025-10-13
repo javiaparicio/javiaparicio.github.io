@@ -1,15 +1,13 @@
 # Javi Aparicio Foto WordPress Theme
 
-A professional photography portfolio WordPress theme converted from Jekyll, featuring responsive design, image galleries, multi-language support, and modern lightbox functionality.
+A professional photography portfolio WordPress theme converted from Jekyll, featuring responsive design, multi-language support, and modern functionality.
 
 ## Features
 
 - **Responsive Design**: Mobile-first approach with hamburger menu for mobile devices
-- **Image Galleries**: Custom post types for Portraits and Events with lightbox functionality
+- **Custom Post Types**: Portraits and Events for organizing photography content
 - **Multi-language Support**: Built-in support for English, Spanish, and German
-- **Custom Post Types**: Dedicated galleries for portraits and events
-- **Lightbox Gallery**: Full-screen image viewing with navigation
-- **Lazy Loading**: Optimized image loading for better performance
+- **Custom Post Types**: Dedicated content types for portraits and events
 - **SEO Ready**: Clean, semantic HTML structure
 - **Customizer Integration**: Easy theme customization through WordPress Customizer
 
@@ -49,7 +47,6 @@ After activating the theme:
 
 Go to Appearance → Customize → Theme Options:
 
-- **Contact Email**: Set your contact email
 - **Phone Number**: Add your phone number
 - **Address**: Add your business address
 
@@ -82,13 +79,13 @@ The theme includes a content import tool:
 
 ### 5. Adding Content
 
-#### Portraits Gallery
+#### Portraits Content
 1. Go to Portraits → Add New
 2. Add title and featured image
 3. Fill in multi-language titles in the meta box
 4. Publish
 
-#### Events Gallery
+#### Events Content
 1. Go to Events → Add New
 2. Add title and featured image
 3. Fill in multi-language titles in the meta box
@@ -97,7 +94,7 @@ The theme includes a content import tool:
 #### Pages
 Create the following pages with the specified templates:
 
-- **Contact Page**: Use "Contact Page" template
+- **Contact Page**: Standard page for contact information
 - **Pricing Page**: Use "Pricing Page" template
 - **Legal Pages**: Create standard pages for legal content
 
@@ -106,12 +103,9 @@ Create the following pages with the specified templates:
 For best performance:
 
 1. **Image Sizes**: The theme creates custom image sizes:
-   - `gallery-thumb`: 350x350px (gallery thumbnails)
-   - `gallery-large`: 1200x800px (lightbox images)
    - `about-image`: 300x300px (about section)
 
 2. **WebP Support**: Use WebP format for better compression
-3. **Lazy Loading**: Images load automatically as users scroll
 
 ## File Structure
 
@@ -124,7 +118,6 @@ wordpress-theme/
 ├── footer.php                # Footer template
 ├── single.php                # Single post template
 ├── page.php                  # Page template
-├── page-contact.php          # Contact page template
 ├── page-pricing.php          # Pricing page template
 ├── archive-portraits.php     # Portraits archive
 ├── archive-events.php        # Events archive
@@ -186,7 +179,7 @@ For extensive customizations, create a child theme:
 
 1. **Menu Not Showing**: Ensure menus are assigned to correct locations
 2. **Images Not Loading**: Check image paths and permissions
-3. **Lightbox Not Working**: Verify JavaScript is enabled
+3. **JavaScript Issues**: Verify JavaScript is enabled
 4. **Mobile Menu Issues**: Clear cache and check responsive settings
 
 ### Debug Mode
@@ -214,7 +207,7 @@ For theme support and customization:
 - Added custom post types for galleries
 - Implemented multi-language support
 - Added responsive design
-- Included lightbox functionality
+- Clean, semantic HTML structure
 
 ## License
 

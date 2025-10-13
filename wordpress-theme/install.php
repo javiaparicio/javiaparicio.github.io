@@ -27,6 +27,9 @@ class JaviAparicioThemeInstaller {
         // Set default options
         $this->set_default_options();
         
+        // Create sample content
+        $this->create_sample_content();
+        
         // Flush rewrite rules
         flush_rewrite_rules();
     }
@@ -34,31 +37,117 @@ class JaviAparicioThemeInstaller {
     private function create_default_pages() {
         $pages = array(
             array(
+                'title' => 'Portraits',
+                'slug' => 'portraits',
+                'content' => '<h2>Portrait Photography</h2>
+<p>Professional portrait photography that captures your personality and tells your story.</p>
+
+<h3>Portrait Sessions</h3>
+<p>I specialize in creating beautiful, natural portraits that reflect your true self. Each session is tailored to your individual style and preferences.</p>
+
+<h3>What to Expect</h3>
+<ul>
+<li><strong>Consultation</strong> - We\'ll discuss your vision and goals</li>
+<li><strong>Planning</strong> - Location, styling, and session details</li>
+<li><strong>Photography</strong> - Professional session with guidance</li>
+<li><strong>Editing</strong> - Careful post-processing for best results</li>
+<li><strong>Delivery</strong> - High-resolution images in your preferred format</li>
+</ul>
+
+<p>Ready to create beautiful portraits? Contact me to book your session.</p>'
+            ),
+            array(
+                'title' => 'Events',
+                'slug' => 'events',
+                'content' => '<h2>Event Photography</h2>
+<p>Professional event photography that captures the special moments and emotions of your important occasions.</p>
+
+<h3>Event Coverage</h3>
+<p>From intimate gatherings to large celebrations, I document your events with a professional eye for detail and emotion.</p>
+
+<h3>Services Available</h3>
+<ul>
+<li><strong>Weddings</strong> - Complete wedding day coverage</li>
+<li><strong>Corporate Events</strong> - Business meetings, conferences, and celebrations</li>
+<li><strong>Birthday Parties</strong> - Milestone celebrations and special occasions</li>
+<li><strong>Anniversaries</strong> - Celebrating important milestones</li>
+<li><strong>Custom Events</strong> - Any special occasion you want to remember</li>
+</ul>
+
+<p>Let\'s discuss your event photography needs. Get in touch for a personalized quote.</p>'
+            ),
+            array(
                 'title' => 'Contact',
                 'slug' => 'contact',
-                'template' => 'page-contact.php',
-                'content' => 'Contact page content...'
+                'content' => '<h2>Get in Touch</h2>
+<p>Ready to create something amazing together? Let\'s discuss your photography needs.</p>
+
+<h3>Professional Photography Services</h3>
+<p>I offer personalized photography services tailored to your specific needs and vision. Every project is unique, and so is my approach.</p>
+
+<h3>Services Available</h3>
+<ul>
+<li><strong>Portrait Photography</strong> - Professional portrait sessions</li>
+<li><strong>Event Photography</strong> - Weddings, corporate events, celebrations</li>
+<li><strong>Commercial Photography</strong> - Business and product photography</li>
+<li><strong>Custom Projects</strong> - Tailored solutions for your specific needs</li>
+</ul>
+
+<p>Get in touch to discuss your photography requirements and get a personalized quote.</p>'
             ),
             array(
                 'title' => 'Pricing',
                 'slug' => 'pricing',
-                'template' => 'page-pricing.php',
-                'content' => 'Pricing page content...'
+                'content' => '<h2>Professional Photography Services</h2>
+<p>Every project is unique, and so is my approach. I offer personalized photography services tailored to your specific needs and vision.</p>
+
+<h3>Portrait Session</h3>
+<p>Professional portrait photography session</p>
+<ul>
+<li>1-2 hour session</li>
+<li>Professional editing</li>
+<li>High-resolution digital files</li>
+<li>Content management for portfolios</li>
+</ul>
+<p><strong>Starting from CHF 300</strong></p>
+
+<h3>Event Photography</h3>
+<p>Professional event documentation</p>
+<ul>
+<li>Full event coverage</li>
+<li>Professional editing</li>
+<li>High-resolution digital files</li>
+<li>Quick turnaround</li>
+</ul>
+<p><strong>Starting from CHF 500</strong></p>
+
+<h3>Custom Projects</h3>
+<p>Tailored photography solutions</p>
+<ul>
+<li>Consultation and planning</li>
+<li>Flexible scheduling</li>
+<li>Custom deliverables</li>
+<li>Ongoing support</li>
+</ul>
+<p><strong>Custom pricing</strong></p>'
             ),
             array(
                 'title' => 'Legal',
                 'slug' => 'legal',
-                'content' => 'Legal information...'
+                'content' => '<h2>Legal Information</h2>
+<p>Legal information and terms for Javi Aparicio Foto services.</p>'
             ),
             array(
                 'title' => 'Terms and Conditions',
                 'slug' => 'terms-and-conditions',
-                'content' => 'Terms and conditions...'
+                'content' => '<h2>Terms and Conditions</h2>
+<p>Terms and conditions for photography services.</p>'
             ),
             array(
                 'title' => 'Privacy Policy',
                 'slug' => 'privacy-policy',
-                'content' => 'Privacy policy...'
+                'content' => '<h2>Privacy Policy</h2>
+<p>Privacy policy and data protection information.</p>'
             )
         );
         
@@ -73,9 +162,6 @@ class JaviAparicioThemeInstaller {
                     'post_content' => $page['content']
                 ));
                 
-                if (isset($page['template']) && $page_id) {
-                    update_post_meta($page_id, '_wp_page_template', $page['template']);
-                }
             }
         }
     }
@@ -135,9 +221,6 @@ class JaviAparicioThemeInstaller {
     
     private function set_default_options() {
         // Set default theme options
-        set_theme_mod('contact_email', 'info@javiapariciofoto.ch');
-        set_theme_mod('contact_phone', '+41 77 231 12 63');
-        set_theme_mod('contact_address', 'Stauffacherstrasse 44, 3014 Bern, Switzerland');
         
         // Set default image sizes
         update_option('thumbnail_size_w', 350);
