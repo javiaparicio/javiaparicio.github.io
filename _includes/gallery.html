@@ -1,22 +1,24 @@
 {% assign gallery_data = site.data[include.gallery_type] %}
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign folder = '/assets/images/portfolio/' | append: include.gallery_type %}
-{% assign images = site.static_files | where_exp: "file", "file.path contains folder" | sort: "path" | reverse %}
+{% assign all_images = site.static_files | where_exp: "file", "file.path contains folder" | sort: "path" | reverse %}
 {% assign file_time = site.time | date: '%s' %}
 {% assign hash = file_time | MD5 %}
 
 <div class="gallery">
-  {% for image in images %}
+  {% for image in all_images %}
     {% if image.extname == ".webp" %}
-      {% assign filename = image.basename | append: image.extname %}
-      {% assign meta = gallery_data.images | where: "filename", filename | first %}
+      {% unless image.path contains '/wordpress-theme/' %}
+        {% assign filename = image.basename | append: image.extname %}
+        {% assign meta = gallery_data.images | where: "filename", filename | first %}
 
-      <img
-        data-src="{{ image.path | append: '?v=' | append: hash }}"
-        alt="{{ meta.title[lang] | default: 'Photo by Javi Aparicio' }}"
-        class="gallery-image lazy"
-        data-title="{{ meta.title[lang] | default: '' }}"
-      >
+        <img
+          data-src="{{ image.path | append: '?v=' | append: hash }}"
+          alt="{{ meta.title[lang] | default: 'Photo by Javi Aparicio' }}"
+          class="gallery-image lazy"
+          data-title="{{ meta.title[lang] | default: '' }}"
+        >
+      {% endunless %}
     {% endif %}
   {% endfor %}
 </div>
