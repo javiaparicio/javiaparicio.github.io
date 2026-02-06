@@ -19,7 +19,7 @@ locale:
   de: "de_DE"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://javiapariciofoto.ch" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gh.javiapariciofoto.ch" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
 author:
@@ -29,7 +29,7 @@ author:
     es: "Fotógrafo de retratos con base en Berna, Suiza."
     de: "Porträtfotograf mit Sitz in Bern, Schweiz."
   email: info@javiapariciofoto.ch
-  url: https://javiapariciofoto.ch
+  url: https://gh.javiapariciofoto.ch
 
 # Build settings
 theme: minima
