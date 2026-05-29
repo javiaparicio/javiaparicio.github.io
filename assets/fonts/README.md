@@ -6,6 +6,6 @@
 | `socials.svg` | IcoMoon source (reference) |
 | `pixelfed-icon-color.svg` | Pixelfed logo in sidebar |
 | `socials` | Legacy EOT (unused; safe to delete) |
-| `roboto_mono.woff` | Unused (site loads Roboto Mono from Google Fonts) |
+| `roboto-mono/*.woff2` | Roboto Mono 300/400/500 (self-hosted, OFL — see `roboto-mono/OFL.txt`) |
 
 Icons are wired in `_data/settings.yml` (`icon: icon-*`) and `_sass/_sidebar.scss`.
