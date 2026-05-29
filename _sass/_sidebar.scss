@@ -16,13 +16,26 @@
 
 /* Logo Styling */
 .sidebar-logo {
-    margin-bottom: 30px; /* Space below the logo */
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 
+.sidebar-logo a {
+    display: block;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.sidebar-logo a:focus-visible {
+    outline: 2px solid #6cc282;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
 .sidebar-logo img {
-    max-width: 150px; /* Adjust logo size as needed */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 150px;
+    height: auto;
+    display: block;
 }
 
 /* Menu Styling */
