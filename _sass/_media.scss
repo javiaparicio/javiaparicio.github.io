@@ -1,0 +1,189 @@
+@media (max-width: 768px) {
+    .container {
+        --content-gutter: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1002;
+        background: rgba(248, 248, 248, 0.95);
+        border: none;
+        border-radius: 4px;
+        color: inherit;
+        line-height: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .hamburger:focus-visible {
+        outline: 2px solid #6cc282;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1001;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+        width: 100%;
+        padding: var(--content-gutter, 20px);
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar-logo {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar-logo img {
+        max-width: 72px;
+        width: 72px;
+        height: auto;
+        display: block;
+    }
+
+    .menu-list {
+        width: 100%;
+    }
+
+    .menu-list li {
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 44px;
+        padding: 8px 12px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.3;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .menu-list li a:focus-visible {
+        outline: 2px solid #6cc282;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    .language_selector {
+        width: 100%;
+        margin: 4px 0 12px;
+        padding: 0;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .language_selector li {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+    }
+
+    .language_selector a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0 6px;
+        font-size: 15px;
+    }
+
+    .language_selector a:focus-visible {
+        outline: 2px solid #6cc282;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    .language_selector li:not(:last-child)::after {
+        content: "|";
+        margin: 0 2px;
+        color: #000;
+    }
+
+    .socials {
+        width: auto;
+        margin: 8px auto 12px;
+        grid-template-columns: repeat(2, 44px);
+        justify-content: center;
+        gap: 12px 16px;
+    }
+
+    .socials_item_link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .content {
+        margin-top: var(--content-gutter);
+        margin-left: 0;
+        padding: var(--content-gutter);
+        flex: 1;
+    }
+
+    .content.shift {
+        margin-left: 220px; /* Match sidebar width */
+    }
+
+    .text-content,
+    .entry-content,
+    div.aboutme,
+    div.contactme {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .entry-title {
+        font-size: 1.75em;
+    }
+
+    .site-footer {
+        margin-left: calc(-1 * var(--content-gutter, 20px));
+        margin-right: calc(-1 * var(--content-gutter, 20px));
+        padding: 0 var(--content-gutter, 20px);
+    }
+
+    .gallery:not(.gallery--page) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .gallery:not(.gallery--page) .gallery-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .lightbox-btn--fullscreen {
+        display: none;
+    }
+}

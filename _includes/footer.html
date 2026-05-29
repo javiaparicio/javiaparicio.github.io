@@ -1,0 +1,14 @@
+<footer class="site-footer">
+    <hr class="content-divider site-footer__divider" />
+    <p class="site-footer__line">
+        &copy; {{ site.time | date: '%Y' }} {{ site.data.settings.footer.copyright[site.lang] }}
+    </p>
+    <p class="site-footer__line site-footer__line--muted">
+        {{ site.data.settings.footer.appointment[site.lang] }}
+    </p>
+    <nav class="site-footer__nav" aria-label="{% if site.lang == 'de' %}Fußzeile{% elsif site.lang == 'es' %}Pie de página{% else %}Footer{% endif %}">
+        {% for link in site.data.settings.footer.links %}
+        <a href="{% if link.namespace %}{% tl link.namespace %}{% else %}{{ link.url[site.lang] }}{% endif %}">{{ link.name[site.lang] }}</a>
+        {% endfor %}
+    </nav>
+</footer>

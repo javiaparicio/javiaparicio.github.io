@@ -1,0 +1,61 @@
+{% comment %}
+  Usage: {% include gallery.html page="clients" %}
+         {% include gallery.html page="portraits" reverse=true %}
+  Images: assets/images/galleries/{page}/*.webp
+  Captions: _data/galleries.yml
+{% endcomment %}
+{% assign lang = site.lang | default: site.default_lang | default: "de" %}
+{% assign file_time = site.time | date: '%s' %}
+{% assign hash = file_time | MD5 %}
+{% assign page = include.page %}
+{% assign gallery_folder = '/assets/images/galleries/' | append: page | append: '/' %}
+
+{% case page %}
+  {% when 'portraits' %}{% assign alt_key = 'portraits' %}
+  {% when 'events' %}{% assign alt_key = 'events' %}
+  {% else %}{% assign alt_key = 'pages' %}
+{% endcase %}
+{% assign alt_prefix = site.data.seo.gallery_alt[alt_key][lang] | default: site.data.seo.gallery_alt[alt_key].de %}
+
+{% assign all_images = site.static_files
+  | where_exp: "file", "file.path contains gallery_folder"
+  | sort: "path" %}
+{% if include.reverse %}
+  {% assign all_images = all_images | reverse %}
+{% endif %}
+
+{% assign page_layout = "index,services,clients,process" | split: "," %}
+
+{% if all_images.size > 0 %}
+<div class="gallery{% if page_layout contains page %} gallery--page{% endif %}">
+  {% for image in all_images %}
+    {% if image.extname == ".webp" %}
+      {% assign filename = image.basename | append: image.extname %}
+      {% assign caption = '' %}
+      {% assign meta = site.data.galleries[page][filename] %}
+      {% if meta %}
+        {% assign caption = meta[lang] | default: meta.de | default: '' %}
+      {% endif %}
+
+      {% assign plain_name = caption | strip_html | strip %}
+      {% if plain_name == '' or plain_name == 'Self-portrait.' or plain_name == 'Selbstporträt.' or plain_name == 'Autorretrato.' %}
+        {% assign alt_text = alt_prefix %}
+      {% else %}
+        {% assign alt_text = alt_prefix | append: ' – ' | append: plain_name %}
+      {% endif %}
+
+      {% assign img_src = image.path | relative_url | append: '?v=' | append: hash %}
+
+      <img
+        data-src="{{ img_src }}"
+        alt="{{ alt_text | escape }}"
+        class="gallery-image lazy"
+        width="533"
+        height="800"
+        decoding="async"
+        {% if caption != '' %}data-title='{{ caption | replace: "'", "&#39;" }}'{% endif %}
+      >
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}

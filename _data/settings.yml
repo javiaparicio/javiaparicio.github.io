@@ -1,0 +1,106 @@
+contact_settings:
+  form_action: "https://formspree.io/f/mjvnrpje"
+  confirmation_url:
+    de: "/danke/"
+    en: "/en/thank-you/"
+    es: "/es/gracias/"
+  email_subject: "Nachricht von javiapariciofoto.ch"
+  send_button_text:
+    de: "Senden"
+    en: "Send"
+    es: "Enviar"
+
+social_links:
+  - name: Pixelfed
+    url: https://pixelfed.social/javifoto
+    icon: icon-pixelfed
+  - name: Instagram
+    url: https://instagram.com/javiapariciofoto
+    icon: icon-instagram
+  - name: Telegram
+    url: https://t.me/javiapariciofoto
+    icon: icon-telegram
+  - name: Whatsapp
+    phone_link: true
+    icon: icon-whatsapp
+
+menu:
+  - name:
+      de: Startseite
+      en: Home
+      es: Inicio
+    namespace: home
+  - name:
+      de: Dienstleistungen
+      en: Services
+      es: Servicios
+    namespace: services
+  - name:
+      de: Kunden
+      en: Clients
+      es: Clientes
+    namespace: clients
+  - name:
+      de: Ablauf
+      en: Process
+      es: Proceso
+    namespace: process
+  - name:
+      de: Preise
+      en: Pricing
+      es: Precios
+    namespace: pricing
+  - name:
+      de: Über mich
+      en: About
+      es: Sobre mí
+    namespace: about
+  - name:
+      de: Kontakt
+      en: Contact
+      es: Contacto
+    namespace: contact
+
+footer:
+  copyright:
+    de: "Javier Aparicio Ríos Foto. Alle Rechte vorbehalten."
+    en: "Javier Aparicio Ríos Foto. All rights reserved."
+    es: "Javier Aparicio Ríos Foto. Todos los derechos reservados."
+  appointment:
+    de: "Sessions nur nach Termin — Studio in Bern."
+    en: "Sessions by appointment — studio in Bern."
+    es: "Sesiones con cita previa — estudio en Berna."
+  links:
+    - name:
+        de: Porträt-Galerie
+        en: Portrait gallery
+        es: Galería retratos
+      namespace: portraits
+    - name:
+        de: Weitere Arbeiten
+        en: More work
+        es: Otros trabajos
+      namespace: more-work
+    - name:
+        de: Impressum
+        en: Legal notice
+        es: Aviso legal
+      namespace: legal
+    - name:
+        de: AGB
+        en: Terms
+        es: Condiciones
+      namespace: terms
+    - name:
+        de: Datenschutz
+        en: Privacy
+        es: Privacidad
+      namespace: privacy
+    - name:
+        de: Sitemap
+        en: Sitemap
+        es: Mapa del sitio
+      url:
+        de: /sitemap.xml
+        en: /en/sitemap.xml
+        es: /es/sitemap.xml

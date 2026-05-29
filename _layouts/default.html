@@ -1,0 +1,229 @@
+<!doctype html>
+
+<html lang="{{ site.lang | default: site.default_lang }}">
+
+    <head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {% include hreflang.html %}
+
+        {% include metatags.html %}
+
+        <meta
+
+            name="ahrefs-site-verification"
+
+            content="4704889a5ffe2bdc50576fc6ddee24b63e59ac71720cf5536d7a8fa7ed7c1723"
+
+        />
+
+        <meta name="facebook-domain-verification" content="0b6g28oc3e1znqczd2e0t4pv8zkwoy" />
+
+        {% include favicon.html %}
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+
+            rel="preload"
+
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap"
+
+            as="style"
+
+            onload="this.onload=null;this.rel='stylesheet'"
+
+        />
+
+        <noscript>
+
+            <link
+
+                rel="stylesheet"
+
+                href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap"
+
+            />
+
+        </noscript>
+
+        <link
+
+            rel="stylesheet"
+
+            href="{{ '/assets/css/main.css' | absolute_url }}"
+
+        />
+
+        <script
+
+            src="{{ '/assets/js/script.js' | absolute_url }}"
+
+            defer
+
+        ></script>
+
+        {% include ldjson.html %}
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <button
+
+                type="button"
+
+                class="hamburger"
+
+                id="hamburger"
+
+                aria-label="Toggle navigation menu"
+
+                aria-expanded="false"
+
+                aria-controls="sidebar"
+
+            >
+
+                <span aria-hidden="true">&#9776;</span>
+
+            </button>
+
+
+
+            <nav class="sidebar" id="sidebar">
+
+                <div class="sidebar-logo">
+
+                    <img src="{{ '/assets/images/javiAparicioFotoLogo.webp' | absolute_url }}" alt="Javi Aparicio Foto — Portraitfotograf Bern" width="200" height="60" decoding="async">
+
+                </div>
+
+                <ul class="menu-list">
+
+                    {% for menuelement in site.data.settings.menu %}
+
+                    <li>
+
+                        <a href="{% tl menuelement.namespace %}">{{ menuelement.name[site.lang] }}</a>
+
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+                <ul class="language_selector">
+
+                    {% for lang in site.languages %}
+
+                    <li>
+
+                        {% if page.namespace %}
+
+                            {% capture tl_key %}{{ page.namespace }} {{ lang }}{% endcapture %}
+
+                            <a href="{% tl tl_key %}" hreflang="{{ lang }}">{{ lang | upcase }}</a>
+
+                        {% else %}
+
+                            {% assign base_url = page.url | remove: page.lang | append: '/' %}
+
+                            {% if lang == site.default_lang %}
+
+                                <a href="{{ base_url | replace: '//', '/'}}" hreflang="{{ lang }}">{{ lang | upcase }}</a>
+
+                            {% else %}
+
+                                <a href="/{{ lang }}{{ base_url | replace: '//', '/' }}" hreflang="{{ lang }}">{{ lang | upcase }}</a>
+
+                            {% endif %}
+
+                        {% endif %}
+
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+                <ul class="socials">
+
+                    {% for social in site.data.settings.social_links %}
+
+                    <li class="socials_item">
+
+                        <a
+
+                            {% if social.phone_link %}
+                            href="#"
+                            class="socials_item_link js-whatsapp-link"
+                            {% else %}
+                            href="{{ social.url }}"
+                            class="socials_item_link"
+                            {% endif %}
+
+                            target="_blank"
+
+                            rel="noopener noreferrer"
+
+                            title="{{ social.name }}"
+                            aria-label="{{ social.name }}"
+
+                        >
+
+                            <span class="social-icon {{ social.icon }}" aria-hidden="true"></span>
+
+                        </a>
+
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </nav>
+
+
+
+            <div class="content" id="content">
+
+                {% assign page_title = page.title[site.lang] | default: page.title %}
+
+                {% if page_title != blank %}
+
+                <header class="entry-header">
+
+                    <h1 class="entry-title">{{ page_title }}</h1>
+
+                </header>
+
+                {% endif %}
+
+                <div class="entry-content">
+
+                    {{ content }}
+
+                </div>
+
+                {% include lightbox.html %}
+
+                {% include footer.html %}
+
+            </div>
+
+        </div>
+
+
+
+    </body>
+
+</html>
+

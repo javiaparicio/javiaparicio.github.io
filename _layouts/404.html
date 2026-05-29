@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'de' }}" id="error-html">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include metatags.html %}
+    {% include favicon.html %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <style>
+        .error-layout {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem var(--content-gutter, 30px);
+            box-sizing: border-box;
+            text-align: center;
+            background: #f8f8f8;
+        }
+        .error-layout__image {
+            margin-bottom: 2rem;
+        }
+        .error-layout__image img {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .error-layout__content {
+            max-width: 28rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        .error-layout__content strong {
+            color: #333;
+            font-weight: 400;
+        }
+        .error-layout__actions {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .error-layout__actions a {
+            color: #2a2f36;
+            text-decoration: underline;
+            text-decoration-color: #6cc282;
+            text-underline-offset: 0.15em;
+        }
+        .error-layout__actions a:hover {
+            color: #6cc282;
+        }
+        [data-404-lang][hidden] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <main class="error-layout" id="error-main">
+        <a href="/" class="error-layout__image" id="error-home-link">
+            <img
+                src="{{ '/assets/images/404.webp' | relative_url }}"
+                alt=""
+                width="300"
+                height="200"
+                decoding="async"
+            />
+        </a>
+        {{ content }}
+    </main>
+    <script>
+        (function () {
+            var path = window.location.pathname || "/";
+            var lang = "de";
+            if (path === "/en" || path.indexOf("/en/") === 0) lang = "en";
+            else if (path === "/es" || path.indexOf("/es/") === 0) lang = "es";
+
+            var titles = {
+                de: "Seite nicht gefunden – Javi Aparicio Foto",
+                en: "Page not found – Javi Aparicio Foto",
+                es: "Página no encontrada – Javi Aparicio Foto",
+            };
+            var descriptions = {
+                de: "Die angeforderte Seite existiert nicht. Zurück zur Startseite von Javi Aparicio Foto, Portraitfotograf in Bern.",
+                en: "The page you requested does not exist. Return to Javi Aparicio Foto, portrait photographer in Bern.",
+                es: "La página solicitada no existe. Vuelva a Javi Aparicio Foto, fotógrafo de retratos en Berna.",
+            };
+            var locales = { de: "de-CH", en: "en-CH", es: "es" };
+            var homes = { de: "/", en: "/en/", es: "/es/" };
+
+            document.documentElement.lang = locales[lang];
+            document.title = titles[lang];
+            var metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute("content", descriptions[lang]);
+            var homeLink = document.getElementById("error-home-link");
+            if (homeLink) homeLink.href = homes[lang];
+
+            document.querySelectorAll("[data-404-lang]").forEach(function (el) {
+                el.hidden = el.getAttribute("data-404-lang") !== lang;
+            });
+        })();
+    </script>
+</body>
+</html>

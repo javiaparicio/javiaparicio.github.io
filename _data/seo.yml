@@ -1,0 +1,85 @@
+brand: "Javi Aparicio Foto"
+
+gallery_alt:
+  pages:
+    de: "Portraitfotografie Bern"
+    en: "Portrait photography Bern"
+    es: "Fotografía de retrato en Berna"
+  portraits:
+    de: "Professionelles Porträt, Fotostudio Bern"
+    en: "Professional portrait, Bern photo studio"
+    es: "Retrato profesional, estudio de fotografía en Berna"
+  events:
+    de: "Eventfotografie Bern"
+    en: "Event photography Bern"
+    es: "Fotografía de eventos en Berna"
+
+og_image:
+  default: "/assets/images/galleries/index/index_001.webp"
+  home: "/assets/images/galleries/index/index_002.webp"
+  services: "/assets/images/galleries/services/services_001.webp"
+  clients: "/assets/images/galleries/clients/clients_001.webp"
+  process: "/assets/images/galleries/process/process_002.webp"
+  pricing: "/assets/images/galleries/index/index_003.webp"
+  about: "/assets/images/about/001.webp"
+  contact: "/assets/images/javiAparicioFotoLogo.webp"
+  portraits: "/assets/images/galleries/portraits/portraits_034.webp"
+  events: "/assets/images/galleries/events/events_003.webp"
+  more-work: "/assets/images/galleries/index/index_001.webp"
+
+breadcrumb_home:
+  de: "Startseite"
+  en: "Home"
+  es: "Inicio"
+
+faq_pricing:
+  de:
+    - question: "Welche Session brauche ich?"
+      answer: "Wenn Sie unsicher sind, schreiben Sie mir kurz, wofür Sie die Fotos brauchen (LinkedIn, Webseite, Team). Ich empfehle Ihnen das passende Paket — ohne Verpflichtung."
+    - question: "Was kostet ein Portrait in Bern?"
+      answer: "Professionelle Porträts ab 150 CHF, Personal Branding und Team-Sessions ab 350 CHF. Alle Pakete inkl. Vorbereitung, Session, Auswahl und Bearbeitung."
+    - question: "Wo findet die Session statt?"
+      answer: "In meinem Studio in Bern oder an einem Ort in der Stadt — immer nach Terminvereinbarung."
+  en:
+    - question: "Which session do I need?"
+      answer: "If you are unsure, tell me what you need the photos for (LinkedIn, website, team). I will suggest the right package — no obligation."
+    - question: "How much does a portrait session in Bern cost?"
+      answer: "Professional portraits from CHF 150; personal branding and team sessions from CHF 350. All packages include preparation, the session, selection and editing."
+    - question: "Where does the session take place?"
+      answer: "At my studio in Bern or at a location in the city — always by appointment."
+  es:
+    - question: "¿Qué sesión necesito?"
+      answer: "Si no está seguro, indíqueme para qué necesita las fotos (LinkedIn, web, equipo). Le recomiendo el paquete adecuado — sin compromiso."
+    - question: "¿Cuánto cuesta un retrato en Berna?"
+      answer: "Retratos profesionales desde 150 CHF; marca personal y equipos desde 350 CHF. Todos los paquetes incluyen preparación, sesión, selección y edición."
+    - question: "¿Dónde se realiza la sesión?"
+      answer: "En mi estudio en Berna o en un lugar de la ciudad — siempre con cita previa."
+
+offers_pricing:
+  - name:
+      de: "Professionelles Porträt"
+      en: "Professional portrait"
+      es: "Retrato profesional"
+    price: "150"
+    description:
+      de: "Studio-Session für LinkedIn und Webseite in Bern."
+      en: "Studio session for LinkedIn and website in Bern."
+      es: "Sesión en estudio para LinkedIn y web en Berna."
+  - name:
+      de: "Personal Branding"
+      en: "Personal branding"
+      es: "Marca personal"
+    price: "350"
+    description:
+      de: "Mehrere Looks für Online-Präsenz und Social Media."
+      en: "Multiple looks for online presence and social media."
+      es: "Varios looks para presencia online y redes."
+  - name:
+      de: "Teams und kleine Unternehmen"
+      en: "Teams and small businesses"
+      es: "Equipos y pequeñas empresas"
+    price: "350"
+    description:
+      de: "Porträts für Webseite und Unternehmenskommunikation."
+      en: "Portraits for website and business communication."
+      es: "Retratos para web y comunicación empresarial."

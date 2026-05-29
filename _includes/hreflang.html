@@ -1,0 +1,21 @@
+{% if page.namespace %}
+{% for lang in site.languages %}
+  {% capture tl_key %}{{ page.namespace }} {{ lang }}{% endcapture %}
+  {% capture alt_path %}{% tl tl_key %}{% endcapture %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ alt_path | absolute_url }}" />
+{% endfor %}
+{% capture tl_default %}{{ page.namespace }} {{ site.default_lang }}{% endcapture %}
+{% capture default_path %}{% tl tl_default %}{% endcapture %}
+<link rel="alternate" hreflang="x-default" href="{{ default_path | absolute_url }}" />
+{% else %}
+{% assign base_url = page.url | remove: page.lang | append: '/' | replace: '//', '/' %}
+{% for lang in site.languages %}
+  {% if lang == site.default_lang %}
+    {% assign alt_path = base_url %}
+  {% else %}
+    {% assign alt_path = '/' | append: lang | append: base_url %}
+  {% endif %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ alt_path | absolute_url }}" />
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ base_url | absolute_url }}" />
+{% endif %}
