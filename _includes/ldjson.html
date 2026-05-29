@@ -1,51 +1,148 @@
+{% assign lang = site.lang | default: site.default_lang %}
+{% assign seo = site.data.seo %}
+{% assign logo_url = '/assets/images/javiAparicioFotoLogo.webp' | absolute_url %}
+{% assign business_id = site.url | append: '/#business' | absolute_url %}
+{% assign page_title = page.title[lang] | default: page.title %}
+
+{% if page.namespace %}
+  {% capture canonical_path %}{% tl page.namespace %}{% endcapture %}
+{% else %}
+  {% assign canonical_path = page.url %}
+{% endif %}
+{% assign page_url = canonical_path | absolute_url %}
+
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Javi Aparicio Foto",
-        "image": "https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp",
-        "@id": "https://javiapariciofoto.ch/",
-        "url": "https://javiapariciofoto.ch/",
-        "telephone": "+41 77 231 12 63",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Stauffacherstrasse 44",
-            "addressLocality": "Bern",
-            "postalCode": "3014",
-            "addressCountry": "CH"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "46.9647184",
-            "longitude": "7.4527444"
-        },
-        "priceRange": "$$",
-        "openingHours": "Mo-Su 17:00-21:00",
-        "sameAs": ["https://www.instagram.com/javiapariciofoto/"],
-        "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 46.9647184,
-                "longitude": 7.4527444
-            },
-            "geoRadius": 100000
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Photography Services",
-            "itemListElement": [
-                {
-                    "@type": "Service",
-                    "name": "Portrait Photography",
-                    "description": "Professional portrait photography in Bern for individuals, couples, and families."
-                },
-                {
-                    "@type": "Service",
-                    "name": "Event Photography",
-                    "description": "High-quality event photography for corporate events, concerts, and private gatherings."
-                }
-            ]
-        }
+      "@type": ["ProfessionalService", "Photographer", "LocalBusiness"],
+      "@id": {{ business_id | jsonify }},
+      "name": {{ seo.brand | jsonify }},
+      "image": {{ logo_url | jsonify }},
+      "url": {{ site.url | jsonify }},
+      "telephone": "+41 77 231 12 63",
+      "email": {{ site.email | jsonify }},
+      "description": {{ site.description[lang] | jsonify }},
+      "priceRange": "CHF 150–350",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stauffacherstrasse 44",
+        "addressLocality": "Bern",
+        "postalCode": "3014",
+        "addressCountry": "CH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.9647184,
+        "longitude": 7.4527444
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Bern"
+      },
+      "sameAs": [
+        {%- for social in site.data.settings.social_links -%}
+        {{ social.url | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ],
+      "knowsLanguage": ["de", "en", "es"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Portrait photography",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Professional portrait",
+              "description": "LinkedIn and website portraits in Bern"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Personal branding photography",
+              "description": "Portrait sessions for personal brand and social media"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": {{ page_url | append: '#webpage' | jsonify }},
+      "url": {{ page_url | jsonify }},
+      "name": {{ page_title | jsonify }},
+      "description": {{ page.description[lang] | default: site.description[lang] | jsonify }},
+      "inLanguage": {{ site.locale[lang] | jsonify }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": {{ site.url | append: '/#website' | jsonify }},
+        "url": {{ site.url | jsonify }},
+        "name": {{ seo.brand | jsonify }},
+        "publisher": { "@id": {{ business_id | jsonify }} }
+      }
     }
+    {% if page.namespace == 'home' %}
+    ,{
+      "@type": "WebSite",
+      "@id": {{ site.url | append: '/#website' | jsonify }},
+      "url": {{ site.url | jsonify }},
+      "name": {{ seo.brand | jsonify }},
+      "publisher": { "@id": {{ business_id | jsonify }} },
+      "inLanguage": ["de-CH", "en-CH", "es"]
+    }
+    {% endif %}
+    {% unless page.namespace == 'home' or page.namespace == nil %}
+    ,{
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ site.data.seo.breadcrumb_home[lang] | jsonify }},
+          "item": {% capture home_path %}{% tl home %}{% endcapture %}{{ home_path | absolute_url | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page_title | jsonify }},
+          "item": {{ page_url | jsonify }}
+        }
+      ]
+    }
+    {% endunless %}
+    {% if page.namespace == 'pricing' %}
+    {% for offer in seo.offers_pricing %}
+    ,{
+      "@type": "Offer",
+      "name": {{ offer.name[lang] | jsonify }},
+      "description": {{ offer.description[lang] | jsonify }},
+      "price": {{ offer.price | jsonify }},
+      "priceCurrency": "CHF",
+      "availability": "https://schema.org/InStock",
+      "url": {{ page_url | jsonify }},
+      "seller": { "@id": {{ business_id | jsonify }} }
+    }
+    {% endfor %}
+    ,{
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in seo.faq_pricing[lang] %}
+        {
+          "@type": "Question",
+          "name": {{ item.question | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.answer | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+  ]
+}
 </script>

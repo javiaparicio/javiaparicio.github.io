@@ -1,24 +1,97 @@
 .content {
     margin-top: 30px;
-    margin-left: 320px;
-    padding: 20px;
+    margin-left: 260px;
+    padding: 20px 40px 24px 20px;
     flex: 1;
     color: #666;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.entry-header {
+    margin-bottom: 30px;
+}
+
+.entry-title {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.entry-content {
+    line-height: 1.6;
     width: 100%;
-    max-width: 1200px;
-    transition: margin-left 0.3s ease; /* Smooth transition for shifting content */
+}
+
+/* Hide duplicate h1 when title is shown in header (from front matter) */
+.entry-header ~ .entry-content > h1:first-child,
+.entry-header ~ .entry-content .text-content > h1:first-child {
+    display: none;
 }
 
 .text-content {
-    width: 60%;
-    margin: 0 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     color: #666;
+
+    .lead {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #2A2F36;
+    }
+
+    blockquote {
+        margin: 0.75rem 0;
+        padding: 0.5rem 0 1rem;
+        border-left: 3px solid #6CC282;
+        color: #555;
+        font-style: italic;
+    }
+
+    h2 {
+        color: #333;
+        font-weight: 300;
+        font-size: 1.5em;
+        margin: 0 0 1rem;
+    }
+
+    h3 {
+        color: #333;
+        font-weight: 300;
+        margin-top: 1.25rem;
+    }
+
+    a {
+        color: #2a2f36;
+        text-decoration: underline;
+        text-decoration-color: #6cc282;
+        text-underline-offset: 0.15em;
+    }
+
+    a:hover {
+        color: #6cc282;
+    }
+}
+
+hr.content-divider,
+.entry-content hr {
+    border: none;
+    border-top: 2px solid #666;
+    margin: 2rem 0;
+    width: 100%;
+    opacity: 0.4;
 }
 
 .aboutme {
     background-color: #ffffff;
     border-radius: 5px;
-    width: 60%;
+    width: 100%;
+    max-width: 100%;
 
     p {
         color: #666;
@@ -29,19 +102,19 @@
     border-radius: 8px;
 }
 
-
 /* Contact */
 .contactme {
-    width: 60%; /* Keep the width as needed */
+    width: 100%;
+    max-width: 100%;
     background-color: #ffffff;
     border-radius: 5px;
-    margin-left: 0; /* Align the container to the left */
-    padding: 0px; /* Add padding for better spacing */
+    margin-left: 0;
+    padding: 0;
 }
 
 form {
-    max-width: 600px; /* Keep the max-width for the form */
-    margin: 0; /* Remove auto margin to stop centering */
+    max-width: 600px;
+    margin: 0;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -82,7 +155,7 @@ button[type="submit"]:hover {
 .agb-checkbox {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adds space between checkbox and label */
+    gap: 10px;
     font-size: 0.9rem;
 }
 
@@ -100,52 +173,49 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-
-/* Pricing */
-.pricing-content {
-    width: 60%;
-    background-color: #ffffff;
-    border-radius: 5px;
-}
-
-.pricing-content h1 {
-    text-align: center;
-    color: #333;
-}
-
-/* Specific Styles for Packages */
-.package {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.package h2 {
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.package ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-/* Footer Styles */
+/* Footer — aligned with main content typography */
 .site-footer {
-    background: #ffffff;
-    color: white;
-    padding: 20px 0;
-    font-size: 0.9rem;
+    margin: 2rem -40px 0 -20px;
+    padding: 0 40px 0 20px;
+    width: auto;
+    font-size: inherit;
+    font-weight: 300;
     line-height: 1.6;
-    width: 100%;
+    color: #666;
+    background: transparent;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding: 10px 20px;
-    background: #abb7b7;
-    color: #333333;
-    font-size: 0.8rem;
-    margin-top: 20px;
+.site-footer__divider {
+    margin: 0 0 1.25rem;
+}
+
+.site-footer__line {
+    margin: 0 0 0.35rem;
+    color: #666;
+}
+
+.site-footer__line--muted {
+    color: #6c7a89;
+    margin-bottom: 1rem;
+}
+
+.site-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer__nav a {
+    color: #2a2f36;
+    text-decoration: underline;
+    text-decoration-color: #6cc282;
+    text-underline-offset: 0.15em;
+    font-size: inherit;
+}
+
+.site-footer__nav a:hover {
+    color: #6cc282;
 }

@@ -1,25 +1,41 @@
 ---
 permalink: /404.html
 layout: default
+title:
+  de: "Seite nicht gefunden – Javi Aparicio Foto"
+  en: "Page not found – Javi Aparicio Foto"
+  es: "Página no encontrada – Javi Aparicio Foto"
+description:
+  de: "Die angeforderte Seite existiert nicht. Zurück zur Startseite von Javi Aparicio Foto, Portraitfotograf in Bern."
+  en: "The page you requested does not exist. Return to Javi Aparicio Foto, portrait photographer in Bern."
+  es: "La página solicitada no existe. Vuelva a Javi Aparicio Foto, fotógrafo de retratos en Berna."
+noindex: true
+sitemap: false
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+  .error-page {
+    max-width: 36rem;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+  .error-page h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #333;
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="text-content error-page">
+  {% if site.lang == 'de' %}
+  <p><strong>Seite nicht gefunden.</strong></p>
+  <p>Der Link ist kaputt oder die Seite gibt es nicht mehr.</p>
+  <p><a href="{% tl home %}" class="button">Zur Startseite</a> · <a href="{% tl contact %}">Kontakt</a></p>
+  {% elsif site.lang == 'es' %}
+  <p><strong>Página no encontrada.</strong></p>
+  <p>El enlace no funciona o la página ya no está aquí.</p>
+  <p><a href="{% tl home %}" class="button">Volver al inicio</a> · <a href="{% tl contact %}">Contacto</a></p>
+  {% else %}
+  <p><strong>Page not found.</strong></p>
+  <p>The link is broken or the page has moved.</p>
+  <p><a href="{% tl home %}" class="button">Back to home</a> · <a href="{% tl contact %}">Contact</a></p>
+  {% endif %}
 </div>

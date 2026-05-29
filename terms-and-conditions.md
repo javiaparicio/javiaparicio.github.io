@@ -1,16 +1,22 @@
 ---
 layout: default
-title: ""
-permalink: /terms-and-conditions/
-description: ""
+namespace: terms
+permalink: /allgemeine-geschaeftsbedingungen-agb/
+permalink_en: /terms/
+permalink_es: /condiciones/
 title:
-  en: "Terms and Conditions (TC) – Javi Aparicio Foto"
-  es: "Términos y Condiciones (TC) – Javi Aparicio Foto"
-  de: "Allgemeine Geschäftsbedingungen (AGB) – Javi Aparicio Foto"
+  de: "AGB"
+  en: "Terms & Conditions"
+  es: "Condiciones generales"
 description:
-  en: "Review the Terms and Conditions (TC) for Javi Aparicio Foto. Learn about our booking policies, payment terms, and image usage rights."
-  es: "Revisa los Términos y Condiciones (TC) de Javi Aparicio Foto. Infórmate sobre nuestras políticas de reserva, términos de pago y derechos de uso de las imágenes."
-  de: "Überprüfen Sie die AGB von Javi Aparicio Foto. Erfahren Sie mehr über unsere Buchungsrichtlinien, Zahlungsbedingungen und Bildnutzungsrechte."
+  de: "Allgemeine Geschäftsbedingungen für Portrait-Sessions in Bern: Buchung, Zahlung, Stornierung, Bildrechte und Nutzung der Fotos."
+  en: "Terms for portrait sessions in Bern: booking, payment, cancellation, image rights and use of photographs."
+  es: "Condiciones para sesiones de retrato en Berna: reserva, pago, cancelación, derechos de imagen y uso de las fotos."
+redirect_from:
+  - /terms-and-conditions/
+  - /de/allgemeine-geschaeftsbedingungen-agb/
+  - /en/allgemeine-geschaeftsbedingungen-agb/
+  - /es/allgemeine-geschaeftsbedingungen-agb/
 ---
 
 {% tf terms-and-conditions.md %}

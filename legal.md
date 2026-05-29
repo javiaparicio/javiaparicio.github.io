@@ -1,14 +1,23 @@
 ---
 layout: default
-permalink: /legal/
+namespace: legal
+permalink: /rechtliche-informationen-impressum/
+permalink_en: /legal-notice/
+permalink_es: /aviso-legal/
 title:
-  en: "Legal Information – Javi Aparicio Foto | Photography in Bern"
-  es: "Información Legal – Javi Aparicio Foto | Fotografía en Berna"
-  de: "Rechtliche Informationen – Javi Aparicio Foto | Fotografie in Bern"
+  de: "Impressum"
+  en: "Legal Notice"
+  es: "Aviso legal"
 description:
-  en: "Legal information for Javi Aparicio Foto. Find contact details, company information, and compliance details for our photography business in Bern, Switzerland."
-  es: "Información legal de Javi Aparicio Foto: contacto, datos de la empresa y detalles de cumplimiento para nuestro negocio de fotografía en Berna, Suiza."
-  de: "Rechtliche Informationen zu Javi Aparicio Foto: Kontaktangaben, Unternehmensinfos und Compliance-Details für unser Fotografiegeschäft in Bern, Schweiz."
+  de: "Impressum von Javi Aparicio Foto, Portraitfotograf Bern: Anbieter, Adresse Stauffacherstrasse 44, Kontakt und rechtliche Angaben gemäss Schweizer Recht."
+  en: "Legal notice for Javi Aparicio Foto, portrait photographer Bern: provider details, Stauffacherstrasse 44 address, contact and legal information."
+  es: "Aviso legal de Javi Aparicio Foto, fotógrafo en Berna: datos del proveedor, dirección Stauffacherstrasse 44, contacto e información legal."
+redirect_from:
+  - /legal/
+  - /impressum/
+  - /de/rechtliche-informationen-impressum/
+  - /en/rechtliche-informationen-impressum/
+  - /es/rechtliche-informationen-impressum/
 ---
 
 {% tf legal.md %}

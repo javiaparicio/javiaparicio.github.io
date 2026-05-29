@@ -1,43 +1,34 @@
-languages: ["en", "de", "es"]
-default_lang: "en"
+languages: ["de", "en", "es"]
+default_lang: "de"
 
 title:
-  en: "Javi Aparicio Foto - Professional Photography"
-  es: "Javi Aparicio Foto - Fotografía Profesional"
-  de: "Javi Aparicio Foto - Professionelle Fotografie"
+  de: "Portraitfotograf Bern | LinkedIn & Personal Branding – Javi Aparicio Foto"
+  en: "Portrait Photographer Bern | LinkedIn & Branding – Javi Aparicio Foto"
+  es: "Fotógrafo de retratos Berna | LinkedIn y marca personal – Javi Aparicio Foto"
 
 description:
-    en: "Capturing authentic moments through professional photography."
-    es: "Capturando momentos auténticos a través de la fotografía profesional."
-    de: "Authentische Momente durch professionelle Fotografie festhalten."
+  de: "Portraitfotograf in Bern für Fachpersonen & Teams: LinkedIn, Personal Branding, Fotostudio mit Termin. Pakete ab 150 CHF — Session anfragen."
+  en: "Portrait photographer in Bern for professionals & teams: LinkedIn, personal branding, studio by appointment. Packages from CHF 150 — book a session."
+  es: "Fotógrafo de retratos en Berna para profesionales y equipos: LinkedIn, marca personal, estudio con cita. Paquetes desde 150 CHF — solicitar sesión."
 
 email: info@javiapariciofoto.ch
 
 locale:
-  en: "en_US"
-  es: "es_ES"
-  de: "de_DE"
+  de: "de_CH"
+  en: "en_CH"
+  es: "es"
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gh.javiapariciofoto.ch" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
-github_username:
+baseurl: ""
+url: "https://javiapariciofoto.ch"
+
 author:
   name: Javi Aparicio
-  bio:
-    en: "Portrait photographer based in Bern, Switzerland."
-    es: "Fotógrafo de retratos con base en Berna, Suiza."
-    de: "Porträtfotograf mit Sitz in Bern, Schweiz."
   email: info@javiapariciofoto.ch
-  url: https://gh.javiapariciofoto.ch
+  url: https://javiapariciofoto.ch
 
-# Build settings
-theme: minima
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
   - jekyll-multiple-languages-plugin
-
+  - jekyll-redirect-from
 
 exclude_from_localization: ["assets"]
 
@@ -48,14 +39,6 @@ timezone: Europe/Zurich
 
 markdown: kramdown
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -67,3 +50,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - wordpress-theme/

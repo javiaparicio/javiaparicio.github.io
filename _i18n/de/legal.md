@@ -1,41 +1,19 @@
-# Rechtliche Informationen (Impressum)
+# Impressum
 
-## Impressum
-**Firmenname**: Javier Aparicio Ríos Foto
+**Firmenname:** Javier Aparicio Ríos Foto
 
-**Inhaber**: <span id="owner">Javascript Blocked</span>
+**Inhaber:** Javi Aparicio
 
-**Adresse**: <span id="address">Javascript Blocked</span>
+**Adresse:** Stauffacherstrasse 44, 3014 Bern, Schweiz
 
-**E-Mail**: <span id="email">Javascript Blocked</span>
+**E-Mail:** [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)
 
-**Telefon**: <span id="phone">Javascript Blocked</span>
+**Telefon:** +41 77 231 12 63
 
-**Handelsregister-Nummer**: <span id="che">Javascript Blocked</span>
+**Handelsregister:** CHE-482.759.955
 
-**Mehrwertsteuer-Nummer**: Nicht mehrwertsteuerpflichtig.
+**MWST:** Nicht mehrwertsteuerpflichtig.
 
 ---
 
-## Kontaktinformationen
-Bei Fragen oder Anliegen bezüglich dieser rechtlichen Informationen kontaktieren Sie uns bitte unter:
-
-**E-Mail**: <span id="email2">Javascript Blocked</span>
-
-**Telefon**: <span id="phone2">Javascript Blocked</span>
-
-<script>
-  fetch('/contact.json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("email").innerHTML =
-        '<a href="mailto:' + data.email + '">' + data.email + '</a>';
-      document.getElementById("email2").innerHTML = document.getElementById("email").innerHTML;
-      document.getElementById("phone").innerHTML = data.phone;
-      document.getElementById("phone2").innerHTML = data.phone;
-      document.getElementById("che").innerHTML = data.che;
-      document.getElementById("address").innerHTML = data.address;
-      document.getElementById("owner").innerHTML = data.owner;
-    })
-    .catch(error => console.error('Error loading contact data:', error));
-</script>
+Fragen zu dieser Seite: [info@javiapariciofoto.ch](mailto:info@javiapariciofoto.ch)

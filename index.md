@@ -1,13 +1,22 @@
 ---
 layout: default
+namespace: home
+permalink: /
+permalink_en: /
+permalink_es: /
 title:
-  en: "Javi Aparicio Foto – Photographer in Bern, Switzerland"
-  es: "Javi Aparicio Foto – Fotógrafo en Berna, Suiza"
-  de: "Javi Aparicio Foto – Fotograf in Bern, Schweiz"
+  de: "Portraitfotograf Bern"
+  en: "Portrait Photographer Bern"
+  es: "Fotógrafo de retratos Berna"
 description:
-  en: "Discover Javi Aparicio Foto, a professional portrait and travel photographer based in Bern, Switzerland. Available by appointment only."
-  es: "Descubre Javi Aparicio Foto, un fotógrafo profesional de retratos y viajes con sede en Berna, Suiza. Disponible solo con cita previa."
-  de: "Entdecken Sie Javi Aparicio Foto, einen professionellen Porträt- und Reisefotografen mit Sitz in Bern, Schweiz. Nur nach Terminvereinbarung verfügbar."
+  de: "Portraitfotograf in Bern für Fachpersonen & Teams: LinkedIn, Personal Branding, Fotostudio mit Termin. Pakete ab 150 CHF — jetzt Session anfragen."
+  en: "Portrait photographer in Bern for professionals & teams: LinkedIn, personal branding, studio by appointment. Packages from CHF 150 — request a session today."
+  es: "Fotógrafo de retratos en Berna para profesionales y equipos: LinkedIn, marca personal, estudio con cita. Paquetes desde 150 CHF — solicite su sesión."
+redirect_from:
+  - /professioneller-portraitfotograf-in-bern/
+  - /de/professioneller-portraitfotograf-in-bern/
+  - /en/professional-portrait-photographer-in-bern/
+  - /es/fotografo-retratos-profesionales-berna/
 ---
 
 {% tf index.md %}

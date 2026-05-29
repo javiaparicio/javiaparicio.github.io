@@ -1,14 +1,22 @@
 ---
 layout: default
-permalink: /pricing/
+namespace: pricing
+permalink: /preise-fuer-portrait-sessions-in-bern/
+permalink_en: /pricing/
+permalink_es: /precios/
 title:
-  en: "Photography Pricing – Affordable Packages in Bern"
-  es: "Precios de Fotografía – Paquetes Asequibles en Berna"
-  de: "Fotopreise – Erschwingliche Pakete in Bern"
+  de: "Preise Portraitfotografie"
+  en: "Portrait Photography Pricing"
+  es: "Precios retrato profesional"
 description:
-  en: "Discover Javi Aparicio Foto’s pricing for portrait photography in Bern. Professional, transparent, and affordable. Book your session today!"
-  es: "Descubre los precios de fotografía de retrato de Javi Aparicio Foto en Berna. Profesional, transparente y asequible. ¡Reserva tu sesión hoy mismo!"
-  de: "Entdecken Sie die Preise für Porträtfotografie von Javi Aparicio Foto in Bern. Professionell, transparent und erschwinglich. Buchen Sie noch heute Ihre Sitzung!"
+  de: "Preise für Portrait-Sessions in Bern: Porträt ab 150 CHF, Personal Branding & Teams ab 350 CHF. Inkl. Vorbereitung, Session & Bearbeitung — Paket wählen."
+  en: "Portrait session prices in Bern: portraits from CHF 150, personal branding & teams from CHF 350. Includes prep, session & editing — choose your package."
+  es: "Precios de sesiones en Berna: retrato desde 150 CHF, marca personal y equipos desde 350 CHF. Incluye preparación, sesión y edición — elija su paquete."
+redirect_from:
+  - /preise/
+  - /de/preise-fuer-portrait-sessions-in-bern/
+  - /en/preise-fuer-portrait-sessions-in-bern/
+  - /es/preise-fuer-portrait-sessions-in-bern/
 ---
 
 {% tf pricing.md %}

@@ -1,31 +1,53 @@
+{% assign lang = site.lang | default: site.default_lang %}
+{% assign page_title = page.title[lang] | default: page.title | default: site.title[lang] %}
+{% assign page_description = page.description[lang] | default: page.description | default: site.description[lang] %}
+{% assign seo = site.data.seo %}
+
+{% if page.namespace %}
+  {% capture canonical_path %}{% tl page.namespace %}{% endcapture %}
+  {% assign canonical_url = canonical_path | absolute_url %}
+{% else %}
+  {% assign canonical_url = page.url | absolute_url %}
+{% endif %}
+
+{% assign og_key = page.namespace | default: 'default' %}
+{% assign og_image_path = page.og_image | default: seo.og_image[og_key] | default: seo.og_image.default %}
+{% assign og_image_url = og_image_path | absolute_url %}
+
+{% assign noindex = page.noindex | default: false %}
+{% if page.sitemap == false or page.layout == 'linktree' or page.layout == 'forward' %}
+  {% assign noindex = true %}
+{% endif %}
+
 <!-- HTML Meta Tags -->
-<title>
-    {% if page.title[site.lang] %}
-        {{ page.title[site.lang] }}
-    {% else %}
-        {{ site.title[site.lang] }}
-    {% endif %}
-</title>
-<meta name="description" content="{% if page.description[site.lang] %}{{ page.description[site.lang] }}{% else %}{{ site.description[site.lang] }}{% endif %}" />
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description | strip_newlines | escape }}" />
 <meta name="author" content="{{ site.author.name }}" />
-<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-<!-- End HTML Meta Tags -->
+{% if noindex %}
+<meta name="robots" content="noindex, follow" />
+{% else %}
+<meta name="robots" content="index, follow, max-image-preview:large" />
+{% endif %}
+<link rel="canonical" href="{{ canonical_url }}" />
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<!-- Open Graph -->
+<meta property="og:url" content="{{ canonical_url }}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{% if page.title[site.lang] %}{{ page.title[site.lang] }}{% else %}{{ site.title[site.lang] }}{% endif %}" />
-<meta property="og:description" content="{% if page.description[site.lang] %}{{ page.description[site.lang] }}{% else %}{{ site.description[site.lang] }}{% endif %}" />
-<meta property="og:image" content="https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp" />
-<meta property="og:site_name" content="{{ site.title[site.lang] }}" />
-<meta property="og:locale" content="{{ site.locale[site.lang] }}" />
-<!-- End Facebook Meta Tags -->
+<meta property="og:title" content="{{ page_title | escape }}" />
+<meta property="og:description" content="{{ page_description | strip_newlines | escape }}" />
+<meta property="og:image" content="{{ og_image_url }}" />
+<meta property="og:image:alt" content="{{ page_title | escape }}" />
+<meta property="og:site_name" content="{{ seo.brand }}" />
+<meta property="og:locale" content="{{ site.locale[lang] }}" />
+{% for alt_lang in site.languages %}
+  {% unless alt_lang == lang %}
+    <meta property="og:locale:alternate" content="{{ site.locale[alt_lang] }}" />
+  {% endunless %}
+{% endfor %}
 
-<!-- Twitter Meta Tags -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:domain" content="javiapariciofoto.ch" />
-<meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
-<meta name="twitter:title" content="{% if page.title[site.lang] %}{{ page.title[site.lang] }}{% else %}{{ site.title[site.lang] }}{% endif %}" />
-<meta name="twitter:description" content="{% if page.description[site.lang] %}{{ page.description[site.lang] }}{% else %}{{ site.description[site.lang] }}{% endif %}" />
-<meta name="twitter:image" content="https://javiapariciofoto.ch/assets/images/javiAparicioFotoLogo.webp" />
-<!-- End Twitter Meta Tags -->
+<meta name="twitter:title" content="{{ page_title | escape }}" />
+<meta name="twitter:description" content="{{ page_description | strip_newlines | escape }}" />
+<meta name="twitter:image" content="{{ og_image_url }}" />
+<meta name="twitter:image:alt" content="{{ page_title | escape }}" />

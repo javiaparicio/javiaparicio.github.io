@@ -1,37 +1,35 @@
-# Terms and Conditions (AGB)
+# Terms & conditions (AGB)
 
-By booking a photography session with Javi Aparicio Foto, you agree to the following terms:
-
----
-
-## **1. Booking and Payment**
-- All sessions are by appointment only.
-- A 50% deposit is required to confirm your session.
-- Remaining balance is due upon completion of the session.
+If you book a session with me, these are the rules we work by:
 
 ---
 
-## **2. Cancellation and Rescheduling**
-- Cancellations made less than 48 hours before the session may result in a 20% fee.
-- Rescheduling is allowed up to 48 hours before the session, subject to availability.
+## 1. Booking and payment
+- Sessions are by appointment only.
+- I ask for a 50% deposit to hold the date.
+- The rest is due when we finish the shoot.
 
 ---
 
-## **3. Image Ownership and Usage Rights**
-- All photographs remain the property of Javi Aparicio Foto.
-- Clients are granted a license for personal or commercial use as agreed upon.
-- Photographs may not be altered or resold without prior written consent.
+## 2. Cancellation and rescheduling
+- Cancel less than 48 hours before the session → 20% fee may apply.
+- Reschedule up to 48 hours ahead, if I have another slot free.
 
 ---
 
-## **4. Liability**
-Javi Aparicio Foto is not liable for delays or failures caused by circumstances beyond our control (e.g., weather, technical issues).
+## 3. Photos and usage
+- I keep copyright on the images.
+- You get the usage we agree on (private, commercial, etc.) in writing.
+- Don’t edit or resell the files without my OK.
 
 ---
 
-## Contact Information
-For any inquiries about these terms, please contact:
+## 4. Liability
+I’m not responsible for delays caused by things outside my control — bad weather, gear failure, venue issues, that kind of thing.
 
+---
+
+## Questions?
 **Email**: <span id="email">Javascript Blocked</span>
 
 **Phone**: <span id="phone">Javascript Blocked</span>

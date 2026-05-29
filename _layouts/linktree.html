@@ -138,25 +138,29 @@
     <body>
         <div class="container">
             <img
-                src="/assets/images/about/001.webp"
+                src="{{ '/assets/images/about/001.webp' | absolute_url }}"
                 alt="Javi Aparicio Foto"
                 class="avatar"
             />
             <h1>@javiapariciofoto</h1>
             <div class="links">
-                <a href="https://javiapariciofoto.ch">Homepage</a>
+                <a href="{{ '/' | absolute_url }}">Website</a>
                 <a
                     href="https://pixelfed.social/javifoto/"
-                    target="_blank">Pixelfed - The new Instagram</a>
+                    target="_blank"
+                    rel="noopener noreferrer">Pixelfed</a>
 		<a
                     href="https://instagram.com/javiapariciofoto/"
-                    target="_blank">Instagram</a>
+                    target="_blank"
+                    rel="noopener noreferrer">Instagram</a>
                 <a
                     href="https://g.page/r/CXBGODcJ4AiGEBM/review"
-                    target="_blank">Leave a Google Review</a>
+                    target="_blank"
+                    rel="noopener noreferrer">Google review</a>
 		<a
                     href="https://www.digitec.ch/en/shoplist/show/CfDJ8KxmonKY7vZCt7WF4wF2LM3BUZ8YGOFFZTA5mT_02ATsHbpNwmjymeNLU_6LcGnNkQaKAnkl8CQ8rq-bDh7LhiBo57VmXY6Q1RDNrcxNEWCvr5gG_Ozwg5AGzGQw5ousmw"
-                    target="_blank">Next Photo Equipment</a>
+                    target="_blank"
+                    rel="noopener noreferrer">My Digitec wishlist</a>
             </div>
         </div>
     </body>

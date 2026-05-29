@@ -1,14 +1,21 @@
 ---
 layout: default
-permalink: /contact/
+namespace: contact
+permalink: /kontakt/
+permalink_en: /contact/
+permalink_es: /contacto/
 title:
-  en: "Contact Javi Aparicio Foto – Book Your Photography Session"
-  es: "Contacta con Javi Aparicio Foto – Reserva tu sesión de fotos"
-  de: "Kontaktieren Sie Javi Aparicio Foto – Buchen Sie Ihre Fotosession"
+  de: "Kontakt & Termin"
+  en: "Contact & Booking"
+  es: "Contacto y cita"
 description:
-  en: "Contact Javi Aparicio Foto for professional photography in Bern. Schedule your portrait session or inquire about custom projects today!"
-  es: "Contacta con Javi Aparicio Foto para fotografía profesional en Berna. ¡Programa tu sesión de retrato o consulta sobre proyectos personalizados hoy mismo!"
-  de: "Kontaktieren Sie Javi Aparicio Foto für professionelle Fotografie in Bern. Vereinbaren Sie Ihr Porträt-Shooting oder fragen Sie nach individuellen Projekten!"
+  de: "Portrait-Session in Bern anfragen: Formular oder E-Mail. Studio Stauffacherstrasse 44, Termine nach Vereinbarung. Antwort in der Regel innerhalb von 24 h."
+  en: "Book a portrait session in Bern: contact form or email. Studio at Stauffacherstrasse 44, appointments only. I usually reply within 24 hours."
+  es: "Solicite su sesión de retrato en Berna: formulario o correo. Estudio en Stauffacherstrasse 44, con cita previa. Suele responder en 24 horas."
+redirect_from:
+  - /de/kontakt/
+  - /en/kontakt/
+  - /es/kontakt/
 ---
 
 {% tf contact.md %}

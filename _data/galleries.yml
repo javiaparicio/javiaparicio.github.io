@@ -1,0 +1,275 @@
+# Gallery captions (alt text / lightbox). One section per folder under assets/images/galleries/.
+# Omit a file to use the default alt prefix from _data/seo.yml (gallery_alt).
+
+index:
+  index_001.webp:
+    de: Mann in grauem Hemd, Arme verschränkt.
+    en: Man in grey shirt, arms crossed.
+    es: Hombre con camisa gris, brazos cruzados.
+  index_002.webp:
+    de: Elegante Frau in schwarzem Kleid.
+    en: Elegant woman in black dress.
+    es: Mujer elegante con vestido negro.
+  index_003.webp:
+    de: Person in weißem Hemd und Leggings.
+    en: Person in white shirt and leggings.
+    es: Persona con camisa blanca y leggings.
+services:
+  services_001.webp:
+    de: Frau in einem geblümten, schulterfreien Kleid
+    en: Woman in a floral off-shoulder dress
+    es: Mujer con vestido floral sin hombros
+  services_002.webp:
+    de: Frau mit langen Haaren, dunkler Hintergrund.
+    en: Woman with long hair, dark background.
+    es: Mujer con pelo largo, fondo oscuro.
+  services_003.webp:
+    de: Person, die einen braunen Rollkragenpullover trägt.
+    en: Person wearing a brown turtleneck sweater.
+    es: Persona con jersey de cuello alto marrón.
+clients:
+  clients_001.webp:
+    de: Modell mit einem eleganten schwarzen Ensemble.
+    en: Model in an elegant black outfit.
+    es: Mujer con conjunto negro elegante.
+  clients_002.webp:
+    de: Person mit langen schwarzen Haaren
+    en: Person with long black hair
+    es: Persona con pelo largo negro
+  clients_003.webp:
+    de: Frau in schwarzem Oberteil und Jeans
+    en: Woman in black top and jeans
+    es: Mujer con top negro y vaqueros
+process:
+  process_001.webp:
+    de: Mann mit Brille und Krawatte, monochrom
+    en: Man with glasses and tie, monochrome
+    es: Hombre con gafas y corbata, monocromo
+  process_002.webp:
+    de: Person in weißem Strickpullover
+    en: Person in white knit sweater
+    es: Persona con jersey blanco de punto
+  process_003.webp:
+    de: Person mit lockigem Haar, Arme verschränkt.
+    en: Person with curly hair, arms crossed.
+    es: Persona con pelo rizado, brazos cruzados.
+portraits:
+  portraits_002.webp:
+    de: José
+    en: José
+    es: José
+  portraits_003.webp:
+    de: José
+    en: José
+    es: José
+  portraits_004.webp:
+    de: José
+    en: José
+    es: José
+  portraits_005.webp:
+    de: José
+    en: José
+    es: José
+  portraits_006.webp:
+    de: Christian
+    en: Christian
+    es: Christian
+  portraits_007.webp:
+    de: Christian
+    en: Christian
+    es: Christian
+  portraits_009.webp:
+    de: "<a href='https://www.instagram.com/raulhuerta_palisandro/' target='_blank'
+      rel='noopener noreferrer'>Raul Huerta &amp; Palisandro</a>"
+    en: "<a href='https://www.instagram.com/raulhuerta_palisandro/' target='_blank'
+      rel='noopener noreferrer'>Raul Huerta &amp; Palisandro</a>"
+    es: "<a href='https://www.instagram.com/raulhuerta_palisandro/' target='_blank'
+      rel='noopener noreferrer'>Raul Huerta y Palisandro</a>"
+  portraits_010.webp:
+    de: Avelino
+    en: Avelino
+    es: Avelino
+  portraits_012.webp:
+    de: Frank
+    en: Frank
+    es: Frank
+  portraits_013.webp:
+    de: ''
+    en: ''
+    es: ''
+  portraits_014.webp:
+    de: Nana
+    en: Nana
+    es: Nana
+  portraits_015.webp:
+    de: Mirta
+    en: Mirta
+    es: Mirta
+  portraits_016.webp:
+    de: Selbstporträt.
+    en: Self-portrait.
+    es: Autorretrato.
+  portraits_017.webp:
+    de: José
+    en: José
+    es: José
+  portraits_018.webp:
+    de: ''
+    en: ''
+    es: ''
+  portraits_019.webp:
+    de: Kathy
+    en: Kathy
+    es: Kathy
+  portraits_020.webp:
+    de: Selbstporträt.
+    en: Self-portrait.
+    es: Autorretrato.
+  portraits_021.webp:
+    de: Selbstporträt.
+    en: Self-portrait.
+    es: Autorretrato.
+  portraits_022.webp:
+    de: Robert
+    en: Robert
+    es: Robert
+  portraits_023.webp:
+    de: Leiba
+    en: Leiba
+    es: Leiba
+  portraits_024.webp:
+    de: José
+    en: José
+    es: José
+  portraits_025.webp:
+    de: "<a href='https://www.instagram.com/joseditionvisual/' target='_blank' rel='noopener
+      noreferrer'>José</a>"
+    en: "<a href='https://www.instagram.com/joseditionvisual/' target='_blank' rel='noopener
+      noreferrer'>José</a>"
+    es: "<a href='https://www.instagram.com/joseditionvisual/' target='_blank' rel='noopener
+      noreferrer'>José</a>"
+  portraits_027.webp:
+    de: "<a href='https://www.instagram.com/jeya.artmodel/' target='_blank' rel='noopener
+      noreferrer'>Evgenia</a>"
+    en: "<a href='https://www.instagram.com/jeya.artmodel/' target='_blank' rel='noopener
+      noreferrer'>Evgenia</a>"
+    es: "<a href='https://www.instagram.com/jeya.artmodel/' target='_blank' rel='noopener
+      noreferrer'>Evgenia</a>"
+  portraits_028.webp:
+    de: Selbstporträt.
+    en: Self-portrait.
+    es: Autorretrato.
+  portraits_029.webp:
+    de: "<a href='https://www.instagram.com/jlzyu/' target='_blank' rel='noopener
+      noreferrer'>Julia</a>"
+    en: "<a href='https://www.instagram.com/jlzyu/' target='_blank' rel='noopener
+      noreferrer'>Julia</a>"
+    es: "<a href='https://www.instagram.com/jlzyu/' target='_blank' rel='noopener
+      noreferrer'>Julia</a>"
+  portraits_030.webp:
+    de: "<a href='https://www.mioneo.ch/' target='_blank' rel='noopener noreferrer'>MioNeo</a>"
+    en: "<a href='https://www.mioneo.ch/' target='_blank' rel='noopener noreferrer'>MioNeo</a>"
+    es: "<a href='https://www.mioneo.ch/' target='_blank' rel='noopener noreferrer'>MioNeo</a>"
+  portraits_031.webp:
+    de: "<a href='https://www.instagram.com/demifrayy/' target='_blank' rel='noopener
+      noreferrer'>Demmi Fray</a>"
+    en: "<a href='https://www.instagram.com/demifrayy/' target='_blank' rel='noopener
+      noreferrer'>Demmi Fray</a>"
+    es: "<a href='https://www.instagram.com/demifrayy/' target='_blank' rel='noopener
+      noreferrer'>Demmi Fray</a>"
+  portraits_032.webp:
+    de: "<a href='https://irynaberdnyk.com/' target='_blank' rel='noopener noreferrer'>Iryna
+      Berdnyk</a>"
+    en: "<a href='https://irynaberdnyk.com/' target='_blank' rel='noopener noreferrer'>Iryna
+      Berdnyk</a>"
+    es: "<a href='https://irynaberdnyk.com/' target='_blank' rel='noopener noreferrer'>Iryna
+      Berdnyk</a>"
+  portraits_033.webp:
+    de: "<a href='https://www.instagram.com/travelmodel.s/' target='_blank' rel='noopener
+      noreferrer'>Alessandra</a>"
+    en: "<a href='https://www.instagram.com/travelmodel.s/' target='_blank' rel='noopener
+      noreferrer'>Alessandra</a>"
+    es: "<a href='https://www.instagram.com/travelmodel.s/' target='_blank' rel='noopener
+      noreferrer'>Alessandra</a>"
+  portraits_034.webp:
+    de: "<a href='https://www.instagram.com/sofia_mdprofessional/' target='_blank'
+      rel='noopener noreferrer'>Sofia</a>"
+    en: "<a href='https://www.instagram.com/sofia_mdprofessional/' target='_blank'
+      rel='noopener noreferrer'>Sofia</a>"
+    es: "<a href='https://www.instagram.com/sofia_mdprofessional/' target='_blank'
+      rel='noopener noreferrer'>Sofia</a>"
+  portraits_035.webp:
+    de: Juan
+    en: Juan
+    es: Juan
+  portraits_036.webp:
+    de: Laura
+    en: Laura
+    es: Laura
+  portraits_037.webp:
+    de: "<a href='https://www.instagram.com/ilonychkaa/' target='_blank' rel='noopener
+      noreferrer'>Ilonka</a>"
+    en: "<a href='https://www.instagram.com/ilonychkaa/' target='_blank' rel='noopener
+      noreferrer'>Ilonka</a>"
+    es: "<a href='https://www.instagram.com/ilonychkaa/' target='_blank' rel='noopener
+      noreferrer'>Ilonka</a>"
+  portraits_038.webp:
+    de: "<a href='https://www.instagram.com/ar.maryna/' target='_blank' rel='noopener
+      noreferrer'>Maryna</a>"
+    en: "<a href='https://www.instagram.com/ar.maryna/' target='_blank' rel='noopener
+      noreferrer'>Maryna</a>"
+    es: "<a href='https://www.instagram.com/ar.maryna/' target='_blank' rel='noopener
+      noreferrer'>Maryna</a>"
+events:
+  events_001.webp:
+    de: Raul Huerta &amp; Palisandro — Bar, Hotel Ibis Bern
+    en: Raul Huerta &amp; Palisandro — Hotel Ibis Bern, bar
+    es: Raul Huerta y Palisandro — bar del Hotel Ibis Bern
+  events_002.webp:
+    de: Raul Huerta &amp; Palisandro — Bar, Hotel Ibis Bern
+    en: Raul Huerta &amp; Palisandro — Hotel Ibis Bern, bar
+    es: Raul Huerta y Palisandro — bar del Hotel Ibis Bern
+  events_003.webp:
+    de: 45. Internationales Ballonfestival, Château-d'Oex
+    en: 45th Balloon Festival, Château-d'Oex
+    es: 45.º Festival Internacional de Globos, Château-d'Oex
+  events_004.webp:
+    de: 45. Internationales Ballonfestival, Château-d'Oex
+    en: 45th Balloon Festival, Château-d'Oex
+    es: 45.º Festival Internacional de Globos, Château-d'Oex
+  events_005.webp:
+    de: Ceviche Mixto — Lakelive
+    en: Ceviche Mixto — Lakelive
+    es: Ceviche Mixto — Lakelive
+  events_006.webp:
+    de: Ceviche Mixto — Lakelive
+    en: Ceviche Mixto — Lakelive
+    es: Ceviche Mixto — Lakelive
+  events_007.webp:
+    de: Ceviche Mixto — 30 Jahre, Kulturhof Schloss Köniz
+    en: Ceviche Mixto — 30 years, Kulturhof Schloss Köniz
+    es: Ceviche Mixto — 30 aniversario, Kulturhof Schloss Köniz
+  events_008.webp:
+    de: Ceviche Mixto — 30 Jahre, Kulturhof Schloss Köniz
+    en: Ceviche Mixto — 30 years, Kulturhof Schloss Köniz
+    es: Ceviche Mixto — 30 aniversario, Kulturhof Schloss Köniz
+  events_009.webp:
+    de: Ceviche Mixto — 30 Jahre, Kulturhof Schloss Köniz
+    en: Ceviche Mixto — 30 years, Kulturhof Schloss Köniz
+    es: Ceviche Mixto — 30 aniversario, Kulturhof Schloss Köniz
+  events_010.webp:
+    de: Ceviche Mixto — 30 Jahre, Kulturhof Schloss Köniz
+    en: Ceviche Mixto — 30 years, Kulturhof Schloss Köniz
+    es: Ceviche Mixto — 30 aniversario, Kulturhof Schloss Köniz
+  events_011.webp:
+    de: Los Vacíos de Charly — vor dem Konzert, Casino Burgdorf
+    en: Los Vacíos de Charly — soundcheck, Casino Burgdorf
+    es: Los Vacíos de Charly — antes del concierto, Casino Burgdorf
+  events_012.webp:
+    de: Ceviche Mixto.
+    en: Ceviche Mixto.
+    es: Ceviche Mixto.
+  events_013.webp:
+    de: Sol Family.
+    en: Sol Family.
+    es: Sol Family.

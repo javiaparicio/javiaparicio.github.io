@@ -1,14 +1,22 @@
 ---
 layout: default
+namespace: events
 permalink: /events/
+permalink_en: /events/
+permalink_es: /eventos/
 title:
-  en: "Events Photography Portfolio by Javi Aparicio – Bern, CH"
-  es: "Portafolio de Fotografía de Eventos por Javi Aparicio – Berna, CH"
-  de: "Eventfotografie-Portfolio von Javi Aparicio – Bern, CH"
+  de: "Event-Galerie"
+  en: "Event Gallery"
+  es: "Galería de eventos"
 description:
-  en: "Explore Javi Aparicio Foto's events photography portfolio. From corporate gatherings to cultural events, discover how moments are captured beautifully."
-  es: "Explora el portafolio de fotografía de eventos de Javi Aparicio Foto. Desde reuniones corporativas hasta eventos culturales, capturando momentos únicos."
-  de: "Entdecken Sie das Eventfotografie-Portfolio von Javi Aparicio Foto. Von Firmen- bis kulturellen Events – erleben Sie, wie besondere Momente festgehalten werden."
+  de: "Eventfotografie in Bern: Konzerte, Firmenanlässe & Festivals. Ergänzend zur Portraitarbeit — ausgewählte Projekte auf Anfrage."
+  en: "Event photography in Bern: concerts, corporate events & festivals. Alongside portrait work — selected projects by agreement."
+  es: "Fotografía de eventos en Berna: conciertos, eventos corporativos y festivales. Complemento del retrato profesional — proyectos bajo consulta."
+redirect_from:
+  - /veranstaltungen/
+  - /en/eventos/
+  - /es/events/
 ---
 
 {% tf events.md %}
+{% include gallery.html page="events" reverse=true %}

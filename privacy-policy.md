@@ -1,14 +1,23 @@
 ---
 layout: default
-permalink: /privacy-policy/
+namespace: privacy
+permalink: /datenschutzerklaerung/
+permalink_en: /privacy/
+permalink_es: /privacidad/
 title:
-  en: "Privacy Policy – How Javi Aparicio Foto Protects Your Data"
-  es: "Política de Privacidad – Cómo Javi Aparicio Foto Protege Tus Datos"
-  de: "Datenschutzerklärung – Wie Javi Aparicio Foto Ihre Daten schützt"
+  de: "Datenschutzerklärung"
+  en: "Privacy Policy"
+  es: "Política de privacidad"
 description:
-  en: "Read the Privacy Policy of Javi Aparicio Foto to learn how we collect, use, and protect your personal data. Your privacy matters to us."
-  es: "Lee la Política de Privacidad de Javi Aparicio Foto para conocer cómo recopilamos, usamos y protegemos tus datos. Tu privacidad es nuestra prioridad."
-  de: "Lesen Sie die Datenschutzerklärung von Javi Aparicio Foto, um zu erfahren, wie wir Ihre Daten erfassen, verwenden und schützen. Ihre Privatsphäre ist wichtig."
+  de: "Datenschutzerklärung von javiapariciofoto.ch: welche Daten das Kontaktformular erhebt, wie lange sie gespeichert werden und Ihre Rechte."
+  en: "Privacy policy for javiapariciofoto.ch: what data the contact form collects, how long it is kept and your rights."
+  es: "Política de privacidad de javiapariciofoto.ch: qué datos recoge el formulario de contacto, cuánto se conservan y sus derechos."
+redirect_from:
+  - /privacy-policy/
+  - /datenschutz/
+  - /de/datenschutzerklaerung/
+  - /en/datenschutzerklaerung/
+  - /es/datenschutzerklaerung/
 ---
 
 {% tf privacy-policy.md %}

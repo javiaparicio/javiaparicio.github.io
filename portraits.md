@@ -1,14 +1,20 @@
 ---
 layout: default
+namespace: portraits
 permalink: /portraits/
+permalink_en: /portraits/
+permalink_es: /retratos/
 title:
-  en: "Portrait Photography Portfolio by Javi Aparicio – Bern, CH"
-  es: "Portafolio de Fotografía de Retrato por Javi Aparicio – Berna, CH"
-  de: "Porträtfotografie-Portfolio von Javi Aparicio – Bern, CH"
+  de: "Porträt-Galerie | Portraitfotograf Bern"
+  en: "Portrait Gallery | Photographer Bern"
+  es: "Galería de retratos | Fotógrafo Berna"
 description:
-  en: "Explore Javi Aparicio’s portraits portfolio, showcasing stunning portraits. See the moments that define creativity and artistry."
-  es: "Explora el portafolio de retratos de Javi Aparicio, con impresionantes fotografías. Descubre los momentos que definen la creatividad y el arte."
-  de: "Entdecken Sie das Porträtfotografie-Portfolio von Javi Aparicio mit beeindruckenden Porträts. Erleben Sie die Momente, die Kreativität und Kunst ausmachen."
+  de: "Ausgewählte Porträts aus Bern: LinkedIn, Personal Branding, Teams & Editorial. Sehen Sie Stil und Qualität — dann Session im Fotostudio anfragen."
+  en: "Selected portraits from Bern: LinkedIn, personal branding, teams & editorial. See my style and quality — then request a session at the studio."
+  es: "Retratos seleccionados en Berna: LinkedIn, marca personal, equipos y editorial. Vea el estilo y la calidad — luego solicite una sesión en el estudio."
+redirect_from:
+  - /es/portraits/
 ---
 
 {% tf portraits.md %}
+{% include gallery.html page="portraits" reverse=true %}

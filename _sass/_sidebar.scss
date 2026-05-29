@@ -2,7 +2,7 @@
     background-color: #f8f8f8;
     padding: 20px;
     width: 220px;
-    height: 100%;
+    height: 100vh;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     display: flex;
@@ -107,35 +107,35 @@
     text-align: center;
 }
 
-.socials_item_link span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .socials_item_link:hover {
-    background: #ff6347; /* Adjust hover color as needed */
+    background: #ff6347;
     color: #fff;
 }
 
+/* Social icons: IcoMoon font (IG, WhatsApp, Telegram) + SVG (Pixelfed) */
 @font-face {
     font-family: "socials";
-    src: url("/assets/fonts/socials.eot?kyddd8");
     src:
-        url("/assets/fonts/socials.eot?kyddd8#iefix")
-            format("embedded-opentype"),
-        url("/assets/fonts/socials.ttf?kyddd8") format("truetype"),
         url("/assets/fonts/socials.woff?kyddd8") format("woff"),
-        url("/assets/fonts/socials.svg?kyddd8#icomoon") format("svg");
+        url("/assets/fonts/socials.ttf?kyddd8") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
+.socials_item_link .social-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.social-icon.icon-instagram::before,
+.social-icon.icon-whatsapp::before,
+.social-icon.icon-telegram::before {
     font-family: "socials" !important;
     speak: never;
     font-style: normal;
@@ -143,28 +143,23 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
-    /* Better Font Rendering =========== */
+    display: block;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram:before {
+.social-icon.icon-instagram::before {
     content: "\ea92";
 }
-.icon-whatsapp:before {
+
+.social-icon.icon-whatsapp::before {
     content: "\ea93";
 }
-.icon-telegram:before {
+
+.social-icon.icon-telegram::before {
     content: "\ea95";
 }
-.iconlocal-pixelfed:before {
-    content: "";
-    background-image: url("/assets/fonts/pixelfed-icon-color.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
+
+.social-icon.icon-pixelfed {
+    background: url("/assets/fonts/pixelfed-icon-color.svg") center / contain no-repeat;
 }

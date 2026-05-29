@@ -1,27 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
 
-  // Lazy Loading Images
-  const lazyImages = document.querySelectorAll("img.lazy");
-  if ("IntersectionObserver" in window) {
-    const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
-
-    lazyImages.forEach((lazyImage) => lazyImageObserver.observe(lazyImage));
-  } else {
-    lazyImages.forEach((lazyImage) => {
-      lazyImage.src = lazyImage.dataset.src;
-      lazyImage.classList.remove("lazy");
-    });
-  }
+  setupLazyGalleryImages();
 
   // Lightbox Initialization
   if (document.getElementById("lightbox")) {
@@ -31,13 +11,53 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mobile Menu
   const hamburger = document.getElementById("hamburger");
   const sidebar = document.getElementById("sidebar");
-  hamburger?.addEventListener("click", () => sidebar.classList.toggle("show"));
+  hamburger?.addEventListener("click", () => {
+    const isOpen = sidebar.classList.toggle("show");
+    hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
 
   // Contact Form Autofill
   if (path.includes("/contact")) {
     prefillContactForm();
   }
 });
+
+// ----------------------
+// LAZY GALLERY IMAGES (blur until loaded)
+// ----------------------
+function setupLazyGalleryImages() {
+  const lazyImages = document.querySelectorAll("img.gallery-image.lazy[data-src]");
+  if (!lazyImages.length) return;
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadGalleryImage(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    });
+    lazyImages.forEach((img) => observer.observe(img));
+  } else {
+    lazyImages.forEach(loadGalleryImage);
+  }
+}
+
+function loadGalleryImage(img) {
+  if (!img.dataset.src || img.src) return;
+  img.src = img.dataset.src;
+  const clearLazy = () => img.classList.remove("lazy");
+  if (img.complete) clearLazy();
+  else {
+    img.addEventListener("load", clearLazy, { once: true });
+    img.addEventListener("error", clearLazy, { once: true });
+  }
+}
+
+function galleryImageUrl(img) {
+  return img.currentSrc || img.src || img.dataset.src || "";
+}
 
 // ----------------------
 // LIGHTBOX FUNCTION
@@ -49,14 +69,19 @@ function setupLightbox() {
   const fullscreenButton = document.getElementById("fullscreen");
   let galleryImages = Array.from(
     document.querySelectorAll(".gallery-image"),
-  ).reverse();
+  );
+  if (!galleryImages.length) return;
+  galleryImages = galleryImages.reverse();
   let currentImageIndex = 0;
 
   function showImage(index) {
     const imgElement = galleryImages[index];
     if (!imgElement) return;
 
-    lightboxImg.src = imgElement.dataset.src;
+    if (!imgElement.src && imgElement.dataset.src) {
+      loadGalleryImage(imgElement);
+    }
+    lightboxImg.src = galleryImageUrl(imgElement);
     lightboxCaption.innerHTML = imgElement.dataset.title || "";
 
     lightbox.classList.add("show");

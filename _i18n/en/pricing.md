@@ -1,71 +1,65 @@
-# Portrait Photography Packages
+<div class="text-content">
 
-<div class="pricing-content">
-    <p>Choose the perfect package for your needs. My sessions are designed to provide a relaxed and professional experience with stunning results.</p>
-    <p>All sessions are available by appointment only. Contact me to book your preferred time.</p>
-    <p>View my <a href="/portraits/" class="button">portfolio</a> to see examples of my work.</p>
+<p>Professional photography for LinkedIn, personal branding and teams. All sessions take place in my studio in Bern, Switzerland or at locations within the city.</p>
 
-    <div class="package">
-        <h2>Basic Portrait Session – CHF 150</h2>
-        <ul>
-            <li>Up to 30 minutes of shooting</li>
-            <li>1 location (studio or outdoor)</li>
-            <li>5 high-resolution, edited images</li>
-            <li>Basic retouching</li>
-            <li>Delivery within 3 business days</li>
-        </ul>
-    </div>
+<p>Prices include preparation, the session, selection and professional editing.</p>
 
-    <div class="package">
-        <h2>Standard Portrait Session – CHF 350</h2>
-        <ul>
-            <li>1 hour of shooting</li>
-            <li>2 locations (studio and/or outdoor)</li>
-            <li>10 high-resolution, edited images</li>
-            <li>2 outfit changes and guidance on posing</li>
-            <li>Enhanced retouching (skin smoothing, stray hair removal)</li>
-            <li>Delivery within 7 business days</li>
-        </ul>
-    </div>
+<hr class="content-divider">
 
-    <div class="package">
-        <h2>Premium Portrait Experience – CHF 850</h2>
-        <ul>
-            <li>2–3 hours of shooting</li>
-            <li>Multiple locations and 3 outfit changes</li>
-            <li>20 high-resolution, professionally retouched images</li>
-            <li>Complimentary 30-minute session planning consultation</li>
-            <li>A 20x30cm fine art print of your favorite photo</li>
-            <li>Priority delivery within 5 business days</li>
-        </ul>
-    </div>
+<h2>Professional portrait</h2>
+<p>For people who need a clear and professional image for LinkedIn and their website.</p>
+<p>Includes:</p>
+<ul>
+<li>Studio session</li>
+<li>Guidance during the session</li>
+<li>Photo selection</li>
+<li>Edited images</li>
+<li>Digital delivery</li>
+</ul>
+<p><strong>From CHF 150</strong></p>
 
-    <div class="package">
-        <h2>Optional Add-ons</h2>
-        <ul>
-            <li><strong>Extra Edited Images:</strong> CHF 25 per image</li>
-            <li><strong>Rush Delivery (within 2 business days):</strong> CHF 100</li>
-            <li><strong>Professional Makeup Artist:</strong> Starting at CHF 150</li>
-            <li><strong>Additional Shooting Time:</strong> CHF 80 per 30 minutes</li>
-        </ul>
-    </div>
+<hr class="content-divider">
 
-    <div>
-      <p>Ready to book a session? <a href="/contact/" class="button">Contact me</a>.</p>
-    </div>
+<h2>Personal branding</h2>
+<p>For people who need a collection of images for their online presence, social media and communication.</p>
+<p>Includes:</p>
+<ul>
+<li>Longer session</li>
+<li>Different looks</li>
+<li>Varied crops</li>
+<li>Edited photos</li>
+<li>Digital delivery</li>
+</ul>
+<p><strong>From CHF 350</strong></p>
 
-    <div class="why-choose-me">
-        <h2>Why Choose Me?</h2>
-        <p>
-            With a professional yet relaxed approach, I help clients feel at ease during their sessions. My focus on personalized services and high-quality editing ensures timeless portraits that you'll cherish forever.
-        </p>
-    </div>
+<hr class="content-divider">
 
-    <!-- Custom Projects Section -->
-    <div class="custom-projects">
-        <h2>Looking for Something Different?</h2>
-        <p>If you're interested in travel photography, astrophotography, or any other custom photography project, I'd be thrilled to collaborate with you to create stunning, tailored images.</p>
-        <p>Contact me for a consultation, and we can discuss your vision, goals, and requirements for your unique project.</p>
-        <a href="/contact/?subject=Request Custom Quote" class="button">Request a Custom Quote</a>
-    </div>
+<h2>Teams and small businesses</h2>
+<p>For companies and teams in Bern who need portraits of their members for their website and communication.</p>
+<p>Includes:</p>
+<ul>
+<li>Studio or office session</li>
+<li>Individual guidance</li>
+<li>Professional editing</li>
+<li>Digital delivery</li>
+</ul>
+<p><strong>From CHF 350</strong></p>
+
+<hr class="content-divider">
+
+<h2>Included in all prices</h2>
+<ul>
+<li>Session preparation</li>
+<li>Consultation</li>
+<li>Professional editing</li>
+<li>Images ready for professional use</li>
+<li>Digital delivery</li>
+</ul>
+
+<hr class="content-divider">
+
+<p><strong>Which session do I need?</strong> If you are unsure which type of session suits you best, write to me and tell me what you need. I will help you choose the best option.</p>
+
+<p><a href="{% tl contact %}" class="button">Write to me</a></p>
+
 </div>

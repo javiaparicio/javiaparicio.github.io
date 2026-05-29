@@ -1,6 +1,7 @@
 ---
 layout: linktree
 permalink: /linktree/
-description: Portrait photographer located in Bern, Switzerland
+description: Links — Javi Aparicio Foto, Bern
 sitemap: false
+noindex: true
 ---

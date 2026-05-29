@@ -1,20 +1,19 @@
-basic_settings:
-  site_title: Javi Aparicio Foto
-  site_tagline: Portrait Photographer
-
 contact_settings:
   form_action: "https://formspree.io/f/mjvnrpje"
-  confirmation_url: "/thanks"
-  email_subject: "Contact form submission"
+  confirmation_url:
+    de: "/danke/"
+    en: "/en/thank-you/"
+    es: "/es/gracias/"
+  email_subject: "Nachricht von javiapariciofoto.ch"
   send_button_text:
-    en: "Send Message"
-    de: "Nachricht senden"
-    es: "Enviar mensaje"
+    de: "Senden"
+    en: "Send"
+    es: "Enviar"
 
 social_links:
   - name: Pixelfed
     url: https://pixelfed.social/javifoto
-    icon: iconlocal-pixelfed
+    icon: icon-pixelfed
   - name: Instagram
     url: https://instagram.com/javiapariciofoto
     icon: icon-instagram
@@ -27,98 +26,81 @@ social_links:
 
 menu:
   - name:
+      de: Startseite
       en: Home
       es: Inicio
-      de: Startseite
-    url:
-      en: /
-      es: /es/
-      de: /de/
+    namespace: home
   - name:
-      en: Portraits
-      es: Retratos
-      de: Porträts
-    url:
-      en: /portraits/
-      es: /es/portraits/
-      de: /de/portraits/
+      de: Dienstleistungen
+      en: Services
+      es: Servicios
+    namespace: services
   - name:
-      en: Events
-      es: Eventos
-      de: Veranstaltungen
-    url:
-      en: /events/
-      es: /es/events/
-      de: /de/events/
+      de: Kunden
+      en: Clients
+      es: Clientes
+    namespace: clients
   - name:
-      en: Pricing
-      es: Tarifas
+      de: Ablauf
+      en: Process
+      es: Proceso
+    namespace: process
+  - name:
       de: Preise
-    url:
-      en: /pricing/
-      es: /es/pricing/
-      de: /de/pricing/
+      en: Pricing
+      es: Precios
+    namespace: pricing
   - name:
+      de: Über mich
+      en: About
+      es: Sobre mí
+    namespace: about
+  - name:
+      de: Kontakt
       en: Contact
       es: Contacto
-      de: Kontakt
-    url:
-      en: /contact/
-      es: /es/contact/
-      de: /de/contact/
+    namespace: contact
 
 footer:
   copyright:
+    de: "Javier Aparicio Ríos Foto. Alle Rechte vorbehalten."
     en: "Javier Aparicio Ríos Foto. All rights reserved."
     es: "Javier Aparicio Ríos Foto. Todos los derechos reservados."
-    de: "Javier Aparicio Ríos Foto. Alle Rechte vorbehalten."
   appointment:
-    en: "Photography services are available by appointment only."
-    es: "Los servicios de fotografía están disponibles solo con cita previa."
-    de: "Fotodienstleistungen sind nur nach Vereinbarung verfügbar."
+    de: "Sessions nur nach Termin — Studio in Bern."
+    en: "Sessions by appointment — studio in Bern."
+    es: "Sesiones con cita previa — estudio en Berna."
   links:
     - name:
-        en: Legal
-        es: Legal
-        de: Rechtliches
-      url:
-        en: /legal/
-        es: /es/legal/
-        de: /de/legal/
+        de: Porträt-Galerie
+        en: Portrait gallery
+        es: Galería retratos
+      namespace: portraits
     - name:
-        en: Terms and Conditions
-        es: Términos y Condiciones
-        de: Allgemeine Geschäftsbedingungen
-      url:
-        en: /terms-and-conditions/
-        es: /es/terms-and-conditions/
-        de: /de/terms-and-conditions/
+        de: Weitere Arbeiten
+        en: More work
+        es: Otros trabajos
+      namespace: more-work
     - name:
-        en: Privacy Policy
-        es: Política de Privacidad
+        de: Impressum
+        en: Legal notice
+        es: Aviso legal
+      namespace: legal
+    - name:
+        de: AGB
+        en: Terms
+        es: Condiciones
+      namespace: terms
+    - name:
         de: Datenschutz
-      url:
-        en: /privacy-policy/
-        es: /es/privacy-policy/
-        de: /de/privacy-policy/
+        en: Privacy
+        es: Privacidad
+      namespace: privacy
     - name:
-        en: Sitemap
-        es: Mapa del Sitio
         de: Sitemap
+        en: Sitemap
+        es: Mapa del sitio
       url:
-        en: /sitemap.xml
+        de: /sitemap.xml
+        en: /en/sitemap.xml
         es: /es/sitemap.xml
-        de: /de/sitemap.xml
-
-color_settings:
-  background_color: "#ffffff"
-  background_alt_color: "#f7f9fa"
-  text_dark_color: "#2A2F36"
-  text_medium_color: "#6C7A89"
-  text_light_color: "#ABB7B7"
-  accent_color: "#6CC282"
-  border_color: "#dddddd"
-  overlay_background_color: "#6CC282"
-  overlay_text_color: "#ffffff"
-  overlay_accent_color: "#2A2F36"
-  error_color: "#D64541"
