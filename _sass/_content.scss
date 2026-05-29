@@ -104,75 +104,127 @@ hr.content-divider,
     border-radius: 8px;
 }
 
-/* Contact */
+/* Contact form — same language as .text-content (no boxed “widget” look) */
 .contactme {
     width: 100%;
-    max-width: 100%;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin-left: 0;
-    padding: 0;
-}
+    max-width: 36rem;
 
-form {
-    max-width: 600px;
-    margin: 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
+    > p {
+        margin: 0 0 1rem;
+    }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+    form {
+        margin-top: 1.75rem;
+        padding: 0;
+        border: none;
+        background: transparent;
+        max-width: none;
+    }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    label {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: #333;
+    }
 
-button[type="submit"] {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #006fb7;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.65rem 0.75rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid rgba(102, 102, 102, 0.35);
+        border-radius: 4px;
+        background: #fff;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 300;
+        color: #333;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
 
-button[type="submit"]:hover {
-    background-color: #ffeb00;
-    color: black;
-}
+        &::placeholder {
+            color: #999;
+            font-weight: 300;
+        }
 
-.agb-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-}
+        &:focus {
+            outline: none;
+            border-color: #6cc282;
+            box-shadow: 0 0 0 2px rgba(108, 194, 130, 0.22);
+        }
+    }
 
-.agb-checkbox input[type="checkbox"] {
-    width: auto;
-    margin: 0;
-}
+    textarea {
+        min-height: 8rem;
+        resize: vertical;
+    }
 
-.agb-checkbox a {
-    color: #007bff;
-    text-decoration: none;
-}
+    .agb-checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.65rem;
+        margin: 0.25rem 0 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #666;
 
-.agb-checkbox a:hover {
-    text-decoration: underline;
+        input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            margin: 0.2rem 0 0;
+            flex-shrink: 0;
+            accent-color: #6cc282;
+        }
+
+        label {
+            margin-bottom: 0;
+            font-weight: 300;
+            font-size: inherit;
+        }
+
+        a {
+            color: #2a2f36;
+            text-decoration: underline;
+            text-decoration-color: #6cc282;
+            text-underline-offset: 0.15em;
+        }
+
+        a:hover {
+            color: #6cc282;
+        }
+    }
+
+    button[type="submit"] {
+        display: inline-block;
+        padding: 0.75rem 1.75rem;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #2a2f36;
+        background: transparent;
+        border: 2px solid #6cc282;
+        border-radius: 4px;
+        cursor: pointer;
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease;
+
+        &:hover {
+            background-color: #6cc282;
+            color: #fff;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #6cc282;
+            outline-offset: 3px;
+        }
+    }
 }
 
 /* Footer — aligned with main content typography */

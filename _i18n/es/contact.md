@@ -29,7 +29,6 @@
         <a href="{% tl privacy %}" target="_blank" rel="noopener">política de privacidad</a>.
       </label>
     </div>
-    <br />
 
   <input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" />
   <input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url[site.lang] | absolute_url }}" />
