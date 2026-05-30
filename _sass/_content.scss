@@ -27,6 +27,12 @@ $content-gutter: 30px;
 .entry-content {
     line-height: 1.6;
     width: 100%;
+
+    .legal-last-updated {
+        margin-top: 2rem;
+        font-size: 0.85rem;
+        color: #999;
+    }
 }
 
 /* Hide duplicate h1 when title is shown in header (from front matter) */
@@ -187,6 +193,25 @@ hr.content-divider,
             font-weight: 300;
             font-size: inherit;
         }
+
+        a {
+            color: #2a2f36;
+            text-decoration: underline;
+            text-decoration-color: #6cc282;
+            text-underline-offset: 0.15em;
+        }
+
+        a:hover {
+            color: #6cc282;
+        }
+    }
+
+    .form-terms-note {
+        margin: -0.75rem 0 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #666;
 
         a {
             color: #2a2f36;

@@ -1,27 +1,45 @@
-# Rechtliche Informationen (Impressum)
+# Rechtliche Informationen
 
-## Impressum
-**Firmenname**: Javier Aparicio Ríos Foto
+## Anbieterkennzeichnung
 
-**Inhaber**: <span id="owner"></span>
+**Firma**: {{ site.data.contact.business_name }}
 
-**Adresse**: <span id="address"></span>
+**Rechtsform**: {{ site.data.contact.legal_form[site.lang] }}
 
-**E-Mail**: <span id="email"></span>
+**Inhaber**: {{ site.data.contact.owner }}
 
-**Telefon**: <span id="phone"></span>
+**Adresse**: {{ site.data.contact.address }}
 
-**Handelsregister-Nummer**: <span id="che"></span>
+**E-Mail**: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }})
 
-**Mehrwertsteuer-Nummer**: Nicht mehrwertsteuerpflichtig.
+**Telefon**: {{ site.data.contact.phone }}
+
+**UID / Handelsregister-Nr.**: {{ site.data.contact.che }}
+
+**Mehrwertsteuer**: {{ site.data.contact.mwst_status[site.lang] }}
 
 ---
 
-## Kontaktinformationen
-Bei Fragen oder Anliegen bezüglich dieser rechtlichen Informationen kontaktieren Sie uns bitte unter:
+## Verantwortlich für den Inhalt dieser Website
 
-**E-Mail**: <span id="email2"></span>
+{{ site.data.contact.owner }}, {{ site.data.contact.address }}
 
-**Telefon**: <span id="phone2"></span>
+---
 
-{% include contact-loader.html %}
+## Urheberrecht
+
+Texte, Fotografien und sonstige Inhalte dieser Website sind urheberrechtlich geschützt und Eigentum von {{ site.data.contact.business_name }}, sofern nicht anders gekennzeichnet. Jede Vervielfältigung, Bearbeitung oder Verbreitung ohne vorherige schriftliche Zustimmung ist untersagt.
+
+---
+
+## Externe Links
+
+Diese Website kann Links zu Websites Dritter enthalten. Für deren Inhalte übernehmen wir keine Verantwortung; beim Aufruf solcher Links gelten die Bedingungen der jeweiligen Anbieter.
+
+---
+
+## Kontakt
+
+Bei Fragen zu diesen Angaben: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+
+{% include legal-last-updated.html %}

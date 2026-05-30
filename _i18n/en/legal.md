@@ -1,27 +1,45 @@
-# Legal Information (Impressum)
+# Legal Notice
 
-## Impressum
-**Business Name**: Javier Aparicio Ríos Foto
+## Provider Information
 
-**Owner**: <span id="owner"></span>
+**Business name**: {{ site.data.contact.business_name }}
 
-**Address**: <span id="address"></span>
+**Legal form**: {{ site.data.contact.legal_form[site.lang] }}
 
-**Email**: <span id="email"></span>
+**Owner**: {{ site.data.contact.owner }}
 
-**Phone**: <span id="phone"></span>
+**Address**: {{ site.data.contact.address }}
 
-**Commercial Register Number**: <span id="che"></span>
+**Email**: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }})
 
-**VAT Number**: Not subject to VAT.
+**Phone**: {{ site.data.contact.phone }}
+
+**UID / Commercial register no.**: {{ site.data.contact.che }}
+
+**VAT**: {{ site.data.contact.mwst_status[site.lang] }}
 
 ---
 
-## Contact Information
-For any questions or concerns regarding this Legal Page, please contact us at:
+## Person Responsible for Website Content
 
-**Email**: <span id="email2"></span>
+{{ site.data.contact.owner }}, {{ site.data.contact.address }}
 
-**Phone**: <span id="phone2"></span>
+---
 
-{% include contact-loader.html %}
+## Copyright
+
+Text, photographs and other content on this website are protected by copyright and owned by {{ site.data.contact.business_name }} unless otherwise stated. Reproduction, editing or distribution without prior written consent is prohibited.
+
+---
+
+## External Links
+
+This website may contain links to third-party sites. We are not responsible for their content; the respective providers’ terms apply when you visit them.
+
+---
+
+## Contact
+
+Questions about this page: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+
+{% include legal-last-updated.html %}

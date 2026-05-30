@@ -1,27 +1,47 @@
-# Información Legal (Impressum)
+# Aviso legal
 
-## Impressum
-**Nombre del Negocio**: Javier Aparicio Ríos Foto
+*El prestador tiene su sede en Suiza. Esta página identifica al proveedor según la práctica suiza; no sustituye obligaciones de la legislación española para prestadores radicados en España.*
 
-**Propietario**: <span id="owner"></span>
+## Datos del prestador
 
-**Dirección**: <span id="address"></span>
+**Nombre comercial**: {{ site.data.contact.business_name }}
 
-**Correo Electrónico**: <span id="email"></span>
+**Forma jurídica**: {{ site.data.contact.legal_form[site.lang] }}
 
-**Teléfono**: <span id="phone"></span>
+**Titular**: {{ site.data.contact.owner }}
 
-**Número de Registro Mercantil**: <span id="che"></span>
+**Dirección**: {{ site.data.contact.address }}
 
-**Número de IVA**: No sujeto a IVA.
+**Correo electrónico**: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }})
+
+**Teléfono**: {{ site.data.contact.phone }}
+
+**UID / N.º registro mercantil**: {{ site.data.contact.che }}
+
+**IVA**: {{ site.data.contact.mwst_status[site.lang] }}
 
 ---
 
-## Información de Contacto
-Para cualquier pregunta o inquietud relacionada con esta página legal, contáctenos en:
+## Responsable del contenido de este sitio web
 
-**Correo Electrónico**: <span id="email2"></span>
+{{ site.data.contact.owner }}, {{ site.data.contact.address }}
 
-**Teléfono**: <span id="phone2"></span>
+---
 
-{% include contact-loader.html %}
+## Derechos de autor
+
+Los textos, fotografías y demás contenidos de este sitio están protegidos por derechos de autor y son propiedad de {{ site.data.contact.business_name }}, salvo indicación contraria. Queda prohibida su reproducción, modificación o distribución sin consentimiento previo por escrito.
+
+---
+
+## Enlaces externos
+
+Este sitio puede incluir enlaces a páginas de terceros. No nos responsabilizamos de su contenido; al acceder a ellos rigen las condiciones del proveedor correspondiente.
+
+---
+
+## Contacto
+
+Consultas sobre esta página: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+
+{% include legal-last-updated.html %}

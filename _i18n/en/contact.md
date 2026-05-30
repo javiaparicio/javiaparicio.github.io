@@ -22,13 +22,16 @@
   <textarea id="message" name="message" rows="10" placeholder="What you need the photos for, rough date, questions" required></textarea>
 
     <div class="agb-checkbox">
-      <input type="checkbox" id="agb" name="agb" value="accepted" required>
-      <label for="agb">
-        I accept the
-        <a href="{% tl terms %}" target="_blank" rel="noopener">terms</a> and
-        <a href="{% tl privacy %}" target="_blank" rel="noopener">privacy policy</a>.
+      <input type="checkbox" id="privacy" name="privacy" value="accepted" required>
+      <label for="privacy">
+        I have read the
+        <a href="{% tl privacy %}" target="_blank" rel="noopener">privacy policy</a>
+        and agree to the processing of my details.
       </label>
     </div>
+    <p class="form-terms-note">
+      The <a href="{% tl terms %}" target="_blank" rel="noopener">terms and conditions</a> apply upon written booking confirmation.
+    </p>
 
   <input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" />
   <input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url[site.lang] | absolute_url }}" />

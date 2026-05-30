@@ -20,7 +20,19 @@ Weitere Informationen finden Sie in der [Datenschutzerklärung von Formspree](ht
 
 ---
 
-## **2. Verwendung von Google reCAPTCHA**
+## **2. Hosting, Infrastruktur und E-Mail**
+
+Beim Besuch dieser Website und bei der Kommunikation mit uns setzen wir folgende Dienstleister ein:
+
+- **GitHub, Inc. (GitHub Pages)** — Hosting des statischen Webauftritts. **Zweck:** Bereitstellung der Website. **Daten:** technische Zugriffsdaten (z. B. IP-Adresse, Zeitpunkt, angeforderte Seite). [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
+- **Cloudflare, Inc.** — DNS, Reverse Proxy und Schutz der Website. **Zweck:** Auslieferung, Sicherheit und Performance. **Daten:** z. B. IP-Adresse, Browser- und Zugriffsdaten, Protokolle. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Proton AG (Proton Mail)** — E-Mail für Anfragen aus dem Kontaktformular und direkte E-Mail-Kontakte. **Zweck:** Bearbeitung von Anfragen und Kundenkommunikation. **Daten:** z. B. Name, E-Mail-Adresse, Nachrichteninhalt, ggf. Telefonnummer. [Proton Privacy Policy](https://proton.me/legal/privacy)
+
+Einige Anbieter haben ihren Sitz ausserhalb der Schweiz (z. B. USA). Dabei kann eine Datenübermittlung ins Ausland erfolgen; die Anbieter geben an, angemessene Schutzmassnahmen zu verwenden (z. B. Standardvertragsklauseln).
+
+---
+
+## **3. Verwendung von Google reCAPTCHA**
 Wir verwenden Google reCAPTCHA auf unserem Kontaktformular, um Spam und Missbrauch zu verhindern. Dieser Dienst wird von Google LLC bereitgestellt und hilft zu überprüfen, ob die Formularübermittlung von einem Menschen stammt.
 
 Wenn Sie unser Kontaktformular verwenden, kann Google reCAPTCHA folgende Daten erfassen:
@@ -35,12 +47,12 @@ Weitere Informationen finden Sie unter:
 
 ---
 
-## **3. Spracheinstellung (Cookie)**
+## **4. Spracheinstellung (Cookie)**
 Wenn Sie über den Sprachwechsler eine Sprache wählen, speichern wir Ihre Auswahl in einem Cookie (`jaf_lang`, Gültigkeit etwa ein Jahr, `SameSite=Lax`, nur für diese Website). **Zweck:** Beim nächsten Besuch die von Ihnen gewählte Sprachversion anzuzeigen. Es werden keine Tracking- oder Werbedaten erhoben. Sie können den Cookie jederzeit in den Einstellungen Ihres Browsers löschen; danach gilt wieder die Sprache der URL, die Sie aufrufen.
 
 ---
 
-## **4. Verwendung der Daten**
+## **5. Verwendung der Daten**
 Wir verwenden Ihre Daten, um:
 - Auf Anfragen zu antworten und Dienstleistungen bereitzustellen.
 - Unsere Kommunikation und Benutzererfahrung zu verbessern.
@@ -49,12 +61,12 @@ Wir **verkaufen oder geben Ihre Daten nicht an unbefugte Dritte weiter**.
 
 ---
 
-## **5. Datenschutz**
+## **6. Datenschutz**
 Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre persönlichen Daten zu schützen. Obwohl wir darauf vertrauen, dass Drittanbieter Daten sicher verwalten, sind wir nicht verantwortlich für Datenschutzverletzungen auf deren Seite.
 
 ---
 
-## **6. Ihre Rechte**
+## **7. Ihre Rechte**
 Sie haben das Recht:
 - Auf Ihre Daten zuzugreifen.
 - Berichtigung oder Löschung Ihrer Daten zu verlangen.

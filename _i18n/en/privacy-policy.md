@@ -20,7 +20,19 @@ For more information, please refer to [Formspree’s Privacy Policy](https://for
 
 ---
 
-## **2. Use of Google reCAPTCHA**
+## **2. Hosting, infrastructure and email**
+
+When you visit this website or communicate with us, the following providers may process data on our behalf or as separate controllers:
+
+- **GitHub, Inc. (GitHub Pages)** — Hosting of the static website. **Purpose:** delivery of the site. **Data:** technical access data (e.g. IP address, time, page requested). [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
+- **Cloudflare, Inc.** — DNS, reverse proxy and protection of the website. **Purpose:** delivery, security and performance. **Data:** e.g. IP address, browser and access data, logs. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Proton AG (Proton Mail)** — Email for enquiries from the contact form and direct email. **Purpose:** handling enquiries and client communication. **Data:** e.g. name, email address, message content, phone number if provided. [Proton Privacy Policy](https://proton.me/legal/privacy)
+
+Some providers are based outside Switzerland (e.g. USA). Data may be transferred abroad; they state that appropriate safeguards apply (e.g. standard contractual clauses).
+
+---
+
+## **3. Use of Google reCAPTCHA**
 We use Google reCAPTCHA on our contact form to prevent spam and abuse. This service is provided by Google LLC and helps verify that the form submission is made by a human.
 
 When you use our contact form, Google reCAPTCHA may collect:
@@ -35,12 +47,12 @@ For more information, please refer to:
 
 ---
 
-## **3. Language preference (cookie)**
+## **4. Language preference (cookie)**
 When you choose a language using the site’s language switcher, we store your choice in a cookie (`jaf_lang`, valid for about one year, `SameSite=Lax`, scoped to this site only). **Purpose:** To show the language version you selected on your next visit. No tracking or advertising data is collected. You can delete the cookie at any time in your browser settings; after that, the language of the URL you open will apply again.
 
 ---
 
-## **4. Data Usage**
+## **5. Data Usage**
 We use your data to:
 - Respond to inquiries and provide services.
 - Improve our communication and user experience.
@@ -49,12 +61,12 @@ We **do not sell or distribute your data** to unauthorized third parties.
 
 ---
 
-## **5. Data Protection**
+## **6. Data Protection**
 We implement appropriate security measures to protect your personal data. While we trust third-party providers to manage data securely, we are not responsible for breaches on their end.
 
 ---
 
-## **6. Your Rights**
+## **7. Your Rights**
 You have the right to:
 - Request access to your data.
 - Request correction or deletion of your data.

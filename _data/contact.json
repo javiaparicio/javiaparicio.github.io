@@ -1,5 +1,6 @@
 {
-  "owner": "Javi Aparicio",
+  "owner": "Javier Aparicio Ríos",
+  "business_name": "Javier Aparicio Ríos Foto",
   "email": "info@javiapariciofoto.ch",
   "phone": "+41 77 231 12 63",
   "che": "CHE-482.759.955",
@@ -7,5 +8,15 @@
   "street": "Stauffacherstrasse 44",
   "city": "Bern",
   "postal_code": "3014",
-  "country": "CH"
+  "country": "CH",
+  "legal_form": {
+    "de": "Einzelfirma (eingetragen im Handelsregister des Kantons Bern)",
+    "en": "Sole proprietorship (registered in the commercial register of the Canton of Bern)",
+    "es": "Empresa individual (inscrita en el registro mercantil del cantón de Berna)"
+  },
+  "mwst_status": {
+    "de": "Rechnungen unterliegen nicht der Mehrwertsteuer gemäss Art. 10 Abs. 2 des Bundesgesetzes über die Mehrwertsteuer (MWSTG).",
+    "en": "Invoices are not subject to VAT according to Art. 10 para. 2 of the Swiss VAT Act (MWSTG).",
+    "es": "Las facturas no están sujetas al IVA conforme al art. 10, párr. 2, de la ley federal suiza sobre el impuesto al valor añadido (MWSTG)."
+  }
 }

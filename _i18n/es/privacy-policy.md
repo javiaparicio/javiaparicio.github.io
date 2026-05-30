@@ -20,7 +20,19 @@ Para más información, consulte la [Política de Privacidad de Formspree](https
 
 ---
 
-## **2. Uso de Google reCAPTCHA**
+## **2. Alojamiento, infraestructura y correo electrónico**
+
+Al visitar este sitio o comunicarse con nosotros, pueden intervenir los siguientes proveedores:
+
+- **GitHub, Inc. (GitHub Pages)** — Alojamiento del sitio estático. **Finalidad:** publicación del sitio web. **Datos:** datos técnicos de acceso (p. ej. dirección IP, fecha y hora, página solicitada). [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
+- **Cloudflare, Inc.** — DNS, proxy inverso y protección del sitio. **Finalidad:** entrega, seguridad y rendimiento. **Datos:** p. ej. dirección IP, datos del navegador y de acceso, registros. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Proton AG (Proton Mail)** — Correo para consultas del formulario y correo directo. **Finalidad:** gestión de consultas y comunicación con clientes. **Datos:** p. ej. nombre, correo electrónico, contenido del mensaje, teléfono si se indica. [Proton Privacy Policy](https://proton.me/legal/privacy)
+
+Algunos proveedores tienen sede fuera de Suiza (p. ej. EE. UU.). Puede producirse una transferencia internacional; indican medidas de protección adecuadas (p. ej. cláusulas contractuales tipo).
+
+---
+
+## **3. Uso de Google reCAPTCHA**
 Utilizamos Google reCAPTCHA en nuestro formulario de contacto para prevenir spam y abusos. Este servicio es proporcionado por Google LLC y ayuda a verificar que el envío del formulario lo realiza una persona.
 
 Cuando utiliza nuestro formulario de contacto, Google reCAPTCHA puede recopilar:
@@ -35,12 +47,12 @@ Para más información, consulte:
 
 ---
 
-## **3. Preferencia de idioma (cookie)**
+## **4. Preferencia de idioma (cookie)**
 Si elige un idioma en el selector del sitio, guardamos su elección en una cookie (`jaf_lang`, validez aproximada de un año, `SameSite=Lax`, solo para este sitio). **Finalidad:** Mostrar en su próxima visita la versión en el idioma elegido. No se recopilan datos de seguimiento ni publicitarios. Puede eliminar la cookie en cualquier momento desde la configuración de su navegador; después volverá a aplicarse el idioma de la URL que abra.
 
 ---
 
-## **4. Uso de los Datos**
+## **5. Uso de los Datos**
 Utilizamos sus datos para:
 - Responder a consultas y proporcionar servicios.
 - Mejorar nuestra comunicación y experiencia del usuario.
@@ -49,12 +61,12 @@ Utilizamos sus datos para:
 
 ---
 
-## **5. Protección de Datos**
+## **6. Protección de Datos**
 Implementamos medidas de seguridad adecuadas para proteger sus datos personales. Aunque confiamos en que los proveedores de terceros gestionen los datos de forma segura, no somos responsables de las brechas de seguridad en su parte.
 
 ---
 
-## **6. Sus Derechos**
+## **7. Sus Derechos**
 Usted tiene derecho a:
 - Solicitar acceso a sus datos.
 - Solicitar la corrección o eliminación de sus datos.
