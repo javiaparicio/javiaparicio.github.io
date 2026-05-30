@@ -47,8 +47,8 @@ For more information, please refer to:
 
 ---
 
-## **4. Language preference (cookie)**
-When you choose a language using the site’s language switcher, we store your choice in a cookie (`jaf_lang`, valid for about one year, `SameSite=Lax`, scoped to this site only). **Purpose:** To show the language version you selected on your next visit. No tracking or advertising data is collected. You can delete the cookie at any time in your browser settings; after that, the language of the URL you open will apply again.
+## **4. Language preference (localStorage)**
+When you choose a language using the site’s language switcher, we store your choice in your browser’s **local storage** (`localStorage`, key `jaf_lang`, scoped to this site only). This data is **not** sent to our server. **Purpose:** To show the language version you selected on your next visit. No tracking or advertising data is collected. You can remove it at any time in your browser settings (site data / local storage); after that, the language of the URL you open will apply again.
 
 ---
 

@@ -15,10 +15,13 @@
 </script>
 <script>
 (function () {
-  var match = document.cookie.match(/(?:^|; )jaf_lang=(de|en|es)/);
-  if (!match) return;
+  var preferred = null;
 
-  var preferred = match[1];
+  try {
+    preferred = localStorage.getItem("jaf_lang");
+  } catch (e) {}
+
+  if (preferred !== "de" && preferred !== "en" && preferred !== "es") return;
 
   function pathLang() {
     var p = window.location.pathname;

@@ -47,8 +47,8 @@ Para más información, consulte:
 
 ---
 
-## **4. Preferencia de idioma (cookie)**
-Si elige un idioma en el selector del sitio, guardamos su elección en una cookie (`jaf_lang`, validez aproximada de un año, `SameSite=Lax`, solo para este sitio). **Finalidad:** Mostrar en su próxima visita la versión en el idioma elegido. No se recopilan datos de seguimiento ni publicitarios. Puede eliminar la cookie en cualquier momento desde la configuración de su navegador; después volverá a aplicarse el idioma de la URL que abra.
+## **4. Preferencia de idioma (localStorage)**
+Si elige un idioma en el selector del sitio, guardamos su elección en el **almacenamiento local** del navegador (`localStorage`, clave `jaf_lang`, solo para este sitio). Los datos **no** se envían a nuestro servidor. **Finalidad:** Mostrar en su próxima visita la versión en el idioma elegido. No se recopilan datos de seguimiento ni publicitarios. Puede eliminar el valor en la configuración del navegador (datos del sitio / localStorage); después volverá a aplicarse el idioma de la URL que abra.
 
 ---
 

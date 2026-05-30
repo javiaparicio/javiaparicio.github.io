@@ -47,8 +47,8 @@ Weitere Informationen finden Sie unter:
 
 ---
 
-## **4. Spracheinstellung (Cookie)**
-Wenn Sie über den Sprachwechsler eine Sprache wählen, speichern wir Ihre Auswahl in einem Cookie (`jaf_lang`, Gültigkeit etwa ein Jahr, `SameSite=Lax`, nur für diese Website). **Zweck:** Beim nächsten Besuch die von Ihnen gewählte Sprachversion anzuzeigen. Es werden keine Tracking- oder Werbedaten erhoben. Sie können den Cookie jederzeit in den Einstellungen Ihres Browsers löschen; danach gilt wieder die Sprache der URL, die Sie aufrufen.
+## **4. Spracheinstellung (localStorage)**
+Wenn Sie über den Sprachwechsler eine Sprache wählen, speichern wir Ihre Auswahl im **lokalen Speicher** Ihres Browsers (`localStorage`, Schlüssel `jaf_lang`, nur für diese Website). Die Daten werden **nicht** an unseren Server übermittelt. **Zweck:** Beim nächsten Besuch die von Ihnen gewählte Sprachversion anzuzeigen. Es werden keine Tracking- oder Werbedaten erhoben. Sie können den Eintrag jederzeit in den Browser-Einstellungen (Website-Daten / localStorage) löschen; danach gilt wieder die Sprache der URL, die Sie aufrufen.
 
 ---
 

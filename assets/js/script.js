@@ -25,16 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ----------------------
-// LANGUAGE PREFERENCE (cookie jaf_lang, 1 year)
+// LANGUAGE PREFERENCE (localStorage key jaf_lang)
 // ----------------------
+function setPreferredLang(lang) {
+  if (lang !== "de" && lang !== "en" && lang !== "es") return;
+  try {
+    localStorage.setItem("jaf_lang", lang);
+  } catch (e) {}
+}
+
 function setupLangPreference() {
-  var selector = ".language_selector a[hreflang]";
-  document.querySelectorAll(selector).forEach(function (link) {
+  document.querySelectorAll(".language_selector a[hreflang]").forEach(function (link) {
     link.addEventListener("click", function () {
-      var lang = link.getAttribute("hreflang");
-      if (lang !== "de" && lang !== "en" && lang !== "es") return;
-      document.cookie =
-        "jaf_lang=" + lang + "; path=/; max-age=31536000; SameSite=Lax";
+      setPreferredLang(link.getAttribute("hreflang"));
     });
   });
 }
