@@ -35,7 +35,12 @@ For more information, please refer to:
 
 ---
 
-## **3. Data Usage**
+## **3. Language preference (cookie)**
+When you choose a language using the site’s language switcher, we store your choice in a cookie (`jaf_lang`, valid for about one year, `SameSite=Lax`, scoped to this site only). **Purpose:** To show the language version you selected on your next visit. No tracking or advertising data is collected. You can delete the cookie at any time in your browser settings; after that, the language of the URL you open will apply again.
+
+---
+
+## **4. Data Usage**
 We use your data to:
 - Respond to inquiries and provide services.
 - Improve our communication and user experience.
@@ -44,12 +49,12 @@ We **do not sell or distribute your data** to unauthorized third parties.
 
 ---
 
-## **4. Data Protection**
+## **5. Data Protection**
 We implement appropriate security measures to protect your personal data. While we trust third-party providers to manage data securely, we are not responsible for breaches on their end.
 
 ---
 
-## **5. Your Rights**
+## **6. Your Rights**
 You have the right to:
 - Request access to your data.
 - Request correction or deletion of your data.

@@ -1,0 +1,41 @@
+<script type="application/json" id="jaf-lang-alternates">
+{
+{% if page.namespace %}
+{% for lang in site.languages %}
+  {% capture tl_key %}{{ page.namespace }} {{ lang }}{% endcapture %}
+  {% capture alt_path %}{% tl tl_key %}{% endcapture %}
+  "{{ lang }}": {{ alt_path | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+{% else %}
+  "de": "/",
+  "en": "/en/",
+  "es": "/es/"
+{% endif %}
+}
+</script>
+<script>
+(function () {
+  var match = document.cookie.match(/(?:^|; )jaf_lang=(de|en|es)/);
+  if (!match) return;
+
+  var preferred = match[1];
+
+  function pathLang() {
+    var p = window.location.pathname;
+    if (p === "/en" || p.indexOf("/en/") === 0) return "en";
+    if (p === "/es" || p.indexOf("/es/") === 0) return "es";
+    return "de";
+  }
+
+  if (pathLang() === preferred) return;
+
+  var data = document.getElementById("jaf-lang-alternates");
+  if (!data) return;
+
+  var alternates = JSON.parse(data.textContent);
+  var target = alternates[preferred];
+  if (!target || target === window.location.pathname) return;
+
+  window.location.replace(target);
+})();
+</script>

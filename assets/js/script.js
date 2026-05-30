@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupLazyGalleryImages();
   setupContactData();
+  setupLangPreference();
 
   // Lightbox Initialization
   if (document.getElementById("lightbox")) {
@@ -22,6 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
     prefillContactForm();
   }
 });
+
+// ----------------------
+// LANGUAGE PREFERENCE (cookie jaf_lang, 1 year)
+// ----------------------
+function setupLangPreference() {
+  var selector = ".language_selector a[hreflang]";
+  document.querySelectorAll(selector).forEach(function (link) {
+    link.addEventListener("click", function () {
+      var lang = link.getAttribute("hreflang");
+      if (lang !== "de" && lang !== "en" && lang !== "es") return;
+      document.cookie =
+        "jaf_lang=" + lang + "; path=/; max-age=31536000; SameSite=Lax";
+    });
+  });
+}
 
 // ----------------------
 // CONTACT DATA (legal pages + WhatsApp link)

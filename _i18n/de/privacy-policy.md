@@ -35,7 +35,12 @@ Weitere Informationen finden Sie unter:
 
 ---
 
-## **3. Verwendung der Daten**
+## **3. Spracheinstellung (Cookie)**
+Wenn Sie über den Sprachwechsler eine Sprache wählen, speichern wir Ihre Auswahl in einem Cookie (`jaf_lang`, Gültigkeit etwa ein Jahr, `SameSite=Lax`, nur für diese Website). **Zweck:** Beim nächsten Besuch die von Ihnen gewählte Sprachversion anzuzeigen. Es werden keine Tracking- oder Werbedaten erhoben. Sie können den Cookie jederzeit in den Einstellungen Ihres Browsers löschen; danach gilt wieder die Sprache der URL, die Sie aufrufen.
+
+---
+
+## **4. Verwendung der Daten**
 Wir verwenden Ihre Daten, um:
 - Auf Anfragen zu antworten und Dienstleistungen bereitzustellen.
 - Unsere Kommunikation und Benutzererfahrung zu verbessern.
@@ -44,12 +49,12 @@ Wir **verkaufen oder geben Ihre Daten nicht an unbefugte Dritte weiter**.
 
 ---
 
-## **4. Datenschutz**
+## **5. Datenschutz**
 Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre persönlichen Daten zu schützen. Obwohl wir darauf vertrauen, dass Drittanbieter Daten sicher verwalten, sind wir nicht verantwortlich für Datenschutzverletzungen auf deren Seite.
 
 ---
 
-## **5. Ihre Rechte**
+## **6. Ihre Rechte**
 Sie haben das Recht:
 - Auf Ihre Daten zuzugreifen.
 - Berichtigung oder Löschung Ihrer Daten zu verlangen.

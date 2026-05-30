@@ -35,7 +35,12 @@ Para más información, consulte:
 
 ---
 
-## **3. Uso de los Datos**
+## **3. Preferencia de idioma (cookie)**
+Si elige un idioma en el selector del sitio, guardamos su elección en una cookie (`jaf_lang`, validez aproximada de un año, `SameSite=Lax`, solo para este sitio). **Finalidad:** Mostrar en su próxima visita la versión en el idioma elegido. No se recopilan datos de seguimiento ni publicitarios. Puede eliminar la cookie en cualquier momento desde la configuración de su navegador; después volverá a aplicarse el idioma de la URL que abra.
+
+---
+
+## **4. Uso de los Datos**
 Utilizamos sus datos para:
 - Responder a consultas y proporcionar servicios.
 - Mejorar nuestra comunicación y experiencia del usuario.
@@ -44,12 +49,12 @@ Utilizamos sus datos para:
 
 ---
 
-## **4. Protección de Datos**
+## **5. Protección de Datos**
 Implementamos medidas de seguridad adecuadas para proteger sus datos personales. Aunque confiamos en que los proveedores de terceros gestionen los datos de forma segura, no somos responsables de las brechas de seguridad en su parte.
 
 ---
 
-## **5. Sus Derechos**
+## **6. Sus Derechos**
 Usted tiene derecho a:
 - Solicitar acceso a sus datos.
 - Solicitar la corrección o eliminación de sus datos.
