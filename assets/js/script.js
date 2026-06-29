@@ -43,7 +43,7 @@ function setupLangPreference() {
 }
 
 // ----------------------
-// CONTACT DATA (legal pages + WhatsApp link)
+// CONTACT DATA (loaded client-side to reduce scraper harvesting)
 // ----------------------
 let contactDataCache = null;
 
@@ -63,45 +63,33 @@ function loadContactData() {
   return contactDataCache;
 }
 
-function applyContactData(data) {
-  function setText(id, text) {
-    var el = document.getElementById(id);
-    if (el && text != null) el.textContent = text;
-  }
-
-  function setEmail(id, email) {
-    var el = document.getElementById(id);
-    if (!el || !email) return;
-    var a = document.createElement("a");
-    a.href = "mailto:" + email;
-    a.textContent = email;
-    el.replaceChildren(a);
-  }
-
-  setText("owner", data.owner);
-  setText("address", data.address);
-  setText("che", data.che);
-  setText("phone", data.phone);
-  setText("phone2", data.phone);
-  setEmail("email", data.email);
-  setEmail("email2", data.email);
-
-  var whatsapp = document.querySelector(".js-whatsapp-link");
-  if (whatsapp && data.phone) {
-    var digits = data.phone.replace(/\D/g, "");
-    whatsapp.href = "https://wa.me/" + digits;
-  }
-}
-
 function setupContactData() {
-  var needsData =
-    document.querySelector(".js-whatsapp-link") ||
-    document.getElementById("email") ||
-    document.getElementById("owner");
+  const fields = document.querySelectorAll(".contact-protected[data-contact-field]");
+  const whatsapp = document.querySelector(".js-whatsapp-link");
+  if (!fields.length && !whatsapp) return;
 
-  if (!needsData) return;
+  loadContactData()
+    .then(function (data) {
+      fields.forEach(function (el) {
+        const field = el.getAttribute("data-contact-field");
+        const value = data[field];
+        if (!value) return;
 
-  loadContactData().then(applyContactData);
+        if (field === "email") {
+          const link = document.createElement("a");
+          link.href = "mailto:" + value;
+          link.textContent = value;
+          el.replaceChildren(link);
+        } else {
+          el.textContent = value;
+        }
+      });
+
+      if (whatsapp && data.phone) {
+        whatsapp.href = "https://wa.me/" + data.phone.replace(/\D/g, "");
+      }
+    })
+    .catch(function () {});
 }
 
 // ----------------------

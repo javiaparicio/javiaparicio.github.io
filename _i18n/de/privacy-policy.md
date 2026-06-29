@@ -72,15 +72,15 @@ Sie haben das Recht:
 - Berichtigung oder Löschung Ihrer Daten zu verlangen.
 - Die Einwilligung zur Datenverarbeitung zu widerrufen.
 
-Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <span id="email2"></span>.
+Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter {% include contact-email.html id="email2" %}.
 
 ---
 
 ## Kontaktinformationen
 Bei Fragen oder Bedenken bezüglich dieser Datenschutzerklärung wenden Sie sich bitte an:
 
-**E-Mail**: <span id="email"></span>
+**E-Mail**: {% include contact-email.html %}
 
-**Telefon**: <span id="phone"></span>
+**Telefon**: {% include contact-phone.html %}
 
-{% include contact-loader.html %}
+{% include contact-protected.html %}

@@ -6,6 +6,7 @@ Static site for [javiapariciofoto.ch](https://javiapariciofoto.ch), built with J
 
 ```bash
 bundle install
+ruby -rjson -e 'c=JSON.parse(File.read("_data/contact.json")); File.write("contact.json", JSON.generate({"email"=>c["email"],"phone"=>c["phone"]})+"\n")'
 bundle exec jekyll serve
 ```
 
@@ -32,21 +33,22 @@ German uses the original WordPress slugs; English and Spanish use shorter locali
 
 ```
 pages/              Page front matter (permalink, namespace, SEO)
+pages/aliases/      Legacy URL aliases (noindex, canonical via namespace)
 _i18n/{de,en,es}/   Page body copy ({% tf filename.md %})
 _data/              settings.yml, galleries.yml, contact.json
 _includes/          Partials (gallery, meta, footer, …)
-_layouts/           default, 404, linktree, forward
-_plugins/           seo_sitemap.rb
+_layouts/           default, 404, linktree, forward, sitemap
 assets/             CSS, JS, images, favicons
 404.html            GitHub Pages error page (repo root)
 robots.txt, CNAME   Deploy / SEO (repo root)
+sitemap_index.xml   Static sitemap index (repo root)
 ```
 
 ## SEO
 
 - Meta titles/descriptions per page and language (front matter)
 - `hreflang`, canonical URLs via `{% tl %}`, structured data (`_includes/ldjson.html`)
-- Sitemaps: `sitemap_index.xml` → `/sitemap.xml`, `/en/sitemap.xml`, `/es/sitemap.xml` (custom plugin)
+- Sitemaps: `sitemap_index.xml` → `/sitemap.xml`, `/en/sitemap.xml`, `/es/sitemap.xml` (Liquid layout)
 - Utility pages (`danke`, `linktree`, `scanme`, `404`) use `noindex`
 
 After deploy, submit `https://javiapariciofoto.ch/sitemap_index.xml` in Google Search Console.
@@ -63,6 +65,6 @@ After DNS cutover, disable or remove the WordPress hosting for this domain.
 
 - Page config: `pages/*.md`
 - Page bodies: `_i18n/{de,en,es}/*.md`
-- Contact details (legal/privacy/terms): edit `_data/contact.json` → build publishes `/contact.json` → `{% include contact-loader.html %}` fills spans in the browser. Email/phone omitted from JSON-LD; `robots.txt` disallows `/contact.json`.
+- Contact details (legal/privacy/terms): edit `_data/contact.json`. Email and phone load in the browser from `/contact.json` (not in static HTML; `robots.txt` disallows that file). JSON-LD omits email/phone.
 - Menus and footer: `_data/settings.yml` (namespaces + `{% tl %}`)
 - Galleries: `assets/images/galleries/{page}/` — `{% include gallery.html page="clients" %}`; optional `reverse=true` for portfolio. Captions in `_data/galleries.yml`.

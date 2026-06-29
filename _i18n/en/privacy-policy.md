@@ -72,15 +72,15 @@ You have the right to:
 - Request correction or deletion of your data.
 - Withdraw consent for data processing.
 
-To exercise these rights, please contact us at <span id="email2"></span>.
+To exercise these rights, please contact us at {% include contact-email.html id="email2" %}.
 
 ---
 
 ## Contact Information
 For any questions or concerns regarding this Privacy Policy, please contact:
 
-**Email**: <span id="email"></span>
+**Email**: {% include contact-email.html %}
 
-**Phone**: <span id="phone"></span>
+**Phone**: {% include contact-phone.html %}
 
-{% include contact-loader.html %}
+{% include contact-protected.html %}

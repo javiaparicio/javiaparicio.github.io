@@ -12,9 +12,9 @@
 
 **Dirección**: {{ site.data.contact.address }}
 
-**Correo electrónico**: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }})
+**Correo electrónico**: {% include contact-email.html %}
 
-**Teléfono**: {{ site.data.contact.phone }}
+**Teléfono**: {% include contact-phone.html %}
 
 **UID / N.º registro mercantil**: {{ site.data.contact.che }}
 
@@ -42,6 +42,7 @@ Este sitio puede incluir enlaces a páginas de terceros. No nos responsabilizamo
 
 ## Contacto
 
-Consultas sobre esta página: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+Consultas sobre esta página: {% include contact-email.html id="email2" %} · {% include contact-phone.html id="phone2" %}
 
+{% include contact-protected.html %}
 {% include legal-last-updated.html %}

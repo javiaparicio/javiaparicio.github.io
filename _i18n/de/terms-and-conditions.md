@@ -101,6 +101,8 @@ Diese AGB regeln Fotografie-Dienstleistungen von {{ site.data.contact.business_n
 
 ## Kontakt
 
-Fragen zu diesen Bedingungen: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+Fragen zu diesen Bedingungen: {% include contact-email.html %} · {% include contact-phone.html %}
+
+{% include contact-protected.html %}
 
 {% include legal-last-updated.html %}

@@ -1,6 +1,18 @@
 {% assign lang = site.lang | default: site.default_lang %}
-{% assign page_title = page.title[lang] | default: page.title | default: site.title[lang] %}
-{% assign page_description = page.description[lang] | default: page.description | default: site.description[lang] %}
+{% if page.alias and page.namespace %}
+  {% assign primary_page = nil %}
+  {% for p in site.pages %}
+    {% if p.namespace == page.namespace and p.alias != true and p.layout == 'default' %}
+      {% assign primary_page = p %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% assign page_title = primary_page.title[lang] | default: primary_page.title | default: page.title[lang] | default: page.title | default: site.title[lang] %}
+  {% assign page_description = primary_page.description[lang] | default: primary_page.description | default: page.description[lang] | default: page.description | default: site.description[lang] %}
+{% else %}
+  {% assign page_title = page.title[lang] | default: page.title | default: site.title[lang] %}
+  {% assign page_description = page.description[lang] | default: page.description | default: site.description[lang] %}
+{% endif %}
 {% assign seo = site.data.seo %}
 
 {% if page.namespace %}

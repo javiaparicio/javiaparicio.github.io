@@ -101,6 +101,8 @@ These terms govern photography services provided by {{ site.data.contact.busines
 
 ## Contact
 
-Questions about these terms: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+Questions about these terms: {% include contact-email.html %} · {% include contact-phone.html %}
+
+{% include contact-protected.html %}
 
 {% include legal-last-updated.html %}

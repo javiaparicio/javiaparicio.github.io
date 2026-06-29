@@ -29,6 +29,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
+      - name: Publish contact.json for client-side loader
+        run: ruby -rjson -e 'c=JSON.parse(File.read("_data/contact.json")); File.write("contact.json", JSON.generate({"email"=>c["email"],"phone"=>c["phone"]})+"\n")'
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:

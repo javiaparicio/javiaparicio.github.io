@@ -1,0 +1,11 @@
+<noscript>
+  <p class="contact-noscript">
+    {% if site.lang == 'de' %}
+      E-Mail und Telefon werden mit JavaScript angezeigt. Nutzen Sie das <a href="{% tl contact %}">Kontaktformular</a>.
+    {% elsif site.lang == 'es' %}
+      El correo y el teléfono requieren JavaScript. Use el <a href="{% tl contact %}">formulario de contacto</a>.
+    {% else %}
+      Email and phone are shown with JavaScript. Please use the <a href="{% tl contact %}">contact form</a>.
+    {% endif %}
+  </p>
+</noscript>

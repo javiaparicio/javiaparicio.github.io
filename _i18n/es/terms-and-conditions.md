@@ -101,6 +101,8 @@ Estas condiciones regulan los servicios de fotografía de {{ site.data.contact.b
 
 ## Contacto
 
-Consultas sobre estas condiciones: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+Consultas sobre estas condiciones: {% include contact-email.html %} · {% include contact-phone.html %}
+
+{% include contact-protected.html %}
 
 {% include legal-last-updated.html %}

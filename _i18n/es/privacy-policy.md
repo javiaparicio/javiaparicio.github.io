@@ -72,15 +72,15 @@ Usted tiene derecho a:
 - Solicitar la corrección o eliminación de sus datos.
 - Retirar el consentimiento para el procesamiento de datos.
 
-Para ejercer estos derechos, contáctenos en <span id="email2"></span>.
+Para ejercer estos derechos, contáctenos en {% include contact-email.html id="email2" %}.
 
 ---
 
 ## Información de Contacto
 Para cualquier pregunta o inquietud sobre esta Política de Privacidad, contáctenos:
 
-**Correo Electrónico**: <span id="email"></span>
+**Correo Electrónico**: {% include contact-email.html %}
 
-**Teléfono**: <span id="phone"></span>
+**Teléfono**: {% include contact-phone.html %}
 
-{% include contact-loader.html %}
+{% include contact-protected.html %}

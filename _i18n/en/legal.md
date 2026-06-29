@@ -10,9 +10,9 @@
 
 **Address**: {{ site.data.contact.address }}
 
-**Email**: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }})
+**Email**: {% include contact-email.html %}
 
-**Phone**: {{ site.data.contact.phone }}
+**Phone**: {% include contact-phone.html %}
 
 **UID / Commercial register no.**: {{ site.data.contact.che }}
 
@@ -40,6 +40,7 @@ This website may contain links to third-party sites. We are not responsible for 
 
 ## Contact
 
-Questions about this page: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+Questions about this page: {% include contact-email.html id="email2" %} · {% include contact-phone.html id="phone2" %}
 
+{% include contact-protected.html %}
 {% include legal-last-updated.html %}

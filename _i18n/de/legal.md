@@ -10,9 +10,9 @@
 
 **Adresse**: {{ site.data.contact.address }}
 
-**E-Mail**: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }})
+**E-Mail**: {% include contact-email.html %}
 
-**Telefon**: {{ site.data.contact.phone }}
+**Telefon**: {% include contact-phone.html %}
 
 **UID / Handelsregister-Nr.**: {{ site.data.contact.che }}
 
@@ -40,6 +40,7 @@ Diese Website kann Links zu Websites Dritter enthalten. Für deren Inhalte über
 
 ## Kontakt
 
-Bei Fragen zu diesen Angaben: [{{ site.data.contact.email }}](mailto:{{ site.data.contact.email }}) · {{ site.data.contact.phone }}
+Bei Fragen zu diesen Angaben: {% include contact-email.html id="email2" %} · {% include contact-phone.html id="phone2" %}
 
+{% include contact-protected.html %}
 {% include legal-last-updated.html %}
