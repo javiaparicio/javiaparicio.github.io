@@ -6,7 +6,7 @@ Static site for [javiapariciofoto.ch](https://javiapariciofoto.ch), built with J
 
 ```bash
 bundle install
-ruby -rjson -e 'c=JSON.parse(File.read("_data/contact.json")); File.write("contact.json", JSON.generate({"email"=>c["email"],"phone"=>c["phone"]})+"\n")'
+ruby -rjson -rbase64 -e 'c=JSON.parse(File.read("_data/contact.json")); File.write("contact.json", JSON.generate({"e"=>Base64.strict_encode64(c["email"]),"p"=>Base64.strict_encode64(c["phone"])})+"\n")'
 bundle exec jekyll serve
 ```
 
@@ -65,6 +65,6 @@ After DNS cutover, disable or remove the WordPress hosting for this domain.
 
 - Page config: `pages/*.md`
 - Page bodies: `_i18n/{de,en,es}/*.md`
-- Contact details (legal/privacy/terms): edit `_data/contact.json`. Email and phone load in the browser from `/contact.json` (not in static HTML; `robots.txt` disallows that file). JSON-LD omits email/phone.
+- Contact details (legal/privacy/terms): edit `_data/contact.json`. Email and phone load in the browser from obfuscated `/contact.json` (not in static HTML; `robots.txt` disallows that file). JSON-LD uses city-level address only, no email/phone.
 - Menus and footer: `_data/settings.yml` (namespaces + `{% tl %}`)
 - Galleries: `assets/images/galleries/{page}/` — `{% include gallery.html page="clients" %}`; optional `reverse=true` for portfolio. Captions in `_data/galleries.yml`.

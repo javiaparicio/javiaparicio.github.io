@@ -47,6 +47,13 @@ function setupLangPreference() {
 // ----------------------
 let contactDataCache = null;
 
+function decodeContactPayload(raw) {
+  return {
+    email: atob(raw.e),
+    phone: atob(raw.p),
+  };
+}
+
 function loadContactData() {
   if (!contactDataCache) {
     contactDataCache = fetch("/contact.json")
@@ -54,6 +61,7 @@ function loadContactData() {
         if (!response.ok) throw new Error("HTTP " + response.status);
         return response.json();
       })
+      .then(decodeContactPayload)
       .catch(function (error) {
         contactDataCache = null;
         console.error("Error loading contact data:", error);
@@ -65,8 +73,7 @@ function loadContactData() {
 
 function setupContactData() {
   const fields = document.querySelectorAll(".contact-protected[data-contact-field]");
-  const whatsapp = document.querySelector(".js-whatsapp-link");
-  if (!fields.length && !whatsapp) return;
+  if (!fields.length) return;
 
   loadContactData()
     .then(function (data) {
@@ -84,10 +91,6 @@ function setupContactData() {
           el.textContent = value;
         }
       });
-
-      if (whatsapp && data.phone) {
-        whatsapp.href = "https://wa.me/" + data.phone.replace(/\D/g, "");
-      }
     })
     .catch(function () {});
 }

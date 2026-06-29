@@ -27,15 +27,9 @@
       "priceRange": "CHF 150–350",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": {{ contact.street | jsonify }},
         "addressLocality": {{ contact.city | jsonify }},
         "postalCode": {{ contact.postal_code | jsonify }},
         "addressCountry": {{ contact.country | jsonify }}
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 46.9647184,
-        "longitude": 7.4527444
       },
       "areaServed": {
         "@type": "City",

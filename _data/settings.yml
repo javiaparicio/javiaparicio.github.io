@@ -21,7 +21,7 @@ social_links:
     url: https://t.me/javiapariciofoto
     icon: icon-telegram
   - name: Whatsapp
-    phone_link: true
+    url: https://wa.me/+41772311263
     icon: icon-whatsapp
 
 menu:
