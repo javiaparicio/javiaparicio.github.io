@@ -1,7 +1,7 @@
 ---
 languages: ["en"]
 layout: default
-namespace: terms
+alias_of: terms
 permalink: /terms-and-conditions-agb/
 sitemap: false
 noindex: true

@@ -100,9 +100,10 @@
 
                     <li>
 
-                        {% if page.namespace %}
+                        {% if page.namespace or page.alias_of %}
 
-                            {% capture tl_key %}{{ page.namespace }} {{ lang }}{% endcapture %}
+                            {% assign page_ns = page.namespace | default: page.alias_of %}
+                            {% capture tl_key %}{{ page_ns }} {{ lang }}{% endcapture %}
 
                             <a href="{% tl tl_key %}" hreflang="{{ lang }}">{{ lang | upcase }}</a>
 

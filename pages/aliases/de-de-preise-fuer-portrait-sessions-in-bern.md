@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: pricing
+alias_of: pricing
 permalink: /de/preise-fuer-portrait-sessions-in-bern/
 sitemap: false
 noindex: true

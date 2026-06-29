@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: privacy
+alias_of: privacy
 permalink: /datenschutz/
 sitemap: false
 noindex: true

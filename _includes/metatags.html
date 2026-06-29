@@ -1,8 +1,9 @@
 {% assign lang = site.lang | default: site.default_lang %}
-{% if page.alias and page.namespace %}
+{% assign page_ns = page.namespace | default: page.alias_of %}
+{% if page.alias and page_ns %}
   {% assign primary_page = nil %}
   {% for p in site.pages %}
-    {% if p.namespace == page.namespace and p.alias != true and p.layout == 'default' %}
+    {% if p.namespace == page_ns and p.alias != true and p.layout == 'default' %}
       {% assign primary_page = p %}
       {% break %}
     {% endif %}
@@ -15,8 +16,8 @@
 {% endif %}
 {% assign seo = site.data.seo %}
 
-{% if page.namespace %}
-  {% capture canonical_path %}{% tl page.namespace %}{% endcapture %}
+{% if page_ns %}
+  {% capture canonical_path %}{% tl page_ns %}{% endcapture %}
   {% assign canonical_url = canonical_path | absolute_url %}
 {% else %}
   {% assign canonical_url = page.url | absolute_url %}

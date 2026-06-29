@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: home
+alias_of: home
 permalink: /de
 sitemap: false
 noindex: true

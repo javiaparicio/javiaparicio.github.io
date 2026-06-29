@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: home
+alias_of: home
 permalink: /de/professioneller-portraitfotograf-in-bern/
 sitemap: false
 noindex: true

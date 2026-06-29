@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: pricing
+alias_of: pricing
 permalink: /preise/
 sitemap: false
 noindex: true

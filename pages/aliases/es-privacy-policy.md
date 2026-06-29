@@ -1,7 +1,7 @@
 ---
 languages: ["es"]
 layout: default
-namespace: privacy
+alias_of: privacy
 permalink: /privacy-policy/
 sitemap: false
 noindex: true

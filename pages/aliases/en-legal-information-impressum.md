@@ -1,7 +1,7 @@
 ---
 languages: ["en"]
 layout: default
-namespace: legal
+alias_of: legal
 permalink: /legal-information-impressum/
 sitemap: false
 noindex: true

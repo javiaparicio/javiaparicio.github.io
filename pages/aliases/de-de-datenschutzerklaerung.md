@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: privacy
+alias_of: privacy
 permalink: /de/datenschutzerklaerung/
 sitemap: false
 noindex: true

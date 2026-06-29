@@ -1,10 +1,11 @@
-{% if page.namespace %}
+{% assign page_ns = page.namespace | default: page.alias_of %}
+{% if page_ns %}
 {% for lang in site.languages %}
-  {% capture tl_key %}{{ page.namespace }} {{ lang }}{% endcapture %}
+  {% capture tl_key %}{{ page_ns }} {{ lang }}{% endcapture %}
   {% capture alt_path %}{% tl tl_key %}{% endcapture %}
   <link rel="alternate" hreflang="{{ lang }}" href="{{ alt_path | absolute_url }}" />
 {% endfor %}
-{% capture tl_default %}{{ page.namespace }} {{ site.default_lang }}{% endcapture %}
+{% capture tl_default %}{{ page_ns }} {{ site.default_lang }}{% endcapture %}
 {% capture default_path %}{% tl tl_default %}{% endcapture %}
 <link rel="alternate" hreflang="x-default" href="{{ default_path | absolute_url }}" />
 {% else %}

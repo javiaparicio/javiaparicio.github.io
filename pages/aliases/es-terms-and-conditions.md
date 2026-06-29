@@ -1,7 +1,7 @@
 ---
 languages: ["es"]
 layout: default
-namespace: terms
+alias_of: terms
 permalink: /terms-and-conditions/
 sitemap: false
 noindex: true

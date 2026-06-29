@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: contact
+alias_of: contact
 permalink: /de/kontakt/
 sitemap: false
 noindex: true

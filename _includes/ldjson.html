@@ -5,8 +5,9 @@
 {% assign business_id = site.url | append: '/#business' | absolute_url %}
 {% assign page_title = page.title[lang] | default: page.title %}
 
-{% if page.namespace %}
-  {% capture canonical_path %}{% tl page.namespace %}{% endcapture %}
+{% assign page_ns = page.namespace | default: page.alias_of %}
+{% if page_ns %}
+  {% capture canonical_path %}{% tl page_ns %}{% endcapture %}
 {% else %}
   {% assign canonical_path = page.url %}
 {% endif %}

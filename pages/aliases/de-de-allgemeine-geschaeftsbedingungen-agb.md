@@ -1,7 +1,7 @@
 ---
 languages: ["de"]
 layout: default
-namespace: terms
+alias_of: terms
 permalink: /de/allgemeine-geschaeftsbedingungen-agb/
 sitemap: false
 noindex: true
