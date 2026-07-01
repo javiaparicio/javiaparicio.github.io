@@ -37,7 +37,7 @@ pages/aliases/      Legacy URL aliases (noindex, canonical via namespace)
 _i18n/{de,en,es}/   Page body copy ({% tf filename.md %})
 _data/              settings.yml, galleries.yml, contact.json
 _includes/          Partials (gallery, meta, footer, …)
-_layouts/           default, 404, linktree, forward, sitemap
+_layouts/           default, 404, linktree, forward, sitemap, compress
 assets/             CSS, JS, images, favicons
 404.html            GitHub Pages error page (repo root)
 robots.txt, CNAME   Deploy / SEO (repo root)
@@ -50,6 +50,7 @@ sitemap_index.xml   Static sitemap index (repo root)
 - `hreflang`, canonical URLs via `{% tl %}`, structured data (`_includes/ldjson.html`)
 - Sitemaps: `sitemap_index.xml` → `/sitemap.xml`, `/en/sitemap.xml`, `/es/sitemap.xml` (Liquid layout)
 - Utility pages (`danke`, `linktree`, `scanme`, `404`) use `noindex`
+- HTML output is minified at build time via the pure-Liquid `_layouts/compress.html` ([jekyll-compress-html](http://jch.penibelst.de/)), no Ruby plugin needed
 
 After deploy, submit `https://javiapariciofoto.ch/sitemap_index.xml` in Google Search Console.
 

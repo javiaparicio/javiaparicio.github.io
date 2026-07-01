@@ -29,10 +29,22 @@ author:
 plugins:
   - jekyll-multiple-languages-plugin
 
-exclude_from_localization: ["assets"]
+exclude_from_localizations:
+  - assets
+  - contact.json
+  - robots.txt
+  - CNAME
+  - README.md
+  - sitemap_index.xml
+  - 60c897ba159d47ef82a9edfa68a80dc7.txt
 
 sass:
   style: compressed
+
+compress_html:
+  comments: ["<!-- ", " -->"]
+  clippings: all
+  blanklines: false
 
 timezone: Europe/Zurich
 
@@ -49,3 +61,11 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - wordpress-utils/
+  - README.md
+  - assets/images/discarded/
+  - assets/images/portfolio/
+  - assets/images/_site/
+  - assets/images/.jekyll-cache/
+  - assets/images/galleries/README.md
+  - assets/fonts/README.md
