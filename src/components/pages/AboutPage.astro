@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import type { Locale } from '../../lib/i18n';
+import { pageHeadings, ui } from '../../lib/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../StructuredData.astro';
+import portrait from '../../assets/contact/javi.webp';
+
+interface Props {
+  locale: Locale;
+  html: string;
+}
+
+const { locale, html } = Astro.props;
+---
+
+<BaseLayout locale={locale} pageKey="about">
+  <StructuredData slot="head" locale={locale} pageType="AboutPage" />
+
+  <div class="container page-block page-block--last">
+    <header class="page-header">
+      <h1>{pageHeadings.about[locale]}</h1>
+    </header>
+
+    <div class="contact-layout">
+      <div class="prose" set:html={html} />
+      <figure class="contact-layout__media about-portrait">
+        <Image
+          src={portrait}
+          alt={ui.contact.photoAlt[locale]}
+          widths={[480, 720, 960]}
+          sizes="(max-width: 800px) 100vw, 40vw"
+          format="webp"
+          quality={85}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </figure>
+    </div>
+  </div>
+</BaseLayout>

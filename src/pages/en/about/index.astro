@@ -1,0 +1,6 @@
+---
+import AboutPage from '../../../components/pages/AboutPage.astro';
+import { applyContentTokens } from '../../../lib/content';
+import { pageCopy } from '../../../content/pages/copy';
+---
+<AboutPage locale="en" html={applyContentTokens(pageCopy.about.en, 'en')} />

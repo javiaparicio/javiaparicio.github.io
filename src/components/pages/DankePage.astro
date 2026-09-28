@@ -1,0 +1,19 @@
+---
+import type { Locale } from '../../lib/i18n';
+import { applyContentTokens } from '../../lib/content';
+import { pageCopy } from '../../content/pages/copy';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const html = applyContentTokens(pageCopy.danke[locale], locale);
+---
+
+<BaseLayout locale={locale} pageKey="danke" noindex>
+  <div class="container page-header page-block page-block--last">
+    <div class="prose" set:html={html} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,353 @@
+{
+  "nav": {
+    "portfolio": {
+      "de": "Portfolio",
+      "en": "Portfolio",
+      "es": "Portfolio"
+    },
+    "about": {
+      "de": "Über mich",
+      "en": "About",
+      "es": "Sobre mí"
+    },
+    "contact": {
+      "de": "Kontakt",
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "pricing": {
+      "de": "Preise",
+      "en": "Pricing",
+      "es": "Precios"
+    },
+    "menu": {
+      "de": "Menü",
+      "en": "Menu",
+      "es": "Menú"
+    },
+    "close": {
+      "de": "Schliessen",
+      "en": "Close",
+      "es": "Cerrar"
+    },
+    "language": {
+      "de": "Sprache",
+      "en": "Language",
+      "es": "Idioma"
+    }
+  },
+  "footer": {
+    "copyright": {
+      "de": "Javi Aparicio Foto. Alle Rechte vorbehalten.",
+      "en": "Javi Aparicio Foto. All rights reserved.",
+      "es": "Javi Aparicio Foto. Todos los derechos reservados."
+    },
+    "appointment": {
+      "de": "Sessions nur nach Termin. Studio in Bern.",
+      "en": "Sessions by appointment. Studio in Bern.",
+      "es": "Sesiones con cita previa. Estudio en Berna."
+    },
+    "events": {
+      "de": "Events",
+      "en": "Events",
+      "es": "Eventos"
+    },
+    "legal": {
+      "de": "Impressum",
+      "en": "Legal notice",
+      "es": "Aviso legal"
+    },
+    "terms": {
+      "de": "AGB",
+      "en": "Terms",
+      "es": "Condiciones"
+    },
+    "privacy": {
+      "de": "Datenschutz",
+      "en": "Privacy",
+      "es": "Privacidad"
+    }
+  },
+  "home": {
+    "brand": {
+      "de": "Javi Aparicio Foto",
+      "en": "Javi Aparicio Foto",
+      "es": "Javi Aparicio Foto"
+    },
+    "headline": {
+      "de": "Portraitfotograf Bern",
+      "en": "Portrait photographer in Bern",
+      "es": "Fotógrafo de retratos en Berna"
+    },
+    "lead": {
+      "de": "Ich helfe Fachpersonen, Unternehmerinnen und Personal Brands, ihre Bildwirkung authentisch und professionell zu zeigen.",
+      "en": "I help professionals, entrepreneurs and personal brands present their image authentically and professionally.",
+      "es": "Ayudo a profesionales, emprendedores y marcas personales a presentar su imagen de forma auténtica y profesional."
+    },
+    "lead2": {
+      "de": "Sessions im Studio und an Aussenorten für LinkedIn, Webseiten, Social Media und professionelle Kommunikation. Ich arbeite von Bern aus mit Menschen, die Vertrauen, Kohärenz und Professionalität vermitteln wollen.",
+      "en": "Studio and outdoor sessions for LinkedIn, websites, social media and professional communication. I work from Bern, Switzerland, with people who want to convey trust, coherence and professionalism.",
+      "es": "Sesiones en estudio y exteriores para LinkedIn, webs, redes sociales y comunicación profesional. Trabajo desde Berna, Suiza, con personas que quieren transmitir confianza, coherencia y profesionalidad."
+    },
+    "cta": {
+      "de": "Session anfragen",
+      "en": "Request a session",
+      "es": "Solicitar sesión"
+    },
+    "selected": {
+      "de": "Arbeit aus dem Studio",
+      "en": "Work from the studio",
+      "es": "Trabajo del estudio"
+    },
+    "viewAll": {
+      "de": "Alle Porträts ansehen",
+      "en": "View all portraits",
+      "es": "Ver todos los retratos"
+    },
+    "servicesTitle": {
+      "de": "Pakete",
+      "en": "Packages",
+      "es": "Paquetes"
+    },
+    "moreInfo": {
+      "de": "Mehr Infos",
+      "en": "More information",
+      "es": "Más información"
+    },
+    "forWhomTitle": {
+      "de": "Für wen",
+      "en": "Who it is for",
+      "es": "Para quién"
+    },
+    "forWhomText": {
+      "de": "Selbstständige, Coaches, Unternehmerinnen und kleine Teams, die ein professionelles Bild brauchen, das zu ihnen passt.",
+      "en": "Freelancers, coaches, founders and small teams who need a professional image that fits who they are.",
+      "es": "Autónomos, coaches, emprendedores y equipos pequeños que necesitan una imagen profesional que encaje con quiénes son."
+    },
+    "processTitle": {
+      "de": "Von der Idee zum Bild",
+      "en": "From idea to photograph",
+      "es": "De la idea a la foto"
+    },
+    "process1": {
+      "de": "Sie schreiben mir, wofür Sie die Fotos brauchen und welche Termine passen",
+      "en": "You write what the photos are for and which dates work for you",
+      "es": "Me escribe para qué necesita las fotos y qué fechas le van bien"
+    },
+    "process2": {
+      "de": "Wir vereinbaren einen Termin im Studio in Bern",
+      "en": "We book a session at the studio in Bern",
+      "es": "Concertamos una cita en el estudio en Berna"
+    },
+    "process3": {
+      "de": "In der Session gebe ich klare Ansagen zu Haltung und Blick; Pose-Erfahrung braucht es nicht",
+      "en": "In the session I give clear direction on posture and expression; no posing experience needed",
+      "es": "En la sesión le indico postura y mirada; no hace falta experiencia previa"
+    },
+    "process4": {
+      "de": "Auswahl, Bearbeitung und digitale Lieferung der Bilder",
+      "en": "Selection, editing and digital delivery of the images",
+      "es": "Selección, edición y entrega digital de las imágenes"
+    },
+    "deliverablesTitle": {
+      "de": "Was Sie erhalten",
+      "en": "What you receive",
+      "es": "Qué recibe"
+    },
+    "deliverable1": {
+      "de": "Eine Auswahl bearbeiteter Fotos in hoher Auflösung",
+      "en": "A selection of edited photos in high resolution",
+      "es": "Una selección de fotos editadas en alta resolución"
+    },
+    "deliverable2": {
+      "de": "Versionen optimiert für Web und Social Media",
+      "en": "Versions optimised for web and social media",
+      "es": "Versiones optimizadas para web y redes"
+    },
+    "deliverable3": {
+      "de": "Bilder bereit für LinkedIn, Webseite und professionelle Kommunikation",
+      "en": "Images ready for LinkedIn, your website and professional communication",
+      "es": "Imágenes listas para LinkedIn, su web y comunicación profesional"
+    },
+    "aboutTitle": {
+      "de": "Über mich",
+      "en": "About",
+      "es": "Sobre mí"
+    },
+    "aboutText": {
+      "de": "Ich bin Javi Aparicio, Portraitfotograf in Bern. Nah und geführt, damit Sie sich in den Bildern wiedererkennen.",
+      "en": "I am Javi Aparicio, a portrait photographer in Bern. Close direction, so you recognise yourself in the photographs.",
+      "es": "Soy Javi Aparicio, fotógrafo de retratos en Berna. Dirección cercana, para que se reconozca en las fotos."
+    },
+    "contactTitle": {
+      "de": "Nächster Schritt",
+      "en": "Next step",
+      "es": "Siguiente paso"
+    },
+    "contactText": {
+      "de": "Schreiben Sie mir wofür, und ich sage Ihnen, welches Paket passt.",
+      "en": "Tell me what you need them for, and I will say which package fits.",
+      "es": "Cuénteme para qué las necesita y le digo qué paquete encaja."
+    },
+    "fromPrice": {
+      "de": "Ab 150 CHF",
+      "en": "From CHF 150",
+      "es": "Desde 150 CHF"
+    }
+  },
+  "portfolio": {
+    "title": {
+      "de": "Portfolio",
+      "en": "Portfolio",
+      "es": "Portfolio"
+    },
+    "view": {
+      "de": "Ansehen",
+      "en": "View",
+      "es": "Ver"
+    },
+    "eventsTeaser": {
+      "de": "Events und weitere Projekte",
+      "en": "Events and other projects",
+      "es": "Eventos y otros proyectos"
+    }
+  },
+  "gallery": {
+    "open": {
+      "de": "Vollbild öffnen",
+      "en": "Open fullscreen",
+      "es": "Abrir a pantalla completa"
+    },
+    "prev": {
+      "de": "Vorheriges Bild",
+      "en": "Previous image",
+      "es": "Imagen anterior"
+    },
+    "next": {
+      "de": "Nächstes Bild",
+      "en": "Next image",
+      "es": "Imagen siguiente"
+    },
+    "close": {
+      "de": "Schliessen",
+      "en": "Close",
+      "es": "Cerrar"
+    },
+    "of": {
+      "de": "von",
+      "en": "of",
+      "es": "de"
+    }
+  },
+  "contact": {
+    "name": {
+      "de": "Name*",
+      "en": "Name*",
+      "es": "Nombre*"
+    },
+    "company": {
+      "de": "Firma / Rolle",
+      "en": "Company / role",
+      "es": "Empresa / rol"
+    },
+    "email": {
+      "de": "E-Mail*",
+      "en": "Email*",
+      "es": "Correo*"
+    },
+    "subject": {
+      "de": "Betreff*",
+      "en": "Subject*",
+      "es": "Asunto*"
+    },
+    "subjectPh": {
+      "de": "z. B. LinkedIn-Porträt, Team 6 Personen",
+      "en": "e.g. LinkedIn portrait, team of 6",
+      "es": "p. ej. retrato LinkedIn, equipo de 6"
+    },
+    "message": {
+      "de": "Nachricht*",
+      "en": "Message*",
+      "es": "Mensaje*"
+    },
+    "messagePh": {
+      "de": "Wofür Sie die Fotos brauchen, ungefähres Datum, Fragen",
+      "en": "What you need the photos for, approximate date, questions",
+      "es": "Para qué necesita las fotos, fecha aproximada, preguntas"
+    },
+    "privacy": {
+      "de": "Ich habe die <a href=\"{{privacy}}\" target=\"_blank\" rel=\"noopener\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zu.",
+      "en": "I have read the <a href=\"{{privacy}}\" target=\"_blank\" rel=\"noopener\">privacy policy</a> and agree to the processing of my details.",
+      "es": "He leído la <a href=\"{{privacy}}\" target=\"_blank\" rel=\"noopener\">política de privacidad</a> y acepto el tratamiento de mis datos."
+    },
+    "termsNote": {
+      "de": "Die <a href=\"{{terms}}\" target=\"_blank\" rel=\"noopener\">AGB</a> gelten verbindlich ab schriftlicher Buchungsbestätigung.",
+      "en": "The <a href=\"{{terms}}\" target=\"_blank\" rel=\"noopener\">terms</a> become binding upon written booking confirmation.",
+      "es": "Las <a href=\"{{terms}}\" target=\"_blank\" rel=\"noopener\">condiciones</a> son vinculantes a partir de la confirmación escrita de la reserva."
+    },
+    "direct": {
+      "de": "Oder schreiben Sie direkt per {{email}}, {{whatsapp}} oder {{telegram}}.",
+      "en": "Or write directly by {{email}}, {{whatsapp}} or {{telegram}}.",
+      "es": "O escriba directamente al {{email}}, {{whatsapp}} o {{telegram}}."
+    },
+    "send": {
+      "de": "Senden",
+      "en": "Send",
+      "es": "Enviar"
+    },
+    "channelEmail": {
+      "de": "E-Mail",
+      "en": "email",
+      "es": "email"
+    },
+    "channelWhatsapp": {
+      "de": "WhatsApp",
+      "en": "WhatsApp",
+      "es": "WhatsApp"
+    },
+    "channelTelegram": {
+      "de": "Telegram",
+      "en": "Telegram",
+      "es": "Telegram"
+    },
+    "photoAlt": {
+      "de": "Javi Aparicio, Portraitfotograf in Bern",
+      "en": "Javi Aparicio, portrait photographer in Bern",
+      "es": "Javi Aparicio, fotógrafo de retratos en Berna"
+    }
+  },
+  "categories": {
+    "portraits": {
+      "de": "Porträts",
+      "en": "Portraits",
+      "es": "Retratos"
+    },
+    "other": {
+      "de": "Weitere Projekte",
+      "en": "Other projects",
+      "es": "Otros proyectos"
+    }
+  },
+  "common": {
+    "backToPortfolio": {
+      "de": "Zum Portfolio",
+      "en": "Back to portfolio",
+      "es": "Volver al portfolio"
+    },
+    "requestSession": {
+      "de": "Session anfragen",
+      "en": "Request a session",
+      "es": "Solicitar sesión"
+    },
+    "learnMore": {
+      "de": "Mehr erfahren",
+      "en": "Learn more",
+      "es": "Saber más"
+    },
+    "lastUpdated": {
+      "de": "Stand",
+      "en": "Last updated",
+      "es": "Última actualización"
+    }
+  }
+}

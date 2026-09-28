@@ -1,0 +1,91 @@
+---
+import type { Locale } from '../lib/i18n';
+import { getPagePath } from '../lib/routes';
+import { SITE } from '../lib/site';
+import { ui } from '../lib/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p class="site-footer__line">
+      <span class="site-footer__name">{SITE.brand}</span>
+      <span aria-hidden="true">·</span>
+      <span>{ui.footer.appointment[locale]}</span>
+    </p>
+    <p class="site-footer__line">
+      <a href={getPagePath('events', locale)}>{ui.footer.events[locale]}</a>
+      <span aria-hidden="true">·</span>
+      <a href={getPagePath('legal', locale)}>{ui.footer.legal[locale]}</a>
+      <span aria-hidden="true">·</span>
+      <a href={getPagePath('terms', locale)}>{ui.footer.terms[locale]}</a>
+      <span aria-hidden="true">·</span>
+      <a href={getPagePath('privacy', locale)}>{ui.footer.privacy[locale]}</a>
+      {
+        SITE.social.map((s) => (
+          <>
+            <span aria-hidden="true">·</span>
+            <a href={s.url} target="_blank" rel="noopener noreferrer">
+              {s.name}
+            </a>
+          </>
+        ))
+      }
+      <span aria-hidden="true">·</span>
+      <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </p>
+    <p class="site-footer__copy">© {year} {ui.footer.copyright[locale]}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-line);
+    padding: var(--space-4) 0;
+    margin-top: var(--space-5);
+  }
+
+  .site-footer__inner {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .site-footer__line {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  .site-footer__name {
+    color: var(--color-ink);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .site-footer__line a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .site-footer__line a:hover {
+    color: var(--color-ink);
+    opacity: 1;
+  }
+
+  .site-footer__copy {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+</style>

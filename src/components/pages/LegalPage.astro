@@ -1,0 +1,44 @@
+---
+import type { Locale } from '../../lib/i18n';
+import type { PageKey } from '../../lib/routes';
+import { pageHeadings } from '../../lib/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../StructuredData.astro';
+
+interface Props {
+  locale: Locale;
+  pageKey: PageKey;
+  html: string;
+}
+
+const { locale, pageKey, html } = Astro.props;
+const title = pageHeadings[pageKey][locale];
+const hasH1 = /<h1[\s>]/i.test(html);
+---
+
+<BaseLayout locale={locale} pageKey={pageKey}>
+  <StructuredData slot="head" locale={locale} />
+
+  <div class="container page-block page-block--last">
+    {
+      !hasH1 && (
+        <header class="page-header">
+          <h1>{title}</h1>
+        </header>
+      )
+    }
+
+    <div class:list={['prose', hasH1 && 'legal-has-title']} set:html={html} />
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .legal-has-title {
+    padding-top: var(--space-5);
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import type { Locale } from '../../lib/i18n';
+import { applyContentTokens } from '../../lib/content';
+import { pageCopy } from '../../content/pages/copy';
+import { pageHeadings, ui } from '../../lib/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../ContactForm.astro';
+import StructuredData from '../StructuredData.astro';
+import contactPortrait from '../../assets/contact/portrait.webp';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const introHtml = applyContentTokens(pageCopy.contact[locale], locale);
+---
+
+<BaseLayout locale={locale} pageKey="contact">
+  <StructuredData slot="head" locale={locale} pageType="ContactPage" />
+
+  <div class="container page-block page-block--last">
+    <header class="page-header page-header--with-lead">
+      <h1>{pageHeadings.contact[locale]}</h1>
+      <div class="prose" set:html={introHtml} />
+    </header>
+
+    <div class="contact-layout">
+      <div class="contact-layout__form">
+        <ContactForm locale={locale} />
+      </div>
+      <figure class="contact-layout__media">
+        <Image
+          src={contactPortrait}
+          alt={ui.contact.photoAlt[locale]}
+          widths={[480, 720, 960]}
+          sizes="(max-width: 800px) 100vw, 40vw"
+          format="webp"
+          quality={85}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </figure>
+    </div>
+  </div>
+</BaseLayout>

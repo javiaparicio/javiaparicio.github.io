@@ -1,0 +1,90 @@
+---
+import type { Locale } from '../../lib/i18n';
+import { getProjectBySlug, resolveProject } from '../../lib/projects';
+import { getPagePath } from '../../lib/routes';
+import { ui } from '../../lib/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Gallery from '../Gallery.astro';
+import ProjectCard from '../ProjectCard.astro';
+import StructuredData from '../StructuredData.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const portraitsEntry = await getProjectBySlug('portraits');
+const eventsEntry = await getProjectBySlug('events');
+
+if (!portraitsEntry) {
+  return Astro.redirect(getPagePath('home', locale));
+}
+
+const portraits = await resolveProject(portraitsEntry, locale);
+const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
+---
+
+<BaseLayout locale={locale} pageKey="portfolio">
+  <StructuredData slot="head" locale={locale} />
+
+  <div class="container page-block page-block--last">
+    <header class="page-header">
+      <h1>{ui.portfolio.title[locale]}</h1>
+    </header>
+
+    <div class="project-gallery page-block">
+      <Gallery
+        slides={portraits.slides}
+        layout={portraitsEntry.data.layout}
+        locale={locale}
+        showCaptions={false}
+      />
+    </div>
+
+    {
+      events && (
+        <div class="page-block">
+          <h2 class="events-heading">{ui.portfolio.eventsTeaser[locale]}</h2>
+          <div class="events-card">
+            <ProjectCard
+              locale={locale}
+              href={events.href}
+              title={events.title}
+              description={events.description}
+              categoryLabel={ui.categories.other[locale]}
+              cover={events.cover?.src}
+              coverAlt={events.cover?.alt || events.title}
+            />
+          </div>
+        </div>
+      )
+    }
+
+    <div class="cta-row">
+      <a class="btn" href={getPagePath('contact', locale)}>
+        {ui.common.requestSession[locale]}
+      </a>
+      <a class="btn btn--ghost" href={getPagePath('pricing', locale)}>
+        {ui.nav.pricing[locale]}
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .events-heading {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+  }
+
+  .events-card {
+    max-width: 28rem;
+  }
+</style>

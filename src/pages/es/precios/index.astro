@@ -1,0 +1,12 @@
+---
+import CopyPage from '../../../components/pages/CopyPage.astro';
+import { applyContentTokens } from '../../../lib/content';
+import { pageCopy } from '../../../content/pages/copy';
+import { pricingPackages } from '../../../content/pages/pricing-packages';
+---
+<CopyPage
+  locale="es"
+  pageKey="pricing"
+  html={applyContentTokens(pageCopy.pricing.es, 'es')}
+  packages={pricingPackages}
+/>

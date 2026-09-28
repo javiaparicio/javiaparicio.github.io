@@ -1,0 +1,1 @@
+Schreiben Sie mir, wenn Sie eine Session in Bern festmachen möchten. Teilen Sie mir Ihren Beruf, den geplanten Einsatz der Fotos und einen ungefähren Termin mit. Ich melde mich mit Verfügbarkeit und den nächsten Schritten.

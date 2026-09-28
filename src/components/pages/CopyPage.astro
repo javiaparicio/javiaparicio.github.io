@@ -1,0 +1,212 @@
+---
+import type { Locale } from '../../lib/i18n';
+import { getPagePath, type PageKey } from '../../lib/routes';
+import { pageHeadings, ui } from '../../lib/ui';
+import type { PricingPackage } from '../../content/pages/pricing-packages';
+import {
+  pricingFaq,
+  pricingFaqTitle,
+  pricingIncludedInAll,
+} from '../../content/pages/pricing-packages';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../StructuredData.astro';
+
+interface Props {
+  locale: Locale;
+  pageKey: PageKey;
+  html: string;
+  packages?: PricingPackage[];
+  pageType?: 'WebPage' | 'AboutPage' | 'ContactPage';
+}
+
+const {
+  locale,
+  pageKey,
+  html,
+  packages,
+  pageType = pageKey === 'about' ? 'AboutPage' : 'WebPage',
+} = Astro.props;
+
+const title = pageHeadings[pageKey][locale];
+
+function splitPricingHtml(raw: string): { intro: string; outro: string } {
+  const parts = raw
+    .split(/<hr[^>]*>/i)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  if (parts.length >= 2) {
+    return { intro: parts[0]!, outro: parts[parts.length - 1]! };
+  }
+  return { intro: raw.trim(), outro: '' };
+}
+
+const pricingParts = packages?.length ? splitPricingHtml(html) : null;
+---
+
+<BaseLayout locale={locale} pageKey={pageKey}>
+  <StructuredData slot="head" locale={locale} pageType={pageType} />
+
+  <div class="container page-block page-block--last">
+    <header class="page-header">
+      <h1>{title}</h1>
+    </header>
+
+    {
+      packages && packages.length > 0 && pricingParts ? (
+        <>
+          {pricingParts.intro && (
+            <div class="prose page-block" set:html={pricingParts.intro} />
+          )}
+
+          <div class="page-block">
+            <div class="pricing-grid">
+              {packages.map((pkg) => (
+                <article class="pricing-package">
+                  <h2 class="pricing-package__name">{pkg.name[locale]}</h2>
+                  <p class="pricing-package__price">{pkg.priceLabel[locale]}</p>
+                  <p class="pricing-package__desc">{pkg.description[locale]}</p>
+                  <ul class="pricing-package__includes">
+                    {pkg.includes[locale].map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div class="pricing-included">
+              <h2>
+                {locale === 'de'
+                  ? 'In allen Preisen enthalten'
+                  : locale === 'en'
+                    ? 'Included in all prices'
+                    : 'Incluido en todos los precios'}
+              </h2>
+              <ul>
+                {pricingIncludedInAll[locale].map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div class="pricing-faq page-block">
+            <h2>{pricingFaqTitle[locale]}</h2>
+            <div class="pricing-faq__list">
+              {pricingFaq.map((item) => (
+                <div class="pricing-faq__item">
+                  <h3>{item.question[locale]}</h3>
+                  <p>{item.answer[locale]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href={getPagePath('contact', locale)}>
+              {ui.common.requestSession[locale]}
+            </a>
+          </div>
+        </>
+      ) : (
+        <div class="prose" set:html={html} />
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--gap-section);
+  }
+
+  .pricing-package {
+    padding: var(--gap-stack) 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .pricing-package__name {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+  }
+
+  .pricing-package__price {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    color: var(--color-ink);
+  }
+
+  .pricing-package__desc {
+    margin: 0 0 var(--gap-heading);
+    color: var(--color-ink-muted);
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+
+  .pricing-package__includes {
+    margin: 0;
+    padding-left: 1.15em;
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--color-ink-muted);
+  }
+
+  .pricing-included {
+    margin-top: var(--gap-section);
+  }
+
+  .pricing-included h2,
+  .pricing-faq h2 {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+  }
+
+  .pricing-included ul {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--color-ink-muted);
+  }
+
+  .pricing-faq {
+    margin-top: var(--gap-section);
+  }
+
+  .pricing-faq__list {
+    display: grid;
+    gap: var(--gap-stack);
+  }
+
+  .pricing-faq__item {
+    padding-top: var(--gap-stack);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .pricing-faq__item h3 {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-base);
+    font-weight: 400;
+  }
+
+  .pricing-faq__item p {
+    margin: 0;
+    color: var(--color-ink-muted);
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

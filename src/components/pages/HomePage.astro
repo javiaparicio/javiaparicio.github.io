@@ -1,0 +1,326 @@
+---
+import { Image } from 'astro:assets';
+import type { Locale } from '../../lib/i18n';
+import type { ProjectImage } from '../../lib/images';
+import { getProjectBySlug, resolveProject } from '../../lib/projects';
+import { getPagePath } from '../../lib/routes';
+import { pricingPackages } from '../../content/pages/pricing-packages';
+import { ui } from '../../lib/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../StructuredData.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const portraitsEntry = await getProjectBySlug('portraits');
+const portraits = portraitsEntry
+  ? await resolveProject(portraitsEntry, locale)
+  : null;
+
+const images = portraits?.images ?? [];
+
+/** Prefer vertical portraits for the three-up strips */
+const vertical = images.filter((img) => img.src.height >= img.src.width);
+const pool = vertical.length >= 6 ? vertical : images;
+
+const heroCluster: ProjectImage[] = pool.slice(0, 3);
+const midCluster: ProjectImage[] = pool.slice(3, 6);
+
+const processSteps = [
+  ui.home.process1[locale],
+  ui.home.process2[locale],
+  ui.home.process3[locale],
+  ui.home.process4[locale],
+] as const;
+---
+
+<BaseLayout locale={locale} pageKey="home" bodyClass="page-home">
+  <StructuredData slot="head" locale={locale} pageType="WebSite" />
+
+  <section class="home-open">
+    <div class="home-open__identity container">
+      <p class="home-open__brand">{ui.home.brand[locale]}</p>
+      <h1>{ui.home.headline[locale]}</h1>
+    </div>
+
+    {
+      heroCluster.length > 0 && (
+        <div class="home-cluster container">
+          {heroCluster.map((image, index) => (
+            <div class="home-cluster__item">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                widths={[400, 640, 900]}
+                sizes="33vw"
+                format="webp"
+                quality={85}
+                loading="eager"
+                {...(index === 0 ? { fetchpriority: 'high' as const } : {})}
+              />
+            </div>
+          ))}
+        </div>
+      )
+    }
+
+    <div class="home-open__copy container">
+      <p class="home-open__lead">{ui.home.lead[locale]}</p>
+      <p class="home-open__lead">{ui.home.lead2[locale]}</p>
+      <div class="cta-row">
+        <a class="btn" href={getPagePath('contact', locale)}>{ui.home.cta[locale]}</a>
+        <a class="btn btn--ghost" href={getPagePath('portfolio', locale)}>{ui.nav.portfolio[locale]}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-info">
+    <div class="container home-info__block home-info__block--lead">
+      <h2>{ui.home.forWhomTitle[locale]}</h2>
+      <p class="home-info__about">{ui.home.forWhomText[locale]}</p>
+    </div>
+
+    {
+      midCluster.length > 0 && (
+        <div class="home-cluster-wrap">
+          <div class="home-cluster container">
+            {midCluster.map((image) => (
+              <div class="home-cluster__item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  widths={[400, 640, 900]}
+                  sizes="33vw"
+                  format="webp"
+                  quality={85}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+    <div class="container home-info__grid">
+      <div class="home-info__block">
+        <h2>{ui.home.servicesTitle[locale]}</h2>
+        <ul class="home-info__prices">
+          {
+            pricingPackages.map((pkg) => (
+              <li>
+                <div class="home-info__price-copy">
+                  <span class="home-info__price-name">{pkg.name[locale]}</span>
+                  <span class="home-info__price-desc">{pkg.description[locale]}</span>
+                </div>
+                <strong>{pkg.priceLabel[locale]}</strong>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="cta-row">
+          <a class="btn" href={getPagePath('pricing', locale)}>{ui.home.moreInfo[locale]}</a>
+          <a class="btn btn--ghost" href={getPagePath('contact', locale)}>{ui.home.cta[locale]}</a>
+        </div>
+      </div>
+
+      <div class="home-info__block">
+        <h2>{ui.home.processTitle[locale]}</h2>
+        <ol class="home-info__steps">
+          {processSteps.map((step) => <li>{step}</li>)}
+        </ol>
+      </div>
+
+      <div class="home-info__block">
+        <h2>{ui.home.deliverablesTitle[locale]}</h2>
+        <ul class="home-info__deliverables">
+          <li>{ui.home.deliverable1[locale]}</li>
+          <li>{ui.home.deliverable2[locale]}</li>
+          <li>{ui.home.deliverable3[locale]}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-home :global(.site-footer) {
+    margin-top: 0;
+  }
+
+  .home-open {
+    padding-top: var(--space-4);
+  }
+
+  .home-open__identity {
+    padding-bottom: var(--gap-stack);
+  }
+
+  .home-open__brand {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-display);
+    font-weight: 300;
+    letter-spacing: var(--tracking-tight);
+    line-height: 1.2;
+  }
+
+  .home-open__identity h1 {
+    margin: 0;
+    font-size: var(--text-xl);
+    font-weight: 300;
+    letter-spacing: var(--tracking-tight);
+    line-height: 1.3;
+    color: var(--color-ink);
+  }
+
+  .home-cluster {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    height: min(38vh, 22rem);
+    overflow: hidden;
+    background: #1a1a1a;
+  }
+
+  .home-cluster-wrap {
+    margin: 0 0 var(--gap-section);
+  }
+
+  .home-cluster__item {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .home-cluster__item :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: var(--img-focus-face);
+  }
+
+  .home-open__copy {
+    padding-block: var(--gap-section);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .home-open__lead {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--color-ink-muted);
+    max-width: none;
+  }
+
+  .home-open__lead + .home-open__lead {
+    margin-bottom: var(--gap-stack);
+  }
+
+  .home-info {
+    padding-block: var(--gap-section);
+  }
+
+  .home-info__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-section);
+  }
+
+  .home-info__block--lead {
+    margin-bottom: var(--gap-section);
+  }
+
+  .home-info__block h2 {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    letter-spacing: var(--tracking-snug);
+  }
+
+  .home-info__prices {
+    list-style: none;
+    margin: 0 0 var(--gap-stack);
+    padding: 0;
+  }
+
+  .home-info__prices li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem 1.25rem;
+    align-items: start;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--color-line);
+    font-size: var(--text-base);
+    line-height: 1.5;
+  }
+
+  .home-info__prices li:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .home-info__price-copy {
+    display: grid;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .home-info__price-name {
+    color: var(--color-ink);
+    font-weight: 400;
+  }
+
+  .home-info__price-desc {
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+
+  .home-info__prices strong {
+    font-weight: 400;
+    font-size: var(--text-base);
+    white-space: nowrap;
+    color: var(--color-ink);
+  }
+
+  .home-info__steps,
+  .home-info__deliverables {
+    margin: 0;
+    padding-left: 1.15em;
+    color: var(--color-ink-muted);
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+
+  .home-info__steps li + li,
+  .home-info__deliverables li + li {
+    margin-top: 0.4em;
+  }
+
+  .home-info__about {
+    margin: 0;
+    max-width: none;
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--color-ink-muted);
+  }
+
+  @media (max-width: 800px) {
+    .home-cluster {
+      grid-template-columns: 1fr;
+      height: auto;
+      background: transparent;
+    }
+
+    .home-cluster__item {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+    }
+  }
+</style>

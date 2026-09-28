@@ -1,0 +1,188 @@
+{
+  "pageTitles": {
+    "home": {
+      "de": "Portraitfotograf Bern",
+      "en": "Portrait Photographer in Bern",
+      "es": "Fotógrafo de retratos en Berna"
+    },
+    "portfolio": {
+      "de": "Portfolio | Portraitfotograf Bern",
+      "en": "Portfolio | Portrait photographer Bern",
+      "es": "Portfolio | Fotógrafo de retratos Berna"
+    },
+    "portraits": {
+      "de": "Porträt-Galerie | Portraitfotograf Bern",
+      "en": "Portrait Gallery | Photographer Bern",
+      "es": "Galería de retratos | Fotógrafo Berna"
+    },
+    "events": {
+      "de": "Event-Galerie",
+      "en": "Event Gallery",
+      "es": "Galería de eventos"
+    },
+    "pricing": {
+      "de": "Preise Portraitfotografie Bern",
+      "en": "Portrait Photography Pricing Bern",
+      "es": "Precios retrato profesional Berna"
+    },
+    "about": {
+      "de": "Über mich | Portraitfotograf Bern",
+      "en": "About | Portrait photographer Bern",
+      "es": "Sobre mí | Fotógrafo de retratos Berna"
+    },
+    "contact": {
+      "de": "Kontakt | Portrait-Session Bern",
+      "en": "Contact | Portrait session Bern",
+      "es": "Contacto | Sesión de retrato Berna"
+    },
+    "legal": {
+      "de": "Impressum",
+      "en": "Legal Notice",
+      "es": "Aviso legal"
+    },
+    "terms": {
+      "de": "AGB",
+      "en": "Terms & Conditions",
+      "es": "Condiciones generales"
+    },
+    "privacy": {
+      "de": "Datenschutzerklärung",
+      "en": "Privacy Policy",
+      "es": "Política de privacidad"
+    },
+    "danke": {
+      "de": "Nachricht gesendet",
+      "en": "Message sent",
+      "es": "Mensaje enviado"
+    },
+    "linktree": {
+      "de": "Links",
+      "en": "Links",
+      "es": "Enlaces"
+    }
+  },
+  "pageDescriptions": {
+    "home": {
+      "de": "Portraitfotograf in Bern für Fachpersonen & Teams: LinkedIn, Personal Branding, Fotostudio mit Termin. Pakete ab 150 CHF. Session anfragen.",
+      "en": "Portrait photographer in Bern for professionals & teams: LinkedIn, personal branding, studio by appointment. Packages from CHF 150. Book a session.",
+      "es": "Fotógrafo de retratos en Berna para profesionales y equipos: LinkedIn, marca personal, estudio con cita. Paquetes desde 150 CHF. Solicitar sesión."
+    },
+    "portfolio": {
+      "de": "Porträts aus dem Studio in Bern: LinkedIn, Personal Branding und Teams. Ausgewählte Arbeiten ansehen und eine Portrait-Session anfragen.",
+      "en": "Portraits from the studio in Bern: LinkedIn, personal branding and teams. Browse selected work and request a portrait session.",
+      "es": "Retratos del estudio en Berna: LinkedIn, marca personal y equipos. Vea trabajos seleccionados y solicite una sesión de retrato."
+    },
+    "portraits": {
+      "de": "Ausgewählte Porträts aus Bern: LinkedIn, Personal Branding, Teams & Editorial. Sehen Sie Stil und Qualität, dann Session im Fotostudio anfragen.",
+      "en": "Selected portraits from Bern: LinkedIn, personal branding, teams & editorial. See my style and quality, then request a session at the studio.",
+      "es": "Retratos seleccionados en Berna: LinkedIn, marca personal, equipos y editorial. Vea el estilo y la calidad, luego solicite una sesión en el estudio."
+    },
+    "events": {
+      "de": "Eventfotografie in Bern: Konzerte, Firmenanlässe und Festivals, ergänzend zur Portraitarbeit. Ausgewählte Projekte auf Anfrage.",
+      "en": "Event photography in Bern: concerts, corporate events and festivals alongside portrait work. Selected projects by agreement.",
+      "es": "Fotografía de eventos en Berna: conciertos, eventos corporativos y festivales, complemento del retrato. Proyectos bajo consulta."
+    },
+    "pricing": {
+      "de": "Preise für Portrait-Sessions in Bern: Porträt ab 150 CHF, Personal Branding & Teams ab 350 CHF. Inkl. Vorbereitung, Session und Bearbeitung. Paket wählen.",
+      "en": "Portrait session prices in Bern: portraits from CHF 150, personal branding & teams from CHF 350. Includes prep, session and editing. Choose your package.",
+      "es": "Precios de sesiones en Berna: retrato desde 150 CHF, marca personal y equipos desde 350 CHF. Incluye preparación, sesión y edición. Elija su paquete."
+    },
+    "about": {
+      "de": "Javi Aparicio, Portraitfotograf in Bern. Studio mit Termin, Fokus auf LinkedIn, Personal Branding & Teams. Nah, ruhig, professionell.",
+      "en": "Javi Aparicio, portrait photographer in Bern. Studio by appointment, focused on LinkedIn, personal branding & teams. Close, calm, professional.",
+      "es": "Javi Aparicio, fotógrafo de retratos en Berna. Estudio con cita previa, enfoque en LinkedIn, marca personal y equipos. Cercano y profesional."
+    },
+    "contact": {
+      "de": "Portrait-Session in Bern anfragen: Kontaktformular oder E-Mail. Studio mit Termin — LinkedIn, Personal Branding und Teams.",
+      "en": "Book a portrait session in Bern via the contact form or email. Studio by appointment for LinkedIn, personal branding and teams.",
+      "es": "Solicite una sesión de retrato en Berna por formulario o correo. Estudio con cita previa para LinkedIn, marca personal y equipos."
+    },
+    "legal": {
+      "de": "Impressum von Javi Aparicio Foto, Portraitfotograf Bern: Anbieter, Kontakt und rechtliche Angaben gemäss Schweizer Recht.",
+      "en": "Legal notice for Javi Aparicio Foto, portrait photographer Bern: provider details, contact and legal information.",
+      "es": "Aviso legal de Javi Aparicio Foto, fotógrafo en Berna: datos del proveedor, contacto e información legal."
+    },
+    "terms": {
+      "de": "Allgemeine Geschäftsbedingungen für Portrait-Sessions in Bern: Buchung, Zahlung, Stornierung, Bildrechte und Nutzung der Fotos.",
+      "en": "Terms for portrait sessions in Bern: booking, payment, cancellation, image rights and use of photographs.",
+      "es": "Condiciones para sesiones de retrato en Berna: reserva, pago, cancelación, derechos de imagen y uso de las fotos."
+    },
+    "privacy": {
+      "de": "Datenschutzerklärung von javiapariciofoto.ch: welche Daten das Kontaktformular erhebt, wie lange sie gespeichert werden und Ihre Rechte.",
+      "en": "Privacy policy for javiapariciofoto.ch: what data the contact form collects, how long it is kept and your rights.",
+      "es": "Política de privacidad de javiapariciofoto.ch: qué datos recoge el formulario de contacto, cuánto se conservan y sus derechos."
+    },
+    "danke": {
+      "de": "Ihre Kontaktanfrage wurde gesendet.",
+      "en": "Your contact form was sent.",
+      "es": "Su mensaje se ha enviado."
+    },
+    "linktree": {
+      "de": "Links | Javi Aparicio Foto, Bern",
+      "en": "Links | Javi Aparicio Foto, Bern",
+      "es": "Enlaces | Javi Aparicio Foto, Berna"
+    }
+  },
+  "pageHeadings": {
+    "about": {
+      "de": "Über mich",
+      "en": "About",
+      "es": "Sobre mí"
+    },
+    "pricing": {
+      "de": "Preise",
+      "en": "Pricing",
+      "es": "Precios"
+    },
+    "contact": {
+      "de": "Kontakt",
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "portfolio": {
+      "de": "Portfolio",
+      "en": "Portfolio",
+      "es": "Portfolio"
+    },
+    "portraits": {
+      "de": "Porträts",
+      "en": "Portraits",
+      "es": "Retratos"
+    },
+    "events": {
+      "de": "Events",
+      "en": "Events",
+      "es": "Eventos"
+    },
+    "legal": {
+      "de": "Impressum",
+      "en": "Legal notice",
+      "es": "Aviso legal"
+    },
+    "terms": {
+      "de": "AGB",
+      "en": "Terms",
+      "es": "Condiciones"
+    },
+    "privacy": {
+      "de": "Datenschutz",
+      "en": "Privacy",
+      "es": "Privacidad"
+    },
+    "danke": {
+      "de": "Danke",
+      "en": "Thank you",
+      "es": "Gracias"
+    },
+    "home": {
+      "de": "Portraitfotograf Bern",
+      "en": "Portrait photographer in Bern",
+      "es": "Fotógrafo de retratos en Berna"
+    },
+    "linktree": {
+      "de": "Links",
+      "en": "Links",
+      "es": "Enlaces"
+    }
+  }
+}

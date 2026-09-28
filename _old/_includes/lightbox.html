@@ -1,0 +1,59 @@
+{% assign lb_lang = site.lang | default: site.default_lang | default: "de" %}
+{% case lb_lang %}
+  {% when "de" %}
+    {% assign lb_label = "Bildergalerie" %}
+    {% assign lb_prev = "Vorheriges Bild" %}
+    {% assign lb_next = "Nächstes Bild" %}
+    {% assign lb_close = "Schliessen" %}
+    {% assign lb_fs_enter = "Vollbild" %}
+    {% assign lb_fs_exit = "Vollbild beenden" %}
+  {% when "es" %}
+    {% assign lb_label = "Galería de imágenes" %}
+    {% assign lb_prev = "Imagen anterior" %}
+    {% assign lb_next = "Imagen siguiente" %}
+    {% assign lb_close = "Cerrar" %}
+    {% assign lb_fs_enter = "Pantalla completa" %}
+    {% assign lb_fs_exit = "Salir de pantalla completa" %}
+  {% else %}
+    {% assign lb_label = "Image gallery" %}
+    {% assign lb_prev = "Previous image" %}
+    {% assign lb_next = "Next image" %}
+    {% assign lb_close = "Close" %}
+    {% assign lb_fs_enter = "Enter fullscreen" %}
+    {% assign lb_fs_exit = "Exit fullscreen" %}
+{% endcase %}
+<div
+  class="lightbox"
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="{{ lb_label }}"
+  aria-hidden="true"
+  hidden
+>
+  <button type="button" class="lightbox-btn lightbox-btn--prev" id="prev" aria-label="{{ lb_prev }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </button>
+  <img id="lightbox-img" alt="">
+  <div id="lightbox-caption" class="lightbox-caption"></div>
+  <button type="button" class="lightbox-btn lightbox-btn--next" id="next" aria-label="{{ lb_next }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M9 18l6-6-6-6"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox-btn lightbox-btn--close" id="close" aria-label="{{ lb_close }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox-btn lightbox-btn--fullscreen" id="fullscreen" aria-label="{{ lb_fs_enter }}" data-label-enter="{{ lb_fs_enter }}" data-label-exit="{{ lb_fs_exit }}">
+    <svg class="lightbox-fs-enter" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+    </svg>
+    <svg class="lightbox-fs-exit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+    </svg>
+  </button>
+</div>

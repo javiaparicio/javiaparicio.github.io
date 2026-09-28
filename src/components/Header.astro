@@ -1,0 +1,323 @@
+---
+import { Image } from 'astro:assets';
+import type { Locale } from '../lib/i18n';
+import { LOCALES, LOCALE_META } from '../lib/i18n';
+import { getPagePath, type PageKey } from '../lib/routes';
+import { SITE } from '../lib/site';
+import { ui } from '../lib/ui';
+import brandLogoMark from '../assets/brand/logo-mark.webp';
+
+interface Props {
+  locale: Locale;
+  pageKey: PageKey;
+}
+
+const { locale, pageKey } = Astro.props;
+
+const nav = [
+  { key: 'portfolio' as const, href: getPagePath('portfolio', locale), label: ui.nav.portfolio[locale] },
+  { key: 'pricing' as const, href: getPagePath('pricing', locale), label: ui.nav.pricing[locale] },
+  { key: 'about' as const, href: getPagePath('about', locale), label: ui.nav.about[locale] },
+  { key: 'contact' as const, href: getPagePath('contact', locale), label: ui.nav.contact[locale] },
+];
+
+function langHref(target: Locale): string {
+  return getPagePath(pageKey, target);
+}
+
+const portfolioActive = ['portfolio', 'portraits', 'events'].includes(pageKey);
+---
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="site-logo" href={getPagePath('home', locale)} aria-label={SITE.brand}>
+      <Image
+        class="site-logo__mark"
+        src={brandLogoMark}
+        alt=""
+        widths={[64, 96, 128]}
+        sizes="46px"
+        format="webp"
+        quality={90}
+        loading="eager"
+        decoding="async"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                aria-current={
+                  (item.key === 'portfolio' && portfolioActive) ||
+                  (item.key !== 'portfolio' && pageKey === item.key)
+                    ? 'page'
+                    : undefined
+                }
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__tools">
+      <nav class="lang-switch" aria-label={ui.nav.language[locale]}>
+        {
+          LOCALES.map((l) => (
+            <a
+              href={langHref(l)}
+              lang={LOCALE_META[l].htmlLang}
+              hreflang={l}
+              aria-current={l === locale ? 'true' : undefined}
+              data-lang={l}
+            >
+              {LOCALE_META[l].label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <details class="nav-mobile">
+        <summary aria-label={ui.nav.menu[locale]}>
+          <span></span><span></span>
+        </summary>
+        <div class="nav-mobile__panel">
+          <ul>
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="nav-mobile__langs">
+            {
+              LOCALES.map((l) => (
+                <a
+                  href={langHref(l)}
+                  lang={LOCALE_META[l].htmlLang}
+                  hreflang={l}
+                  aria-current={l === locale ? 'true' : undefined}
+                  data-lang={l}
+                >
+                  {LOCALE_META[l].label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<style>
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--color-ink);
+    color: var(--color-bg);
+    padding: 0.75rem 1rem;
+    z-index: 1000;
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 100;
+    height: var(--header-h);
+    background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .site-header__inner {
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  .site-logo {
+    text-decoration: none;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    height: 2.5rem;
+    box-sizing: border-box;
+  }
+  .site-logo:hover {
+    opacity: 1;
+  }
+  .site-logo__mark {
+    display: block;
+    width: 2.85rem;
+    height: 2.85rem;
+    max-width: none;
+    flex-shrink: 0;
+  }
+
+  .site-nav {
+    justify-self: center;
+  }
+
+  .site-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.75rem;
+    height: 2.5rem;
+  }
+  .site-nav a {
+    position: relative;
+    display: block;
+    padding-bottom: 0.55rem;
+    text-decoration: none;
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
+    line-height: 1.15;
+  }
+  .site-nav a[aria-current='page']::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .site-header__tools {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    height: 2.5rem;
+  }
+
+  .lang-switch {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.65rem;
+    height: 2.5rem;
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+  }
+  .lang-switch a {
+    position: relative;
+    display: block;
+    padding-bottom: 0.55rem;
+    text-decoration: none;
+    opacity: 0.45;
+    line-height: 1.15;
+  }
+  .lang-switch a[aria-current='true'] {
+    opacity: 1;
+  }
+  .lang-switch a[aria-current='true']::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+  .nav-mobile summary {
+    list-style: none;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-content: center;
+    gap: 6px;
+  }
+  .nav-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+  .nav-mobile summary span {
+    display: block;
+    width: 1.25rem;
+    height: 1px;
+    background: var(--color-ink);
+  }
+  .nav-mobile__panel {
+    position: absolute;
+    right: 1.25rem;
+    top: calc(var(--header-h) - 0.25rem);
+    min-width: 14rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-line);
+    padding: 1.25rem;
+  }
+  .nav-mobile__panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-mobile__panel li + li {
+    margin-top: 0.85rem;
+  }
+  .nav-mobile__panel a {
+    text-decoration: none;
+    font-size: var(--text-sm);
+  }
+  .nav-mobile__langs {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-line);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+  }
+
+  @media (max-width: 820px) {
+    .site-header__inner {
+      grid-template-columns: 1fr auto;
+    }
+    .site-nav,
+    .lang-switch {
+      display: none;
+    }
+    .nav-mobile {
+      display: block;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll('.lang-switch a, .nav-mobile__langs a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try {
+        var lang = a.getAttribute('data-lang') || a.textContent.trim().toLowerCase();
+        if (lang === 'de' || lang === 'en' || lang === 'es') {
+          localStorage.setItem('jaf_lang', lang);
+        }
+      } catch (e) {}
+    });
+  });
+</script>

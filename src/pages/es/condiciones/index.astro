@@ -1,0 +1,10 @@
+---
+import LegalPage from '../../../components/pages/LegalPage.astro';
+import { renderLegalBody } from '../../../lib/content';
+import { termsCopy } from '../../../content/legal/terms';
+---
+<LegalPage
+  locale="es"
+  pageKey="terms"
+  html={renderLegalBody(termsCopy.es, 'es')}
+/>

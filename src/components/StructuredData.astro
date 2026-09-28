@@ -1,0 +1,63 @@
+---
+import { SITE } from '../lib/site';
+import type { Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  pageType?: 'WebSite' | 'WebPage' | 'AboutPage' | 'ContactPage';
+  breadcrumbs?: { name: string; url: string }[];
+  extra?: Record<string, unknown>[];
+}
+
+const { locale, pageType = 'WebPage', breadcrumbs = [], extra = [] } = Astro.props;
+
+const business = {
+  '@context': 'https://schema.org',
+  '@type': ['ProfessionalService', 'LocalBusiness', 'Photographer'],
+  name: SITE.brand,
+  legalName: SITE.legalName,
+  url: SITE.url,
+  image: `${SITE.url}/favicons/web-app-manifest-512x512.png`,
+  priceRange: SITE.priceRange,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: SITE.city,
+    addressCountry: SITE.country,
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Bern',
+  },
+  sameAs: SITE.social.map((s) => s.url),
+};
+
+const page = {
+  '@context': 'https://schema.org',
+  '@type': pageType,
+  name: SITE.brand,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.brand,
+    url: SITE.url,
+    inLanguage: locale,
+  },
+};
+
+const crumb =
+  breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((b, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: b.name,
+          item: b.url,
+        })),
+      }
+    : null;
+
+const graph = [business, page, ...(crumb ? [crumb] : []), ...extra];
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />

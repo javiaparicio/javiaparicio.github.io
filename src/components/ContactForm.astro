@@ -1,0 +1,158 @@
+---
+import type { Locale } from '../lib/i18n';
+import { applyContentTokens } from '../lib/content';
+import { getPagePath } from '../lib/routes';
+import { SITE } from '../lib/site';
+import { ui } from '../lib/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const nextUrl = new URL(getPagePath('danke', locale), SITE.url).href;
+const telegramUrl =
+  SITE.social.find((s) => s.name === 'Telegram')?.url ?? 'https://t.me/javiapariciofoto';
+
+const privacyHtml = applyContentTokens(ui.contact.privacy[locale], locale);
+const termsHtml = applyContentTokens(ui.contact.termsNote[locale], locale);
+const directHtml = applyContentTokens(
+  ui.contact.direct[locale]
+    .replaceAll(
+      '{{email}}',
+      `<a class="contact-protected" data-contact="email" href="#">${ui.contact.channelEmail[locale]}</a>`,
+    )
+    .replaceAll(
+      '{{whatsapp}}',
+      `<a href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">${ui.contact.channelWhatsapp[locale]}</a>`,
+    )
+    .replaceAll(
+      '{{telegram}}',
+      `<a href="${telegramUrl}" target="_blank" rel="noopener noreferrer">${ui.contact.channelTelegram[locale]}</a>`,
+    ),
+  locale,
+);
+---
+
+<form class="contact-form" action={SITE.formspree} method="POST">
+  <label for="name">{ui.contact.name[locale]}</label>
+  <input type="text" id="name" name="name" autocomplete="name" required />
+
+  <label for="company">{ui.contact.company[locale]}</label>
+  <input type="text" id="company" name="company" autocomplete="organization" />
+
+  <label for="email">{ui.contact.email[locale]}</label>
+  <input type="email" id="email" name="_replyto" autocomplete="email" required />
+
+  <label for="subject">{ui.contact.subject[locale]}</label>
+  <input
+    type="text"
+    id="subject"
+    name="subject"
+    placeholder={ui.contact.subjectPh[locale]}
+    required
+  />
+
+  <label for="message">{ui.contact.message[locale]}</label>
+  <textarea
+    id="message"
+    name="message"
+    rows="8"
+    placeholder={ui.contact.messagePh[locale]}
+    required></textarea>
+
+  <div class="contact-form__check">
+    <input type="checkbox" id="privacy" name="privacy" value="accepted" required />
+    <label for="privacy" set:html={privacyHtml} />
+  </div>
+
+  <p class="contact-form__note" set:html={termsHtml} />
+
+  <input type="hidden" name="_subject" value={SITE.emailSubject} />
+  <input type="hidden" name="_next" value={nextUrl} />
+  <input
+    type="text"
+    name="_gotcha"
+    class="contact-form__hp"
+    value=""
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+  />
+
+  <button type="submit" class="btn">{ui.contact.send[locale]}</button>
+</form>
+
+<div class="contact-direct">
+  <p set:html={directHtml} />
+</div>
+
+<style>
+  .contact-form {
+    display: grid;
+    gap: 0.65rem;
+  }
+  .contact-form label {
+    font-size: var(--text-sm);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--color-line);
+    background: var(--color-bg-elevated);
+    color: var(--color-ink);
+    font: inherit;
+    padding: 0.7rem 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact-form__check {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    align-items: start;
+    margin: 0.5rem 0;
+    font-size: var(--text-sm);
+  }
+  .contact-form__check input {
+    width: auto;
+    margin-top: 0.25rem;
+  }
+  .contact-form__note {
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    margin: 0 0 1rem;
+  }
+  .contact-form__hp {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  .contact-direct {
+    margin-top: var(--space-5);
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+  }
+  .contact-direct a {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+</style>
+
+<script>
+  async function revealContact() {
+    try {
+      const res = await fetch('/contact.json', { credentials: 'same-origin' });
+      if (!res.ok) return;
+      const data = await res.json();
+      const email = atob(data.e);
+      document.querySelectorAll<HTMLAnchorElement>('[data-contact="email"]').forEach((el) => {
+        el.href = `mailto:${email}`;
+      });
+    } catch {
+      /* keep placeholders */
+    }
+  }
+  revealContact();
+</script>

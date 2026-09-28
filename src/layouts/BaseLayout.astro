@@ -1,0 +1,144 @@
+---
+import type { Locale } from '../lib/i18n';
+import { LOCALE_META, LOCALES } from '../lib/i18n';
+import { absoluteUrl, getPagePath, hreflangMap, type PageKey } from '../lib/routes';
+import { SITE } from '../lib/site';
+import { pageDescriptions, pageTitles } from '../lib/ui';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  locale: Locale;
+  pageKey: PageKey;
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  bodyClass?: string;
+}
+
+const {
+  locale,
+  pageKey,
+  title: titleProp,
+  description: descriptionProp,
+  ogImage = '/og-default.webp',
+  noindex = false,
+  bodyClass = '',
+} = Astro.props;
+
+const titleBase = titleProp ?? pageTitles[pageKey][locale];
+const fullTitle =
+  pageKey === 'home'
+    ? `${titleBase} | LinkedIn & Personal Branding | ${SITE.brand}`
+    : `${titleBase} | ${SITE.brand}`;
+const description = descriptionProp ?? pageDescriptions[pageKey][locale];
+const canonical = absoluteUrl(getPagePath(pageKey, locale));
+const alternates = hreflangMap(pageKey);
+const ogLocale = LOCALE_META[locale].ogLocale;
+const htmlLang = LOCALE_META[locale].htmlLang;
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {/* Remember last language (localStorage only — no cookies). Redirect home entry points. */}
+    <script is:inline>
+      (function () {
+        try {
+          var preferred = localStorage.getItem('jaf_lang');
+          if (preferred !== 'de' && preferred !== 'en' && preferred !== 'es') return;
+
+          var path = location.pathname;
+          if (path !== '/' && path !== '/en/' && path !== '/es/') return;
+
+          var current = path.indexOf('/en/') === 0 ? 'en' : path.indexOf('/es/') === 0 ? 'es' : 'de';
+          if (preferred === current) return;
+
+          var homes = { de: '/', en: '/en/', es: '/es/' };
+          location.replace(homes[preferred] + location.search + location.hash);
+        } catch (e) {}
+      })();
+    </script>
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.brand} />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow" />
+    )}
+    <link rel="canonical" href={canonical} />
+    {
+      LOCALES.map((l) => (
+        <link rel="alternate" hreflang={l === 'de' ? 'de-CH' : l === 'en' ? 'en-CH' : 'es'} href={alternates[l]} />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={alternates.de} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.brand} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+    {
+      LOCALES.filter((l) => l !== locale).map((l) => (
+        <meta property="og:locale:alternate" content={LOCALE_META[l].ogLocale} />
+      ))
+    }
+    <meta property="og:image" content={absoluteUrl(ogImage)} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteUrl(ogImage)} />
+
+    <meta name="ahrefs-site-verification" content={SITE.ahrefsSiteVerification} />
+    <meta name="facebook-domain-verification" content={SITE.facebookDomainVerification} />
+
+    <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+
+    <link
+      rel="preload"
+      href="/fonts/roboto-mono/roboto-mono-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-mono/roboto-mono-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <div class="site-shell">
+      <Header locale={locale} pageKey={pageKey} />
+      <main class="site-main" id="main">
+        <slot />
+      </main>
+      <Footer locale={locale} />
+    </div>
+    <script is:inline>
+      (function () {
+        try {
+          var path = location.pathname;
+          var m = path.match(/^\/(en|es)(\/|$)/);
+          var lang = m ? m[1] : 'de';
+          localStorage.setItem('jaf_lang', lang);
+        } catch (e) {}
+      })();
+    </script>
+  </body>
+</html>

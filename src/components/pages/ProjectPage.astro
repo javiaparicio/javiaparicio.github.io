@@ -1,0 +1,95 @@
+---
+import type { Locale } from '../../lib/i18n';
+import { t } from '../../lib/i18n';
+import { getProjectBySlug, resolveProject } from '../../lib/projects';
+import { absoluteUrl, getPagePath, type PageKey } from '../../lib/routes';
+import { ui } from '../../lib/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Gallery from '../Gallery.astro';
+import StructuredData from '../StructuredData.astro';
+
+interface Props {
+  locale: Locale;
+  slug: string;
+}
+
+const { locale, slug } = Astro.props;
+
+const entry = await getProjectBySlug(slug);
+if (!entry) {
+  return Astro.redirect(getPagePath('portfolio', locale));
+}
+
+const project = await resolveProject(entry, locale);
+const pageKey = (
+  {
+    portraits: 'portraits',
+    events: 'events',
+  } as Record<string, PageKey>
+)[slug];
+
+if (!pageKey) {
+  return Astro.redirect(getPagePath('portfolio', locale));
+}
+
+const breadcrumbs = [
+  { name: ui.nav.portfolio[locale], url: absoluteUrl(getPagePath('portfolio', locale)) },
+  { name: project.title, url: absoluteUrl(getPagePath(pageKey, locale)) },
+];
+
+const seoTitle = entry.data.seoTitle ? t(entry.data.seoTitle, locale) : undefined;
+const seoDescription = entry.data.seoDescription
+  ? t(entry.data.seoDescription, locale)
+  : project.description || undefined;
+---
+
+<BaseLayout
+  locale={locale}
+  pageKey={pageKey}
+  title={seoTitle}
+  description={seoDescription}
+>
+  <StructuredData
+    slot="head"
+    locale={locale}
+    breadcrumbs={breadcrumbs}
+  />
+
+  <div class="container page-block page-block--last">
+    <header class="page-header">
+      <p class="eyebrow">
+        <a href={getPagePath('portfolio', locale)}>{ui.common.backToPortfolio[locale]}</a>
+      </p>
+      <h1>{project.title}</h1>
+      {project.description && <p class="lead">{project.description}</p>}
+    </header>
+
+    <div class="project-gallery page-block">
+      <Gallery
+        slides={project.slides}
+        layout={entry.data.layout}
+        locale={locale}
+      />
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href={getPagePath('contact', locale)}>
+        {ui.common.requestSession[locale]}
+      </a>
+      <a class="btn btn--ghost" href={getPagePath('portfolio', locale)}>
+        {ui.common.backToPortfolio[locale]}
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .eyebrow a {
+    text-decoration: none;
+  }
+</style>
