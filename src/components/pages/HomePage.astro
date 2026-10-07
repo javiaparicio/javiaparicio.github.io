@@ -72,6 +72,7 @@ const processSteps = [
       <p class="home-open__lead">{ui.home.lead2[locale]}</p>
       <div class="cta-row">
         <a class="btn" href={getPagePath('contact', locale)}>{ui.home.cta[locale]}</a>
+        <a class="btn btn--ghost" href={getPagePath('events', locale)}>{ui.home.eventsCta[locale]}</a>
         <a class="btn btn--ghost" href={getPagePath('portfolio', locale)}>{ui.nav.portfolio[locale]}</a>
       </div>
     </div>
@@ -141,6 +142,15 @@ const processSteps = [
           <li>{ui.home.deliverable2[locale]}</li>
           <li>{ui.home.deliverable3[locale]}</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="container home-info__block home-info__block--events">
+      <h2>{ui.home.eventsTitle[locale]}</h2>
+      <p class="home-info__about">{ui.home.eventsText[locale]}</p>
+      <div class="cta-row">
+        <a class="btn" href={getPagePath('contact', locale)}>{ui.home.eventsEnquire[locale]}</a>
+        <a class="btn btn--ghost" href={getPagePath('events', locale)}>{ui.home.eventsCta[locale]}</a>
       </div>
     </div>
   </section>
@@ -235,6 +245,16 @@ const processSteps = [
 
   .home-info__block--lead {
     margin-bottom: var(--gap-section);
+  }
+
+  .home-info__block--events {
+    margin-top: var(--gap-section);
+    padding-top: var(--gap-section);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .home-info__block--events .home-info__about {
+    margin-bottom: var(--gap-stack);
   }
 
   .home-info__block h2 {

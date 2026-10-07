@@ -2,6 +2,8 @@ Me llamo Javi Aparicio. Soy fotógrafo de retratos y trabajo con profesionales, 
 
 Desde mi estudio en Berna creo fotografías que ayudan a presentarse de forma clara, profesional y auténtica en la comunicación.
 
+Soy miembro del SSM (Sindicato Suizo de Medios / Schweizer Syndikat Medienschaffender).
+
 ## Qué tipo de fotografía hago
 
 Mi foco son los retratos. Creo principalmente:
@@ -13,7 +15,7 @@ Mi foco son los retratos. Creo principalmente:
 
 El objetivo es una presencia sólida online y en la comunicación profesional, para personas y para equipos.
 
-De forma puntual también fotografío eventos y otros proyectos. Puede encontrar una pequeña muestra en [Eventos]({{events}}).
+También cubro **eventos en Berna y alrededores**: conciertos, actos de empresa y festivales. Una selección en [Eventos]({{events}}).
 
 ## Cómo trabajo
 

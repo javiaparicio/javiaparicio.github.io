@@ -48,8 +48,8 @@
       "es": "Sesiones con cita previa. Estudio en Berna."
     },
     "events": {
-      "de": "Events",
-      "en": "Events",
+      "de": "Eventfotografie",
+      "en": "Event photography",
       "es": "Eventos"
     },
     "legal": {
@@ -193,6 +193,26 @@
       "de": "Ab 150 CHF",
       "en": "From CHF 150",
       "es": "Desde 150 CHF"
+    },
+    "eventsTitle": {
+      "de": "Eventfotografie Bern",
+      "en": "Event photography in Bern",
+      "es": "Fotografía de eventos en Berna"
+    },
+    "eventsText": {
+      "de": "Konzerte, Firmenanlässe und Festivals in Bern und der Region — professionell dokumentiert. Gerne erstelle ich Ihnen ein Angebot.",
+      "en": "Concerts, corporate events and festivals in Bern and the region — documented professionally. Happy to send a quote.",
+      "es": "Conciertos, eventos corporativos y festivales en Berna y alrededores — documentados con profesionalidad. Con gusto le envío un presupuesto."
+    },
+    "eventsCta": {
+      "de": "Events ansehen",
+      "en": "View events",
+      "es": "Ver eventos"
+    },
+    "eventsEnquire": {
+      "de": "Event anfragen",
+      "en": "Enquire about an event",
+      "es": "Consultar un evento"
     }
   },
   "portfolio": {
@@ -207,9 +227,9 @@
       "es": "Ver"
     },
     "eventsTeaser": {
-      "de": "Events und weitere Projekte",
-      "en": "Events and other projects",
-      "es": "Eventos y otros proyectos"
+      "de": "Eventfotografie in Bern",
+      "en": "Event photography in Bern",
+      "es": "Fotografía de eventos en Berna"
     }
   },
   "gallery": {
@@ -261,9 +281,9 @@
       "es": "Asunto*"
     },
     "subjectPh": {
-      "de": "z. B. LinkedIn-Porträt, Team 6 Personen",
-      "en": "e.g. LinkedIn portrait, team of 6",
-      "es": "p. ej. retrato LinkedIn, equipo de 6"
+      "de": "z. B. LinkedIn-Porträt, Firmenevent, Team 6 Personen",
+      "en": "e.g. LinkedIn portrait, corporate event, team of 6",
+      "es": "p. ej. retrato LinkedIn, evento de empresa, equipo de 6"
     },
     "message": {
       "de": "Nachricht*",
@@ -323,9 +343,9 @@
       "es": "Retratos"
     },
     "other": {
-      "de": "Weitere Projekte",
-      "en": "Other projects",
-      "es": "Otros proyectos"
+      "de": "Eventfotografie",
+      "en": "Event photography",
+      "es": "Fotografía de eventos"
     }
   },
   "common": {
@@ -338,6 +358,11 @@
       "de": "Session anfragen",
       "en": "Request a session",
       "es": "Solicitar sesión"
+    },
+    "requestEvent": {
+      "de": "Event anfragen",
+      "en": "Enquire about an event",
+      "es": "Consultar un evento"
     },
     "learnMore": {
       "de": "Mehr erfahren",

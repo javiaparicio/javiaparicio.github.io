@@ -29,9 +29,15 @@ const {
 } = Astro.props;
 
 const titleBase = titleProp ?? pageTitles[pageKey][locale];
+const homeTitleMiddle =
+  locale === 'en'
+    ? 'LinkedIn & Event Photography'
+    : locale === 'es'
+      ? 'LinkedIn y eventos'
+      : 'LinkedIn & Eventfotografie';
 const fullTitle =
   pageKey === 'home'
-    ? `${titleBase} | LinkedIn & Personal Branding | ${SITE.brand}`
+    ? `${titleBase} | ${homeTitleMiddle} | ${SITE.brand}`
     : `${titleBase} | ${SITE.brand}`;
 const description = descriptionProp ?? pageDescriptions[pageKey][locale];
 const canonical = absoluteUrl(getPagePath(pageKey, locale));

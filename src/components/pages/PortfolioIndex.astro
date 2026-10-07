@@ -65,6 +65,9 @@ const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
       <a class="btn" href={getPagePath('contact', locale)}>
         {ui.common.requestSession[locale]}
       </a>
+      <a class="btn btn--ghost" href={getPagePath('events', locale)}>
+        {ui.home.eventsCta[locale]}
+      </a>
       <a class="btn btn--ghost" href={getPagePath('pricing', locale)}>
         {ui.nav.pricing[locale]}
       </a>

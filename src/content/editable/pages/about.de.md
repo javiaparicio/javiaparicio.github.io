@@ -2,6 +2,8 @@ Mein Name ist Javi Aparicio. Ich bin Portraitfotograf und arbeite mit Fachperson
 
 Von meinem Studio in Bern aus entstehen Fotografien, die helfen, sich klar, professionell und authentisch in der eigenen Kommunikation zu zeigen.
 
+Ich bin Mitglied im SSM (Schweizer Syndikat Medienschaffender).
+
 ## Welche Art von Fotografie ich mache
 
 Mein Schwerpunkt liegt auf Porträts. Ich erstelle vor allem:
@@ -13,7 +15,7 @@ Mein Schwerpunkt liegt auf Porträts. Ich erstelle vor allem:
 
 Ziel ist eine starke Darstellung für Online-Präsenz und professionelle Kommunikation, für Einzelpersonen und für Teams.
 
-Gelegentlich fotografiere ich auch Events und andere Projekte. Eine kleine Auswahl finden Sie unter [Events]({{events}}).
+Ich übernehme auch **Eventfotografie in Bern und Umgebung**: Konzerte, Firmenanlässe und Festivals. Eine Auswahl finden Sie unter [Events]({{events}}).
 
 ## Wie ich arbeite
 

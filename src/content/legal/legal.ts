@@ -22,6 +22,7 @@ export const legalCopy: LocalizedHtml = {
 <p><strong>Telefon</strong>: {{phone}}</p>
 <p><strong>UID / Handelsregister-Nr.</strong>: {{che}}</p>
 <p><strong>Mehrwertsteuer</strong>: {{mwst}}</p>
+<p><strong>Mitgliedschaft</strong>: SSM (Schweizer Syndikat Medienschaffender)</p>
 
 <hr>
 
@@ -63,6 +64,7 @@ export const legalCopy: LocalizedHtml = {
 <p><strong>Phone</strong>: {{phone}}</p>
 <p><strong>UID / Commercial register no.</strong>: {{che}}</p>
 <p><strong>VAT</strong>: {{mwst}}</p>
+<p><strong>Membership</strong>: SSM (Swiss Syndicate of Media Professionals)</p>
 
 <hr>
 
@@ -106,6 +108,7 @@ export const legalCopy: LocalizedHtml = {
 <p><strong>Teléfono</strong>: {{phone}}</p>
 <p><strong>UID / N.º registro mercantil</strong>: {{che}}</p>
 <p><strong>IVA</strong>: {{mwst}}</p>
+<p><strong>Afiliación</strong>: SSM (Sindicato Suizo de Medios / Schweizer Syndikat Medienschaffender)</p>
 
 <hr>
 

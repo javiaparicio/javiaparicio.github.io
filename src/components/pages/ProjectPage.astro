@@ -41,6 +41,11 @@ const seoTitle = entry.data.seoTitle ? t(entry.data.seoTitle, locale) : undefine
 const seoDescription = entry.data.seoDescription
   ? t(entry.data.seoDescription, locale)
   : project.description || undefined;
+
+const isEvents = slug === 'events';
+const primaryCtaLabel = isEvents
+  ? ui.common.requestEvent[locale]
+  : ui.common.requestSession[locale];
 ---
 
 <BaseLayout
@@ -74,7 +79,7 @@ const seoDescription = entry.data.seoDescription
 
     <div class="cta-row">
       <a class="btn" href={getPagePath('contact', locale)}>
-        {ui.common.requestSession[locale]}
+        {primaryCtaLabel}
       </a>
       <a class="btn btn--ghost" href={getPagePath('portfolio', locale)}>
         {ui.common.backToPortfolio[locale]}
