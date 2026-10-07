@@ -101,4 +101,16 @@ captions:
     de: "Crazy David, Ausstellung, Köniz"
     en: "Crazy David, exhibition, Köniz"
     es: "Crazy David, exposición, Köniz"
+  "21.webp":
+    de: "Burning Fuses, Konzert, Roessli Bern"
+    en: "Burning Fuses, concert, Roessli Bern"
+    es: "Burning Fuses, concierto, Roessli Berna"
+  "22.webp":
+    de: "Still Untitled, Konzert, Sommerside"
+    en: "Still Untitled, concert, Sommerside"
+    es: "Still Untitled, concierto, Sommerside"
+  "23.webp":
+    de: "Feria LEES, Bern"
+    en: "LEES Fair, Bern"
+    es: "Feria LEES, Berna"
 ---
