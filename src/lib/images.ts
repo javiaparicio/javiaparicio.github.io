@@ -32,7 +32,41 @@ export type ProjectImage = {
   filename: string;
   src: ImageMetadata;
   alt: string;
+  /** Sanitized caption HTML (plain text, or a single https link). */
+  captionHtml: string;
 };
+
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+}
+
+export type Caption = {
+  name?: string;
+  de?: string;
+  en?: string;
+  es?: string;
+  url?: string;
+};
+
+function captionLabel(caption: Caption | undefined, locale: Locale): string {
+  if (!caption) return '';
+  if (caption.name?.trim()) return caption.name.trim();
+  return (caption[locale] || caption.de || '').trim();
+}
+
+/** Plain caption, or the same text wrapped in an https link. */
+export function renderCaptionHtml(label: string, url?: string): string {
+  const text = escapeHtml(label.trim());
+  if (!text) return '';
+  if (url && /^https:\/\//i.test(url)) {
+    return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+  }
+  return text;
+}
 
 export function listProjectImagePaths(slug: string): string[] {
   const paths = Object.keys(IMAGE_GLOB)
@@ -46,7 +80,7 @@ export function listProjectImagePaths(slug: string): string[] {
 export async function getProjectImages(
   slug: string,
   locale: Locale,
-  captions?: Record<string, { de: string; en: string; es: string }>,
+  captions?: Record<string, Caption>,
   fallbackAlt = '',
 ): Promise<ProjectImage[]> {
   const entries: { filename: string; path: string }[] = [];
@@ -63,16 +97,14 @@ export async function getProjectImages(
   for (const entry of entries) {
     const mod = await IMAGE_GLOB[entry.path]!();
     const caption = captions?.[entry.filename];
-    const alt =
-      (caption ? caption[locale] || caption.de : '') ||
-      fallbackAlt ||
-      '';
-    // Strip HTML from captions for alt text
-    const cleanAlt = alt.replace(/<[^>]+>/g, '').trim();
+    const label = captionLabel(caption, locale) || fallbackAlt.trim();
+    const captionHtml = renderCaptionHtml(label, caption?.url);
+    const cleanAlt = label;
     images.push({
       filename: entry.filename,
       src: mod.default,
       alt: cleanAlt,
+      captionHtml,
     });
   }
   return images;
@@ -93,6 +125,7 @@ export function resolveCover(
 export type OptimizedSlide = {
   filename: string;
   alt: string;
+  captionHtml: string;
   width: number;
   height: number;
   thumbSrc: string;
@@ -132,6 +165,7 @@ export async function optimizeGalleryImages(
     slides.push({
       filename: image.filename,
       alt: image.alt,
+      captionHtml: image.captionHtml,
       width: image.src.width,
       height: image.src.height,
       thumbSrc: largest.src,

@@ -22,19 +22,66 @@ seoDescription:
   en: "Selected portraits from Bern: LinkedIn, personal branding, teams and editorial. See the style and quality, then request a studio session."
   es: "Retratos seleccionados en Berna: LinkedIn, marca personal, equipos y editorial. Vea el estilo y la calidad, luego solicite sesión en el estudio."
 captions:
-  "01.webp": { de: "José", en: "José", es: "José" }
-  "02.webp": { de: "José", en: "José", es: "José" }
-  "03.webp": { de: "Christian", en: "Christian", es: "Christian" }
-  "04.webp": { de: "Christian", en: "Christian", es: "Christian" }
-  "05.webp": { de: "Frank", en: "Frank", es: "Frank" }
-  "06.webp": { de: "Nana", en: "Nana", es: "Nana" }
-  "07.webp": { de: "", en: "", es: "" }
-  "08.webp": { de: "Kathy", en: "Kathy", es: "Kathy" }
-  "09.webp": { de: "Leiba", en: "Leiba", es: "Leiba" }
-  "10.webp": { de: "Evgenia", en: "Evgenia", es: "Evgenia" }
-  "11.webp": { de: "Julia", en: "Julia", es: "Julia" }
-  "12.webp": { de: "MioNeo", en: "MioNeo", es: "MioNeo" }
-  "13.webp": { de: "Demmi Fray", en: "Demmi Fray", es: "Demmi Fray" }
-  "14.webp": { de: "Iryna Berdnyk", en: "Iryna Berdnyk", es: "Iryna Berdnyk" }
-  "15.webp": { de: "Alessandra", en: "Alessandra", es: "Alessandra" }
+  "01.webp":
+    name: José
+    url: https://www.instagram.com/joseditionvisual/
+  "02.webp":
+    name: José
+    url: https://www.instagram.com/joseditionvisual/
+  "03.webp": { name: Christian }
+  "04.webp": { name: Christian }
+  "05.webp": { name: Frank }
+  "06.webp": { name: Nana }
+  "08.webp": { name: Kathy }
+  "09.webp": { name: Leiba }
+  "10.webp":
+    name: Evgenia
+    url: https://www.instagram.com/jeya.artmodel/
+  "11.webp":
+    name: Julia
+    url: https://www.instagram.com/jlzyu/
+  "12.webp":
+    name: MioNeo
+    url: https://www.mioneo.ch/
+  "13.webp":
+    name: Demmi Fray
+    url: https://www.instagram.com/demifrayy/
+  "14.webp":
+    name: Iryna Berdnyk
+    url: https://irynaberdnyk.com/
+  "15.webp":
+    name: Alessandra
+    url: https://www.instagram.com/travelmodel.s/
+  "16.webp":
+    name: Sofia
+    url: https://www.instagram.com/sofiiainternational/
+  "17.webp":
+    name: Alessandra
+    url: https://www.instagram.com/travelmodel.s/
+  "18.webp": { name: Liuba }
+  "19.webp":
+    name: Maryna
+    url: https://www.instagram.com/ar.maryna/
+  "20.webp":
+    name: Lona
+    url: https://www.instagram.com/itslona_model/
+  "21.webp":
+    name: Mica
+    url: https://www.instagram.com/micaelaweberrr/
+  "22.webp":
+    name: José
+    url: https://www.instagram.com/joseditionvisual/
+  "23.webp":
+    name: Robert
+    url: https://www.instagram.com/rsegarra16/
+  "25.webp":
+    name: Bexxii
+    url: https://www.instagram.com/modelbexxii/
+  "26.webp":
+    name: Jessica
+    url: https://www.instagram.com/jessicagomezreal3/
+  "27.webp": { name: Frank }
+  "28.webp":
+    name: Ksenia Gratch
+    url: https://www.instagram.com/kseniagratch/
 ---

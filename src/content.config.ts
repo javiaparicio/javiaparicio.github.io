@@ -35,14 +35,19 @@ const projects = defineCollection({
       .default('editorial'),
     seoTitle: localized.optional(),
     seoDescription: localized.optional(),
-    /** Optional alt/caption keyed by filename (e.g. "01.webp") */
+    /** Optional caption keyed by filename. `name` if it is the same in every language; otherwise de/en/es. Optional https `url` turns the caption into a link. */
     captions: z
       .record(
         z.string(),
         z.object({
-          de: z.string(),
-          en: z.string(),
-          es: z.string(),
+          name: z.string().optional(),
+          de: z.string().optional(),
+          en: z.string().optional(),
+          es: z.string().optional(),
+          url: z
+            .string()
+            .regex(/^https:\/\//, 'Caption url must start with https://')
+            .optional(),
         }),
       )
       .optional(),
