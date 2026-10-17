@@ -4,9 +4,9 @@ title:
   en: Event Photography Bern
   es: Fotografía de eventos Berna
 description:
-  de: Konzerte, Firmenanlässe und Festivals in Bern und Region — professionelle Eventfotografie auf Anfrage.
-  en: Concerts, corporate events and festivals in Bern and the region — professional event photography on request.
-  es: Conciertos, eventos corporativos y festivales en Berna y alrededores — fotografía de eventos profesional bajo consulta.
+  de: Konzerte, Firmenanlässe und Festivals in Bern und Region. Professionelle Eventfotografie auf Anfrage.
+  en: Concerts, corporate events and festivals in Bern and the region. Professional event photography on request.
+  es: Conciertos, eventos corporativos y festivales en Berna y alrededores. Fotografía de eventos profesional bajo consulta.
 category: other
 location: Bern
 featured: true
