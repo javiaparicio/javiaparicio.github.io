@@ -7,6 +7,7 @@ import {
   pricingFaq,
   pricingFaqTitle,
   pricingIncludedInAll,
+  pricingPackagesNote,
 } from '../../content/pages/pricing-packages';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StructuredData from '../StructuredData.astro';
@@ -65,15 +66,17 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
                 <article class="pricing-package">
                   <h2 class="pricing-package__name">{pkg.name[locale]}</h2>
                   <p class="pricing-package__price">{pkg.priceLabel[locale]}</p>
-                  <p class="pricing-package__desc">{pkg.description[locale]}</p>
                   <ul class="pricing-package__includes">
                     {pkg.includes[locale].map((item) => (
                       <li>{item}</li>
                     ))}
                   </ul>
+                  <p class="pricing-package__note">{pkg.note[locale]}</p>
                 </article>
               ))}
             </div>
+
+            <p class="pricing-note">{pricingPackagesNote[locale]}</p>
 
             <div class="pricing-included">
               <h2>
@@ -133,6 +136,8 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
   }
 
   .pricing-package {
+    display: flex;
+    flex-direction: column;
     padding: var(--gap-stack) 0;
     border-top: 1px solid var(--color-line);
   }
@@ -150,19 +155,29 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
     color: var(--color-ink);
   }
 
-  .pricing-package__desc {
-    margin: 0 0 var(--gap-heading);
-    color: var(--color-ink-muted);
-    font-size: var(--text-base);
-    line-height: 1.55;
-  }
-
   .pricing-package__includes {
-    margin: 0;
+    margin: 0 0 var(--gap-heading);
     padding-left: 1.15em;
     font-size: var(--text-base);
     line-height: 1.55;
     color: var(--color-ink-muted);
+  }
+
+  .pricing-package__note,
+  .pricing-note {
+    margin: 0;
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    line-height: 1.5;
+    color: var(--color-ink-muted);
+  }
+
+  .pricing-package__note {
+    margin-top: auto;
+  }
+
+  .pricing-note {
+    margin-top: var(--gap-stack);
   }
 
   .pricing-included {

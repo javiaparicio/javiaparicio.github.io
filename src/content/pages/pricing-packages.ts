@@ -12,12 +12,15 @@ export type PricingPackage = {
   description: LocalizedString;
   includes: Record<Locale, string[]>;
   priceLabel: LocalizedString;
+  note: LocalizedString;
 };
 
 /**
  * Pricing packages — edit `src/content/editable/pricing.json`.
  */
 export const pricingPackages = pricingData.packages as PricingPackage[];
+
+export const pricingPackagesNote = pricingData.packagesNote as LocalizedString;
 
 export const pricingIncludedInAll = pricingData.includedInAll as Record<
   Locale,

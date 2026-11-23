@@ -5,9 +5,9 @@
       "price": 150,
       "currency": "CHF",
       "name": {
-        "de": "Professionelles Porträt",
-        "en": "Professional portrait",
-        "es": "Retrato profesional"
+        "de": "Business- & LinkedIn-Porträt",
+        "en": "Professional Portrait & LinkedIn",
+        "es": "Retrato Profesional y LinkedIn"
       },
       "description": {
         "de": "Für Fachpersonen, die ein klares Bild für LinkedIn und Webseite brauchen.",
@@ -16,31 +16,36 @@
       },
       "includes": {
         "de": [
-          "Studio-Session",
-          "Pose- und Blickführung (auch ohne Erfahrung)",
-          "Fotoauswahl",
-          "Retusche für professionelle Nutzung",
-          "Lieferung als digitale Dateien"
+          "30 Minuten geführtes Studio-Shooting in Bern",
+          "1 Outfit-Wechsel",
+          "Gemeinsame Bildauswahl direkt am Bildschirm",
+          "3 retuschierte hochauflösende Fotos (+ LinkedIn-Zuschnitt)",
+          "Schnelle Lieferung innerhalb von 48–72 Stunden"
         ],
         "en": [
-          "Studio session",
-          "Pose and gaze direction (no experience needed)",
-          "Photo selection",
-          "Retouching for professional use",
-          "Delivery as digital files"
+          "30-minute guided studio session in Bern",
+          "1 outfit change",
+          "Live image selection together on screen",
+          "3 retouched high-resolution photos (+ LinkedIn crop)",
+          "Fast delivery within 48–72 hours"
         ],
         "es": [
-          "Sesión en estudio",
-          "Dirección de pose y mirada (sin experiencia previa)",
-          "Selección de fotos",
-          "Retoque para uso profesional",
-          "Entrega en archivos digitales"
+          "Sesión guiada de 30 minutos en estudio en Berna",
+          "1 cambio de vestuario",
+          "Selección conjunta de fotos en pantalla al terminar",
+          "3 fotos retocadas en alta resolución (+ recorte para LinkedIn)",
+          "Entrega rápida en 48–72 horas"
         ]
       },
       "priceLabel": {
-        "de": "Ab 150 CHF",
-        "en": "From CHF 150",
-        "es": "Desde 150 CHF"
+        "de": "CHF 150",
+        "en": "CHF 150",
+        "es": "CHF 150"
+      },
+      "note": {
+        "de": "Zusätzliche retuschierte Fotos: je CHF 35",
+        "en": "Additional retouched photos: CHF 35 each",
+        "es": "Fotos retocadas adicionales: CHF 35 / unidad"
       }
     },
     {
@@ -49,8 +54,8 @@
       "currency": "CHF",
       "name": {
         "de": "Personal Branding",
-        "en": "Personal branding",
-        "es": "Marca personal"
+        "en": "Personal Branding",
+        "es": "Marca Personal"
       },
       "description": {
         "de": "Für Coaches und Personal Brands mit mehreren Looks für Online-Präsenz.",
@@ -59,31 +64,36 @@
       },
       "includes": {
         "de": [
-          "Mehr Zeit, mehrere Outfits / Settings",
-          "Close-ups und halbe Figuren für Web & Social",
-          "Pose- und Blickführung",
-          "Retusche für professionelle Nutzung",
-          "Lieferung als digitale Dateien"
+          "90 Minuten Shooting (Studio und/oder Outdoor in Bern)",
+          "Mehrere Outfit-Wechsel & verschiedene Sets",
+          "Geführtes Posing & kreative Bildregie",
+          "Ab 10 retuschierten hochauflösenden Fotos",
+          "Lieferung innerhalb von 5 Arbeitstagen"
         ],
         "en": [
-          "More time, several outfits / settings",
-          "Close-ups and half-length frames for web & social",
-          "Pose and gaze direction",
-          "Retouching for professional use",
-          "Delivery as digital files"
+          "90-minute session (studio and/or outdoor in Bern)",
+          "Multiple outfit changes & visual setups",
+          "Guided posing & creative direction",
+          "From 10 retouched high-resolution photos",
+          "Delivery within 5 business days"
         ],
         "es": [
-          "Más tiempo, varios outfits / settings",
-          "Primeros planos y planos medios para web y redes",
-          "Dirección de pose y mirada",
-          "Retoque para uso profesional",
-          "Entrega en archivos digitales"
+          "Sesión de 90 minutos (estudio y/o exterior en Berna)",
+          "Varios cambios de vestuario y ambientes visuales",
+          "Dirección de pose y estilo personalizada",
+          "Desde 10 fotos retocadas en alta resolución",
+          "Entrega en 5 días laborables"
         ]
       },
       "priceLabel": {
-        "de": "Ab 350 CHF",
+        "de": "Ab CHF 350",
         "en": "From CHF 350",
-        "es": "Desde 350 CHF"
+        "es": "Desde CHF 350"
+      },
+      "note": {
+        "de": "Ideal für Selbstständige, Coaches & Freelancer",
+        "en": "Ideal for entrepreneurs, coaches & independent professionals",
+        "es": "Ideal para emprendedores, coaches y profesionales independientes"
       }
     },
     {
@@ -91,9 +101,9 @@
       "price": 350,
       "currency": "CHF",
       "name": {
-        "de": "Teams und kleine Unternehmen",
-        "en": "Teams and small businesses",
-        "es": "Equipos y pequeñas empresas"
+        "de": "Teams & Unternehmen",
+        "en": "Teams & Companies",
+        "es": "Equipos y Empresas"
       },
       "description": {
         "de": "Für Startups und kleine Teams mit einer gemeinsamen Bildsprache.",
@@ -102,31 +112,44 @@
       },
       "includes": {
         "de": [
-          "Studio- oder Büro-Session",
-          "Individuelle Führung pro Person",
-          "Retusche für professionelle Nutzung",
-          "Lieferung als digitale Dateien"
+          "Vor Ort in Ihrem Büro in Bern oder im Studio",
+          "Einheitliches Licht, Hintergrund & Bildstil für das gesamte Team",
+          "Einzelporträts + Gruppenaufnahmen",
+          "Hochauflösende Dateien für Web & Print inklusive",
+          "Individuelles Angebot je nach Teamgrösse"
         ],
         "en": [
-          "Studio or office session",
-          "Individual direction per person",
-          "Retouching for professional use",
-          "Delivery as digital files"
+          "On-site at your office in Bern or in my studio",
+          "Consistent lighting, background & visual style across the team",
+          "Individual portraits + group photos",
+          "High-resolution web & print files included",
+          "Custom quote based on team size"
         ],
         "es": [
-          "Sesión en estudio u oficina",
-          "Dirección individual por persona",
-          "Retoque para uso profesional",
-          "Entrega en archivos digitales"
+          "En sus oficinas en Berna o en mi estudio",
+          "Iluminación, fondo y estilo visual homogéneos para todo el equipo",
+          "Retratos individuales + fotos de grupo",
+          "Archivos en alta resolución para web e impresión incluidos",
+          "Presupuesto a medida según el tamaño del equipo"
         ]
       },
       "priceLabel": {
-        "de": "Ab 350 CHF",
+        "de": "Ab CHF 350",
         "en": "From CHF 350",
-        "es": "Desde 350 CHF"
+        "es": "Desde CHF 350"
+      },
+      "note": {
+        "de": "Unverbindliches Firmenangebot anfragen",
+        "en": "Ask for a tailored corporate package",
+        "es": "Solicite una propuesta personalizada para su empresa"
       }
     }
   ],
+  "packagesNote": {
+    "de": "Alle Preise sind Endpreise (mehrwertsteuerbefreit gemäss Art. 10 Abs. 2 MWSTG). Keine Posing-Erfahrung erforderlich.",
+    "en": "All prices are final (exempt from VAT pursuant to Art. 10 para. 2 Swiss MWSTG). No prior posing experience needed.",
+    "es": "Todos los precios son finales (exento de IVA según el art. 10, párr. 2, de la ley suiza MWSTG). No necesita experiencia previa posando."
+  },
   "includedInAll": {
     "de": [
       "Vorbereitung der Session",
@@ -175,9 +198,9 @@
         "es": "¿Cuánto cuesta un retrato en Berna?"
       },
       "answer": {
-        "de": "Professionelle Porträts ab 150 CHF, Personal Branding und Team-Sessions ab 350 CHF. Alle Pakete inkl. Vorbereitung, Session, Auswahl und Bearbeitung.",
-        "en": "Professional portraits from CHF 150; personal branding and team sessions from CHF 350. All packages include preparation, the session, selection and editing.",
-        "es": "Retratos profesionales desde 150 CHF; marca personal y equipos desde 350 CHF. Todos los paquetes incluyen preparación, sesión, selección y edición."
+        "de": "Business- & LinkedIn-Porträts für CHF 150, Personal Branding und Team-Sessions ab CHF 350. Alle Pakete inkl. Vorbereitung, Session, Auswahl und Bearbeitung.",
+        "en": "Professional & LinkedIn portraits for CHF 150; personal branding and team sessions from CHF 350. All packages include preparation, the session, selection and editing.",
+        "es": "Retrato profesional y LinkedIn por CHF 150; marca personal y equipos desde CHF 350. Todos los paquetes incluyen preparación, sesión, selección y edición."
       }
     },
     {
