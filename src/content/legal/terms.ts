@@ -43,7 +43,9 @@ Diese AGB regeln Fotografie-Dienstleistungen von {{business_name}}. Sie gelten *
 ## **4. Leistungsumfang und Lieferung**
 
 - Umfang (Dauer, Anzahl bearbeiteter Bilder, Format, Nutzungsrechte) ergibt sich aus dem **Angebot**.
-- Bearbeitete Bilder werden in der Regel innerhalb von **3 Arbeitstagen** nach der Session in digitaler Form bereitgestellt, sofern nicht anders vereinbart.
+- Bearbeitete Bilder werden in digitaler Form bereitgestellt, sofern nicht anders vereinbart, in der Regel innerhalb folgender Fristen:
+  - **Einzelporträts und LinkedIn-Sessions im Studio:** innerhalb von **3 bis 5 Arbeitstagen** nach der Bildauswahl.
+  - **Eventfotografie, Teamfotos und umfangreiche Firmenprojekte:** innerhalb von **2 bis 4 Wochen** nach dem Anlass bzw. der Session.
 - **Zusätzliche Retuschen** oder Express-Lieferung sind nur gegen Aufpreis und schriftliche Vereinbarung.
 - Digitale Dateien werden für **12 Monate** zum Download bereitgestellt; danach obliegt die Archivierung dem Kunden.
 
@@ -150,7 +152,9 @@ These terms govern photography services provided by {{business_name}}. They are 
 ## **4. Scope of Services and Delivery**
 
 - Scope (duration, number of edited images, file format, usage rights) is defined in the **quote**.
-- Edited images are normally delivered digitally within **3 business days** after the session unless otherwise agreed.
+- Edited images are delivered digitally, unless otherwise agreed, normally within the following periods:
+  - **Individual portraits and LinkedIn studio sessions:** within **3 to 5 business days** after the image selection.
+  - **Event photography, team photos and larger corporate projects:** within **2 to 4 weeks** after the event or session.
 - **Extra retouching** or express delivery is available only by written agreement and additional fee.
 - Digital files are available for download for **12 months**; archiving thereafter is the client’s responsibility.
 
@@ -257,7 +261,9 @@ Estas condiciones regulan los servicios de fotografía de {{business_name}}. Son
 ## **4. Alcance del servicio y entrega**
 
 - El alcance (duración, número de imágenes editadas, formato, derechos de uso) consta en la **oferta**.
-- Las imágenes editadas se entregan normalmente en **3 días laborables** tras la sesión, salvo otro plazo acordado.
+- Las imágenes editadas se entregan en formato digital, salvo otro plazo acordado, normalmente en los siguientes plazos:
+  - **Retratos individuales y sesiones de LinkedIn en estudio:** en **3 a 5 días laborables** tras la selección de las imágenes.
+  - **Fotografía de eventos, equipos y proyectos corporativos amplios:** en **2 a 4 semanas** tras el evento o la sesión.
 - **Retoques adicionales** o entrega urgente solo con acuerdo escrito y suplemento.
 - Los archivos digitales están disponibles para descarga durante **12 meses**; después el archivo es responsabilidad del cliente.
 
