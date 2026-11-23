@@ -43,7 +43,7 @@ Diese AGB regeln Fotografie-Dienstleistungen von {{business_name}}. Sie gelten *
 ## **4. Leistungsumfang und Lieferung**
 
 - Umfang (Dauer, Anzahl bearbeiteter Bilder, Format, Nutzungsrechte) ergibt sich aus dem **Angebot**.
-- Bearbeitete Bilder werden in der Regel innerhalb von **4-6 Wochen** nach der Session in digitaler Form bereitgestellt, sofern nicht anders vereinbart.
+- Bearbeitete Bilder werden in der Regel innerhalb von **3 Arbeitstagen** nach der Session in digitaler Form bereitgestellt, sofern nicht anders vereinbart.
 - **Zusätzliche Retuschen** oder Express-Lieferung sind nur gegen Aufpreis und schriftliche Vereinbarung.
 - Digitale Dateien werden für **12 Monate** zum Download bereitgestellt; danach obliegt die Archivierung dem Kunden.
 
@@ -150,7 +150,7 @@ These terms govern photography services provided by {{business_name}}. They are 
 ## **4. Scope of Services and Delivery**
 
 - Scope (duration, number of edited images, file format, usage rights) is defined in the **quote**.
-- Edited images are normally delivered digitally within **4-6 weeks** after the session unless otherwise agreed.
+- Edited images are normally delivered digitally within **3 business days** after the session unless otherwise agreed.
 - **Extra retouching** or express delivery is available only by written agreement and additional fee.
 - Digital files are available for download for **12 months**; archiving thereafter is the client’s responsibility.
 
@@ -257,7 +257,7 @@ Estas condiciones regulan los servicios de fotografía de {{business_name}}. Son
 ## **4. Alcance del servicio y entrega**
 
 - El alcance (duración, número de imágenes editadas, formato, derechos de uso) consta en la **oferta**.
-- Las imágenes editadas se entregan normalmente en **4-6 semanas** tras la sesión, salvo otro plazo acordado.
+- Las imágenes editadas se entregan normalmente en **3 días laborables** tras la sesión, salvo otro plazo acordado.
 - **Retoques adicionales** o entrega urgente solo con acuerdo escrito y suplemento.
 - Los archivos digitales están disponibles para descarga durante **12 meses**; después el archivo es responsabilidad del cliente.
 
