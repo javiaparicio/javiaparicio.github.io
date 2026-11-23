@@ -9,10 +9,11 @@ import brandLogoMark from '../assets/brand/logo-mark.webp';
 
 interface Props {
   locale: Locale;
-  pageKey: PageKey;
+  pageKey?: PageKey;
+  langLinks?: Partial<Record<Locale, string>>;
 }
 
-const { locale, pageKey } = Astro.props;
+const { locale, pageKey, langLinks } = Astro.props;
 
 const nav = [
   { key: 'portfolio' as const, href: getPagePath('portfolio', locale), label: ui.nav.portfolio[locale] },
@@ -22,10 +23,10 @@ const nav = [
 ];
 
 function langHref(target: Locale): string {
-  return getPagePath(pageKey, target);
+  return langLinks?.[target] ?? getPagePath(pageKey ?? 'home', target);
 }
 
-const portfolioActive = ['portfolio', 'portraits', 'events'].includes(pageKey);
+const portfolioActive = pageKey !== undefined && ['portfolio', 'portraits', 'events'].includes(pageKey);
 ---
 
 <a class="skip-link" href="#main">Skip to content</a>

@@ -37,6 +37,11 @@ export const PAGE_PATHS: Record<
   linktree: { de: '/linktree/', en: '/linktree/', es: '/linktree/' },
 };
 
+/** Single-language landing pages: no translations, so no hreflang alternates */
+export const LANDING_PATHS = {
+  linkedinHeadshotsBern: '/en/linkedin-headshots-bern/',
+} as const;
+
 /** Project slug → page key for dedicated gallery URLs */
 export const PROJECT_PAGE: Record<string, PageKey> = {
   portraits: 'portraits',

@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../../lib/i18n';
-import { getPagePath, type PageKey } from '../../lib/routes';
+import { getPagePath, LANDING_PATHS, type PageKey } from '../../lib/routes';
 import { pageHeadings, ui } from '../../lib/ui';
 import type { PricingPackage } from '../../content/pages/pricing-packages';
 import {
@@ -72,6 +72,11 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
                     ))}
                   </ul>
                   <p class="pricing-package__note">{pkg.note[locale]}</p>
+                  {locale === 'en' && pkg.id === 'professional-portrait' && (
+                    <p class="pricing-package__more">
+                      <a href={LANDING_PATHS.linkedinHeadshotsBern}>Learn more about LinkedIn headshots in Bern →</a>
+                    </p>
+                  )}
                 </article>
               ))}
             </div>
@@ -178,6 +183,11 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
 
   .pricing-note {
     margin-top: var(--gap-stack);
+  }
+
+  .pricing-package__more {
+    margin: var(--space-3) 0 0;
+    font-size: var(--text-sm);
   }
 
   .pricing-included {

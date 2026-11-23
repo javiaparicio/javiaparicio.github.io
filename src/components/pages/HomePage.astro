@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import type { ProjectImage } from '../../lib/images';
 import { getProjectBySlug, resolveProject } from '../../lib/projects';
-import { getPagePath } from '../../lib/routes';
+import { getPagePath, LANDING_PATHS } from '../../lib/routes';
 import { pricingPackages } from '../../content/pages/pricing-packages';
 import { ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -123,6 +123,13 @@ const processSteps = [
             ))
           }
         </ul>
+        {
+          locale === 'en' && (
+            <p class="home-info__landing">
+              <a href={LANDING_PATHS.linkedinHeadshotsBern}>Learn more about LinkedIn headshots in Bern →</a>
+            </p>
+          )
+        }
         <div class="cta-row">
           <a class="btn" href={getPagePath('pricing', locale)}>{ui.home.moreInfo[locale]}</a>
           <a class="btn btn--ghost" href={getPagePath('contact', locale)}>{ui.home.cta[locale]}</a>
@@ -310,6 +317,11 @@ const processSteps = [
     font-size: var(--text-base);
     white-space: nowrap;
     color: var(--color-ink);
+  }
+
+  .home-info__landing {
+    margin: 0 0 var(--gap-stack);
+    font-size: var(--text-sm);
   }
 
   .home-info__steps,

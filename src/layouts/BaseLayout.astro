@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
 import { LOCALE_META, LOCALES } from '../lib/i18n';
-import { absoluteUrl, getPagePath, hreflangMap, type PageKey } from '../lib/routes';
+import { absoluteUrl, hreflangMap, type PageKey } from '../lib/routes';
 import { SITE } from '../lib/site';
 import { pageDescriptions, pageTitles } from '../lib/ui';
 import '../styles/global.css';
@@ -10,9 +10,17 @@ import Footer from '../components/Footer.astro';
 
 interface Props {
   locale: Locale;
-  pageKey: PageKey;
+  /** Omit for pages outside PAGE_PATHS (then `title`, `description` and `alternates` are required). */
+  pageKey?: PageKey;
   title?: string;
   description?: string;
+  /**
+   * Paths of the translations that really exist, e.g. `{ en: '/en/foo/' }` for a single-language page.
+   * Defaults to all three locales of `pageKey`.
+   */
+  alternates?: Partial<Record<Locale, string>>;
+  /** Override the header language switcher targets. */
+  langLinks?: Partial<Record<Locale, string>>;
   ogImage?: string;
   noindex?: boolean;
   bodyClass?: string;
@@ -23,12 +31,14 @@ const {
   pageKey,
   title: titleProp,
   description: descriptionProp,
+  alternates: alternatesProp,
+  langLinks,
   ogImage = '/og-default.webp',
   noindex = false,
   bodyClass = '',
 } = Astro.props;
 
-const titleBase = titleProp ?? pageTitles[pageKey][locale];
+const titleBase = titleProp ?? (pageKey ? pageTitles[pageKey][locale] : SITE.brand);
 const homeTitleMiddle =
   locale === 'en'
     ? 'LinkedIn & Event Photography'
@@ -39,9 +49,17 @@ const fullTitle =
   pageKey === 'home'
     ? `${titleBase} | ${homeTitleMiddle} | ${SITE.brand}`
     : `${titleBase} | ${SITE.brand}`;
-const description = descriptionProp ?? pageDescriptions[pageKey][locale];
-const canonical = absoluteUrl(getPagePath(pageKey, locale));
-const alternates = hreflangMap(pageKey);
+const description = descriptionProp ?? (pageKey ? pageDescriptions[pageKey][locale] : '');
+const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).href;
+const alternates: Partial<Record<Locale, string>> = alternatesProp
+  ? Object.fromEntries(
+      Object.entries(alternatesProp).map(([l, path]) => [l, absoluteUrl(path)]),
+    )
+  : pageKey
+    ? hreflangMap(pageKey)
+    : { [locale]: canonical };
+const alternateLocales = LOCALES.filter((l) => alternates[l]);
+const hasTranslations = alternateLocales.length > 1;
 const ogLocale = LOCALE_META[locale].ogLocale;
 const htmlLang = LOCALE_META[locale].htmlLang;
 ---
@@ -79,11 +97,11 @@ const htmlLang = LOCALE_META[locale].htmlLang;
     )}
     <link rel="canonical" href={canonical} />
     {
-      LOCALES.map((l) => (
-        <link rel="alternate" hreflang={l === 'de' ? 'de-CH' : l === 'en' ? 'en-CH' : 'es'} href={alternates[l]} />
+      alternateLocales.map((l) => (
+        <link rel="alternate" hreflang={LOCALE_META[l].htmlLang} href={alternates[l]} />
       ))
     }
-    <link rel="alternate" hreflang="x-default" href={alternates.de} />
+    {hasTranslations && alternates.de && <link rel="alternate" hreflang="x-default" href={alternates.de} />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.brand} />
@@ -92,7 +110,7 @@ const htmlLang = LOCALE_META[locale].htmlLang;
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale} />
     {
-      LOCALES.filter((l) => l !== locale).map((l) => (
+      alternateLocales.filter((l) => l !== locale).map((l) => (
         <meta property="og:locale:alternate" content={LOCALE_META[l].ogLocale} />
       ))
     }
@@ -130,7 +148,7 @@ const htmlLang = LOCALE_META[locale].htmlLang;
   </head>
   <body class={bodyClass}>
     <div class="site-shell">
-      <Header locale={locale} pageKey={pageKey} />
+      <Header locale={locale} pageKey={pageKey} langLinks={langLinks} />
       <main class="site-main" id="main">
         <slot />
       </main>

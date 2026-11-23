@@ -1,0 +1,312 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import StructuredData from '../../../components/StructuredData.astro';
+import Testimonials from '../../../components/Testimonials.astro';
+import { getPagePath, LANDING_PATHS } from '../../../lib/routes';
+import { SITE } from '../../../lib/site';
+import portraitShirt from '../../../content/projects/portraits/images/27.webp';
+import portraitBlazer from '../../../content/projects/portraits/images/24.webp';
+import portraitSmile from '../../../content/projects/portraits/images/05.webp';
+import portraitBlazerDark from '../../../content/projects/portraits/images/08.webp';
+import portraitBlouse from '../../../content/projects/portraits/images/25.webp';
+import portraitSuspenders from '../../../content/projects/portraits/images/07.webp';
+
+const path = LANDING_PATHS.linkedinHeadshotsBern;
+const contactPath = getPagePath('contact', 'en');
+
+const gallery = [
+  { src: portraitShirt, alt: 'Natural LinkedIn portrait of a male professional in a shirt, arms crossed, Bern studio' },
+  { src: portraitBlazer, alt: 'Business portrait of a smiling woman in a navy blazer against a light studio background in Bern' },
+  { src: portraitSmile, alt: 'Relaxed LinkedIn headshot of a smiling man in a casual shirt on a dark studio background' },
+  { src: portraitBlazerDark, alt: 'Professional portrait of a woman in a black double-breasted blazer, Bern studio' },
+  { src: portraitBlouse, alt: 'Seated business portrait of a woman in a light blue blouse on a grey background' },
+  { src: portraitSuspenders, alt: 'Black-and-white portrait of a smiling man in a white shirt and suspenders' },
+];
+
+const steps = [
+  {
+    title: 'Quick Prep & Arrival',
+    text: 'Tell me what role or industry you are targeting. Bring 1–2 outfit options to my studio in Bern (3014) so we can match the right background and lighting.',
+  },
+  {
+    title: 'Guided Shooting (No Posing Skills Needed)',
+    text: 'We take our time with relaxed coaching on posture, expression, and angles. You review the shots live on screen as we go—no guesswork.',
+  },
+  {
+    title: 'Fast Delivery Ready for LinkedIn',
+    text: 'We pick your top 3 favorites together before you leave. Within 48–72 hours, you receive retouched high-resolution files plus a ready-to-upload LinkedIn crop.',
+  },
+];
+
+const includes = [
+  '30-minute guided studio session in Bern',
+  '1 outfit change',
+  'Live image selection together on screen',
+  '3 retouched high-resolution photos (+ LinkedIn-ready crop)',
+  'Fast delivery within 48–72 hours',
+];
+
+const faq = [
+  {
+    question: 'What should I wear for a LinkedIn headshot?',
+    answer:
+      'Solid colors and well-fitted layers (such as a blazer, shirt, or clean knitwear) work best and keep the focus on your face. Avoid busy patterns, thin stripes, or large logos. You can bring one extra outfit so we can shoot two distinct looks.',
+  },
+  {
+    question: 'I usually feel awkward in front of a camera. Is that a problem?',
+    answer:
+      'Not at all—most of my clients say the exact same thing before we start. You do not need any posing experience. I guide you step by step with natural prompts and show you the results on screen during the session so you can relax and see how good you look.',
+  },
+  {
+    question: 'Can I wear glasses during the shoot?',
+    answer:
+      'Yes. If you wear glasses daily, you should wear them in your LinkedIn photo so people recognize you. I adjust the studio lighting angles specifically to avoid distracting reflections on your lenses.',
+  },
+  {
+    question: 'How fast will I receive my finished photos?',
+    answer:
+      'Your 3 selected images are professionally retouched (natural skin tones, stray hairs, lighting balance) and delivered digitally within 48 to 72 hours, in both full resolution and an optimized square crop for LinkedIn.',
+  },
+];
+---
+
+<BaseLayout
+  locale="en"
+  title="LinkedIn Headshots & Business Portraits in Bern"
+  description="Natural, guided LinkedIn headshots and professional portraits in Bern. Own studio in 3014 Bern, transparent pricing at CHF 150, live image selection and fast 48–72h delivery."
+  alternates={{ en: path }}
+  langLinks={{ de: getPagePath('home', 'de'), en: path, es: getPagePath('home', 'es') }}
+>
+  <StructuredData slot="head" locale="en" pageType="WebPage" />
+
+  <div class="container page-block page-block--last">
+    <header class="page-header landing-hero">
+      <p class="eyebrow">Studio &amp; On-Location in Bern · English-Speaking Photographer</p>
+      <h1>LinkedIn Headshots &amp; Business Portraits in Bern</h1>
+      <p class="lead">
+        Look approachable, confident, and credible—even if you hate being in front of a camera. Guided
+        30-minute studio sessions in Bern with live image selection and delivery in 48–72 hours.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href={contactPath}>Book your session</a>
+        <a class="btn btn--ghost" href="#pricing">See pricing &amp; details</a>
+      </div>
+    </header>
+
+    <section class="page-block" aria-label="Selected LinkedIn and business portraits">
+      <div class="landing-gallery">
+        {
+          gallery.map((image, index) => (
+            <figure class="landing-gallery__item">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                widths={[360, 540, 800]}
+                sizes="(max-width: 800px) 50vw, 33vw"
+                format="webp"
+                quality={85}
+                loading={index < 3 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="page-block">
+      <h2 class="section-title">How a 30-Minute Session Works</h2>
+      <ol class="landing-steps">
+        {
+          steps.map((step, index) => (
+            <li class="landing-steps__item">
+              <p class="landing-steps__number">Step {index + 1}</p>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="page-block" id="pricing">
+      <h2 class="section-title">Transparent Pricing</h2>
+      <article class="landing-package">
+        <h3 class="landing-package__name">LinkedIn &amp; Business Portrait</h3>
+        <p class="landing-package__price">CHF 150</p>
+        <ul class="landing-package__includes">
+          {includes.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="landing-package__note">Additional retouched photos: CHF 35 each</p>
+        <p class="landing-package__note">Final price (exempt from VAT pursuant to Art. 10 para. 2 Swiss MWSTG).</p>
+        <div class="cta-row">
+          <a class="btn" href={contactPath}>Book this package</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="page-block">
+      <Testimonials lang="en" />
+    </div>
+
+    <section class="page-block">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="landing-faq">
+        {
+          faq.map((item) => (
+            <details class="landing-faq__item">
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="landing-cta">
+      <h2 class="section-title">Ready to update your LinkedIn profile?</h2>
+      <p class="landing-cta__text">
+        Sessions are available in English, German, or Spanish at my studio in Bern. Send a quick message with
+        your preferred days and I will get back to you within 24 hours.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href={contactPath}>Contact &amp; Book</a>
+        <a class="btn btn--ghost" href={SITE.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .landing-hero .lead {
+    margin-bottom: 0;
+  }
+
+  .landing-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.65rem, 1.4vw, 1.1rem);
+  }
+
+  .landing-gallery__item {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: #e6e6e2;
+  }
+
+  .landing-gallery__item :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--img-focus-face);
+  }
+
+  .landing-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--gap-section);
+  }
+
+  .landing-steps__item {
+    margin: 0;
+    padding-top: var(--gap-stack);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .landing-steps__number,
+  .landing-package__note {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-ink-muted);
+  }
+
+  .landing-steps__number {
+    text-transform: uppercase;
+  }
+
+  .landing-steps__item h3 {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-base);
+    font-weight: 400;
+  }
+
+  .landing-steps__item p:last-child,
+  .landing-faq__item p,
+  .landing-cta__text {
+    margin: 0;
+    color: var(--color-ink-muted);
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+
+  .landing-package {
+    max-width: var(--max-w-narrow);
+    padding: var(--gap-stack) 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .landing-package__name {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+  }
+
+  .landing-package__price {
+    margin: 0 0 var(--gap-heading);
+    font-size: var(--text-lg);
+    color: var(--color-ink);
+  }
+
+  .landing-package__includes {
+    margin: 0 0 var(--gap-heading);
+    padding-left: 1.15em;
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--color-ink-muted);
+  }
+
+  .landing-faq__item {
+    padding: var(--gap-stack) 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .landing-faq__item:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .landing-faq__item summary {
+    cursor: pointer;
+    font-size: var(--text-base);
+    color: var(--color-ink);
+  }
+
+  .landing-faq__item[open] summary {
+    margin-bottom: var(--gap-heading);
+  }
+
+  .landing-cta {
+    padding-top: var(--gap-section);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .landing-cta__text {
+    max-width: var(--max-w-narrow);
+  }
+
+  @media (max-width: 800px) {
+    .landing-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .landing-steps {
+      grid-template-columns: 1fr;
+      gap: var(--gap-stack);
+    }
+  }
+</style>
