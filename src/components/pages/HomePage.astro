@@ -8,6 +8,7 @@ import { pricingPackages } from '../../content/pages/pricing-packages';
 import { ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StructuredData from '../StructuredData.astro';
+import Testimonials from '../Testimonials.astro';
 
 interface Props {
   locale: Locale;
@@ -127,6 +128,8 @@ const processSteps = [
           <a class="btn btn--ghost" href={getPagePath('contact', locale)}>{ui.home.cta[locale]}</a>
         </div>
       </div>
+
+      <Testimonials lang={locale} />
 
       <div class="home-info__block">
         <h2>{ui.home.processTitle[locale]}</h2>

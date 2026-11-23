@@ -1,0 +1,140 @@
+---
+import type { Locale } from '../lib/i18n';
+import { googleReviews } from '../data/reviews';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+
+const copy = {
+  en: {
+    title: 'What clients say',
+    badge: (rating: string, total: number) => [`${rating}`, `rating on Google (${total} verified reviews)`],
+    link: 'Read all reviews on Google',
+    stars: '5 out of 5 stars',
+  },
+  de: {
+    title: 'Kundenstimmen',
+    badge: (rating: string, total: number) => [`${rating}`, `Bewertung auf Google (${total} verifizierte Rezensionen)`],
+    link: 'Alle Rezensionen auf Google ansehen',
+    stars: '5 von 5 Sternen',
+  },
+  es: {
+    title: 'Lo que dicen mis clientes',
+    badge: (rating: string, total: number) => [`Valoración de ${rating}`, `en Google (${total} reseñas verificadas)`],
+    link: 'Ver todas las reseñas en Google',
+    stars: '5 de 5 estrellas',
+  },
+} as const;
+
+const t = copy[lang];
+const [badgeBefore, badgeAfter] = t.badge(googleReviews.rating.toFixed(1), googleReviews.total);
+const featured = googleReviews.reviews.filter((review) => review.featured);
+const starPath =
+  'M12 2.5l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.52l-5.88 3.09 1.12-6.55L2.48 9.42l6.58-.96z';
+---
+
+<section class="testimonials" aria-labelledby="testimonials-title">
+  <h2 id="testimonials-title" class="testimonials__title">{t.title}</h2>
+  <p class="testimonials__badge">
+    {badgeBefore} <span aria-hidden="true">★</span> {badgeAfter}
+  </p>
+
+  <div class="testimonials__grid">
+    {
+      featured.map((review) => (
+        <figure class="testimonial">
+          <svg class="testimonial__stars" viewBox="0 0 120 24" role="img" aria-label={t.stars}>
+            {[0, 1, 2, 3, 4].map((i) => (
+              <path d={starPath} transform={`translate(${i * 24} 0)`} />
+            ))}
+          </svg>
+          <blockquote class="testimonial__quote" lang={review.lang}>
+            <p>{review.text}</p>
+          </blockquote>
+          <figcaption class="testimonial__author">
+            <cite>{review.author}</cite>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+
+  <p class="testimonials__more">
+    <a href={googleReviews.url} target="_blank" rel="noopener noreferrer">{t.link}</a>
+  </p>
+</section>
+
+<style>
+  .testimonials__title {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    letter-spacing: var(--tracking-snug);
+  }
+
+  .testimonials__badge {
+    margin: 0 0 var(--gap-stack);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 var(--gap-section);
+  }
+
+  .testimonial {
+    margin: 0;
+    padding: var(--gap-stack) 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .testimonial__stars {
+    display: block;
+    width: 5.5rem;
+    height: auto;
+    margin-bottom: var(--gap-heading);
+    fill: var(--color-ink);
+  }
+
+  .testimonial__quote {
+    margin: 0 0 var(--gap-heading);
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--color-ink-muted);
+  }
+
+  .testimonial__quote p {
+    margin: 0;
+  }
+
+  .testimonial__author {
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-ink);
+  }
+
+  .testimonial__author cite {
+    font-style: normal;
+  }
+
+  .testimonials__more {
+    margin: var(--space-3) 0 0;
+    font-size: var(--text-sm);
+  }
+
+  @media (max-width: 800px) {
+    .testimonials__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

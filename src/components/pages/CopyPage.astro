@@ -10,6 +10,7 @@ import {
 } from '../../content/pages/pricing-packages';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StructuredData from '../StructuredData.astro';
+import Testimonials from '../Testimonials.astro';
 
 interface Props {
   locale: Locale;
@@ -87,6 +88,10 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
                   <li>{item}</li>
                 ))}
               </ul>
+            </div>
+
+            <div class="pricing-testimonials">
+              <Testimonials lang={locale} />
             </div>
           </div>
 
@@ -175,6 +180,10 @@ const pricingParts = packages?.length ? splitPricingHtml(html) : null;
     margin: 0;
     font-size: var(--text-base);
     color: var(--color-ink-muted);
+  }
+
+  .pricing-testimonials {
+    margin-top: var(--gap-section);
   }
 
   .pricing-faq {
