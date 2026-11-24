@@ -108,37 +108,35 @@ import img404 from '../assets/brand/404.webp';
         </div>
       </div>
     </main>
-    <script is:inline>
-      (function () {
-        var path = window.location.pathname || '/';
-        var lang = 'de';
-        if (path === '/en' || path.indexOf('/en/') === 0) lang = 'en';
-        else if (path === '/es' || path.indexOf('/es/') === 0) lang = 'es';
+    <script>
+      const path = window.location.pathname || '/';
+      let lang = 'de';
+      if (path === '/en' || path.indexOf('/en/') === 0) lang = 'en';
+      else if (path === '/es' || path.indexOf('/es/') === 0) lang = 'es';
 
-        var titles = {
-          de: 'Seite nicht gefunden – Javi Aparicio Foto',
-          en: 'Page not found – Javi Aparicio Foto',
-          es: 'Página no encontrada – Javi Aparicio Foto',
-        };
-        var descriptions = {
-          de: 'Die angeforderte Seite existiert nicht. Zurück zur Startseite von Javi Aparicio Foto, Portraitfotograf in Bern.',
-          en: 'The page you requested does not exist. Return to Javi Aparicio Foto, portrait photographer in Bern.',
-          es: 'La página solicitada no existe. Vuelva a Javi Aparicio Foto, fotógrafo de retratos en Berna.',
-        };
-        var locales = { de: 'de-CH', en: 'en-CH', es: 'es' };
-        var homes = { de: '/', en: '/en/', es: '/es/' };
+      const titles = {
+        de: 'Seite nicht gefunden – Javi Aparicio Foto',
+        en: 'Page not found – Javi Aparicio Foto',
+        es: 'Página no encontrada – Javi Aparicio Foto',
+      };
+      const descriptions = {
+        de: 'Die angeforderte Seite existiert nicht. Zurück zur Startseite von Javi Aparicio Foto, Portraitfotograf in Bern.',
+        en: 'The page you requested does not exist. Return to Javi Aparicio Foto, portrait photographer in Bern.',
+        es: 'La página solicitada no existe. Vuelva a Javi Aparicio Foto, fotógrafo de retratos en Berna.',
+      };
+      const locales = { de: 'de-CH', en: 'en-CH', es: 'es' };
+      const homes = { de: '/', en: '/en/', es: '/es/' };
 
-        document.documentElement.lang = locales[lang];
-        document.title = titles[lang];
-        var metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.setAttribute('content', descriptions[lang]);
-        var homeLink = document.getElementById('error-home-link');
-        if (homeLink) homeLink.href = homes[lang];
+      document.documentElement.lang = locales[lang];
+      document.title = titles[lang];
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', descriptions[lang]);
+      const homeLink = document.getElementById('error-home-link');
+      if (homeLink instanceof HTMLAnchorElement) homeLink.href = homes[lang];
 
-        document.querySelectorAll('[data-404-lang]').forEach(function (el) {
-          el.hidden = el.getAttribute('data-404-lang') !== lang;
-        });
-      })();
+      document.querySelectorAll('[data-404-lang]').forEach((el) => {
+        if (el instanceof HTMLElement) el.hidden = el.getAttribute('data-404-lang') !== lang;
+      });
     </script>
   </body>
 </html>

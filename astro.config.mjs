@@ -87,6 +87,13 @@ export default defineConfig({
     layout: 'none',
   },
   vite: {
+    build: {
+      // Astro inlines script chunks under 4 kB. Keep every JS file external so
+      // script-src can omit 'unsafe-inline'. CSS inlining is unchanged.
+      assetsInlineLimit(filePath) {
+        if (filePath.endsWith('.js') || filePath.endsWith('.mjs')) return false;
+      },
+    },
     plugins: [redirectMissingTrailingSlash()],
     server: {
       watch: {

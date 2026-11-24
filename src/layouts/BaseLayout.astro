@@ -78,24 +78,8 @@ const htmlLang = LOCALE_META[locale].htmlLang;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {/* Remember last language (localStorage only — no cookies). Redirect home entry points. */}
-    <script is:inline>
-      (function () {
-        try {
-          var preferred = localStorage.getItem('jaf_lang');
-          if (preferred !== 'de' && preferred !== 'en' && preferred !== 'es') return;
-
-          var path = location.pathname;
-          if (path !== '/' && path !== '/en/' && path !== '/es/') return;
-
-          var current = path.indexOf('/en/') === 0 ? 'en' : path.indexOf('/es/') === 0 ? 'es' : 'de';
-          if (preferred === current) return;
-
-          var homes = { de: '/', en: '/en/', es: '/es/' };
-          location.replace(homes[preferred] + location.search + location.hash);
-        } catch (e) {}
-      })();
-    </script>
+    {/* Remember last language (localStorage only — no cookies). Blocking so it runs before paint. */}
+    <script is:inline src="/js/lang-redirect.js"></script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content={SITE.brand} />
@@ -171,15 +155,15 @@ const htmlLang = LOCALE_META[locale].htmlLang;
       </main>
       <Footer locale={locale} />
     </div>
-    <script is:inline>
-      (function () {
-        try {
-          var path = location.pathname;
-          var m = path.match(/^\/(en|es)(\/|$)/);
-          var lang = m ? m[1] : 'de';
-          localStorage.setItem('jaf_lang', lang);
-        } catch (e) {}
-      })();
+    <script>
+      try {
+        const path = location.pathname;
+        const match = path.match(/^\/(en|es)(\/|$)/);
+        const lang = match ? match[1] : 'de';
+        localStorage.setItem('jaf_lang', lang);
+      } catch {
+        /* storage unavailable */
+      }
     </script>
     {
       import.meta.env.PROD && (

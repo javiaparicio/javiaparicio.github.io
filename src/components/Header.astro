@@ -310,15 +310,17 @@ const portfolioActive = pageKey !== undefined && ['portfolio', 'portraits', 'eve
   }
 </style>
 
-<script is:inline>
-  document.querySelectorAll('.lang-switch a, .nav-mobile__langs a').forEach(function (a) {
-    a.addEventListener('click', function () {
+<script>
+  document.querySelectorAll('.lang-switch a, .nav-mobile__langs a').forEach((anchor) => {
+    anchor.addEventListener('click', () => {
       try {
-        var lang = a.getAttribute('data-lang') || a.textContent.trim().toLowerCase();
+        const lang = anchor.getAttribute('data-lang') || anchor.textContent?.trim().toLowerCase();
         if (lang === 'de' || lang === 'en' || lang === 'es') {
           localStorage.setItem('jaf_lang', lang);
         }
-      } catch (e) {}
+      } catch {
+        /* storage unavailable */
+      }
     });
   });
 </script>
