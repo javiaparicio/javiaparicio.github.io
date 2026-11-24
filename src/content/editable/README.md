@@ -32,6 +32,8 @@ Edit these files to change texts. You do **not** need to touch `.ts` / `.astro` 
 
 Every text has three values: `de`, `en`, `es`. Change all three when you edit.
 
+When a text lists languages, always use the order German, English, Spanish (e.g. "Deutsch, Englisch & Spanisch" · "German, English & Spanish" · "alemán, inglés y español").
+
 ## Markdown tips
 
 - Use `## Heading` for section titles
