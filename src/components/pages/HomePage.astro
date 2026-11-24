@@ -7,7 +7,6 @@ import { getPagePath, LANDING_PATHS } from '../../lib/routes';
 import { pricingPackages } from '../../content/pages/pricing-packages';
 import { ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import StructuredData from '../StructuredData.astro';
 import Testimonials from '../Testimonials.astro';
 
 interface Props {
@@ -39,8 +38,6 @@ const processSteps = [
 ---
 
 <BaseLayout locale={locale} pageKey="home" bodyClass="page-home">
-  <StructuredData slot="head" locale={locale} pageType="WebSite" />
-
   <section class="home-open">
     <div class="home-open__identity container">
       <p class="home-open__brand">{ui.home.brand[locale]}</p>

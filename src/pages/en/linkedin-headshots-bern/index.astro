@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import StructuredData from '../../../components/StructuredData.astro';
 import Testimonials from '../../../components/Testimonials.astro';
 import { getPagePath, LANDING_PATHS } from '../../../lib/routes';
 import { SITE } from '../../../lib/site';
@@ -77,9 +76,8 @@ const faq = [
   description="Natural, guided LinkedIn headshots and professional portraits in Bern. Own studio in 3014 Bern, transparent pricing at CHF 150, live image selection and fast 48–72h delivery."
   alternates={{ en: path }}
   langLinks={{ de: getPagePath('home', 'de'), en: path, es: getPagePath('home', 'es') }}
+  faqs={faq}
 >
-  <StructuredData slot="head" locale="en" pageType="WebPage" />
-
   <div class="container page-block page-block--last">
     <header class="page-header landing-hero">
       <p class="eyebrow">Studio &amp; On-Location in Bern · English-Speaking Photographer</p>

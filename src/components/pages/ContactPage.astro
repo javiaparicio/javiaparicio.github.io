@@ -6,7 +6,6 @@ import { pageCopy } from '../../content/pages/copy';
 import { pageHeadings, ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactForm from '../ContactForm.astro';
-import StructuredData from '../StructuredData.astro';
 import contactPortrait from '../../assets/contact/portrait.webp';
 
 interface Props {
@@ -18,8 +17,6 @@ const introHtml = applyContentTokens(pageCopy.contact[locale], locale);
 ---
 
 <BaseLayout locale={locale} pageKey="contact">
-  <StructuredData slot="head" locale={locale} pageType="ContactPage" />
-
   <div class="container page-block page-block--last">
     <header class="page-header page-header--with-lead">
       <h1>{pageHeadings.contact[locale]}</h1>

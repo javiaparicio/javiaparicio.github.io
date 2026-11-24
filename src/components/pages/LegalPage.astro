@@ -3,7 +3,6 @@ import type { Locale } from '../../lib/i18n';
 import type { PageKey } from '../../lib/routes';
 import { pageHeadings } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import StructuredData from '../StructuredData.astro';
 
 interface Props {
   locale: Locale;
@@ -17,8 +16,6 @@ const hasH1 = /<h1[\s>]/i.test(html);
 ---
 
 <BaseLayout locale={locale} pageKey={pageKey}>
-  <StructuredData slot="head" locale={locale} />
-
   <div class="container page-block page-block--last">
     {
       !hasH1 && (

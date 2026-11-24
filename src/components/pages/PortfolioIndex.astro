@@ -6,7 +6,6 @@ import { ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Gallery from '../Gallery.astro';
 import ProjectCard from '../ProjectCard.astro';
-import StructuredData from '../StructuredData.astro';
 
 interface Props {
   locale: Locale;
@@ -26,8 +25,6 @@ const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
 ---
 
 <BaseLayout locale={locale} pageKey="portfolio">
-  <StructuredData slot="head" locale={locale} />
-
   <div class="container page-block page-block--last">
     <header class="page-header">
       <h1>{ui.portfolio.title[locale]}</h1>

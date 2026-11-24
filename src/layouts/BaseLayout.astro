@@ -7,6 +7,8 @@ import { pageDescriptions, pageTitles } from '../lib/ui';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
+import type { Faq } from '../lib/schema';
 
 interface Props {
   locale: Locale;
@@ -21,6 +23,10 @@ interface Props {
   alternates?: Partial<Record<Locale, string>>;
   /** Override the header language switcher targets. */
   langLinks?: Partial<Record<Locale, string>>;
+  /** Visible FAQs on the page, emitted as FAQPage JSON-LD. */
+  faqs?: Faq[];
+  hasReviews?: boolean;
+  breadcrumbs?: { name: string; url: string }[];
   ogImage?: string;
   noindex?: boolean;
   bodyClass?: string;
@@ -33,6 +39,9 @@ const {
   description: descriptionProp,
   alternates: alternatesProp,
   langLinks,
+  faqs,
+  hasReviews,
+  breadcrumbs,
   ogImage = '/og-default.webp',
   noindex = false,
   bodyClass = '',
@@ -60,6 +69,14 @@ const alternates: Partial<Record<Locale, string>> = alternatesProp
     : { [locale]: canonical };
 const alternateLocales = LOCALES.filter((l) => alternates[l]);
 const hasTranslations = alternateLocales.length > 1;
+const schemaPageType =
+  pageKey === 'home'
+    ? undefined
+    : pageKey === 'about'
+      ? 'AboutPage'
+      : pageKey === 'contact'
+        ? 'ContactPage'
+        : 'WebPage';
 const ogLocale = LOCALE_META[locale].ogLocale;
 const htmlLang = LOCALE_META[locale].htmlLang;
 ---
@@ -144,6 +161,14 @@ const htmlLang = LOCALE_META[locale].htmlLang;
       crossorigin
     />
 
+    <SchemaOrg
+      lang={locale}
+      pageType={schemaPageType}
+      pageName={fullTitle}
+      breadcrumbs={breadcrumbs}
+      faqs={faqs}
+      hasReviews={hasReviews}
+    />
     <slot name="head" />
   </head>
   <body class={bodyClass}>

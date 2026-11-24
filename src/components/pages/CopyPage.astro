@@ -10,7 +10,6 @@ import {
   pricingPackagesNote,
 } from '../../content/pages/pricing-packages';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import StructuredData from '../StructuredData.astro';
 import Testimonials from '../Testimonials.astro';
 
 interface Props {
@@ -18,16 +17,9 @@ interface Props {
   pageKey: PageKey;
   html: string;
   packages?: PricingPackage[];
-  pageType?: 'WebPage' | 'AboutPage' | 'ContactPage';
 }
 
-const {
-  locale,
-  pageKey,
-  html,
-  packages,
-  pageType = pageKey === 'about' ? 'AboutPage' : 'WebPage',
-} = Astro.props;
+const { locale, pageKey, html, packages } = Astro.props;
 
 const title = pageHeadings[pageKey][locale];
 
@@ -43,11 +35,12 @@ function splitPricingHtml(raw: string): { intro: string; outro: string } {
 }
 
 const pricingParts = packages?.length ? splitPricingHtml(html) : null;
+const faqs = pricingParts
+  ? pricingFaq.map((item) => ({ question: item.question[locale], answer: item.answer[locale] }))
+  : undefined;
 ---
 
-<BaseLayout locale={locale} pageKey={pageKey}>
-  <StructuredData slot="head" locale={locale} pageType={pageType} />
-
+<BaseLayout locale={locale} pageKey={pageKey} faqs={faqs}>
   <div class="container page-block page-block--last">
     <header class="page-header">
       <h1>{title}</h1>

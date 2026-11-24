@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import { pageHeadings, ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import StructuredData from '../StructuredData.astro';
 import portrait from '../../assets/contact/javi.webp';
 
 interface Props {
@@ -15,8 +14,6 @@ const { locale, html } = Astro.props;
 ---
 
 <BaseLayout locale={locale} pageKey="about">
-  <StructuredData slot="head" locale={locale} pageType="AboutPage" />
-
   <div class="container page-block page-block--last">
     <header class="page-header">
       <h1>{pageHeadings.about[locale]}</h1>

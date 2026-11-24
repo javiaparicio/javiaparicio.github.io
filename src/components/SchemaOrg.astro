@@ -1,0 +1,204 @@
+---
+import type { Locale } from '../lib/i18n';
+import { LOCALE_META } from '../lib/i18n';
+import { BUSINESS_ID, WEBSITE_ID, jsonLd, type Faq } from '../lib/schema';
+import { SITE } from '../lib/site';
+import { googleReviews } from '../data/reviews';
+
+/** The only JSON-LD block on the page: business, website, page, breadcrumbs and FAQs in one @graph. */
+interface Props {
+  lang: Locale;
+  /** Omit on the home page (the WebSite node covers it). */
+  pageType?: 'WebPage' | 'AboutPage' | 'ContactPage';
+  pageName?: string;
+  breadcrumbs?: { name: string; url: string }[];
+  /** Must match the visible FAQ text on the page exactly. */
+  faqs?: Faq[];
+  /**
+   * Adds aggregateRating to the business node. Off everywhere: Google does not allow
+   * marking up third-party (Google Business) reviews or self-serving LocalBusiness ratings.
+   */
+  hasReviews?: boolean;
+}
+
+const { lang, pageType, pageName, breadcrumbs = [], faqs = [], hasReviews = false } = Astro.props;
+
+const inLanguage = LOCALE_META[lang].htmlLang;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? SITE.url).href;
+const logo = `${SITE.url}/assets/brand/javiAparicioFotoLogo.webp`;
+
+const catalog = {
+  en: {
+    name: 'Photography Services',
+    portrait: [
+      'LinkedIn & Business Portrait',
+      '30-minute guided studio session in Bern, 1 outfit change, live selection, 3 retouched photos + LinkedIn crop, 48-72h delivery.',
+    ],
+    branding: [
+      'Personal Branding',
+      '90-minute studio and/or outdoor session in Bern, multiple outfit changes, from 10 retouched photos.',
+    ],
+    teams: ['Teams & Companies', 'On-site or studio corporate portraits and team photography in Bern.'],
+    events: [
+      'Event Photography',
+      'Professional photography for corporate events, concerts, and cultural festivals in Bern and Switzerland.',
+    ],
+  },
+  de: {
+    name: 'Fotografie-Dienstleistungen',
+    portrait: [
+      'Business- & LinkedIn-Porträt',
+      '30 Minuten geführtes Studio-Shooting in Bern, 1 Outfit-Wechsel, gemeinsame Bildauswahl, 3 retuschierte Fotos + LinkedIn-Zuschnitt, Lieferung in 48–72 Std.',
+    ],
+    branding: [
+      'Personal Branding',
+      '90 Minuten Studio- und/oder Outdoor-Shooting in Bern, mehrere Outfit-Wechsel, ab 10 retuschierten Fotos.',
+    ],
+    teams: ['Teams & Unternehmen', 'Business-Porträts und Teamfotos vor Ort in Bern oder im Studio.'],
+    events: [
+      'Eventfotografie',
+      'Professionelle Eventfotografie für Firmenanlässe, Konzerte und Kulturfestivals in Bern und der Schweiz.',
+    ],
+  },
+  es: {
+    name: 'Servicios de fotografía',
+    portrait: [
+      'Retrato Profesional y LinkedIn',
+      'Sesión guiada de 30 minutos en estudio en Berna, 1 cambio de vestuario, selección en pantalla, 3 fotos retocadas + recorte para LinkedIn, entrega en 48–72 h.',
+    ],
+    branding: [
+      'Marca Personal',
+      'Sesión de 90 minutos en estudio y/o exterior en Berna, varios cambios de vestuario, desde 10 fotos retocadas.',
+    ],
+    teams: ['Equipos y Empresas', 'Retratos corporativos y fotos de equipo en oficinas de Berna o en estudio.'],
+    events: [
+      'Fotografía de Eventos',
+      'Fotografía profesional para eventos corporativos, conciertos y festivales culturales en Berna y Suiza.',
+    ],
+  },
+} satisfies Record<Locale, { name: string } & Record<'portrait' | 'branding' | 'teams' | 'events', [string, string]>>;
+
+const t = catalog[lang];
+
+const service = ([name, description]: [string, string]) => ({
+  '@type': 'Service',
+  name,
+  description,
+  provider: { '@id': BUSINESS_ID },
+  areaServed: { '@type': 'City', name: 'Bern' },
+});
+
+const fromChf = (minPrice: string) => ({
+  '@type': 'PriceSpecification',
+  minPrice,
+  priceCurrency: 'CHF',
+});
+
+const business = {
+  '@type': 'ProfessionalService',
+  '@id': BUSINESS_ID,
+  name: SITE.legalName,
+  alternateName: SITE.brand,
+  url: `${SITE.url}/`,
+  logo,
+  image: logo,
+  priceRange: 'CHF 150 - CHF 600',
+  currenciesAccepted: 'CHF',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: SITE.street,
+    addressLocality: SITE.city,
+    postalCode: SITE.postalCode,
+    addressCountry: 'CH',
+  },
+  areaServed: { '@type': 'City', name: 'Bern' },
+  knowsLanguage: ['de', 'en', 'es'],
+  sameAs: [
+    'https://maps.app.goo.gl/DaCMiAwSyeWQKWUCA',
+    'https://www.linkedin.com/company/javi-aparicio-foto',
+    'https://www.instagram.com/javiapariciofoto/',
+    'https://litmind.com/javiaparicio',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: SITE.owner,
+    jobTitle: 'Photographer',
+    sameAs: ['https://www.linkedin.com/in/javiaparicio/'],
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: t.name,
+    itemListElement: [
+      { '@type': 'Offer', price: '150', priceCurrency: 'CHF', itemOffered: service(t.portrait) },
+      { '@type': 'Offer', priceSpecification: fromChf('350'), itemOffered: service(t.branding) },
+      { '@type': 'Offer', priceSpecification: fromChf('350'), itemOffered: service(t.teams) },
+      { '@type': 'Offer', itemOffered: service(t.events) },
+    ],
+  },
+  aggregateRating: hasReviews
+    ? {
+        '@type': 'AggregateRating',
+        ratingValue: googleReviews.rating.toFixed(1),
+        reviewCount: String(googleReviews.total),
+        bestRating: '5',
+      }
+    : undefined,
+};
+
+const website = {
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  name: SITE.brand,
+  url: `${SITE.url}/`,
+  inLanguage,
+  publisher: { '@id': BUSINESS_ID },
+};
+
+const page = pageType
+  ? {
+      '@type': pageType,
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageName,
+      inLanguage,
+      isPartOf: { '@id': WEBSITE_ID },
+      about: { '@id': BUSINESS_ID },
+    }
+  : undefined;
+
+const crumbs =
+  breadcrumbs.length > 0
+    ? {
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((b, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: b.name,
+          item: b.url,
+        })),
+      }
+    : undefined;
+
+const faqPage =
+  faqs.length > 0
+    ? {
+        '@type': 'FAQPage',
+        '@id': `${pageUrl}#faq`,
+        url: pageUrl,
+        inLanguage,
+        isPartOf: { '@id': WEBSITE_ID },
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      }
+    : undefined;
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [business, website, page, crumbs, faqPage].filter(Boolean),
+};
+---
+
+<script type="application/ld+json" set:html={jsonLd(graph)} />
