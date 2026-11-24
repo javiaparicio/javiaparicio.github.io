@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { getPagePath } from '../lib/routes';
+import { getPagePath, LANDING_PATHS } from '../lib/routes';
 import { SITE } from '../lib/site';
 import { ui } from '../lib/ui';
 
@@ -22,6 +22,14 @@ const year = new Date().getFullYear();
     <p class="site-footer__line">
       <a href={getPagePath('events', locale)}>{ui.footer.events[locale]}</a>
       <span aria-hidden="true">·</span>
+      {
+        locale === 'en' && (
+          <>
+            <a href={LANDING_PATHS.linkedinHeadshotsBern}>LinkedIn Headshots Bern</a>
+            <span aria-hidden="true">·</span>
+          </>
+        )
+      }
       <a href={getPagePath('legal', locale)}>{ui.footer.legal[locale]}</a>
       <span aria-hidden="true">·</span>
       <a href={getPagePath('terms', locale)}>{ui.footer.terms[locale]}</a>

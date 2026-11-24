@@ -48,16 +48,8 @@ const {
 } = Astro.props;
 
 const titleBase = titleProp ?? (pageKey ? pageTitles[pageKey][locale] : SITE.brand);
-const homeTitleMiddle =
-  locale === 'en'
-    ? 'LinkedIn & Event Photography'
-    : locale === 'es'
-      ? 'LinkedIn y eventos'
-      : 'LinkedIn & Eventfotografie';
-const fullTitle =
-  pageKey === 'home'
-    ? `${titleBase} | ${homeTitleMiddle} | ${SITE.brand}`
-    : `${titleBase} | ${SITE.brand}`;
+/** Home titles in meta.json are complete (brand included); keep them ≤ 60 characters. */
+const fullTitle = pageKey === 'home' ? titleBase : `${titleBase} | ${SITE.brand}`;
 const description = descriptionProp ?? (pageKey ? pageDescriptions[pageKey][locale] : '');
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).href;
 const alternates: Partial<Record<Locale, string>> = alternatesProp
@@ -68,7 +60,7 @@ const alternates: Partial<Record<Locale, string>> = alternatesProp
     ? hreflangMap(pageKey)
     : { [locale]: canonical };
 const alternateLocales = LOCALES.filter((l) => alternates[l]);
-const hasTranslations = alternateLocales.length > 1;
+const xDefault = alternateLocales.length > 1 ? alternates.de : canonical;
 const schemaPageType =
   pageKey === 'home'
     ? undefined
@@ -118,7 +110,7 @@ const htmlLang = LOCALE_META[locale].htmlLang;
         <link rel="alternate" hreflang={LOCALE_META[l].htmlLang} href={alternates[l]} />
       ))
     }
-    {hasTranslations && alternates.de && <link rel="alternate" hreflang="x-default" href={alternates.de} />}
+    {xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.brand} />

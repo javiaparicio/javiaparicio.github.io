@@ -1,9 +1,9 @@
 {
   "pageTitles": {
     "home": {
-      "de": "Portraitfotograf Bern",
-      "en": "Portrait Photographer in Bern",
-      "es": "Fotógrafo de retratos en Berna"
+      "de": "Portraitfotograf Bern | LinkedIn & Events | Javi Aparicio",
+      "en": "Portrait & Event Photographer Bern | Javi Aparicio",
+      "es": "Fotógrafo de retratos en Berna | LinkedIn | Javi Aparicio"
     },
     "portfolio": {
       "de": "Portfolio | Portraitfotograf Bern",
@@ -16,9 +16,9 @@
       "es": "Galería de retratos | Fotógrafo Berna"
     },
     "events": {
-      "de": "Eventfotografie Bern | Konzerte & Firmenanlässe",
-      "en": "Event Photography Bern | Concerts & Corporate",
-      "es": "Fotografía de eventos Berna | Conciertos y empresas"
+      "de": "Eventfotograf Bern | Firmen & Konzerte",
+      "en": "Corporate & Concert Photographer Bern",
+      "es": "Fotógrafo de eventos y conciertos Berna"
     },
     "pricing": {
       "de": "Preise Portraitfotografie Bern",
@@ -84,7 +84,7 @@
     },
     "pricing": {
       "de": "Preise für Portrait-Sessions in Bern: LinkedIn-Porträt CHF 150, Personal Branding & Teams ab CHF 350. Inkl. Session, Auswahl und Retusche. Paket wählen.",
-      "en": "Portrait session prices in Bern: LinkedIn portrait CHF 150, personal branding & teams from CHF 350. Includes session, selection and retouching. Choose a package.",
+      "en": "Portrait session prices in Bern: LinkedIn portrait CHF 150, personal branding & teams from CHF 350. Includes session, selection and retouching.",
       "es": "Precios de sesiones en Berna: retrato LinkedIn CHF 150, marca personal y equipos desde CHF 350. Incluye sesión, selección y retoque. Elija su paquete."
     },
     "about": {

@@ -13,9 +13,9 @@ featured: true
 draft: false
 layout: masonry
 seoTitle:
-  de: Eventfotografie Bern | Konzerte & Firmenanlässe
-  en: Event Photography Bern | Concerts & Corporate
-  es: Fotografía de eventos Berna | Conciertos y empresas
+  de: Eventfotograf Bern | Firmen & Konzerte
+  en: Corporate & Concert Photographer Bern
+  es: Fotógrafo de eventos y conciertos Berna
 seoDescription:
   de: "Eventfotografie in Bern: Konzerte, Firmenanlässe und Festivals. Professionelle Dokumentation auf Anfrage — Angebot anfragen."
   en: "Event photography in Bern: concerts, corporate events and festivals. Professional coverage on request — ask for a quote."
