@@ -181,5 +181,15 @@ const htmlLang = LOCALE_META[locale].htmlLang;
         } catch (e) {}
       })();
     </script>
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "266a63441ced40ceadc28d065af323af"}'
+        />
+      )
+    }
   </body>
 </html>

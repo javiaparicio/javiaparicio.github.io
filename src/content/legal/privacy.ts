@@ -35,7 +35,7 @@ Weitere Informationen finden Sie in der [Datenschutzerklärung von Formspree](ht
 Beim Besuch dieser Website und bei der Kommunikation mit uns setzen wir folgende Dienstleister ein:
 
 - **GitHub, Inc. (GitHub Pages)**: Hosting des statischen Webauftritts. **Zweck:** Bereitstellung der Website. **Daten:** technische Zugriffsdaten (z. B. IP-Adresse, Zeitpunkt, angeforderte Seite). [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
-- **Cloudflare, Inc.**: DNS, Reverse Proxy und Schutz der Website. **Zweck:** Auslieferung, Sicherheit und Performance. **Daten:** z. B. IP-Adresse, Browser- und Zugriffsdaten, Protokolle. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Cloudflare, Inc.**: DNS, Reverse-Proxy, Schutz der Website und cookiefreie Reichweitenmessung (Cloudflare Web Analytics). **Zweck:** Auslieferung, Sicherheit, Performance und aggregierte technische Statistiken. **Daten:** z. B. IP-Adresse (für Auslieferung und Sicherheit; nicht in der Analyse gespeichert), Browserdaten und aggregierte cookiefreie Messwerte. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 - **Proton AG (Proton Mail)**: E-Mail für Anfragen aus dem Kontaktformular und direkte E-Mail-Kontakte. **Zweck:** Bearbeitung von Anfragen und Kundenkommunikation. **Daten:** z. B. Name, E-Mail-Adresse, Nachrichteninhalt, ggf. Telefonnummer. [Proton Privacy Policy](https://proton.me/legal/privacy)
 
 Einige Anbieter haben ihren Sitz ausserhalb der Schweiz (z. B. USA). Dabei kann eine Datenübermittlung ins Ausland erfolgen; die Anbieter geben an, angemessene Schutzmassnahmen zu verwenden (z. B. Standardvertragsklauseln).
@@ -122,7 +122,7 @@ For more information, please refer to [Formspree’s Privacy Policy](https://for
 When you visit this website or communicate with us, the following providers may process data on our behalf or as separate controllers:
 
 - **GitHub, Inc. (GitHub Pages)**: Hosting of the static website. **Purpose:** delivery of the site. **Data:** technical access data (e.g. IP address, time, page requested). [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
-- **Cloudflare, Inc.**: DNS, reverse proxy and protection of the website. **Purpose:** delivery, security and performance. **Data:** e.g. IP address, browser and access data, logs. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Cloudflare, Inc.**: DNS, reverse proxy, site protection, and cookie-free analytics (Cloudflare Web Analytics). **Purpose:** delivery, security, performance, and aggregated technical metrics. **Data:** e.g., IP address (for delivery and security; not stored by analytics), browser data, and aggregated cookie-free statistics. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 - **Proton AG (Proton Mail)**: Email for enquiries from the contact form and direct email. **Purpose:** handling enquiries and client communication. **Data:** e.g. name, email address, message content, phone number if provided. [Proton Privacy Policy](https://proton.me/legal/privacy)
 
 Some providers are based outside Switzerland (e.g. USA). Data may be transferred abroad; they state that appropriate safeguards apply (e.g. standard contractual clauses).
@@ -209,7 +209,7 @@ Para más información, consulte la [Política de Privacidad de Formspree](https
 Al visitar este sitio o comunicarse con nosotros, pueden intervenir los siguientes proveedores:
 
 - **GitHub, Inc. (GitHub Pages)**: Alojamiento del sitio estático. **Finalidad:** publicación del sitio web. **Datos:** datos técnicos de acceso (p. ej. dirección IP, fecha y hora, página solicitada). [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
-- **Cloudflare, Inc.**: DNS, proxy inverso y protección del sitio. **Finalidad:** entrega, seguridad y rendimiento. **Datos:** p. ej. dirección IP, datos del navegador y de acceso, registros. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+- **Cloudflare, Inc.**: DNS, proxy inverso, protección del sitio y analítica sin cookies (Cloudflare Web Analytics). **Finalidad:** entrega, seguridad, rendimiento y estadísticas técnicas agregadas. **Datos:** p. ej. dirección IP (para entrega y seguridad; no almacenada en analítica), datos del navegador y métricas agregadas sin cookies. [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 - **Proton AG (Proton Mail)**: Correo para consultas del formulario y correo directo. **Finalidad:** gestión de consultas y comunicación con clientes. **Datos:** p. ej. nombre, correo electrónico, contenido del mensaje, teléfono si se indica. [Proton Privacy Policy](https://proton.me/legal/privacy)
 
 Algunos proveedores tienen sede fuera de Suiza (p. ej. EE. UU.). Puede producirse una transferencia internacional; indican medidas de protección adecuadas (p. ej. cláusulas contractuales tipo).
