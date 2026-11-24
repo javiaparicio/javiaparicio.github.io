@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import type { ProjectImage } from '../../lib/images';
 import { getProjectBySlug, resolveProject } from '../../lib/projects';
-import { getPagePath, LANDING_PATHS } from '../../lib/routes';
+import { contactHref, getPagePath, LANDING_PATHS } from '../../lib/routes';
 import { pricingPackages } from '../../content/pages/pricing-packages';
 import { ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -156,7 +156,7 @@ const processSteps = [
       <h2>{ui.home.eventsTitle[locale]}</h2>
       <p class="home-info__about">{ui.home.eventsText[locale]}</p>
       <div class="cta-row">
-        <a class="btn" href={getPagePath('contact', locale)}>{ui.home.eventsEnquire[locale]}</a>
+        <a class="btn" href={contactHref(locale, 'events')}>{ui.home.eventsEnquire[locale]}</a>
         <a class="btn btn--ghost" href={getPagePath('events', locale)}>{ui.home.eventsCta[locale]}</a>
       </div>
     </div>

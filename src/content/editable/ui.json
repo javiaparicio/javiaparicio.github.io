@@ -260,6 +260,44 @@
     }
   },
   "contact": {
+    "eyebrow": {
+      "de": "Studio in 3014 Bern · Sessions auf Deutsch, Englisch & Spanisch",
+      "en": "Studio in 3014 Bern · Sessions in English, German & Spanish",
+      "es": "Estudio en 3014 Berna · Sesiones en español, inglés y alemán"
+    },
+    "service": {
+      "de": "Art der Session*",
+      "en": "Session type*",
+      "es": "Tipo de sesión*"
+    },
+    "servicePh": {
+      "de": "Bitte wählen …",
+      "en": "Please choose …",
+      "es": "Seleccione …"
+    },
+    "serviceOptions": {
+      "de": {
+        "linkedin": "Business- & LinkedIn-Porträt (CHF 150 · 30 Min. · 3 Fotos)",
+        "branding": "Personal Branding (ab CHF 350)",
+        "teams": "Teams & Unternehmen (ab CHF 350)",
+        "events": "Eventfotografie",
+        "other": "Anderes / allgemeine Frage"
+      },
+      "en": {
+        "linkedin": "LinkedIn & Business Portrait (CHF 150 · 30 min · 3 photos)",
+        "branding": "Personal Branding (From CHF 350)",
+        "teams": "Teams & Companies (From CHF 350)",
+        "events": "Event Photography",
+        "other": "Other / General question"
+      },
+      "es": {
+        "linkedin": "Retrato Profesional y LinkedIn (CHF 150 · 30 min · 3 fotos)",
+        "branding": "Marca Personal (desde CHF 350)",
+        "teams": "Equipos y Empresas (desde CHF 350)",
+        "events": "Fotografía de eventos",
+        "other": "Otro / consulta general"
+      }
+    },
     "name": {
       "de": "Name*",
       "en": "Name*",
@@ -275,25 +313,15 @@
       "en": "Email*",
       "es": "Correo*"
     },
-    "subject": {
-      "de": "Betreff*",
-      "en": "Subject*",
-      "es": "Asunto*"
-    },
-    "subjectPh": {
-      "de": "z. B. LinkedIn-Porträt, Firmenevent, Team 6 Personen",
-      "en": "e.g. LinkedIn portrait, corporate event, team of 6",
-      "es": "p. ej. retrato LinkedIn, evento de empresa, equipo de 6"
-    },
     "message": {
-      "de": "Nachricht*",
-      "en": "Message*",
-      "es": "Mensaje*"
+      "de": "Wunschtermine / Nachricht*",
+      "en": "Preferred days / Message*",
+      "es": "Días preferidos / Mensaje*"
     },
     "messagePh": {
-      "de": "Wofür Sie die Fotos brauchen, ungefähres Datum, Fragen",
-      "en": "What you need the photos for, approximate date, questions",
-      "es": "Para qué necesita las fotos, fecha aproximada, preguntas"
+      "de": "z. B. nächsten Dienstag oder Donnerstagnachmittag, oder Ihre Fragen",
+      "en": "e.g., Next Tuesday or Thursday afternoon, or any questions you have",
+      "es": "p. ej., el próximo martes o el jueves por la tarde, o cualquier pregunta que tenga"
     },
     "privacy": {
       "de": "Ich habe die <a href=\"{{privacy}}\" target=\"_blank\" rel=\"noopener\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zu.",
@@ -311,9 +339,9 @@
       "es": "O escriba directamente al {{email}}, {{whatsapp}} o {{telegram}}."
     },
     "send": {
-      "de": "Senden",
-      "en": "Send",
-      "es": "Enviar"
+      "de": "Anfrage senden",
+      "en": "Send enquiry",
+      "es": "Enviar consulta"
     },
     "channelEmail": {
       "de": "E-Mail",
@@ -334,6 +362,26 @@
       "de": "Javi Aparicio, Portraitfotograf in Bern",
       "en": "Javi Aparicio, portrait photographer in Bern",
       "es": "Javi Aparicio, fotógrafo de retratos en Berna"
+    },
+    "noCommitment": {
+      "de": "Unverbindlich: Eine Anfrage ist noch keine Buchung. Sie erhalten innerhalb von 24 Stunden eine persönliche Antwort.",
+      "en": "No commitment—sending an enquiry does not lock in a booking. You will receive a personal reply within 24 hours.",
+      "es": "Sin compromiso: enviar una consulta no supone ninguna reserva. Recibirá una respuesta personal en 24 horas."
+    },
+    "infoStudio": {
+      "de": "Studio",
+      "en": "Studio location",
+      "es": "Estudio"
+    },
+    "infoLanguages": {
+      "de": "Sprachen",
+      "en": "Languages",
+      "es": "Idiomas"
+    },
+    "infoQuick": {
+      "de": "Kurze Frage?",
+      "en": "Quick question?",
+      "es": "¿Una pregunta rápida?"
     }
   },
   "categories": {

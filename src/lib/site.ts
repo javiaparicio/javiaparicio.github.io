@@ -14,6 +14,7 @@ export const SITE = {
   postalCode: contact.postal_code,
   country: contact.country,
   priceRange: 'CHF 150-350',
+  maps: 'https://maps.app.goo.gl/DaCMiAwSyeWQKWUCA',
   formspree: 'https://formspree.io/f/mjvnrpje',
   emailSubject: 'Nachricht von javiapariciofoto.ch',
   social: [

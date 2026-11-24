@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
 import { applyContentTokens } from '../lib/content';
-import { getPagePath } from '../lib/routes';
+import { getPagePath, type ContactPackage } from '../lib/routes';
 import { SITE } from '../lib/site';
 import { ui } from '../lib/ui';
 
@@ -11,6 +11,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const nextUrl = new URL(getPagePath('danke', locale), SITE.url).href;
+const serviceKeys: ContactPackage[] = ['linkedin', 'branding', 'teams', 'events', 'other'];
 const telegramUrl =
   SITE.social.find((s) => s.name === 'Telegram')?.url ?? 'https://t.me/javiapariciofoto';
 
@@ -35,6 +36,12 @@ const directHtml = applyContentTokens(
 ---
 
 <form class="contact-form" action={SITE.formspree} method="POST">
+  <label for="service">{ui.contact.service[locale]}</label>
+  <select id="service" name="service" required>
+    <option value="" disabled selected>{ui.contact.servicePh[locale]}</option>
+    {serviceKeys.map((key) => <option value={key}>{ui.contact.serviceOptions[locale][key]}</option>)}
+  </select>
+
   <label for="name">{ui.contact.name[locale]}</label>
   <input type="text" id="name" name="name" autocomplete="name" required />
 
@@ -43,15 +50,6 @@ const directHtml = applyContentTokens(
 
   <label for="email">{ui.contact.email[locale]}</label>
   <input type="email" id="email" name="_replyto" autocomplete="email" required />
-
-  <label for="subject">{ui.contact.subject[locale]}</label>
-  <input
-    type="text"
-    id="subject"
-    name="subject"
-    placeholder={ui.contact.subjectPh[locale]}
-    required
-  />
 
   <label for="message">{ui.contact.message[locale]}</label>
   <textarea
@@ -81,6 +79,7 @@ const directHtml = applyContentTokens(
   />
 
   <button type="submit" class="btn">{ui.contact.send[locale]}</button>
+  <p class="contact-form__reassure">{ui.contact.noCommitment[locale]}</p>
 </form>
 
 <div class="contact-direct">
@@ -96,6 +95,7 @@ const directHtml = applyContentTokens(
     font-size: var(--text-sm);
   }
   .contact-form input,
+  .contact-form select,
   .contact-form textarea {
     width: 100%;
     border: 1px solid var(--color-line);
@@ -121,6 +121,13 @@ const directHtml = applyContentTokens(
     font-size: var(--text-sm);
     color: var(--color-ink-muted);
     margin: 0 0 1rem;
+  }
+  .contact-form__reassure {
+    margin: 0;
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    line-height: 1.5;
+    color: var(--color-ink-muted);
   }
   .contact-form__hp {
     position: absolute;
@@ -155,4 +162,10 @@ const directHtml = applyContentTokens(
     }
   }
   revealContact();
+
+  const requested = new URLSearchParams(window.location.search).get('package');
+  const service = document.querySelector<HTMLSelectElement>('#service');
+  if (requested && service && Array.from(service.options).some((o) => o.value === requested)) {
+    service.value = requested;
+  }
 </script>

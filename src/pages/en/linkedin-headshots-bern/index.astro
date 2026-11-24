@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Testimonials from '../../../components/Testimonials.astro';
-import { getPagePath, LANDING_PATHS } from '../../../lib/routes';
+import { contactHref, getPagePath, LANDING_PATHS } from '../../../lib/routes';
 import { SITE } from '../../../lib/site';
 import portraitShirt from '../../../content/projects/portraits/images/27.webp';
 import portraitBlazer from '../../../content/projects/portraits/images/24.webp';
@@ -12,7 +12,7 @@ import portraitBlouse from '../../../content/projects/portraits/images/25.webp';
 import portraitSuspenders from '../../../content/projects/portraits/images/07.webp';
 
 const path = LANDING_PATHS.linkedinHeadshotsBern;
-const contactPath = getPagePath('contact', 'en');
+const contactPath = contactHref('en', 'linkedin');
 
 const gallery = [
   { src: portraitShirt, alt: 'Natural LinkedIn portrait of a male professional in a shirt, arms crossed, Bern studio' },

@@ -56,6 +56,14 @@ export function getPagePath(key: PageKey, locale: Locale): string {
   return `/${locale}${path}`;
 }
 
+/** Values of the contact form's `service` select; `?package=` preselects one. */
+export type ContactPackage = 'linkedin' | 'branding' | 'teams' | 'events' | 'other';
+
+export function contactHref(locale: Locale, pkg?: ContactPackage): string {
+  const path = getPagePath('contact', locale);
+  return pkg ? `${path}?package=${pkg}` : path;
+}
+
 export function absoluteUrl(path: string, site = 'https://javiapariciofoto.ch'): string {
   const base = site.replace(/\/$/, '');
   if (path.startsWith('http')) return path;

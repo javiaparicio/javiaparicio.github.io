@@ -2,7 +2,7 @@
 import type { Locale } from '../../lib/i18n';
 import { t } from '../../lib/i18n';
 import { getProjectBySlug, resolveProject } from '../../lib/projects';
-import { absoluteUrl, getPagePath, type PageKey } from '../../lib/routes';
+import { absoluteUrl, contactHref, getPagePath, type PageKey } from '../../lib/routes';
 import { ui } from '../../lib/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Gallery from '../Gallery.astro';
@@ -72,7 +72,7 @@ const primaryCtaLabel = isEvents
     </div>
 
     <div class="cta-row">
-      <a class="btn" href={getPagePath('contact', locale)}>
+      <a class="btn" href={contactHref(locale, isEvents ? 'events' : undefined)}>
         {primaryCtaLabel}
       </a>
       <a class="btn btn--ghost" href={getPagePath('portfolio', locale)}>

@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../../lib/i18n';
-import { getPagePath, LANDING_PATHS, type PageKey } from '../../lib/routes';
+import { contactHref, getPagePath, LANDING_PATHS, type ContactPackage, type PageKey } from '../../lib/routes';
 import { pageHeadings, ui } from '../../lib/ui';
 import type { PricingPackage } from '../../content/pages/pricing-packages';
 import {
@@ -22,6 +22,12 @@ interface Props {
 const { locale, pageKey, html, packages } = Astro.props;
 
 const title = pageHeadings[pageKey][locale];
+
+const packageForm: Record<PricingPackage['id'], ContactPackage> = {
+  'professional-portrait': 'linkedin',
+  'personal-branding': 'branding',
+  teams: 'teams',
+};
 
 function splitPricingHtml(raw: string): { intro: string; outro: string } {
   const parts = raw
@@ -65,6 +71,9 @@ const faqs = pricingParts
                     ))}
                   </ul>
                   <p class="pricing-package__note">{pkg.note[locale]}</p>
+                  <a class="btn btn--ghost pricing-package__cta" href={contactHref(locale, packageForm[pkg.id])}>
+                    {ui.common.requestSession[locale]}
+                  </a>
                   {locale === 'en' && pkg.id === 'professional-portrait' && (
                     <p class="pricing-package__more">
                       <a href={LANDING_PATHS.linkedinHeadshotsBern}>Learn more about LinkedIn headshots in Bern →</a>
@@ -175,6 +184,11 @@ const faqs = pricingParts
   }
 
   .pricing-note {
+    margin-top: var(--gap-stack);
+  }
+
+  .pricing-package__cta {
+    align-self: flex-start;
     margin-top: var(--gap-stack);
   }
 

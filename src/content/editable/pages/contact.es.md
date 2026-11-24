@@ -1,1 +1,1 @@
-Escríbame si quiere concretar una sesión en Berna. Indíqueme su trabajo, el uso previsto de las fotos y una fecha aproximada, y le respondo con disponibilidad y los siguientes pasos.
+Elija el tipo de sesión e indíqueme sus días u horarios preferidos. Le responderé en 24 horas con las fechas disponibles.

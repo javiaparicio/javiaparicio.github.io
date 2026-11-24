@@ -4,6 +4,7 @@ import type { Locale } from '../../lib/i18n';
 import { applyContentTokens } from '../../lib/content';
 import { pageCopy } from '../../content/pages/copy';
 import { pageHeadings, ui } from '../../lib/ui';
+import { SITE } from '../../lib/site';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactForm from '../ContactForm.astro';
 import contactPortrait from '../../assets/contact/portrait.webp';
@@ -14,11 +15,14 @@ interface Props {
 
 const { locale } = Astro.props;
 const introHtml = applyContentTokens(pageCopy.contact[locale], locale);
+const telegramUrl =
+  SITE.social.find((s) => s.name === 'Telegram')?.url ?? 'https://t.me/javiapariciofoto';
 ---
 
 <BaseLayout locale={locale} pageKey="contact">
   <div class="container page-block page-block--last">
     <header class="page-header page-header--with-lead">
+      <p class="eyebrow">{ui.contact.eyebrow[locale]}</p>
       <h1>{pageHeadings.contact[locale]}</h1>
       <div class="prose" set:html={introHtml} />
     </header>
@@ -27,18 +31,74 @@ const introHtml = applyContentTokens(pageCopy.contact[locale], locale);
       <div class="contact-layout__form">
         <ContactForm locale={locale} />
       </div>
-      <figure class="contact-layout__media">
-        <Image
-          src={contactPortrait}
-          alt={ui.contact.photoAlt[locale]}
-          widths={[480, 720, 960]}
-          sizes="(max-width: 800px) 100vw, 40vw"
-          format="webp"
-          quality={85}
-          loading="eager"
-          fetchpriority="high"
-        />
-      </figure>
+      <div class="contact-aside">
+        <figure class="contact-layout__media">
+          <Image
+            src={contactPortrait}
+            alt={ui.contact.photoAlt[locale]}
+            widths={[480, 720, 960]}
+            sizes="(max-width: 800px) 100vw, 40vw"
+            format="webp"
+            quality={85}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </figure>
+
+        <dl class="contact-info">
+          <div>
+            <dt>{ui.contact.infoStudio[locale]}</dt>
+            <dd>
+              <a href={SITE.maps} target="_blank" rel="noopener noreferrer">
+                {SITE.street}, {SITE.postalCode} {SITE.city}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt>{ui.contact.infoLanguages[locale]}</dt>
+            <dd>English, Deutsch, Español</dd>
+          </div>
+          <div>
+            <dt>{ui.contact.infoQuick[locale]}</dt>
+            <dd>
+              <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              {' · '}
+              <a href={telegramUrl} target="_blank" rel="noopener noreferrer">Telegram</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .contact-aside {
+    display: grid;
+    gap: var(--gap-stack);
+    align-content: start;
+  }
+
+  .contact-info {
+    display: grid;
+    gap: var(--gap-heading);
+    margin: 0;
+  }
+
+  .contact-info dt {
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .contact-info dd {
+    margin: 0;
+    font-size: var(--text-sm);
+  }
+
+  .contact-info a {
+    text-underline-offset: 0.18em;
+  }
+</style>
