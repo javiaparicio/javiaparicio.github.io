@@ -52,6 +52,16 @@ function redirectMissingTrailingSlash() {
   };
 }
 
+/** `Header.astro?astro&type=script…` → `header`. The content hash stays for cache-busting. */
+function assetChunkName(name) {
+  const stem = name
+    .replace(/\.astro.*$/i, '')
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-|-$/g, '')
+    .toLowerCase();
+  return stem || 'app';
+}
+
 export default defineConfig({
   site: SITE,
   output: 'static',
@@ -62,6 +72,8 @@ export default defineConfig({
   build: {
     // Avoid FOUC: don't defer page/layout CSS to a late external file
     inlineStylesheets: 'always',
+    // Compiled images and scripts. Not `_astro`, and not `assets` (that folder is already in public/).
+    assets: 'static',
   },
   integrations: [
     sitemap({
@@ -87,6 +99,18 @@ export default defineConfig({
     layout: 'none',
   },
   vite: {
+    environments: {
+      client: {
+        build: {
+          rolldownOptions: {
+            output: {
+              entryFileNames: (chunk) => `static/${assetChunkName(chunk.name)}.[hash].js`,
+              chunkFileNames: (chunk) => `static/${assetChunkName(chunk.name)}.[hash].js`,
+            },
+          },
+        },
+      },
+    },
     build: {
       // Astro inlines script chunks under 4 kB. Keep every JS file external so
       // script-src can omit 'unsafe-inline'. CSS inlining is unchanged.
