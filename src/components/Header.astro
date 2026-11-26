@@ -228,10 +228,12 @@ const portfolioActive = pageKey !== undefined && ['portfolio', 'portraits', 'eve
     display: block;
     padding-bottom: 0.55rem;
     text-decoration: none;
-    opacity: 0.45;
+    color: var(--color-ink-muted);
     line-height: 1.15;
   }
+  .lang-switch a:hover,
   .lang-switch a[aria-current='true'] {
+    color: var(--color-ink);
     opacity: 1;
   }
   .lang-switch a[aria-current='true']::after {
