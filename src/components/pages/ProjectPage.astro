@@ -54,8 +54,8 @@ const primaryCtaLabel = isEvents
   description={seoDescription}
   breadcrumbs={breadcrumbs}
 >
-  <div class="container page-block page-block--last">
-    <header class="page-header">
+  <div class="project-page page-block page-block--last">
+    <header class="page-header project-page__intro">
       <p class="eyebrow">
         <a href={getPagePath('portfolio', locale)}>{ui.common.backToPortfolio[locale]}</a>
       </p>
@@ -63,7 +63,7 @@ const primaryCtaLabel = isEvents
       {project.description && <p class="lead">{project.description}</p>}
     </header>
 
-    <div class="project-gallery page-block">
+    <div class="gallery-bleed page-block">
       <Gallery
         slides={project.slides}
         layout={entry.data.layout}
@@ -71,7 +71,7 @@ const primaryCtaLabel = isEvents
       />
     </div>
 
-    <div class="cta-row">
+    <div class="project-page__footer cta-row">
       <a class="btn" href={contactHref(locale, isEvents ? 'events' : undefined)}>
         {primaryCtaLabel}
       </a>
@@ -83,9 +83,10 @@ const primaryCtaLabel = isEvents
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-left: 0;
-    padding-right: 0;
+  .project-page__intro,
+  .project-page__footer {
+    width: min(100% - (var(--page-gutter) * 2), var(--max-w));
+    margin-inline: auto;
   }
 
   .eyebrow a {

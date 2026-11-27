@@ -24,13 +24,13 @@ const portraits = await resolveProject(portraitsEntry, locale);
 const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
 ---
 
-<BaseLayout locale={locale} pageKey="portfolio">
-  <div class="container page-block page-block--last">
-    <header class="page-header">
+<BaseLayout locale={locale} pageKey="portfolio" bodyClass="page-portfolio">
+  <div class="portfolio page-block page-block--last">
+    <header class="page-header portfolio__intro">
       <h1>{ui.portfolio.title[locale]}</h1>
     </header>
 
-    <div class="project-gallery page-block">
+    <div class="gallery-bleed page-block">
       <Gallery
         slides={portraits.slides}
         layout={portraitsEntry.data.layout}
@@ -41,7 +41,7 @@ const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
 
     {
       events && (
-        <div class="page-block">
+        <div class="portfolio__footer page-block">
           <h2 class="events-heading">{ui.portfolio.eventsTeaser[locale]}</h2>
           <div class="events-card">
             <ProjectCard
@@ -58,7 +58,7 @@ const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
       )
     }
 
-    <div class="cta-row">
+    <div class="portfolio__footer cta-row">
       <a class="btn" href={getPagePath('contact', locale)}>
         {ui.common.requestSession[locale]}
       </a>
@@ -73,9 +73,10 @@ const events = eventsEntry ? await resolveProject(eventsEntry, locale) : null;
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-left: 0;
-    padding-right: 0;
+  .portfolio__intro,
+  .portfolio__footer {
+    width: min(100% - (var(--page-gutter) * 2), var(--max-w));
+    margin-inline: auto;
   }
 
   .events-heading {

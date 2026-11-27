@@ -229,6 +229,13 @@ li + li {
   width: min(100% - (var(--page-gutter) * 2), var(--max-w-narrow));
 }
 
+/* Wide photo strips / galleries: edge-closer than .container */
+.gallery-bleed {
+  --gallery-gutter: clamp(0.7rem, 2vw, 1rem);
+  width: min(100% - (var(--gallery-gutter) * 2), 96rem);
+  margin-inline: auto;
+}
+
 .section {
   padding-block: var(--space-5);
 }
