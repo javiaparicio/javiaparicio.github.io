@@ -1,6 +1,7 @@
 import type { ImageMetadata } from 'astro';
 import { getImage } from 'astro:assets';
 import type { Locale } from './i18n';
+import { compareNumericDesc } from './masonry/sort.ts';
 
 const IMAGE_GLOB = import.meta.glob<{ default: ImageMetadata }>(
   '/src/content/projects/*/images/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}',
@@ -13,9 +14,9 @@ export function naturalCompare(a: string, b: string): number {
   return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 }
 
-/** Reverse natural sort: portrait_030 before portrait_029. */
+/** Reverse natural sort by numeric filename key (29 before 10 before 2). */
 export function naturalCompareDesc(a: string, b: string): number {
-  return naturalCompare(b, a);
+  return compareNumericDesc(a, b);
 }
 
 function parseGlobPath(path: string): { slug: string; filename: string } | null {
