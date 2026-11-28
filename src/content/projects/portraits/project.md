@@ -28,8 +28,6 @@ captions:
   "02.webp":
     name: José
     url: https://www.instagram.com/joseditionvisual/
-  "03.webp": { name: Christian }
-  "04.webp": { name: Christian }
   "05.webp": { name: Frank }
   "06.webp": { name: Nana }
   "08.webp": { name: Kathy }
@@ -84,4 +82,7 @@ captions:
   "28.webp":
     name: Ksenia Gratch
     url: https://www.instagram.com/kseniagratch/
+  "29.webp":
+    name: Veronika Valentova
+    url: https://www.instagram.com/veronika_valentova_model_/
 ---
